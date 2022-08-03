@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from kannikaenlinea.weebly.com/operating-system-ii.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Aug 2022 23:24:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<title>Operating System II - KANNIKA EN LINEA</title><meta property="og:site_name" content="KANNIKA EN LINEA" />
+<meta property="og:title" content="Operating System II" />
+<meta property="og:description" content="Medium-term scheduler : It takes care of swapping where it removes the process from the main memory (and is blocked waiting for IO) to make room for the other processes and the suspended process is..." />
+<meta property="og:image" content="uploads/5/0/1/5/50158331/mmu_orig.jpg" />
+<meta property="og:image" content="uploads/5/0/1/5/50158331/published/external-fragmentation9173.jpg?1651436617" />
+<meta property="og:image" content="uploads/5/0/1/5/50158331/internal-fragmentation_orig.jpg" />
+<meta property="og:image" content="uploads/5/0/1/5/50158331/paging_orig.jpg" />
+<meta property="og:image" content="uploads/5/0/1/5/50158331/pgtblent_orig.jpg" />
+<meta property="og:image" content="uploads/5/0/1/5/50158331/pgfault_orig.jpg" />
+<meta property="og:image" content="uploads/5/0/1/5/50158331/segment-map-table_orig.jpg" />
+<meta property="og:image" content="uploads/5/0/1/5/50158331/inode_orig.jpg" />
+<meta property="og:url" content="operating-system-ii.html" />
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="../cdn2.editmysite.com/css/sitesdf65.css?buildTime=1659557836" />
+<link rel="stylesheet" type="text/css" href="../cdn2.editmysite.com/css/old/fancybox4e0b.css?1659557836" />
+<link rel="stylesheet" type="text/css" href="../cdn2.editmysite.com/css/social-icons3d3a.css?buildtime=1659557836" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style21ca.css?1659560236" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Quicksand:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Alegreya+SC:400,700,400italic,700italic&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Quicksand" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {color:#000 !important;}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-family:"Alegreya SC" !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-size:16px !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+
+		<script src='files/templateArtifacts21ca.js?1659560236'></script>
+<script>
+var STATIC_BASE = 'http://cdn1.editmysite.com/';
+var ASSETS_BASE = 'http://cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='../ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="../cdn2.editmysite.com/js/lang/en/stl3db6.js?buildTime=1659557836&amp;"></script>
+<script src="../cdn2.editmysite.com/js/site/maindf65.js?buildTime=1659557836"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='kannikaenlinea.weebly.com'; </script><script>_W = _W || {};
+			_W.customerLocale = "en";
+			_W.storeName = null;
+			_W.isCheckoutReskin = false;
+			_W.storeCountry = "CA";
+			_W.storeCurrency = "CAD";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "258110484374261460";
+			com_userID = "50158331";</script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="../cdn2.editmysite.com/js/lang/en/stl3db6.js?buildTime=1659557836&amp;"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "../www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"174265258517029121","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"763883204290499893","title":"Topics","url":"topics.html","target":"","nav_menu":false,"nonclickable":false},{"id":"156041258822275539","title":"Algorithms I","url":"algorithms-i.html","target":"","nav_menu":false,"nonclickable":false},{"id":"822074742203037227","title":"Algorithms II","url":"algorithms-ii.html","target":"","nav_menu":false,"nonclickable":false}],
+			"333610354331612658",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{}
+		)
+	}
+//-->
+</script>
+		
+		<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="../static.zotabox.com/6/9/6972ea4fe8e76a20caa3b853ee786fd5/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="header-page  wsite-page-operating-system-ii  full-width-body-off header-overlay-on alt-nav-off  wsite-theme-light"><div class="wrapper">
+    <div class="birdseye-header">
+      <div class="nav-wrap">
+        <div class="container">
+          <div class="logo"><span class="wsite-logo">
+
+	<a href="index.html">
+	
+	<span id="wsite-title">KANNIKA EN LINEA</span>
+	
+	</a>
+
+</span></div>
+          <div class="nav desktop-nav"><ul class="wsite-menu-default">
+		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg763883204290499893" class="wsite-menu-item-wrap">
+			<a
+						href="topics.html"
+				class="wsite-menu-item"
+				>
+				Topics
+			</a>
+			
+		</li>
+		<li id="pg156041258822275539" class="wsite-menu-item-wrap">
+			<a
+						href="algorithms-i.html"
+				class="wsite-menu-item"
+				>
+				Algorithms I
+			</a>
+			
+		</li>
+		<li id="pg822074742203037227" class="wsite-menu-item-wrap">
+			<a
+						href="algorithms-ii.html"
+				class="wsite-menu-item"
+				>
+				Algorithms II
+			</a>
+			
+		</li>
+</ul>
+</div>
+          <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner-wrap">
+      <div class="wsite-elements wsite-not-footer wsite-header-elements">
+	<div class="wsite-section-wrap">
+	<div  class="wsite-section wsite-header-section wsite-section-bg-image" style="height: auto;background-image: url(_/uploads/5/0/1/5/50158331/background-images/375160026.html) ;background-repeat: no-repeat ;background-position: 50.00% 0.00% ;background-size: 100% ;background-color: transparent ;background-size: cover;" >
+		<div class="wsite-section-content">
+			
+          <div class="container">
+            <div class="banner">
+				<div class="wsite-section-elements">
+					<h2 class="wsite-content-title">Operating System II</h2>
+				</div>
+			</div>
+          </div>
+      
+		</div>
+		<div class=""></div>
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="main-wrap">
+      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-23" style="background-color: #020202;background-image: none;" >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<div class="paragraph"><font color="#18d4ff">Medium-term scheduler</font><font color="#ffffff">: It takes care of swapping where it removes the process from the main memory&nbsp;(and is blocked waiting for IO) to make room for the other processes and the suspended process is put into secondary memory.</font></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Memory Management</font></h2>
+
+<div class="paragraph"><ul><li><font color="#ffffff">- Manages primary memory and moves processes back and forth between RAM and Disk during execution&nbsp;<br /></font></li><li><font color="#ffffff">- Keeps track of every memory location, regardless of if allocated for process or free<br /></font></li><li><font color="#ffffff">- Controls how much of RAM is allocated for each process<br /></font></li><li><font color="#ffffff">- All data in memory is stored in binary format<br /></font></li></ul><font color="#ffffff">Generally, the more process a main memory can store, the higher its CPU utilization</font></div>
+
+<div class="paragraph"><strong><font size="3"><font color="#9789e8">---</font><font color="#ffffff"> 32-bit vs 64-bit </font><font color="#9789e8">---</font></font></strong><br /><font color="#ffffff">- It tells us how much memory a CPU can access from a CPU register</font><br /><font color="#ffffff">&nbsp; &nbsp;&nbsp;- It can access 2^32 or 2^64 different memory addresses</font><br /><font color="#ffffff">&nbsp; &nbsp; - CPU register stores memory addresses, which is how CPU accesses data from RAM</font><br /><font color="#ffffff">&nbsp; &nbsp; - 1 Bit in register can access 1 Byte in memory</font><br /><font color="#ffffff">&nbsp; &nbsp; - So 32-bit system can access a maximum of 4GB of RAM but if it has 8GB of RAM then it better be 64-bit system or else the 4GB of the RAM will be completely inaccessible to the CPU</font></div>
+
+<div class="paragraph"><font color="#ffffff"></font><strong><font size="3"><font color="#9789e8">---&nbsp;</font></font><font color="#ffffff"><font size="3">Logical Address Space vs Physical Address Space&nbsp;</font></font><font size="3"><font color="#9789e8">---</font></font></strong><font color="#ffffff"><br />- The address that is generated by the CPU for a particular process is called the Logical address - It is basically the virtual address of the instruction and data used by the program<br />- The set of all logical addresses generated by a program is referred to as its Logical Address Space - (It can be defined as the size of the process)<br />- However, the actual address that is loaded into the memory-address register is called the Physical address - It cannot be accessed by the user directly but it can be calculated with the help of the logical address<br />- The physical address space can be either the size of the main memory or the set of all physical addresses corresponding to the logical address space</font></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><strong><font size="3"><font color="#9789e8">---&nbsp;</font></font><font color="#ffffff" size="3">MMU (Memory Management Unit)&nbsp;</font><font size="3"><font color="#9789e8">---</font></font></strong><ul><li><font color="#ffffff">It is a hardware device that does the run-time mapping from the virtual address to the physical address and it is located within the CPU</font></li><li><font color="#ffffff">Relocation/Base register in CPU stores a value that is added to the logical address to get the physical address</font></li><li><font color="#ffffff">User program never gets to see the physical address, they only view the logical address</font></li></ul></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/mmu_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><br /><font color="#ffffff">&#8203;* Sometimes a complete program is loaded into the main memory (</font><font color="#f56824">Static Loading</font><font color="#ffffff">), but sometimes only a certain part of the program is loaded into the memory when it is called - This mechanism enhances performance and it is called </font><font color="#00e6f9">Dynamic Loading&nbsp;</font><br /><br /><font color="#ffffff">* Also, there are times when one program is dependent on some other programs. Instead of loading all the dependent programs (</font><font color="#f56824">Static Linking</font><font color="#ffffff">), the CPU links the dependent programs to the main memory only when it. is required - This is called </font><font color="#00e6f9">Dynamic Linking</font></div>
+
+<div class="paragraph"><font color="#ffffff">* </font><font color="#9789e8">Contiguous Memory Allocation</font><font color="#ffffff"> is achieved by dividing the memory into fixed-sized partition. However, </font><font color="#f56824">fixed-sized/static partition</font><font color="#ffffff">&nbsp; can cause internal fragmentation, limitation on the size of the process, external fragmentation and the degree of multiprogramming becomes less.</font><br />&#8203;<br /><font color="#ffffff">* In </font><font color="#00e6f9">variable-size/dynamic partition</font><font color="#ffffff">, when a process arrives, a partition of size equal to the size of the process is created then allocated to the process. This results in no internal fragmentation but external fragmentation exists and it is difficult to implement.</font></div>
+
+<div class="paragraph"><strong><font size="3"><font color="#9789e8">---&nbsp;</font></font><font size="3" style="color:rgb(255, 255, 255)">Fragmentation&nbsp;</font><font size="3"><font color="#9789e8">---</font></font></strong><br /><font color="#ffffff">&nbsp;- When a processes is loaded and removed from memory and the remaining space is occupied by other processes, the next process will use the memory space that was just freed, but if the newly loaded process is smaller in size then it will not use the entire block of freed memory. A slice of memory space will remain unused. If this happens to each blocks in memory, then there will be many slices of unused memory. If the total free memory space is enough for the next process but it cannot be used since it is not contiguous =&gt; </font><font color="#00e6f9">External Fragmentation</font><br /><br /><font color="#ffffff">&#8203;- </font><font color="#00e6f9">Internal Fragmentation</font><font color="#ffffff"> occurs when the allocated memory for a process is too big that there are remaining allocated memory unused</font></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/published/external-fragmentation9173.jpg?1651436617" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><font color="#ffffff">If we decide to merge the free blocks of memory to form a contiguous memory space (</font><font color="#00e6f9">Compaction</font><font color="#ffffff">) =&gt; decreases efficiency and takes too much time to re-write data stored from one place to another</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/internal-fragmentation_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><font color="#ffffff">Info of each partitioned memory blocks are stored in a linked list - which indicates the size of the block and whether or not it is occupied</font><br /><br /><font color="#ffffff">There are some partitioning algorithms to decide which block should be used for a given process:</font><br /><font color="#ffffff">&nbsp;- </font><font color="#a9e976">First Fit</font><font color="#ffffff">: traverse through until the first block that is big enough is found</font><br /><font color="#ffffff">&nbsp;- </font><font color="#a9e976">Best Fit</font><font color="#ffffff">:&nbsp;traverse through until the smallest block that is big enough is found</font><br /><font color="#ffffff">&nbsp;- </font><font color="#a9e976">Next Fit</font><font color="#ffffff">:&nbsp;traverse from current position until the next block that is big enough is found</font><br /><font color="#ffffff">&nbsp;- </font><font color="#a9e976">Worst Fit</font><font color="#ffffff">:&nbsp;traverse through until the biggest block is found</font></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Paging</font></h2>
+
+<div class="paragraph"><font color="#ffffff">A process that's stored in the hard disk is broken into blocks of same size called </font><font color="#00e6f9">pages</font><font color="#ffffff"> (size of a page is a power of 2, between 512 and 8192 bytes). Similarly, the main memory is divided into equal size blocks called </font><font color="#f56824">frames</font><font color="#ffffff">. The pages of the process that are constantly accessed and modified are kept in the main memory and the remaining of the pages for the process is kept in the disk. This way the main memory can hold pages for other processes at the same time. The pages stored in the hard disk act as extra main memory space =&gt; </font><font color="#00e6f9">virtual memory</font><font color="#ffffff">&nbsp;</font></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/paging_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><font color="#00e6f9">Page Table</font><font color="#ffffff"> - A page table contains which frame number contains which page (Each process has its own page table)</font><br /><font color="#00e6f9">Inverted Page Table</font><font color="#ffffff"> - For OS to track all page-frame mappings of all processes in one table</font><br /><font color="#00e6f9">PTBR (Page Table Base Register)</font><font color="#ffffff"> - used to hold the base address of the page table for the current process</font><br /><font color="#00e6f9">Logical Address</font><font color="#ffffff"> = Page # + Page Offset (indicates the specific word that needs to be read from that page)</font><br /><font color="#00e6f9">Physical Address</font><font color="#ffffff"> = Frame # + Page Offset&nbsp;</font></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/pgtblent_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><font color="#00e6f9">Translation Look aside Buffer:</font><font color="#ffffff"> a memory cache in the CPU that only contains the entries of the main pages frequently accessed instead of fetching from page table in main memory every time<br />* Sometimes a page table might be too long so there are multiple page table levels, one entry of the outer page table will point to another inner page table =&gt; </font><font color="#00e6f9">Hierarchical Paging</font><br /><font color="#ffffff">* To handle address space that are larger than 32 bits, a </font><font color="#00e6f9">hashed page table</font><font color="#ffffff"> is used - keys are virtual pg# and value is mapped frame<br />&#8203;* </font><font color="#00e6f9">Clustered Page tables</font><font color="#ffffff"> are like hashed page table but each entry refers to several pages</font><br /><font color="#00e6f9">Demand Paging</font><font color="#ffffff">: Pages of a process which are least used, gets stored in the secondary memory. It gets copied to main memory when it's accessed =&gt; </font><font color="#00e6f9">Page Fault occurs</font><font color="#ffffff"> - requested page not in RAM<br />* If Page fault occurs too frequently and the OS spends more time swapping than CPU utilization for the process =&gt; </font><font color="#00e6f9">Thrashing </font><font color="#ffffff">- usually occurs when there's too many processes in the main memory executing simultaneously. This can be avoided by clumping and loading all pages for the process onto RAM or focus on reducing page fault frequency</font><br /></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/pgfault_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Swapping</font></h2>
+
+<div class="paragraph"><font color="#ffffff">Swapping is the process when all the frames in main memory are full and a page needs to be removed to access a new page.</font><br /><font color="#ffffff">A page replacement algorithm can be used:</font><br /><font color="#ffffff">&nbsp;- </font><font color="#a9e976">FIFO (First-In-First-Out)</font><font color="#ffffff">: First inserted page into RAM will be the first to remove</font><br /><font color="#ffffff">&nbsp;- </font><font color="#a9e976">LRU (Least Recently Used)</font><font color="#ffffff">: Least Recently accessed page will be the first page to be removed from RAM</font></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Segmentation</font></h2>
+
+<div class="paragraph"><font color="#ffffff">Like paging, a process is divided into segments of different size and each segment will be placed into frames with fitting size.</font></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/segment-map-table_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">File Systems</font></h2>
+
+<div class="paragraph"><font color="#ffffff">A </font><font color="#a9e976">file</font><font color="#ffffff"> is a type of data structure that stores sequence of records. Files can be simple (plain text) or complex (specially-formatted). A collection of data is stored in a file, collection of files is known as a </font><font color="#a9e976">Directory</font><font color="#ffffff">, and a collection of directory is called a </font><font color="#a9e976">File System</font><font color="#ffffff">. File management takes care of File Structure, Recovering Free Space, Disk Space Assignment to the files, and Tracking Data Location.</font></div>
+
+<div class="paragraph"><font color="#ffffff">* Attributes of a File</font><ul><li><font color="#ffffff">Name, Identifier (Unique tag(number) within the file system), Type, Location, Size, Protection, Time &amp; Date</font></li></ul><font color="#ffffff">* Operations on a File</font><ul><li><font color="#ffffff">Create, Open, Write, Read, Re-position/Seek, Delete, Close, Rename</font></li></ul><font color="#ffffff">* File Access Methods</font><ul><li><font color="#a9e976">Sequential Access</font><font color="#ffffff"> - OS reads the file word (few bytes) by word (ie: audio and video files)</font></li><li><font color="#a9e976">Direct Access</font><font color="#ffffff"> - Generally implemented in a database system, it will only access the given block/record#</font></li><li><font color="#a9e976">Indexed Access</font><font color="#ffffff"> - Built on top of sequential, but uses an index to control the pointer while accessing the files</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">* A shared file or directory will allow multiple users to access/edit the same file. These multiple paths to the shared location can be either a </font><font color="#00e6f9">symbolic (logical/soft) link</font><font color="#ffffff"> or </font><font color="#f56824">hard (physical) link</font><font color="#ffffff">. When a shared file gets deleted,</font><ul><li><font color="#ffffff">If it's a </font><font color="#00e6f9">soft link</font><font color="#ffffff">, the file will be deleted locally and we are left with a dangling pointer</font></li><li><font color="#ffffff">If it's a </font><font color="#f56824">hard link</font><font color="#ffffff">, the actual file will get deleted after deleting all reference to that file</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">*A file system is divided into different layers</font><ul><li><font color="#a9e976">Application Programs</font><font color="#ffffff"> =&gt; </font><font color="#a9e976">Logical File System</font><font color="#ffffff"> =&gt; </font><font color="#a9e976">File Organization Module</font><font color="#ffffff"> =&gt; </font><font color="#a9e976">Basic File System</font><font color="#ffffff"> =&gt; </font><font color="#a9e976">I/O Control</font><font color="#ffffff"> =&gt; </font><font color="#a9e976">Device</font></li></ul><ul><li><font color="#ffffff">&nbsp;</font></li><li><font color="#ffffff">When the application program asks for a file, it is directed to the logical file system. The logical file system contains the meta data of the file and directory structure. Files are divided into various logical blocks which are stored in the hard disk. The hard disk is divided into various tracks and sectors (each track/sector&nbsp;blocks contain its own specific type&nbsp;of process). In order to store and retrieve files, the logical blocks need to be mapped to physical blocks. This mapping is done by file organization module and it also manages free space. Once the file organization module decides which physical block the application program needs, it passes the info onto the basic file system.&nbsp; The basic file system issues commands to the I/O control to fetch those blocks (because the hard disk is a type of&nbsp;I/O). The I/O controls contains the codes to access the hard disk. These codes are known as device drivers and they also handle interrupts.</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">* MBR (Master Boot Record)</font><ul><li><font color="#ffffff">It is the info present in the first sector of any hard disk - It contains where the OS is located in the hard disk and how it can be booted in the RAM</font></li><li><font color="#ffffff">It also includes a partition table which locates every partition in the hard disk</font></li><li><font color="#ffffff">When you turn on the computer...</font></li></ul>&nbsp; &nbsp; &nbsp; <font color="#ffffff">Since the main memory is volatile, the CPU cannot access the main memory directly. However, there is a special program called BIOS which is stored in ROM and it gets accessed by the CPU first. The BIOS contains the code which causes the CPU to access the 1st partition of the hard disk =&gt; MBR, which guides the CPU on how to load the OS onto the RAM</font></div>
+
+<div class="paragraph"><font color="#ffffff">* Data Structures on the Disk</font><ul><li><font color="#ffffff">Boot Control Block, Volume Control Block, Directory Structure, File Control Block (info on FCB can be found by: ls -lrt)</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">* Directory Implementation</font><ul><li><font color="#a9e976">Linear List</font><font color="#ffffff">: All files in the directory point to data blocks and the next file in the directory</font></li><li><font color="#a9e976">Hash Table</font><font color="#ffffff">: The keys are the file names and the values are pointers to the data blocks</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">* Allocation Methods - used to allocate disk space to the files</font><ul><li><font color="#a9e976">Contiguous Allocation</font></li><li><font color="#a9e976">Linked Allocation</font><font color="#ffffff"> - each disk block is linked to the next</font></li><li><font color="#a9e976">File Allocation Table</font><font color="#ffffff"> - A table contains info on all the disk block links</font></li><li><font color="#a9e976">Indexed Allocation</font><font color="#ffffff"> - stores all disk pointers in one of the blocks (indexed block) since table takes too much space</font></li><li><font color="#a9e976">Inode</font><font color="#ffffff"> - An inode is a type of data structure that contains information on the attributes of the file and the disk block location of where the data of the file is stored in the disk. It may also contain pointers to other inodes.</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">* Everything in Linux/Unix is a file =&gt;&nbsp;Everything in Linux/Unix is actually an inode</font></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/inode_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><font color="#ffffff">* Free Space Management</font><br /><font color="#ffffff">&nbsp;- </font><font color="#f56824">Bit vector</font><font color="#ffffff">: stores 1 if the space bit is free or else 0</font><br /><font color="#ffffff">&nbsp;- </font><font color="#f56824">Linked List</font><font color="#ffffff">: Contains a list of pointers to free blocks on disk</font><br /><font color="#ffffff">* Disk Scheduling Algorithms - To select a disk request from the queue of IO requests and decide which request will be processed first</font><ul><li><font color="#00e6f9">FCFS (First Come First Serve)</font></li><li><font color="#00e6f9">SSTF (Shortest Seek Time First)</font><font color="#ffffff"> - The disk arm performs the next request with the least arm movement</font></li><li><font color="#00e6f9">SCAN</font><font color="#ffffff"> - The disk arm moves into a particular direction till the end (to read data) and then moves the opposite direction</font></li><li><font color="#00e6f9">Look</font><font color="#ffffff"> - The disk arm moves into 1 direction but not till the end (but either to the smallest or biggest block) then the opposite direction</font></li></ul></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer">
+
+<style type="text/css">
+	@font-face {
+		font-family: SQMarket-Medium;
+		font-style: normal;
+		font-weight: 500;
+		src:
+			url("http://cdn2.editmysite.com/fonts/SQ_Market/sqmarket-medium.woff2") format("woff2"),
+			url("http://cdn2.editmysite.com/fonts/SQ_Market/sqmarket-medium.woff") format("woff");
+	}
+</style>
+
+<div id="weebly-footer-signup-container-v3">
+	<a
+		href="https://www.weebly.com/signup?utm_source=internal&amp;utm_medium=footer"
+		target="_blank"
+		class="signup-container-header"
+		id="signup-link-href"
+	>
+		<div class="powered-by">
+			<div class="footer-published-ab-powered-by">
+				Powered by <span class="link weebly-icon"></span>
+				<img class="footer-ab-published-toast-image" src="../cdn2.editmysite.com/images/site/footer/footer-toast-published-image-1.png">
+				<span class="footer-ab-published-toast-text">Create your own unique website with customizable templates.</span>
+				<span class="footer-ab-published-toast-button-wrapper">
+					<button class="footer-published-ab-button">Get Started</button>
+				</span>
+			</div>
+		</div>
+	</a>
+</div>
+
+<script type="text/javascript" src="../cdn2.editmysite.com/js/site/footerSignupdf65.js?buildTime=1659557836"></script>
+<script type="text/javascript">
+	if (document.readystate === 'complete') {
+		Weebly.footer.setupContainer('cdn2.editmysite.com', '1659557836');
+	} else {
+		document.addEventListener('DOMContentLoaded', function() {
+			Weebly.footer.setupContainer('cdn2.editmysite.com', '1659557836');
+		});
+	}
+</script>
+</div>
+    </div><!-- end footer-wrap -->
+  </div><!-- /.wrapper -->
+
+  <div id="navMobile" class="nav mobile-nav">
+    <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+    <ul class="wsite-menu-default">
+    		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+    			<a
+    						href="index.html"
+    				class="wsite-menu-item"
+    				>
+    				Home
+    			</a>
+    			
+    		</li>
+    		<li id="pg763883204290499893" class="wsite-menu-item-wrap">
+    			<a
+    						href="topics.html"
+    				class="wsite-menu-item"
+    				>
+    				Topics
+    			</a>
+    			
+    		</li>
+    		<li id="pg156041258822275539" class="wsite-menu-item-wrap">
+    			<a
+    						href="algorithms-i.html"
+    				class="wsite-menu-item"
+    				>
+    				Algorithms I
+    			</a>
+    			
+    		</li>
+    		<li id="pg822074742203037227" class="wsite-menu-item-wrap">
+    			<a
+    						href="algorithms-ii.html"
+    				class="wsite-menu-item"
+    				>
+    				Algorithms II
+    			</a>
+    			
+    		</li>
+    </ul>
+  </div>
+
+	<script type="text/javascript" src="files/theme/plugins72c5.js?1565969634"></script>
+  <script type="text/javascript" src="files/theme/custom72c5.js?1565969634"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="../cdn2.editmysite.com/js/site/main-customer-accounts-sitedf65.js?buildTime=1659557836"></script>
+
+		<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-7870337-1']);
+	_gaq.push(['_setDomainName', 'none']);
+	_gaq.push(['_setAllowLinker', true]);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		// NOTE: keep the [1] if you replace this code. Otherwise cookie banner scripts won't be first on the page
+		var s = document.getElementsByTagName('script')[1]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	_W.Analytics = _W.Analytics || {'trackers': {}};
+	_W.Analytics.trackers.wGA = '_gaq';
+</script>
+
+<script type="text/javascript" async=1>
+	// NOTE: keep the getElementsByTagName(o)**[1]** if you replace this code. Otherwise cookie banner scripts won't be first on the page
+	;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+			p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+			};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[1];n.async=1;
+			n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,'script','../cdn2.editmysite.com/js/wsnbn/snowday262.js','snowday'));
+
+	var r = [99, 104, 101, 99, 107, 111, 117, 116, 46, 40, 119, 101, 101, 98, 108, 121, 124, 101, 100, 105, 116, 109, 121, 115, 105, 116, 101, 41, 46, 99, 111, 109];
+	var snPlObR = function(arr) {
+		var s = '';
+		for (var i = 0 ; i < arr.length ; i++){
+			s = s + String.fromCharCode(arr[i]);
+		}
+		return s;
+	};
+	var s = snPlObR(r);
+
+	var regEx = new RegExp(s);
+
+	_W.Analytics = _W.Analytics || {'trackers': {}};
+	_W.Analytics.trackers.wSP = 'snowday';
+	_W.Analytics.user_id = '50158331';
+	_W.Analytics.site_id = '258110484374261460';
+
+	var drSegmentsTag = document.getElementById('drSegments');
+	if (drSegmentsTag) {
+		_W.Analytics.spContexts = _W.Analytics.spContexts || [];
+
+		var segmentData = JSON.parse(drSegmentsTag.innerText);
+		segmentData.forEach(function(test) {
+			_W.Analytics.spContexts.push({
+				schema: "iglu:com.weebly/context_ab_segment/jsonschema/1-0-0",
+				data: {
+					test_id: test.name,
+					segment: test.variant,
+				}
+			});
+		});
+	}
+
+
+	(function(app_id, ec_hostname, discover_root_domain) {
+		var track = window[_W.Analytics.trackers.wSP];
+		if (!track) return;
+		track('newTracker', app_id, ec_hostname, {
+			appId: app_id,
+			post: true,
+			platform: 'web',
+			discoverRootDomain: discover_root_domain,
+			cookieName: '_snow_',
+			contexts: {
+				webPage: true,
+				performanceTiming: true,
+				gaCookies: true
+			},
+			crossDomainLinker: function (linkElement) {
+				return regEx.test(linkElement.href);
+			},
+			respectDoNotTrack: true
+		});
+		track('trackPageView', _W.Analytics.user_id+':'+_W.Analytics.site_id, _W.Analytics.spContexts);
+		track('crossDomainLinker', function (linkElement) {
+			return regEx.test(linkElement.href);
+		});
+	})(
+		'_wn',
+		'ec.editmysite.com',
+		false
+	);
+</script>
+
+
+
+
+
+<script>
+	(function(jQuery) {
+		try {
+			if (jQuery) {
+				jQuery('div.blog-social div.fb-like').attr('class', 'blog-social-item blog-fb-like');
+				var $commentFrame = jQuery('#commentArea iframe');
+				if ($commentFrame.length > 0) {
+					var frameHeight = jQuery($commentFrame[0].contentWindow.document).height() + 50;
+					$commentFrame.css('min-height', frameHeight + 'px');
+				}
+				if (jQuery('.product-button').length > 0){
+					jQuery(document).ready(function(){
+						jQuery('.product-button').parent().each(function(index, product){
+							if(jQuery(product).attr('target') == 'paypal'){
+								if (!jQuery(product).find('> [name="bn"]').length){
+									jQuery('<input>').attr({
+										type: 'hidden',
+										name: 'bn',
+										value: 'DragAndDropBuil_SP_EC'
+									}).appendTo(product);
+								}
+							}
+						});
+					});
+				}
+			}
+			else {
+				// Prototype
+				$$('div.blog-social div.fb-like').each(function(div) {
+					div.className = 'blog-social-item blog-fb-like';
+				});
+				$$('#commentArea iframe').each(function(iframe) {
+					iframe.style.minHeight = '410px';
+				});
+			}
+		}
+		catch(ex) {}
+	})(window._W && _W.jQuery);
+</script>
+
+<script>
+	window._W.isEUUser = false;
+	window._W.showCookieToAll = "";
+</script>
+
+
+	</body>
+
+<!-- Mirrored from kannikaenlinea.weebly.com/operating-system-ii.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Aug 2022 23:24:15 GMT -->
+</html>

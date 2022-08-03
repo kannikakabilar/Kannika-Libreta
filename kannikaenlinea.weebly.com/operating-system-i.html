@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from kannikaenlinea.weebly.com/operating-system-i.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Aug 2022 23:24:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<title>Operating System I - KANNIKA EN LINEA</title><meta property="og:site_name" content="KANNIKA EN LINEA" />
+<meta property="og:title" content="Operating System I" />
+<meta property="og:description" content="KANNIKA EN LINEA" />
+<meta property="og:image" content="uploads/5/0/1/5/50158331/batch-operating-system.jpg" />
+<meta property="og:image" content="uploads/5/0/1/5/50158331/4-01-threaddiagram.jpg" />
+<meta property="og:image" content="uploads/5/0/1/5/50158331/process-state-diagram.jpg" />
+<meta property="og:url" content="operating-system-i.html" />
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="../cdn2.editmysite.com/css/sitesdf65.css?buildTime=1659557836" />
+<link rel="stylesheet" type="text/css" href="../cdn2.editmysite.com/css/old/fancybox4e0b.css?1659557836" />
+<link rel="stylesheet" type="text/css" href="../cdn2.editmysite.com/css/social-icons3d3a.css?buildtime=1659557836" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style21ca.css?1659560236" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Quicksand:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Alegreya+SC:400,700,400italic,700italic&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Quicksand" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {color:#000 !important;}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-family:"Alegreya SC" !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-size:16px !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+<link rel='stylesheet' type='text/css' href='../cdn2.editmysite.com/css/old/slideshow/slideshow4e0b.css?1659557836' />
+
+		<script src='files/templateArtifacts21ca.js?1659560236'></script>
+<script>
+var STATIC_BASE = 'http://cdn1.editmysite.com/';
+var ASSETS_BASE = 'http://cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='../ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="../cdn2.editmysite.com/js/lang/en/stl3db6.js?buildTime=1659557836&amp;"></script>
+<script src="../cdn2.editmysite.com/js/site/maindf65.js?buildTime=1659557836"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='kannikaenlinea.weebly.com'; </script><script>_W = _W || {};
+			_W.customerLocale = "en";
+			_W.storeName = null;
+			_W.isCheckoutReskin = false;
+			_W.storeCountry = "CA";
+			_W.storeCurrency = "CAD";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "258110484374261460";
+			com_userID = "50158331";</script><script type='text/javascript' src='../cdn2.editmysite.com/js/old/slideshow-jqdf65.js?buildTime=1659557836'></script>
+<script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="../cdn2.editmysite.com/js/lang/en/stl3db6.js?buildTime=1659557836&amp;"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "../www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"174265258517029121","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"763883204290499893","title":"Topics","url":"topics.html","target":"","nav_menu":false,"nonclickable":false},{"id":"156041258822275539","title":"Algorithms I","url":"algorithms-i.html","target":"","nav_menu":false,"nonclickable":false},{"id":"822074742203037227","title":"Algorithms II","url":"algorithms-ii.html","target":"","nav_menu":false,"nonclickable":false}],
+			"653682310679767363",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{}
+		)
+	}
+//-->
+</script>
+		
+		<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="../static.zotabox.com/6/9/6972ea4fe8e76a20caa3b853ee786fd5/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="header-page  wsite-page-operating-system-i  full-width-body-off header-overlay-on alt-nav-off  wsite-theme-light"><div class="wrapper">
+    <div class="birdseye-header">
+      <div class="nav-wrap">
+        <div class="container">
+          <div class="logo"><span class="wsite-logo">
+
+	<a href="index.html">
+	
+	<span id="wsite-title">KANNIKA EN LINEA</span>
+	
+	</a>
+
+</span></div>
+          <div class="nav desktop-nav"><ul class="wsite-menu-default">
+		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg763883204290499893" class="wsite-menu-item-wrap">
+			<a
+						href="topics.html"
+				class="wsite-menu-item"
+				>
+				Topics
+			</a>
+			
+		</li>
+		<li id="pg156041258822275539" class="wsite-menu-item-wrap">
+			<a
+						href="algorithms-i.html"
+				class="wsite-menu-item"
+				>
+				Algorithms I
+			</a>
+			
+		</li>
+		<li id="pg822074742203037227" class="wsite-menu-item-wrap">
+			<a
+						href="algorithms-ii.html"
+				class="wsite-menu-item"
+				>
+				Algorithms II
+			</a>
+			
+		</li>
+</ul>
+</div>
+          <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner-wrap">
+      <div class="wsite-elements wsite-not-footer wsite-header-elements">
+	<div class="wsite-section-wrap">
+	<div  class="wsite-section wsite-header-section wsite-section-bg-image" style="height: auto;background-image: url(_/uploads/5/0/1/5/50158331/background-images/131199171.html) ;background-repeat: no-repeat ;background-position: 50% 50% ;background-size: 100% ;background-color: transparent ;background-size: cover;" >
+		<div class="wsite-section-content">
+			
+          <div class="container">
+            <div class="banner">
+				<div class="wsite-section-elements">
+					<h2 class="wsite-content-title">Operating System I</h2>
+				</div>
+			</div>
+          </div>
+      
+		</div>
+		<div class=""></div>
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="main-wrap">
+      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-21" style="background-color: #020202;background-image: none;" >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title"><font color="#a9e4f8">Contents</font></h2>
+
+<div class="paragraph"></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Types of OS</font></h2>
+
+<div class="paragraph"><strong><font color="#ffffff" size="5">Batch OS</font></strong><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Popular during the 70s, this technique groups similar types of programs (jobs) together in a batch and then executes them all at once</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; The system puts all of the jobs in a queue on a basis of First-Come-First-Serve, and then executes them one-by-one</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; </font><font color="#e97676">Drawback:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp;&nbsp;May cause starvation - if the 1st job takes too long to execute, the other jobs would have to wait very long or may never get to execute</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Not Interactive - Programs that require user's input can't be executed in Batch OS</font></div>
+
+<div><div style="height:20px;overflow:hidden"></div>
+<div id='156420836472786670-slideshow'></div>
+<script type='text/javascript'>
+(function(jQuery) {
+function init() { window.wSlideshow && window.wSlideshow.render({elementID:"156420836472786670",nav:"none",navLocation:"bottom",captionLocation:"bottom",transition:"fade",autoplay:"0",speed:"5",aspectRatio:"auto",showControls:"true",randomStart:"false",images:[{"url":"5/0/1/5/50158331/batch-operating-system.jpg","width":"840","height":"323"},{"url":"5/0/1/5/50158331/multiprocessing-operating-system12.jpg","width":"544","height":"310"},{"url":"5/0/1/5/50158331/multitasking-operating-system.jpg","width":"550","height":"373"},{"url":"5/0/1/5/50158331/rtos.jpg","width":"800","height":"364"},{"url":"5/0/1/5/50158331/client-server-and-p2p-network-models.jpg","width":"850","height":"345"}]}) }
+jQuery(document).ready(init);
+})(window.jQuery)
+</script>
+
+<div style="height:20px;overflow:hidden"></div></div>
+
+<div class="paragraph"><strong><font color="#ffffff" size="5">Multiprogramming OS<br />&#8203;</font></strong><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; An extension of Batch OS but the CPU starts onto the next program while the first program is writing its output to I/O<br />&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; There's still no user interaction during the program's execution</span></div>
+
+<div class="paragraph"><strong><font color="#ffffff" size="5">Multiprocessing OS<br />&#8203;</font></strong><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Parallel computing is attained with the use of more than one processor.&nbsp; So more than 1 process can be executed at the same time, increasing throughput and reliability but its complex since multiple CPUs modify the same memory</span></div>
+
+<div class="paragraph"><strong><font color="#ffffff" size="5">Multitasking OS<br />&#8203;</font></strong><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Allows more than 1 process to seemingly execute at the same time with a single CPU. It also has a well-defined memory management</span></div>
+
+<div class="paragraph"><strong><font color="#ffffff" size="5">Network OS<br />&#8203;</font></strong><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Runs on a server that manages data, users, groups, security, applications and other networking functions</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Main purpose is to manage a resource (ie: printers or shared application) among multiple computers in a network</font><br /><font color="#ffffff">&#8203;&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Application: routers, switch, firewall ; Types: Client-Server, Peer-to-Peer</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Pro: security is managed by servers, upgrades can be easily integrated, allows remote access</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; </font><font color="#e97676">Con:</font><font color="#ffffff"> expensive, regular maintenance is required, dependent on a central location&nbsp;</font><br /><br /></div>
+
+<div class="paragraph"><strong><font color="#ffffff" size="5">Real Time OS<br />&#8203;</font></strong><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Contain very strict time requirements, each job carries a&nbsp; certain deadline - if not completed during this timeline, the job is rendered useless<br />&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Process data as it comes in without buffer delay so takes very little memory space<br />&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Application: system that provides up-to-date and minute information on stock prices, airline reservation system<br />&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; 2 Types:<br />&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp;&nbsp;Hard real-time: guarantee that critical tasks complete on time, all data is stored in ROM, no virtual memory (ex: anti-lock breaks)<br />&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Soft real-time: critical real-time task gets priority over others until complete (ex: Virtual reality, planetary rovers)</span></div>
+
+<div class="paragraph"><strong><font color="#ffffff" size="5">Time-Sharing OS<br />&#8203;</font></strong><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Main objective is to minimize response time unlike Multiprogramming Batch system is to maximize CPU use</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Many jobs are executed by the CPU by switching between them and the switches occur frequently so user can receive quick&nbsp; response</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; for example if there are n users then each user gets x amount of CPU time (implement Round Robin CPU Scheduling)</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Systems with BatchOS have been modified to Time-sharing OS</font><br /><font color="#ffffff">&#8203;&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; </font><font color="#e97676">Drawback</font><font color="#ffffff">: shared memory so data must be protected from other users while its being transferred</font></div>
+
+<div class="paragraph"><strong><font color="#ffffff" size="5">Distributed OS<br />&#8203;</font></strong><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Uses multiple central processors to serve multiple applications and multiple users<br />&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Processors are referred to as nodes, computers, sites - Uses: peer-to-peer, bitcoin, telephone communication<br />&nbsp; &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; Processors are connected through communication lines (ie: high-speed data buses, telephone lines)</span><br /><br /></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Process Synchronization</font></h2>
+
+<div class="paragraph"><font color="#ffffff">When there are multiple processes, there are 2 categories:</font><br /><font color="#ffffff">&nbsp; &nbsp;&nbsp;</font><font color="#18d4ff">Independent Processes</font><font color="#ffffff"> - execution of 1 process doesn't affect the execution of another process</font><br /><font color="#ffffff">&nbsp; &nbsp; </font><font color="#18d4ff">Cooperative Processes</font><font color="#ffffff"> - execution of 1 process affects the execution of another (especially when both processes is accessing the same shared resource) so it needs to synchronized</font><br /><font color="#ffffff">&#8203;&nbsp; &nbsp; &nbsp; &nbsp; =&gt; </font><font color="#18d4ff">Race Condition</font><font color="#ffffff"> - When the outcome of the cooperative processes are affected by the order of execution or by how they are synchronized</font><br /><br /><font color="#ffffff">There are 4 main&nbsp; sections of a program for cooperative processes:</font><br /><font color="#ffffff">&nbsp; &nbsp; 1) entry section&nbsp; &nbsp; 2) </font><font color="#18d4ff">critical section</font><font color="#ffffff"> (This is where a shared resource is accessed)&nbsp; &nbsp;3) exit section&nbsp; &nbsp; 4) remainder section</font><br /><br /><font color="#ffffff">There are 4 conditions for synchronization of when cooperative process enters a critical section:</font><br /><font color="#ffffff">&nbsp; &nbsp; 1) Mutual Exclusion&nbsp; &nbsp; 2) Progress (process that doesn't need to get into CS shouldn't block other processes from getting CS)&nbsp; &nbsp;</font><br /><font color="#ffffff">&nbsp; &nbsp;&nbsp;3) Bounded Waiting (should not wait infinitely)&nbsp; &nbsp;4) Portability (can be implemented in any OS &amp; architecture)</font><br />&#8203;<br /><font color="#ffffff">* </font><font color="#18d4ff">Pre-emption</font><font color="#ffffff">: When a process gets pre-empted, then it is interrupted from using the CPU because a higher priority process wants the CPU</font></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Solutions to Critical Section</font></h2>
+
+<div class="paragraph" style="text-align:left;"><font color="#ffffff"><font size="4">Test Set and Lock (Hardware Solution)</font><br /></font><font color="#ffffff">&nbsp;- Change the value of lock to true as soon as it becomes available (essentially, store the previous value of the lock for while loop condition and set lock as acquired in 1 step, as if executing it simultaneously) =&gt; so if the lock was already acquired we are simply restating that it is acquired but if it's not then we acquire it so that our process can execute its critical section<br />---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</font><br /></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:45.070422535211%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">&nbsp;bool TSL(bool lock){<br />&nbsp; &nbsp; bool initial = lock;<br />&nbsp; &nbsp; lock = true;<br />&nbsp; &nbsp; return initial;<br />}<br />// Entry section - initialize lock value<br />while(</font><span style="color:rgb(255, 255, 255)">TSL(lock)){ // no op }<br />// Critical section<br />// Exit section<br />lock = false;</span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:54.929577464789%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">Some device architecture allows the steps in the TSL function to be performed simultaneously without pre-emption, guaranteeing mutual exclusion but this might not hold in all device architecture so this method is not portable</font></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><font color="#ffffff" size="4">Peterson's Solution</font><br /><font color="#ffffff">----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br />int turn;&nbsp; int waiting[2] = {false};&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// Shared Variables</font></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">// Process </font><font color="#9789e8">0</font><br /><font color="#ffffff">do{</font><br /><font color="#ffffff">// Entry Section</font><br /><font color="#ffffff">&nbsp; &nbsp; waiting[</font><font color="#9789e8">0</font><font color="#ffffff">] = true;</font><br /><font color="#ffffff">&nbsp; &nbsp; turn = </font><font color="#9789e8">0</font><font color="#ffffff">;</font><br /><font color="#ffffff">&nbsp; &nbsp; while(turn == </font><font color="#9789e8">0</font><font color="#ffffff"> &amp;&amp; waiting[1] == true){ // no op - just wait }</font><br /><font color="#ffffff">// Critical Section</font><br /><font color="#ffffff">// . . .</font><br /><font color="#ffffff">// Exit Section</font><br /><font color="#ffffff">waiting[</font><font color="#9789e8">0</font><font color="#ffffff">] = false;<br />// Remainder Section<br />// . . .<br />} while(true)</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">// Process </font><font color="#e9a476">1</font><br /><font color="#ffffff">do{</font><br /><font color="#ffffff">// Entry Section</font><br /><font color="#ffffff">&nbsp; &nbsp; waiting[</font><font color="#e9a476">1</font><font color="#ffffff">] = true;</font><br /><font color="#ffffff">&nbsp; &nbsp; turn = </font><font color="#e9a476">1</font><font color="#ffffff">;</font><br /><font color="#ffffff">&nbsp; &nbsp; while(turn == </font><font color="#e9a476">1</font><font color="#ffffff"> &amp;&amp; waiting[0] == true){ // no op - just wait }</font><br /><font color="#ffffff">// Critical Section</font><br /><font color="#ffffff">// . . .</font><br /><font color="#ffffff">// Exit Section</font><br /><font color="#ffffff">waiting[</font><font color="#e9a476">1</font><font color="#ffffff">] = false;<br />// Remainder Section<br />// . . .<br />} while(true)</font></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><font color="#ffffff">The Peterson's solution is mutually exclusive, allows progress, bounded waiting and portable. However, this solution involves busy waiting. When a process is in the no op while loop, it is consuming CPU cycles since it has to constantly keep checking the while loop condition.</font></div>
+
+<div class="paragraph"><font size="4" style="color:rgb(255, 255, 255)">Semaphores</font><br /><font size="3"><font color="#ffffff">Semaphores closely follow with the TSL method but instead of busy waiting, it puts the process to sleep until it can get into critical section. Semaphores is a type of built-in integer variable that performs atomic operations. There are 2 types of semaphores:</font><br /><font color="#ffffff">1) </font><font color="#18d4ff">Binary Semaphore</font><font color="#ffffff"> - values are restricted between 0 and 1. wait() only works when sem is 1 and signal only works when sem is 1</font><br /><font color="#ffffff">2) </font><font color="#18d4ff">Counting Semaphore</font><font color="#ffffff"> - unrestricted value domain, mainly used for scenarios similar to readers-writers problem - can acquire and release locks numerous times</font></font><br /><br /></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:62.535211267606%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">The following are built-in methods but just demonstrating for understanding purposes<br />// Called right before when the process is about to enter CS<br />wait(S){<br />&nbsp; &nbsp; &nbsp;/* Shown as a loop but the built-in function tells the process go to sleep and does not waste CPU cycles*/<br />&nbsp; &nbsp;</font><span style="color:rgb(255, 255, 255)">while(S&lt;=0);</span><font color="#ffffff"> <br />&#8203;&nbsp; &nbsp;&nbsp;S--;<br />}<br />// Called when leaving the CS section<br />signal(S){<br />&nbsp; &nbsp; S++;<br />&#8203;}</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:37.464788732394%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">/* Demonstrating implementation of Mutex locks */<br />acquire(lock){<br />&nbsp; &nbsp; while(lock);<br />&nbsp; &nbsp; lock = true;<br />}<br />release(lock){<br />&nbsp; &nbsp; lock = false;<br />}<br />&#8203;// may cause starvation - only 1 thread allowed into CS while sems allow multiple but only 1 process</font></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><font color="#ffffff">Semaphores are machine independent&nbsp;<span>and only allow 1 </span></font><span style="color:rgb(255, 255, 255)">process&nbsp;</span><font color="#ffffff"><span>(but many threads) into CS</span> so they are portable and mutually exclusive. But it can still cause priority inversion (where higher priority process will wait until lower priority process finishes execution) and not practical for large scale processes.</font></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Starvation</font><br />&#8203;It is a problem that occurs when low priority processes gets jammed for an unspecified time as the high priority processes keep executing. It can happen when trying to prevent priority inversion. Resource allocation design needs to take in aging factor to prevent starvation.</font></div>
+
+<div class="paragraph"><font size="4" style="color:rgb(255, 255, 255)">Deadlock</font><br /><font color="#ffffff">A set of blocked processes each holding a resource and waiting to acquire a resource held by another process. Conditions for a deadlock to occur: mutual exclusion, holding onto a resource and waiting for another, no preemption (resources cannot be taken back unless process lets it go on its own), circular wait (forming a cycle in a graph).&nbsp;</font><br /><font color="#ffffff">Methods for handling deadlock:</font><br /><font color="#ffffff">1) </font><font color="#18d4ff">Deadlock Ignorance</font><font color="#ffffff"> - Assume deadlocks will never happen and if it does systems can be restarted (most os follows this)</font><br /><font color="#ffffff">2) </font><font color="#18d4ff">Deadlock Prevention</font><font color="#ffffff"> - Violate one of the conditions required for a deadlock to occur</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; It is more practical to avoid circular wait by ordering each process in a priority</font><br /><font color="#ffffff">3) </font><font color="#18d4ff">Deadlock Avoidance</font><font color="#ffffff"> - OS must check at every step if the system will be in a safe state or an unsafe state, and will only proceed in safe path</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; It can be implemented with Banker's Algorithm</font><br /><font color="#ffffff">4) </font><font color="#18d4ff">Deadlock Detection and Recovery</font><font color="#ffffff"> - A deadlock is detected from the resource allocation graph and it either causes preemption, rollback (go back to its previous safe state) or kill 1 or more processes</font></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Synchronization Problems</font><br />&nbsp;-&nbsp;</font></div>
+
+<h2 class="wsite-content-title"><span style="color:rgb(255, 255, 255)">Threads</span></h2>
+
+<div class="paragraph"><span style="color:rgb(255, 255, 255)">Threads are a flow of execution within a process. It has its own program counter, registers to store variable values and stack to keep the history of the code it executed. However, all threads within the same process share the same program code, data segment/memory and open files. Threads are known as lightweight process because they focus on 1 or few resources while processes are resource intensive. </span><br /><br /><font color="#ffffff">Threads improve application performance through parallelism. The CPU switches rapidly back and forth among the threads (unlike in processes) giving the illusion that the threads are running in parallel. Creation, communication, and termination are faster among threads than processes. However, if a single thread in a process gets blocked then all the other threads in that process also gets blocked but processes are independent of each other and do not block each other.</font><br /><br /><font color="#ffffff">There are 2 types of threads:</font><br /><font color="#ffffff">- </font><font color="#18d4ff">User level threads</font><font color="#ffffff">: implemented by users in an application (using a thread library) that requires no hardware support. Ex: POSIX and Java threads</font><br /><font color="#ffffff">- </font><font color="#18d4ff">Kernel level threads</font><font color="#ffffff">: implemented by the OS, allowing the kernel to perform multiple simultaneous tasks involving system calls. Designed as an independent thread, blockage of another kernel level thread does not affect the remaining kernel threads. Ex: Window Solaris</font><br /><br /><font color="#ffffff">User level threads must be mapped to kernel level through one of the following models:</font><br /><font color="#ffffff">- </font><font color="#18d4ff">Many-To-One</font><font color="#ffffff">: many user level threads are mapped onto a single kernel level thread Threads are managed by the libraries in the user space.</font><br /><font color="#ffffff">- </font><font color="#18d4ff">One-To-One</font><font color="#ffffff">: creates a separate kernel thread to manage each and every user thread. Old Linux and Windows used this model allowing limited # of thread creation. Provides more concurrency than M-to-1</font><br /><font color="#ffffff">- </font><font color="#18d4ff">Many-To-Many</font><font color="#ffffff">: Gets the best of above 2. Allows unlimited user thread creation. User threads can be split among multiple kernel threads.</font><br /><br /><font color="#ffffff">Types of Thread Libraries</font><br /><font color="#ffffff">1. POSIX Pitheads: can be provided as either user or kernel level library</font><br /><font color="#ffffff">2. Windows 32: kernel level threads on Windows systems</font><br /><font color="#ffffff">3. Java Threads: based on the machine that it&rsquo;s running on</font><br /><br /><strong><font color="#e97676">Issues</font></strong><font color="#ffffff">: extensive data sharing, fork() - copy entire process or just the thread, and directing cancellation and signal() to a specific thread and not all threads.</font></div>
+
+<div><div style="height:20px;overflow:hidden"></div>
+<div id='153610643611849485-slideshow'></div>
+<script type='text/javascript'>
+(function(jQuery) {
+function init() { window.wSlideshow && window.wSlideshow.render({elementID:"153610643611849485",nav:"none",navLocation:"bottom",captionLocation:"bottom",transition:"fade",autoplay:"0",speed:"5",aspectRatio:"auto",showControls:"true",randomStart:"false",images:[{"url":"5/0/1/5/50158331/4-01-threaddiagram.jpg","width":"704","height":"406"},{"url":"5/0/1/5/50158331/thread-mapping.jpg","width":"1024","height":"768"}]}) }
+jQuery(document).ready(init);
+})(window.jQuery)
+</script>
+
+<div style="height:20px;overflow:hidden"></div></div>
+
+<h2 class="wsite-content-title"><span style="color:rgb(255, 255, 255)">Process</span></h2>
+
+<div class="paragraph"><span style="color:rgb(255, 255, 255)">We write code in a text file, and when we execute this program, it becomes a process. A process is a program that is loaded into the main memory for execution while program is the code that is stored in the hard disk.<br />A process is given a portion of the memory which is then divided into four parts: </span><ul><li><span style="color:rgb(255, 255, 255)">Stack (contains temporary data such as function parameter and local variable values) </span></li><li><span style="color:rgb(255, 255, 255)">Heap (contains dynamically allocated memory - managed via calls to new, delete, malloc, free) </span></li><li><span style="color:rgb(255, 255, 255)">Text (contains compiled program code</span></li><li><span style="color:rgb(255, 255, 255)">Data (contains global and static variables)</span></li></ul></div>
+
+<div><div style="height:20px;overflow:hidden"></div>
+<div id='316918660701372422-slideshow'></div>
+<script type='text/javascript'>
+(function(jQuery) {
+function init() { window.wSlideshow && window.wSlideshow.render({elementID:"316918660701372422",nav:"none",navLocation:"bottom",captionLocation:"bottom",transition:"fade",autoplay:"1",speed:"5",aspectRatio:"auto",showControls:"true",randomStart:"false",images:[{"url":"5/0/1/5/50158331/process-state-diagram.jpg","width":"732","height":"431"},{"url":"5/0/1/5/50158331/states-modified.jpg","width":"856","height":"483"},{"url":"5/0/1/5/50158331/process-components.jpg","width":"286","height":"379"}]}) }
+jQuery(document).ready(init);
+})(window.jQuery)
+</script>
+
+<div style="height:20px;overflow:hidden"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:71.267605633803%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><span style="color:rgb(255, 255, 255)"><strong><font size="4">Process Control Block (PCB)</font></strong> <br />A Process Control Block is a data structure maintained by the Operating System for every process. The PCB is maintained for a process throughout its lifetime, and is deleted once the process terminates and how it&rsquo;s structured along with the type of info included is dependent on the OS. The PCB contains: <br />- Process ID and the parent process ID <br />- Current process state <br />- Program counter: address of the next instruction to be executed <br />- Process priority and other CPU scheduling information <br />- Process privileges: systems and resources allowed to access <br />- Memory Management info: includes page table, memory limits and etc <br />- CPU registers used <br />- Accounting info: amount of CPU used for process execution, time limits, execution ID etc. <br />- I/O status info: includes a list of I/O devices allocated to the process</span><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:28.732394366197%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">* A computer </font><font color="#18d4ff">program</font><font color="#ffffff"> is usually written by a computer programmer in a programming language, it maybe 1 line of code or millions. A part of a computer program that performs a well-defined task is known as an </font><font color="#18d4ff">algorithm</font><font color="#ffffff">. A collection of computer programs, libraries and related data are referred to as a </font><font color="#18d4ff">software</font><font color="#ffffff">.</font></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><span style="color:rgb(255, 255, 255)"><font size="4">Process Scheduling</font><br />The act of determining which process is in the ready state, and should be moved to the running state is known as <u>Process Scheduling</u>. The OS maintains the process&rsquo; PCB in queues. Each queue is categorized based on the process&rsquo; state and they are implemented using linked lists. </span><ul><li><font color="#18d4ff">Job Queue</font><font color="#ffffff">: All the processes initially gets stored in the job queue and it is maintained in the secondary memory </font></li><li><font color="#18d4ff">Ready Queue</font><font color="#ffffff">: It is maintained in primary memory where processes are waiting to get picked to be executed by the CPU. </font></li><li><font color="#18d4ff">Waiting/Device Queue</font><font color="#ffffff">: Processes waiting for a device to become available are placed in Device Queues. There are unique device queues available for each I/O device. </font></li></ul> &#8203;<font size="4" style="color:rgb(255, 255, 255)">Schedulers</font><br /><font color="#ffffff">* </font><font color="#76cae9">Non Pre-emptive Scheduling</font><font color="#ffffff">: When the currently executing process gives up the CPU voluntarily.</font><br /><font color="#ffffff">* </font><font color="#76cae9">Pre-emptive Scheduling</font><font color="#ffffff">: When the operating system decides to favor another process, pre-empting the currently executing process. </font><ul><li><font color="#18d4ff">Long-term scheduler</font><font color="#ffffff">: It is a job scheduler that chooses the processes from the pool (secondary memory) and puts them in the ready queue maintained in the primary memory. It must choose a perfect mix of IO bound and CPU bound processes so neither CPU nor IO is left idling for too long. </font></li><li><font color="#18d4ff">Short-term scheduler (dispatcher)</font><font color="#ffffff">: It is a CPU scheduler that selects one of the Jobs from the ready queue and dispatches to the CPU for the execution. It must prevent starvation by giving all processes from ready queue a chance to execute. </font></li><li><font color="#18d4ff">Medium-term scheduler</font><font color="#ffffff">: It takes care of swapping where it removes the process from the running state (and is blocked waiting for IO) to make room for the other processes and the suspended process is put into secondary memory. </font></li></ul> <span style="color:rgb(255, 255, 255)"><font size="4">Context Switching</font><br />&nbsp; &nbsp; - Switching the CPU to another process requires saving the state of the old process and loading the saved state for the new process. This task is known as a Context Switch.<br />&nbsp; &nbsp; - The context of a process is represented in the Process Control Block(PCB) of a process; it includes the value of the CPU registers, the process state and memory-management information. When a context switch occurs, the Kernel saves the context of the old process in its PCB and loads the saved context of the new process scheduled to run.<br /><br />&lt;insert code using fork() to create new process and execlp()&gt;</span></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">CPU Scheduling</font></h2>
+
+<div class="paragraph"><font color="#ffffff">A CPU scheduling algorithm should consider the following criteria:</font><br /><font color="#ffffff">&nbsp; &nbsp; - </font><font color="#18d4ff">CPU Utilization</font><font color="#ffffff">: CPU cycles should not be wasted</font><br /><font color="#ffffff">&#8203;&nbsp; &nbsp; - </font><font color="#18d4ff">Throughput</font><font color="#ffffff">: Total # of processes (or amount of work done) completed per unit of time</font><br /><font color="#ffffff">&#8203;&nbsp; &nbsp; - </font><font color="#18d4ff">Turnaround Time</font><font color="#ffffff">: Interval from the time of submission of the process to time of completion</font><br /><font color="#ffffff">&#8203;&nbsp; &nbsp; - </font><font color="#18d4ff">Waiting Time</font><font color="#ffffff">: Sum of periods spent waiting in the ready queue</font><br /><font color="#ffffff">&#8203;&nbsp; &nbsp; - </font><font color="#18d4ff">Response Time</font><font color="#ffffff">: Time taken from arrival time to the first response time</font><br /><font color="#ffffff">&#8203;&nbsp; &nbsp; - </font><font color="#18d4ff">Load Average</font><font color="#ffffff">: Average number of processes in the ready queue</font></div>
+
+<div class="paragraph"><font size="4" style="color:rgb(255, 255, 255)">FCFS (First Come First Serve)</font><br /><font color="#ffffff">- The process that comes in first gets executed first</font><br /><ul><li><font color="#e97676">It's Non Pre-emptive so priority of processes are not considered</font></li><li><font color="#e97676">Not optimal average waiting time</font></li><li><font color="#e97676">Causes Convoy Effect: where CPU gets stuck with a high burst-time process and short burst-time processes are lined up in ready queue</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Shortest Job First (Non Pre-emptive) &amp; Shortest Remaining Time (Pre-emptive)</font><br />&nbsp;- Execute the process with the shortest burst time</font><ul><li><font color="#e97676">High burst-time process may suffer starvation</font></li><li><font color="#e97676">Time taken by a process must be known beforehand, which is not possible</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Round Robin</font><br />&nbsp;- Each process is served by the CPU for a fixed time quantum</font><ul><li><font color="#e97676">If time quantum is too short =&gt; higher context switch and more overheads</font></li><li><font color="#e97676">&#8203;If time quantum is too long =&gt; becomes FCFS</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Priority Based Scheduling</font><br />&nbsp;- Higher priority processes are executed first, if same priority then it follows FCFS</font><ul><li><font color="#e97676">Starvation may occur for lower priority processes, so aging must be taken into account</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">HRRN (Highest Response Ration Next)</font><br />&nbsp;- Response Ratio = (wait_time + burst_time) / burst_time</font><ul><li><font color="#e97676">Cannot know burst time of every process</font></li><li><font color="#e97676">&#8203;Causes overhead for processor</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Multilevel (Feedback) Queue</font><br />- When processes can easily be categorized into different groups, then multilevel queue can be used. The ready queue is partitioned into several separate queues (if process can move from 1 sub-queue to another =&gt; feedback). Each queue has its own scheduling algorithm and priority for the CPU. For feedback queue, if a process uses too much CPU time, then it can be moved to a lower priority queue. Similarly, if a process waits too long, then it can up to a higher priority queue.</font><ul><li><font color="#e97676">Too complex and causes overheads from processes moving around queues</font></li></ul></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer">
+
+<style type="text/css">
+	@font-face {
+		font-family: SQMarket-Medium;
+		font-style: normal;
+		font-weight: 500;
+		src:
+			url("http://cdn2.editmysite.com/fonts/SQ_Market/sqmarket-medium.woff2") format("woff2"),
+			url("http://cdn2.editmysite.com/fonts/SQ_Market/sqmarket-medium.woff") format("woff");
+	}
+</style>
+
+<div id="weebly-footer-signup-container-v3">
+	<a
+		href="https://www.weebly.com/signup?utm_source=internal&amp;utm_medium=footer"
+		target="_blank"
+		class="signup-container-header"
+		id="signup-link-href"
+	>
+		<div class="powered-by">
+			<div class="footer-published-ab-powered-by">
+				Powered by <span class="link weebly-icon"></span>
+				<img class="footer-ab-published-toast-image" src="../cdn2.editmysite.com/images/site/footer/footer-toast-published-image-1.png">
+				<span class="footer-ab-published-toast-text">Create your own unique website with customizable templates.</span>
+				<span class="footer-ab-published-toast-button-wrapper">
+					<button class="footer-published-ab-button">Get Started</button>
+				</span>
+			</div>
+		</div>
+	</a>
+</div>
+
+<script type="text/javascript" src="../cdn2.editmysite.com/js/site/footerSignupdf65.js?buildTime=1659557836"></script>
+<script type="text/javascript">
+	if (document.readystate === 'complete') {
+		Weebly.footer.setupContainer('cdn2.editmysite.com', '1659557836');
+	} else {
+		document.addEventListener('DOMContentLoaded', function() {
+			Weebly.footer.setupContainer('cdn2.editmysite.com', '1659557836');
+		});
+	}
+</script>
+</div>
+    </div><!-- end footer-wrap -->
+  </div><!-- /.wrapper -->
+
+  <div id="navMobile" class="nav mobile-nav">
+    <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+    <ul class="wsite-menu-default">
+    		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+    			<a
+    						href="index.html"
+    				class="wsite-menu-item"
+    				>
+    				Home
+    			</a>
+    			
+    		</li>
+    		<li id="pg763883204290499893" class="wsite-menu-item-wrap">
+    			<a
+    						href="topics.html"
+    				class="wsite-menu-item"
+    				>
+    				Topics
+    			</a>
+    			
+    		</li>
+    		<li id="pg156041258822275539" class="wsite-menu-item-wrap">
+    			<a
+    						href="algorithms-i.html"
+    				class="wsite-menu-item"
+    				>
+    				Algorithms I
+    			</a>
+    			
+    		</li>
+    		<li id="pg822074742203037227" class="wsite-menu-item-wrap">
+    			<a
+    						href="algorithms-ii.html"
+    				class="wsite-menu-item"
+    				>
+    				Algorithms II
+    			</a>
+    			
+    		</li>
+    </ul>
+  </div>
+
+	<script type="text/javascript" src="files/theme/plugins72c5.js?1565969634"></script>
+  <script type="text/javascript" src="files/theme/custom72c5.js?1565969634"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="../cdn2.editmysite.com/js/site/main-customer-accounts-sitedf65.js?buildTime=1659557836"></script>
+
+		<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-7870337-1']);
+	_gaq.push(['_setDomainName', 'none']);
+	_gaq.push(['_setAllowLinker', true]);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		// NOTE: keep the [1] if you replace this code. Otherwise cookie banner scripts won't be first on the page
+		var s = document.getElementsByTagName('script')[1]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	_W.Analytics = _W.Analytics || {'trackers': {}};
+	_W.Analytics.trackers.wGA = '_gaq';
+</script>
+
+<script type="text/javascript" async=1>
+	// NOTE: keep the getElementsByTagName(o)**[1]** if you replace this code. Otherwise cookie banner scripts won't be first on the page
+	;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+			p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+			};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[1];n.async=1;
+			n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,'script','../cdn2.editmysite.com/js/wsnbn/snowday262.js','snowday'));
+
+	var r = [99, 104, 101, 99, 107, 111, 117, 116, 46, 40, 119, 101, 101, 98, 108, 121, 124, 101, 100, 105, 116, 109, 121, 115, 105, 116, 101, 41, 46, 99, 111, 109];
+	var snPlObR = function(arr) {
+		var s = '';
+		for (var i = 0 ; i < arr.length ; i++){
+			s = s + String.fromCharCode(arr[i]);
+		}
+		return s;
+	};
+	var s = snPlObR(r);
+
+	var regEx = new RegExp(s);
+
+	_W.Analytics = _W.Analytics || {'trackers': {}};
+	_W.Analytics.trackers.wSP = 'snowday';
+	_W.Analytics.user_id = '50158331';
+	_W.Analytics.site_id = '258110484374261460';
+
+	var drSegmentsTag = document.getElementById('drSegments');
+	if (drSegmentsTag) {
+		_W.Analytics.spContexts = _W.Analytics.spContexts || [];
+
+		var segmentData = JSON.parse(drSegmentsTag.innerText);
+		segmentData.forEach(function(test) {
+			_W.Analytics.spContexts.push({
+				schema: "iglu:com.weebly/context_ab_segment/jsonschema/1-0-0",
+				data: {
+					test_id: test.name,
+					segment: test.variant,
+				}
+			});
+		});
+	}
+
+
+	(function(app_id, ec_hostname, discover_root_domain) {
+		var track = window[_W.Analytics.trackers.wSP];
+		if (!track) return;
+		track('newTracker', app_id, ec_hostname, {
+			appId: app_id,
+			post: true,
+			platform: 'web',
+			discoverRootDomain: discover_root_domain,
+			cookieName: '_snow_',
+			contexts: {
+				webPage: true,
+				performanceTiming: true,
+				gaCookies: true
+			},
+			crossDomainLinker: function (linkElement) {
+				return regEx.test(linkElement.href);
+			},
+			respectDoNotTrack: true
+		});
+		track('trackPageView', _W.Analytics.user_id+':'+_W.Analytics.site_id, _W.Analytics.spContexts);
+		track('crossDomainLinker', function (linkElement) {
+			return regEx.test(linkElement.href);
+		});
+	})(
+		'_wn',
+		'ec.editmysite.com',
+		false
+	);
+</script>
+
+
+
+
+
+<script>
+	(function(jQuery) {
+		try {
+			if (jQuery) {
+				jQuery('div.blog-social div.fb-like').attr('class', 'blog-social-item blog-fb-like');
+				var $commentFrame = jQuery('#commentArea iframe');
+				if ($commentFrame.length > 0) {
+					var frameHeight = jQuery($commentFrame[0].contentWindow.document).height() + 50;
+					$commentFrame.css('min-height', frameHeight + 'px');
+				}
+				if (jQuery('.product-button').length > 0){
+					jQuery(document).ready(function(){
+						jQuery('.product-button').parent().each(function(index, product){
+							if(jQuery(product).attr('target') == 'paypal'){
+								if (!jQuery(product).find('> [name="bn"]').length){
+									jQuery('<input>').attr({
+										type: 'hidden',
+										name: 'bn',
+										value: 'DragAndDropBuil_SP_EC'
+									}).appendTo(product);
+								}
+							}
+						});
+					});
+				}
+			}
+			else {
+				// Prototype
+				$$('div.blog-social div.fb-like').each(function(div) {
+					div.className = 'blog-social-item blog-fb-like';
+				});
+				$$('#commentArea iframe').each(function(iframe) {
+					iframe.style.minHeight = '410px';
+				});
+			}
+		}
+		catch(ex) {}
+	})(window._W && _W.jQuery);
+</script>
+
+<script>
+	window._W.isEUUser = false;
+	window._W.showCookieToAll = "";
+</script>
+
+
+	</body>
+
+<!-- Mirrored from kannikaenlinea.weebly.com/operating-system-i.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Aug 2022 23:24:13 GMT -->
+</html>

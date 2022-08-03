@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from kannikaenlinea.weebly.com/computer-architecture.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Aug 2022 23:24:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<title>Computer Architecture - KANNIKA EN LINEA</title><meta property="og:site_name" content="KANNIKA EN LINEA" />
+<meta property="og:title" content="Computer Architecture" />
+<meta property="og:description" content="    -    How hardware and software interact     -    Outline of the system&#039;s functionality, design and compatibility     -    New computer architectures are built and tweaked inside..." />
+<meta property="og:image" content="uploads/5/0/1/5/50158331/computer-architecture.jpg" />
+<meta property="og:image" content="uploads/5/0/1/5/50158331/machine-cycle.png" />
+<meta property="og:image" content="uploads/5/0/1/5/50158331/published/alu-block4e1d.png?1644979772" />
+<meta property="og:image" content="uploads/5/0/1/5/50158331/272851315-1259325411226557-3028305253840320441-n.png" />
+<meta property="og:image" content="uploads/5/0/1/5/50158331/isa-700w.jpg" />
+<meta property="og:url" content="computer-architecture.html" />
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="../cdn2.editmysite.com/css/sitesdf65.css?buildTime=1659557836" />
+<link rel="stylesheet" type="text/css" href="../cdn2.editmysite.com/css/old/fancybox4e0b.css?1659557836" />
+<link rel="stylesheet" type="text/css" href="../cdn2.editmysite.com/css/social-icons3d3a.css?buildtime=1659557836" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style21ca.css?1659560236" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Quicksand:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Alegreya+SC:400,700,400italic,700italic&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Quicksand" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {color:#000 !important;}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-family:"Alegreya SC" !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-size:16px !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+<link rel='stylesheet' type='text/css' href='../cdn2.editmysite.com/css/old/slideshow/slideshow4e0b.css?1659557836' />
+
+		<script src='files/templateArtifacts21ca.js?1659560236'></script>
+<script>
+var STATIC_BASE = 'http://cdn1.editmysite.com/';
+var ASSETS_BASE = 'http://cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='../ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="../cdn2.editmysite.com/js/lang/en/stl3db6.js?buildTime=1659557836&amp;"></script>
+<script src="../cdn2.editmysite.com/js/site/maindf65.js?buildTime=1659557836"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='kannikaenlinea.weebly.com'; </script><script>_W = _W || {};
+			_W.customerLocale = "en";
+			_W.storeName = null;
+			_W.isCheckoutReskin = false;
+			_W.storeCountry = "CA";
+			_W.storeCurrency = "CAD";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "258110484374261460";
+			com_userID = "50158331";</script><script type='text/javascript' src='../cdn2.editmysite.com/js/old/slideshow-jqdf65.js?buildTime=1659557836'></script>
+<script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="../cdn2.editmysite.com/js/lang/en/stl3db6.js?buildTime=1659557836&amp;"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "../www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"174265258517029121","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"763883204290499893","title":"Topics","url":"topics.html","target":"","nav_menu":false,"nonclickable":false},{"id":"156041258822275539","title":"Algorithms I","url":"algorithms-i.html","target":"","nav_menu":false,"nonclickable":false},{"id":"822074742203037227","title":"Algorithms II","url":"algorithms-ii.html","target":"","nav_menu":false,"nonclickable":false}],
+			"694631685312922726",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{}
+		)
+	}
+//-->
+</script>
+		
+		<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="../static.zotabox.com/6/9/6972ea4fe8e76a20caa3b853ee786fd5/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="header-page  wsite-page-computer-architecture  full-width-body-off header-overlay-on alt-nav-off  wsite-theme-light"><div class="wrapper">
+    <div class="birdseye-header">
+      <div class="nav-wrap">
+        <div class="container">
+          <div class="logo"><span class="wsite-logo">
+
+	<a href="index.html">
+	
+	<span id="wsite-title">KANNIKA EN LINEA</span>
+	
+	</a>
+
+</span></div>
+          <div class="nav desktop-nav"><ul class="wsite-menu-default">
+		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg763883204290499893" class="wsite-menu-item-wrap">
+			<a
+						href="topics.html"
+				class="wsite-menu-item"
+				>
+				Topics
+			</a>
+			
+		</li>
+		<li id="pg156041258822275539" class="wsite-menu-item-wrap">
+			<a
+						href="algorithms-i.html"
+				class="wsite-menu-item"
+				>
+				Algorithms I
+			</a>
+			
+		</li>
+		<li id="pg822074742203037227" class="wsite-menu-item-wrap">
+			<a
+						href="algorithms-ii.html"
+				class="wsite-menu-item"
+				>
+				Algorithms II
+			</a>
+			
+		</li>
+</ul>
+</div>
+          <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner-wrap">
+      <div class="wsite-elements wsite-not-footer wsite-header-elements">
+	<div class="wsite-section-wrap">
+	<div  class="wsite-section wsite-header-section wsite-section-bg-image" style="height: auto;background-image: url(_/uploads/5/0/1/5/50158331/background-images/738888867.html) ;background-repeat: no-repeat ;background-position: 50% 50% ;background-size: 100% ;background-color: transparent ;background-size: cover;" >
+		<div class="wsite-section-content">
+			
+          <div class="container">
+            <div class="banner">
+				<div class="wsite-section-elements">
+					<h2 class="wsite-content-title">Computer Architecture</h2>
+				</div>
+			</div>
+          </div>
+      
+		</div>
+		<div class=""></div>
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="main-wrap">
+      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-17" style="background-color: #020202;background-image: none;" >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title"><font color="#fdfafa">Computer Architecture</font><br /></h2>
+
+<div class="paragraph"><font color="#ffffff">&nbsp; &nbsp; -&nbsp; &nbsp; How hardware and software interact<br />&nbsp; &nbsp; -&nbsp; &nbsp; Outline of the system's functionality, design and compatibility<br />&nbsp; &nbsp; -&nbsp; &nbsp; New computer architectures are built and tweaked inside another computer architecture or interior part of an FPGA, as a microprocessor<br />&nbsp; &nbsp; -&nbsp; &nbsp; It is basically the function of the CPU and how it controls the connected devices when a program runs</font></div>
+
+<div class="paragraph"><font color="#ffffff"><strong>System Design of Computer Architecture</strong> - includes all the hardware components in the system such as data processor, direct memory access, and GPU. It also includes data paths, memory controllers, and other abstracts ie: memory virtualization, multiprocessing</font></div>
+
+<div><div style="height:20px;overflow:hidden"></div>
+<div id='648098533203120562-slideshow'></div>
+<script type='text/javascript'>
+(function(jQuery) {
+function init() { window.wSlideshow && window.wSlideshow.render({elementID:"648098533203120562",nav:"thumbnails",navLocation:"bottom",captionLocation:"bottom",transition:"fade",autoplay:"0",speed:"5",aspectRatio:"auto",showControls:"true",randomStart:"false",images:[{"url":"5\/0\/1\/5\/50158331\/computer-architecture.jpg","width":800,"height":450,"fullHeight":619,"fullWidth":1100},{"url":"5\/0\/1\/5\/50158331\/control-unit-and-computer-block-diagram.jpg","width":630,"height":423,"fullHeight":423,"fullWidth":630}]}) }
+jQuery(document).ready(init);
+})(window.jQuery)
+</script>
+
+<div style="height:20px;overflow:hidden"></div></div>
+
+<div class="paragraph"><font color="#ffffff">There are 3 main parts to focus on when it comes to Computer Architecture: Control Unit, Arithmetic Logic Unit, and Register. We will look into the Cache component later.</font></div>
+
+<h2 class="wsite-content-title">&nbsp; &nbsp; <font color="#fdfbfb">- Control Unit&nbsp;</font></h2>
+
+<div class="paragraph"><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; -&nbsp; &nbsp; It basically directs the flow of data between CPU and the other devices<br />&nbsp; &nbsp; &nbsp; &nbsp; -&nbsp; &nbsp; Orchestrates fetching (from memory), decoding -- using *binary decoder to convert coded instructions into timing &amp; control signals that direct other units (ie:- memory, ALU, I/O devices)<br />&nbsp; &nbsp; &nbsp; &nbsp; * binary decoder = n coded input to a max of 2^n unique outputs</font><br /></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div style="height:20px;overflow:hidden"></div>
+<div id='777304682299113776-slideshow'></div>
+<script type='text/javascript'>
+(function(jQuery) {
+function init() { window.wSlideshow && window.wSlideshow.render({elementID:"777304682299113776",nav:"none",navLocation:"bottom",captionLocation:"bottom",transition:"fade",autoplay:"1",speed:"5",aspectRatio:"auto",showControls:"true",randomStart:"false",images:[{"url":"5/0/1/5/50158331/machine-cycle.png","width":"550","height":"247"},{"url":"5/0/1/5/50158331/275142085-753166542515248-35180026931876339-n.jpg","width":"566","height":"179"}]}) }
+jQuery(document).ready(init);
+})(window.jQuery)
+</script>
+
+<div style="height:20px;overflow:hidden"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">&nbsp; &nbsp; - For each instruction executed in a CPU, it goes through:<br />1) Fetch, 2) Decode, 3) Execute, and 4) Write to memory<br />&nbsp; &nbsp; - A Clock speed indicates the number of instructions a CPU can execute per second ~ typically 3.5 GHz ~ 3.5 billion instructions per second<br />&nbsp; &nbsp; - The 4 steps must be executed in order but the CPU can execute multiple steps in parallel for different instructions =&gt; several instructions are stored in the pipeline</font></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<h2 class="wsite-content-title">&nbsp; &nbsp;&nbsp;<font color="#fdfbfb">- Registers</font></h2>
+
+<div class="paragraph"><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; -&nbsp; &nbsp; A CPU register is a small set of data holding places that are part of computer processor<br />&nbsp; &nbsp; &nbsp; &nbsp; -&nbsp; &nbsp; It may hold an instruction, a storage address, temporary variable values or any kind of data</font><br /></div>
+
+<h2 class="wsite-content-title"><font color="#fdfbfb">&nbsp; &nbsp; - Arithmetic Logic Unit</font></h2>
+
+<div class="paragraph"><font color="#fffdfd">&nbsp; &nbsp; &nbsp; &nbsp; - ALUs perform arithmetic and logic operations<br />&nbsp; &nbsp; &nbsp; &nbsp; - The input and outputs values are taken and stored in the registers</font><br /></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/5/0/1/5/50158331/edited/alu-block.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/5/0/1/5/50158331/published/alu-block4e1d.png?1644979772" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">*Status codes are like carry bits from previous op or carried over for next op</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/UsK5KV1FPmA?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<h2 class="wsite-content-title"><font color="#fdfbfb">Types of Computer Architecture</font></h2>
+
+<h2 class="wsite-content-title"><font color="#fcfbfb">&nbsp; &nbsp; - John Von-Neumann Architecture</font></h2>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">&nbsp; &nbsp; -&nbsp; &nbsp; The memory unit can store general value data and instructions<br />&nbsp; &nbsp; -&nbsp; &nbsp; The Control unit has the ability to hold the instructions in the program counter (PC) the instruction register (IR)<br />&nbsp; &nbsp; -&nbsp; &nbsp; Von-Neumann's architecture is easier to execute in real hardware so it's more commonly used&nbsp;</font><br /></div>
+
+<h2 class="wsite-content-title"><font color="#fcfbfb">&nbsp; &nbsp; - Harvard Architecture</font></h2>
+
+<div class="paragraph"><font color="#ffffff">&nbsp; &nbsp; -&nbsp; &nbsp; Code/Instruction data is stored in a different memory section than the general value data<br />&nbsp; &nbsp; -&nbsp; &nbsp; Ex:- Punch card uses Harvard Architecture</font></div>
+
+<div class="paragraph"><font color="#ffffff">A <u>System Design Architecture</u> is when the computer design process is used among people and businesses for processing marketing info, and product design</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div style="height:20px;overflow:hidden"></div>
+<div id='888184189989539672-slideshow'></div>
+<script type='text/javascript'>
+(function(jQuery) {
+function init() { window.wSlideshow && window.wSlideshow.render({elementID:"888184189989539672",nav:"thumbnails",navLocation:"bottom",captionLocation:"bottom",transition:"fade",autoplay:"0",speed:"5",aspectRatio:"auto",showControls:"true",randomStart:"false",images:[{"url":"5\/0\/1\/5\/50158331\/272851315-1259325411226557-3028305253840320441-n.png","width":563,"height":364,"fullHeight":364,"fullWidth":563},{"url":"5\/0\/1\/5\/50158331\/271750653-858562401618745-3473785945992563023-n.png","width":525,"height":360,"fullHeight":360,"fullWidth":525}]}) }
+jQuery(document).ready(init);
+})(window.jQuery)
+</script>
+
+<div style="height:20px;overflow:hidden"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<h2 class="wsite-content-title"><font color="#fcfbfb">&nbsp; &nbsp; - Instruction Set Architecture</font></h2>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">&nbsp; &nbsp; -&nbsp; &nbsp; An abstract model of the computer that defines how the CPU is controlled by the software<br />&nbsp; &nbsp; -&nbsp; &nbsp; It is an interface between the hardware and software on how the CPU should get the work done<br />&nbsp; &nbsp; -&nbsp; &nbsp; Understanding how compilers make use of the instructions to execute helps developers write more efficient code<br />&nbsp; &nbsp; -&nbsp; &nbsp;When there's a built-in processor within ISA =&gt; <u>Micro-architecture</u>, where all electronic elements are connected with data pathways for optimal completion of instructions = <u>Computer Organization</u></font><br /><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div style="height:20px;overflow:hidden"></div>
+<div id='969569046181795769-slideshow'></div>
+<script type='text/javascript'>
+(function(jQuery) {
+function init() { window.wSlideshow && window.wSlideshow.render({elementID:"969569046181795769",nav:"none",navLocation:"bottom",captionLocation:"bottom",transition:"fade",autoplay:"1",speed:"5",aspectRatio:"auto",showControls:"true",randomStart:"false",images:[{"url":"5\/0\/1\/5\/50158331\/isa-700w.jpg","width":700,"height":362,"fullHeight":362,"fullWidth":700},{"url":"5\/0\/1\/5\/50158331\/avg0r.jpg","width":572,"height":424,"fullHeight":424,"fullWidth":572}]}) }
+jQuery(document).ready(init);
+})(window.jQuery)
+</script>
+
+<div style="height:20px;overflow:hidden"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:left;"><font color="#a9e4f8" size="4">3 Basic Components of Microprocessor</font><br /><font color="#ffffff">- Address lines: refers to the address of a block</font><br /><font color="#ffffff">- Data Lines: data buses used for data transfer</font><br /><font color="#ffffff">- IC Chips: vital for data processing in a microchip</font><br /><br /><strong><font color="#a9e4f8" size="4">Parts of an Instruction</font></strong><br /><span style="color:rgb(255, 255, 255)">ex: ADD R0 R1 R2</span><br /><span style="color:rgb(255, 255, 255)">&#8203; - ADD is opcode&#8203; - R0, R1, R2 are address fields&#8203; - some have mode field: how to perform op or effectiveness of address field </span><br /><br /><strong><font size="4" color="#a9e4f8">Hazard</font></strong><br /><font color="#ffffff">&#8203; - a situation that prevents the next instruction from the instruction stream from executing during its clock cycle</font><br /><font color="#ffffff">&#8203; - </font><font color="#a9e4f8">Structural Hazard:</font><font color="#ffffff"> hardware cannot support all possible combinations of instructions simultaneously in overlapped execution</font><br /><font color="#ffffff">&#8203; - To Avoid: Fully pipeline the stages</font><br /><font color="#ffffff">&#8203; - </font><font color="#a9e4f8">Data Hazard:</font><font color="#ffffff"> instruction depends on the result of the previous instruction</font><br /><font color="#ffffff">&#8203; - To Avoid: Forwarding / Add stalls </font><br /><font color="#ffffff">&#8203; - </font><font color="#a9e4f8">Control Hazard:</font><font color="#ffffff"> caused by the pipelining of branches and other instructions that change the PC</font><br /><span style="color:rgb(255, 255, 255)">&#8203; - To Avoid: Freeze or flush pipeline = holding/deleting any instruction after the branch destination is known OR use branch prediction</span><br /><br /><strong><font size="4" color="#a9e4f8">RAID (Redundant Array of Independent Disks)</font></strong><br /><span style="color:rgb(255, 255, 255)">- On a case of disk failure, =&gt; RAID can be used to prevent data loss</span><br /><font color="#ffffff">- refers to the hard drives connected and set up in ways to help accelerate / protect the performance of a computer's disk storage</font><br /><font color="#ffffff">- typically used on servers and high-performance computers</font><br /><font color="#ffffff">- 4 common types of RAID: 0, 1, 5, 10</font><br /><font color="#ffffff">- </font><font color="#a9e4f8">RAID 0</font><font color="#ffffff">: Spread data among all disks =&gt; Data loss will still occur if 1 disk is destroyed but data write is fast</font><br /><font color="#ffffff">- </font><font color="#a9e4f8">RAID 1</font><font color="#f8fbfb">:</font><font color="#ffffff"> Data is copied onto more than 1 disk =&gt; So each disk has at least 1 copy</font><br /><font color="#ffffff">- </font><font color="#a9e4f8">RAID 5</font><font color="#fefefe">:</font><font color="#ffffff"> Requires 3 or more disk =&gt; Uses parity to recover 1 disk failure at a time (RAID 6 uses double parity to handle 2 disk failures)</font><br /><font color="#ffffff">- </font><font color="#a9e4f8">RAID 10</font><font color="#ffffff">: Each data is written to various disks, data from each of these various disks are copied</font><br /><br /><strong><font size="4" color="#a9e4f8">Interrupts</font></strong><br /><font color="#ffffff">- </font><font color="#a9e4f8">Internal / Software Interrupts</font><font color="#ffffff">: Caused by special instruction and operate similar to a branch or jump instruction (usually when switching from user to supervisor to execute the instruction)</font><br /><font color="#ffffff">(exceptions caused by the program like divide by 0) - Synchronous, PC is incremented and has highest priority while vice versa for below</font><br /><font color="#ffffff">- </font><font color="#a9e4f8">External / Hardware Interrupts</font><font color="#ffffff">: Caused by an external hardware module/failure (ie: I/O devices)</font><br /><br /><strong><font size="4" color="#a9e4f8">Interrupt Service Routine</font></strong><br /><font color="#ffffff">- Deals with hardware interrupts - used if an interrupt suspends a thread, can't determine when it will be executed</font><br /><font color="#ffffff">- Not like independent threads, but more like signals - runs whenever there's a signal from either software or hardware</font><br /><br /><strong><font size="4" color="#a9e4f8">Subroutine</font></strong><br /><font color="#ffffff">- Part of code within a larger program = performs a specific task and is independent of the remaining code</font><br /><font color="#ffffff">- Can be determined when it will run</font><br /><br /><strong><font size="4" color="#a9e4f8">Hardware Methods to Establish Priority</font></strong><br /><font color="#ffffff">- Daisy-chaining: connecting all devices that can request an interrupt in a serial manner - placed by priority of device</font><br /><font color="#ffffff">- Parallel priority: uses a register for which bits are configured separately by the interrupt signal from each device</font><br /><br /><strong><font size="4" color="#a9e4f8">5 Stages of DLX pipeline</font></strong><br /><font color="#ffffff">- Instruction fetch, Instruction decode and register fetch, Execution, Memory access, Writeback</font><br /><br /><strong><font size="4" color="#a9e4f8">Write-Through Method</font></strong><br /><font color="#ffffff">&#8203; - updating the main memory for every write operation =&gt; data integrity = data is up-to-date, but not good at performance</font><br /><strong><font size="4" color="#a9e4f8">Write-Back Method</font></strong><br /><font color="#ffffff">&#8203; - only the location in cache is updated, flag is set, then later saved to RAM =&gt; saves many write cycle</font><br /><br /><strong><font size="4" color="#a9e4f8">Direct Mapping</font></strong><br /><font color="#ffffff">&#8203; - RAM is used to store data and some data is stored in the cache. </font><br /><font color="#ffffff">&#8203; - Address space is divided into 2 parts: index field and tag field</font><br /><font color="#ffffff">&#8203; - Cache is used to store tag field while index field is stored in RAM</font><br /><font color="#ffffff">&#8203; - Cache basically stores address of the Main memory which contain program data</font><br /><strong><font size="4" color="#a9e4f8">Associative Mapping</font></strong><br /><font color="#ffffff">- Uses several mapping functions to transfer data from main memory to cache memory</font><br /><font color="#ffffff">- Any main memory is mapped into any line of cache =&gt;cache memory address is not used so associative cache controls processor and interprets request</font><br /><br /><strong><font size="4" color="#a9e4f8">DMA (Direct Memory Access)</font></strong><br /><font color="#ffffff">&#8203; - Allows an input/output device to receive/send data directly to/from the main memory, w/o going through the CPU </font><br /><font color="#ffffff">&#8203; - This process is performed by the DMA controller chip to boost memory operations </font><br /><br /><strong><font size="4" color="#a9e4f8">Horizontal Microcode</font></strong><br /><font color="#ffffff">&#8203; - It contains the control signal w/o any intermediary</font><br /><font color="#ffffff">&#8203; - Contained in a wide control store that comes with several discrete micro-operations that are combined into 1 micro-instruction for simultaneous operations</font><br /><br /><strong><font size="4" color="#a9e4f8">Vertical Microcode</font></strong><br /><font color="#ffffff">&#8203; - when only 1 micro-operation is performed at each CPU cycle</font><br /><br /><font color="#ffffff">&#8203;</font><strong><font size="4" color="#a9e4f8">CPU is busy but have other tasks</font></strong><br /><span style="color:rgb(255, 255, 255)">- Create an interrupt that is non-maskable (unstoppable) and then give the jump instruction to the essential subroutine<br /><br />Data Selector =&gt; Multiplexers are used to convert octal code to binary code, where dynamic memory uses the same address lines for both row and column</span><br /><br /><font color="#ffffff">EEPROM is the type of memory whose content is erased, with the passage of electric discharge</font><br /><br /><font color="#ffffff">&#8203;For a pipeline with 'n' stages, the ideal throughput is n instructions, but pipeline does involve some overheads because it will increase cycle per instruction</font><br /><br /><font color="#ffffff">Large numbers of registers in CPU =&gt; use ALU to connect them</font><br /><br /><font color="#ffffff">If internal bus connects only register within CPU, use address register to select RAM memory address and then transfer to or from data register </font><br /><br /><strong><font color="#b5aaf6">Superscalar machine</font></strong><font color="#ffffff"> is a CPU that implements instruction-level parallelism within a single processor - can execute more than 1 instruction per clock cycle</font><br /><strong><font color="#b5aaf6">VLIW (Very Long Instruction Word)</font></strong><font color="#ffffff"> is a CPU architecture that takes advantage of instruction-level parallelism. It executes operations in parallel which is based on a fixed schedule that is determined when compiled.</font><br /><br /></div>
+
+<h2 class="wsite-content-title"></h2>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-large wsite-button-normal" href="coding-in-assembly.html" >
+<span class="wsite-button-inner">Coding In Assembly</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-large wsite-button-normal" href="assembly-projects.html" >
+<span class="wsite-button-inner">View My Assembly Projects</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer">
+
+<style type="text/css">
+	@font-face {
+		font-family: SQMarket-Medium;
+		font-style: normal;
+		font-weight: 500;
+		src:
+			url("http://cdn2.editmysite.com/fonts/SQ_Market/sqmarket-medium.woff2") format("woff2"),
+			url("http://cdn2.editmysite.com/fonts/SQ_Market/sqmarket-medium.woff") format("woff");
+	}
+</style>
+
+<div id="weebly-footer-signup-container-v3">
+	<a
+		href="https://www.weebly.com/signup?utm_source=internal&amp;utm_medium=footer"
+		target="_blank"
+		class="signup-container-header"
+		id="signup-link-href"
+	>
+		<div class="powered-by">
+			<div class="footer-published-ab-powered-by">
+				Powered by <span class="link weebly-icon"></span>
+				<img class="footer-ab-published-toast-image" src="../cdn2.editmysite.com/images/site/footer/footer-toast-published-image-1.png">
+				<span class="footer-ab-published-toast-text">Create your own unique website with customizable templates.</span>
+				<span class="footer-ab-published-toast-button-wrapper">
+					<button class="footer-published-ab-button">Get Started</button>
+				</span>
+			</div>
+		</div>
+	</a>
+</div>
+
+<script type="text/javascript" src="../cdn2.editmysite.com/js/site/footerSignupdf65.js?buildTime=1659557836"></script>
+<script type="text/javascript">
+	if (document.readystate === 'complete') {
+		Weebly.footer.setupContainer('cdn2.editmysite.com', '1659557836');
+	} else {
+		document.addEventListener('DOMContentLoaded', function() {
+			Weebly.footer.setupContainer('cdn2.editmysite.com', '1659557836');
+		});
+	}
+</script>
+</div>
+    </div><!-- end footer-wrap -->
+  </div><!-- /.wrapper -->
+
+  <div id="navMobile" class="nav mobile-nav">
+    <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+    <ul class="wsite-menu-default">
+    		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+    			<a
+    						href="index.html"
+    				class="wsite-menu-item"
+    				>
+    				Home
+    			</a>
+    			
+    		</li>
+    		<li id="pg763883204290499893" class="wsite-menu-item-wrap">
+    			<a
+    						href="topics.html"
+    				class="wsite-menu-item"
+    				>
+    				Topics
+    			</a>
+    			
+    		</li>
+    		<li id="pg156041258822275539" class="wsite-menu-item-wrap">
+    			<a
+    						href="algorithms-i.html"
+    				class="wsite-menu-item"
+    				>
+    				Algorithms I
+    			</a>
+    			
+    		</li>
+    		<li id="pg822074742203037227" class="wsite-menu-item-wrap">
+    			<a
+    						href="algorithms-ii.html"
+    				class="wsite-menu-item"
+    				>
+    				Algorithms II
+    			</a>
+    			
+    		</li>
+    </ul>
+  </div>
+
+	<script type="text/javascript" src="files/theme/plugins72c5.js?1565969634"></script>
+  <script type="text/javascript" src="files/theme/custom72c5.js?1565969634"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="../cdn2.editmysite.com/js/site/main-customer-accounts-sitedf65.js?buildTime=1659557836"></script>
+
+		<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-7870337-1']);
+	_gaq.push(['_setDomainName', 'none']);
+	_gaq.push(['_setAllowLinker', true]);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		// NOTE: keep the [1] if you replace this code. Otherwise cookie banner scripts won't be first on the page
+		var s = document.getElementsByTagName('script')[1]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	_W.Analytics = _W.Analytics || {'trackers': {}};
+	_W.Analytics.trackers.wGA = '_gaq';
+</script>
+
+<script type="text/javascript" async=1>
+	// NOTE: keep the getElementsByTagName(o)**[1]** if you replace this code. Otherwise cookie banner scripts won't be first on the page
+	;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+			p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+			};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[1];n.async=1;
+			n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,'script','../cdn2.editmysite.com/js/wsnbn/snowday262.js','snowday'));
+
+	var r = [99, 104, 101, 99, 107, 111, 117, 116, 46, 40, 119, 101, 101, 98, 108, 121, 124, 101, 100, 105, 116, 109, 121, 115, 105, 116, 101, 41, 46, 99, 111, 109];
+	var snPlObR = function(arr) {
+		var s = '';
+		for (var i = 0 ; i < arr.length ; i++){
+			s = s + String.fromCharCode(arr[i]);
+		}
+		return s;
+	};
+	var s = snPlObR(r);
+
+	var regEx = new RegExp(s);
+
+	_W.Analytics = _W.Analytics || {'trackers': {}};
+	_W.Analytics.trackers.wSP = 'snowday';
+	_W.Analytics.user_id = '50158331';
+	_W.Analytics.site_id = '258110484374261460';
+
+	var drSegmentsTag = document.getElementById('drSegments');
+	if (drSegmentsTag) {
+		_W.Analytics.spContexts = _W.Analytics.spContexts || [];
+
+		var segmentData = JSON.parse(drSegmentsTag.innerText);
+		segmentData.forEach(function(test) {
+			_W.Analytics.spContexts.push({
+				schema: "iglu:com.weebly/context_ab_segment/jsonschema/1-0-0",
+				data: {
+					test_id: test.name,
+					segment: test.variant,
+				}
+			});
+		});
+	}
+
+
+	(function(app_id, ec_hostname, discover_root_domain) {
+		var track = window[_W.Analytics.trackers.wSP];
+		if (!track) return;
+		track('newTracker', app_id, ec_hostname, {
+			appId: app_id,
+			post: true,
+			platform: 'web',
+			discoverRootDomain: discover_root_domain,
+			cookieName: '_snow_',
+			contexts: {
+				webPage: true,
+				performanceTiming: true,
+				gaCookies: true
+			},
+			crossDomainLinker: function (linkElement) {
+				return regEx.test(linkElement.href);
+			},
+			respectDoNotTrack: true
+		});
+		track('trackPageView', _W.Analytics.user_id+':'+_W.Analytics.site_id, _W.Analytics.spContexts);
+		track('crossDomainLinker', function (linkElement) {
+			return regEx.test(linkElement.href);
+		});
+	})(
+		'_wn',
+		'ec.editmysite.com',
+		false
+	);
+</script>
+
+
+
+
+
+<script>
+	(function(jQuery) {
+		try {
+			if (jQuery) {
+				jQuery('div.blog-social div.fb-like').attr('class', 'blog-social-item blog-fb-like');
+				var $commentFrame = jQuery('#commentArea iframe');
+				if ($commentFrame.length > 0) {
+					var frameHeight = jQuery($commentFrame[0].contentWindow.document).height() + 50;
+					$commentFrame.css('min-height', frameHeight + 'px');
+				}
+				if (jQuery('.product-button').length > 0){
+					jQuery(document).ready(function(){
+						jQuery('.product-button').parent().each(function(index, product){
+							if(jQuery(product).attr('target') == 'paypal'){
+								if (!jQuery(product).find('> [name="bn"]').length){
+									jQuery('<input>').attr({
+										type: 'hidden',
+										name: 'bn',
+										value: 'DragAndDropBuil_SP_EC'
+									}).appendTo(product);
+								}
+							}
+						});
+					});
+				}
+			}
+			else {
+				// Prototype
+				$$('div.blog-social div.fb-like').each(function(div) {
+					div.className = 'blog-social-item blog-fb-like';
+				});
+				$$('#commentArea iframe').each(function(iframe) {
+					iframe.style.minHeight = '410px';
+				});
+			}
+		}
+		catch(ex) {}
+	})(window._W && _W.jQuery);
+</script>
+
+<script>
+	window._W.isEUUser = false;
+	window._W.showCookieToAll = "";
+</script>
+
+
+	</body>
+
+<!-- Mirrored from kannikaenlinea.weebly.com/computer-architecture.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Aug 2022 23:24:09 GMT -->
+</html>
