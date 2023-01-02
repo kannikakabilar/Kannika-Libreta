@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Data Structures - KANNIKA LIBRETA</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1672676705" title="wsite-theme-css" />
+<link href='http://cdn2.editmysite.com/fonts/Montserrat/font.css?2' rel='stylesheet' type='text/css' />
+
+<link href='http://cdn2.editmysite.com/fonts/Quicksand/font.css?2' rel='stylesheet' type='text/css' />
+<link href='http://cdn2.editmysite.com/fonts/Alegreya_SC/font.css?2' rel='stylesheet' type='text/css' />
+<link href='http://cdn2.editmysite.com/fonts/Alegreya_SC/font.css?2' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Quicksand" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {color:#000 !important;}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-family:"Alegreya SC" !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {font-family:"Alegreya SC" !important;font-weight:400 !important;}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+.wsite-button-small .wsite-button-inner {font-size:19px !important;}
+.wsite-button-large .wsite-button-inner {font-size:15px !important;}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-size:16px !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+<link rel='stylesheet' type='text/css' href='http://cdn2.editmysite.com/css/old/slideshow/slideshow.css?1234' />
+
+		<script src='files/templateArtifacts.js?1672541044'></script>
+<script>
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='https://cdn2.editmysite.com/js/jquery-1.8.3.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='UNSET'; </script><script>_W = _W || {};
+			_W.customerLocale = "en_US";
+			_W.storeName = null;
+			_W.isCheckoutReskin = false;
+			_W.storeCountry = "CA";
+			_W.storeCurrency = "CAD";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "258110484374261460";
+			com_userID = "50158331";</script><script type='text/javascript' src='http://cdn2.editmysite.com/js/old/slideshow-jq.js?buildTime=1234'></script>
+<script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"174265258517029121","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"726788859509786725","title":"C#  and .NET","url":"c-and-net.html","target":"","nav_menu":false,"nonclickable":false}],
+			"919058173818755407",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{}
+		)
+	}
+//-->
+</script>
+		
+		<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/6/9/6972ea4fe8e76a20caa3b853ee786fd5/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="header-page  wsite-page-data-structures  full-width-body-off header-overlay-on alt-nav-off  wsite-theme-light"><div class="wrapper">
+    <div class="birdseye-header">
+      <div class="nav-wrap">
+        <div class="container">
+          <div class="logo"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">KANNIKA LIBRETA</span>
+	
+	</a>
+
+</span></div>
+          <div class="nav desktop-nav"><ul class="wsite-menu-default">
+		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg726788859509786725" class="wsite-menu-item-wrap">
+			<a
+						href="c-and-net.html"
+				class="wsite-menu-item"
+				>
+				C#  and .NET
+			</a>
+			
+		</li>
+</ul>
+</div>
+          <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner-wrap">
+      <div class="wsite-elements wsite-not-footer wsite-header-elements">
+	<div class="wsite-section-wrap">
+	<div  class="wsite-section wsite-header-section wsite-section-bg-image" style="height: auto;background-image: url(&quot;/uploads/5/0/1/5/50158331/background-images/1340279059.jpg&quot;) ;background-repeat: no-repeat ;background-position: 50% 50% ;background-size: 100% ;background-color: transparent ;background-size: cover;" >
+		<div class="wsite-section-content">
+			
+          <div class="container">
+            <div class="banner">
+				<div class="wsite-section-elements">
+					<h2 class="wsite-content-title">Data Structures</h2>
+				</div>
+			</div>
+          </div>
+      
+		</div>
+		<div class=""></div>
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="main-wrap">
+      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-25" style="background-color: #020202;background-image: none;" >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<div><div style="height:20px;overflow:hidden"></div>
+<div id='352150234337934992-slideshow'></div>
+<script type='text/javascript'>
+(function(jQuery) {
+function init() { window.wSlideshow && window.wSlideshow.render({elementID:"352150234337934992",nav:"none",navLocation:"bottom",captionLocation:"bottom",transition:"fade",autoplay:"1",speed:"5",aspectRatio:"auto",showControls:"true",randomStart:"false",images:[{"url":"5\/0\/1\/5\/50158331\/datastrucmain1.jpg","width":1400,"height":639,"fullHeight":639,"fullWidth":1400},{"url":"5\/0\/1\/5\/50158331\/datastrucmain2.jpg","width":1280,"height":720,"fullHeight":720,"fullWidth":1280},{"url":"5\/0\/1\/5\/50158331\/datastrucmain3.jpg","width":1000,"height":420,"fullHeight":420,"fullWidth":1000}]}) }
+jQuery(document).ready(init);
+})(window.jQuery)
+</script>
+
+<div style="height:20px;overflow:hidden"></div></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/dstypes_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Data Structures</font></h2>
+
+<div class="paragraph"><font color="#ffffff">Data Structures are how the computer stores and organizes data. Data Structures help manage large amounts of data efficiently for uses such as large databases, general files stored in the computer, and internet indexing services. It is used based on its ability to fetch and store data at any place.</font><br /><br /><font color="#ff6721">Primitive Data Structure</font><font color="#ffffff">: It is a predefined way of storing data in the system and all sets of operations are also pre-defined. ex: char data structure consists of a-z, A-Z, and some other symbols.</font><br /><br /><font color="#00d7ff">Non-primitive Data Structure</font><font color="#ffffff">: It can store any set of values that the user wants to store. There are 2 types</font><ul><li><font color="#bb00ff">Linear Data Structure</font><font color="#ffffff">: Elements are arranged sequentially&#8203;</font><font color="#ffffff">&#8203;</font></li><li><font color="#ffffff">&nbsp; &nbsp; - </font><font color="#9789e8">Arrays</font><font color="#ffffff">: collection of items stored at contiguous memory locations</font></li><li><font color="#ffffff">&#8203;&nbsp; &nbsp; &#8203;- </font><font color="#9789e8">Stacks</font><font color="#ffffff">: follows the LIFO (Last In, First Out) principle</font></li><li><font color="#ffffff">&nbsp; &nbsp; &#8203;- </font><font color="#9789e8">Queues</font><font color="#ffffff">: follows the FIFO (First In, First Out) principle</font></li><li><font color="#ffffff">&nbsp; &nbsp; &#8203;- </font><font color="#9789e8">Linked List</font><font color="#ffffff">: a dynamic data structure where the number of nodes in the list is not fixed and can grow/shrink</font></li><br /><li><font color="#fd00e9">Non-Linear Data Structure</font><font color="#ffffff">: data elements can be attached to more than 1 elements. It utilizes memory efficiently and does allocate meory in advance</font></li><li><font color="#ffffff">&nbsp; &nbsp; &#8203;- </font><font color="#f6aaf0">Trees</font><font color="#ffffff">: hierarchical data structure</font></li><li><font color="#ffffff">&nbsp; &nbsp; &#8203;- </font><font color="#f6aaf0">Graphs</font><font color="#ffffff">: pairs of node/vertices are connected by edges</font></li></ul><br /><font color="#ffffff">* </font><font color="#ff6721">Arrays</font><font color="#ffffff"> are considered </font><font color="#f8c7a9">static data structures</font><font color="#ffffff">. It allocates contiguous slots of memory and when a new element is inserted, a bigger array is allocated and the elements are copied over to the bigger array. Stacks, queues, trees, and graphs that are implemented using an array will also be static. However, </font><font color="#00d7ff">Linked list</font><font color="#ffffff"> is a type of </font><font color="#90efff">dynamic data structure</font><font color="#ffffff"> that does not allocate memory when initiated. It is stored in various memory locations and are connected via pointers.&nbsp;</font><span style="color:rgb(255, 255, 255)">Stacks, queues, trees, and graphs that are implemented using a linked lists can be dynamic.</span></div>
+
+<div class="paragraph"><font color="#ffffff">The operation on each dynamic set can be organized into 2 parts:</font><ul><li><font color="#dff900">Query Operations</font><font color="#ffffff">: Helps to get some info about the dynamic set. ex: search(S, k), getMax(S), getMin(S), printSet(S), etc.</font></li><li><font color="#07ff00">Modifying Operations</font><font color="#ffffff">: Helps to update the dynamic set. ex: insert(S, x), delete(S, x), Merge(S1, S2)</font></li></ul></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/ds-time-comp_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="wsite-spacer" style="height:33px;"></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Arrays</font></h2>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/published/screen-shot-2022-06-12-at-10-32-25-pm.png?1655087640" alt="Picture" style="width:355;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><font color="#ffffff">- It is a data structure of fixed-size, which can hold items of the same data type. Arrays are indexed, meaning that random access is possible.<br />- Elements in the array are stored at contiguous memory locations<br /><br />- Inserting and deleting elements from an array takes O(n) time because:<br />&nbsp; &nbsp; &nbsp; &nbsp; - when inserting an element, first a new array with increased size must be created, then copy the existing elements and add the new element</font><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; - for deleting a new array of reduced size is created<br />&#8203;<br />- Byte address of element A[i] = base address (address of the first element in the array) + size of data type * (i)<br /><br /><strong><font size="2">Applications</font></strong>:<br />&#8203;&nbsp; &nbsp; &nbsp; &nbsp; - time complexity for access even on worst case is O(1), but everything else is O(n)<br />&nbsp; &nbsp; &nbsp; &nbsp; - good for storing multiple values in a single variable<br />&nbsp; &nbsp; &nbsp; &nbsp; - used as the building blocks for other data structures<br />&nbsp; &nbsp; &nbsp; &nbsp; - can also be used for different sorting algorithms, ie: insertion sort, quick sort, bubble sort, merge sort</span></div>
+
+<div class="paragraph"><font color="#ffffff">LeetCode / CodingInterview implementations of Arrays are posted </font><a href="https://github.com/kannikakabilar/Learning_DataStructures/tree/main/Arrays"><font color="#5ce0b6">here</font></a></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">______________________________________________________________________________________</font></h2>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Linked Lists</font></h2>
+
+<div class="paragraph"><font color="#ffffff">A linked list is a sequential structure that consists of a sequence of items in linear order which are linked to each other. Data can only be accessed sequentially and random access is not possible. However, the number of elements in a linked list is not fixed and can grow and shrink on demand.<br /><br />Linked List Terms</font><ul><li><font color="#ffffff">Elements in a linked list are known as&nbsp;<span style="font-weight:700">nodes</span>.</font></li><li><font color="#ffffff">Each node contains a&nbsp;<span style="font-weight:700">key</span>&nbsp;and a pointer to its successor node, known as&nbsp;<span style="font-weight:700">next</span>.</font></li><li><font color="#ffffff">The attribute named&nbsp;<span style="font-weight:700">head</span>&nbsp;points to the first element of the linked list.</font></li><li><font color="#ffffff">The last element of the linked list is known as the&nbsp;<span style="font-weight:700">tail</span>.</font></li></ul></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/linkedlist_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><font color="#ffffff">Types of Linked Lists</font><ul><li><font color="#ffffff"><span style="font-weight:700">Singly linked list</span>&nbsp;&mdash; Traversal of items can be done in the forward direction only.</font></li><li><font color="#ffffff"><span style="font-weight:700">Doubly linked list</span>&nbsp;&mdash; Traversal of items can be done in both forward and backward directions. Nodes consist of an additional pointer known as&nbsp;<span style="font-weight:700">prev</span>, pointing to the previous node.</font></li><li><font color="#ffffff"><span style="font-weight:700">Circular linked lists</span>&nbsp;&mdash; Linked lists where the prev pointer of the head points to the tail and the next pointer of the tail points to the head.</font></li></ul><br /><font color="#ffffff" size="3">Linked list operations</font><ul><li><font color="#ffffff"><span style="font-weight:700">Search</span>: Find the first element with the key&nbsp;<span style="font-weight:700">k</span>&nbsp;in the given linked list by a simple linear search and returns a pointer to this element</font></li><li><font color="#ffffff"><span style="font-weight:700">Insert</span>: Insert a key to the linked list. An insertion can be done in 3 different ways; insert at the beginning of the list, insert at the end of the list and insert in the middle of the list.</font></li><li><font color="#ffffff"><span style="font-weight:700">Delete</span>: Removes an element&nbsp;<span style="font-weight:700">x</span>&nbsp;from a given linked list. You cannot delete a node by a single step. A deletion can be done in 3 different ways; delete from the beginning of the list, delete from the end of the list and delete from the middle of the list.</font>&#8203;&#8203;</li></ul><br /><span style="font-weight:inherit"><font color="#ffffff" size="3">&#8203;Applications of linked lists</font></span><ul><li><font color="#ffffff">Used for&nbsp;<em>symbol table management</em>&nbsp;in compiler design.</font></li><li><font color="#ffffff">Used in switching between programs using Alt + Tab (implemented using Circular Linked List).</font></li></ul><br /><br /></div>
+
+<div class="paragraph"><font color="#ffffff">LeetCode / CodingInterview implementations of Linked Lists are posted </font><font color="#5ce0b6"><a href="https://github.com/kannikakabilar/Learning_DataStructures/blob/main/Linked_Lists.py">here</a></font></div>
+
+<div class="paragraph"><strong><font color="#ffffff" size="4">______________________________________________________________________________________</font></strong><br /></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Stacks &amp; Queues</font></h2>
+
+<div class="paragraph"><font color="#ffffff"><strong><font size="2">Stacks</font></strong></font><br /><font color="#ffffff">A stack is a LIFO (Last In First Out - the element placed at last can be accessed at first). The following are operations that can be performed on a stack:</font><ul><li><font color="#ffffff"><span style="font-weight:700">Push</span>: Insert an element on to the top of the stack.</font></li><li><font color="#ffffff"><span style="font-weight:700">Pop</span>: Delete the topmost element and return it.</font></li><li><font color="#ffffff"><span style="font-weight:700">Peek</span>: Return the top element of the stack without deleting it.</font></li><li><font color="#ffffff"><span style="font-weight:700">isEmpty</span>: Check if the stack is empty.</font></li><li><font color="#ffffff"><span style="font-weight:700">isFull</span>: Check if the stack is full.</font></li></ul> <strong><font color="#ffffff" size="2">Applications of stacks</font></strong><ul><li><font color="#ffffff">Used for expression evaluation (e.g.:&nbsp;<em>shunting-yard algorithm</em>&nbsp;for parsing and evaluating mathematical expressions).</font></li><li><font color="#ffffff">Used to implement function calls in recursion programming.</font></li></ul><br />&#8203;<font color="#ffffff">LeetCode / CodingInterview implementations of Stacks are posted </font><a href="https://github.com/kannikakabilar/Learning_DataStructures/blob/main/Stacks.py"><font color="#5ce0b6">here</font></a></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/published/stacks.jpg?1656588068" alt="Picture" style="width:530;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><font color="#ffffff"><strong><font size="2">Queues</font></strong><br />A&nbsp;<span style="font-weight:700">queue</span>&nbsp;is a&nbsp;<span style="font-weight:700">FIFO</span>&nbsp;(First In First Out &mdash; the element placed at first can be accessed at first). The following are operations that can be performed on a queue:</font><ul><li><font color="#ffffff"><span style="font-weight:700">Enqueue</span>: Insert an element to the end of the queue.</font></li><li><font color="#ffffff"><span style="font-weight:700">Dequeue</span>: Delete the element from the beginning of the queue.</font></li><li><font color="#ffffff"><span style="font-weight:700">isEmpty</span>: Check if the queue&nbsp;is empty.</font></li><li><font color="#ffffff"><span style="font-weight:700">isFull</span>: Check if the queue&nbsp;is full.</font></li></ul> <strong><font color="#ffffff" size="2">Applications of Queues</font></strong><ul><li><font color="#ffffff">Used to manage threads in multithreading.</font></li><li><font color="#ffffff">Used to implement queuing systems (e.g.: priority queues).</font></li></ul> <font color="#ffffff">&#8203;LeetCode / CodingInterview implementations of Queues are posted </font><a href="https://github.com/kannikakabilar/Learning_DataStructures/blob/main/Queues.py" style=""><font color="#5ce0b6">here</font></a></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/published/queues.jpg?1656588397" alt="Picture" style="width:535;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><strong><font color="#ffffff" size="4">______________________________________________________________________________________</font></strong><br /></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Hash Table</font></h2>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">- It is a data structure that stores data in an array format, where each data value has its own unique index value. Access of data becomes very fast if we know the index (where its stored in memory) of the desired data. The Hash Function uses a range of key values into a range of indexes of an array.<br />For Ex:- (key, value) pairs: (1, 20); (2, 70); (42, 80); (4, 25)<br />Using the modulo hash function and the size of our hash table is 20<br />Key&nbsp; &nbsp; Hash&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Array Index<br />1&nbsp; &nbsp; &nbsp; &nbsp; 1 % 20 = 1&nbsp; &nbsp; &nbsp; &nbsp;1<br />2&nbsp; &nbsp; &nbsp; &nbsp; 2 % 20 = 2&nbsp; &nbsp; &nbsp; &nbsp;2<br />42&nbsp; &nbsp; &nbsp;42 % 20 = 2&nbsp; &nbsp; &nbsp;2<br />4&nbsp; &nbsp; &nbsp; &nbsp;4 % 20 = 4&nbsp; &nbsp; &nbsp; &nbsp; 4</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:10px;text-align:right">
+<a>
+<img src="uploads/5/0/1/5/50158331/screen-shot-2022-05-16-at-7-47-23-am_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><font color="#00d3fa">Hash Map Collision</font><font color="#ffffff"> - It is when the hash function provides the same index for different key values. If the available space (hash table size is infinite, this can be completely avoided) However, in order to handle this, there are 2 methods:</font></div>
+
+<div class="paragraph"><font color="#00d3fa">Separate Chaining</font><font color="#ffffff">:&nbsp; &nbsp; The idea is to make each cell of hash table point to a linked list of records that have the same hash function value&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font><font color="#e97676">Drawbacks</font><br /><font color="#ffffff">&nbsp; &nbsp;- Wastage of space (some slots of hash table may never get used)</font><br /><font color="#ffffff">&nbsp; &nbsp;- If the chain becomes too long, then search time can become O(n) in the worst case</font><br /><font color="#ffffff">&nbsp; &nbsp;- Poor cache performance (since linked list stores in non-contiguous memory locations)<br /><br />Other methods for chaining include<br />&nbsp; &nbsp; - if the keys are ordered, then instead of creating a linked list, a balance binary search tree can be implemented =&gt; worst-case = O(log n)<br />&nbsp; &nbsp; - </font><font color="#00d3fa">Dynamic Perfect Hashing</font><font color="#ffffff">: 2-level hash tables are used to reduce the look-up complexity, the 2nd hash table will be much bigger in size i^2, so that collisions are less likely to occur =&gt; worst-case = O(1)</font><br /><font color="#ffffff">&#8203;&nbsp; &nbsp; - </font><font color="#00d3fa">Fusion Tree</font><font color="#ffffff">: A type of B-tree that could result in O(1) time for operations with high probability and O(log n) time for others</font></div>
+
+<div class="paragraph"><font color="#00d3fa">Open Addressing</font><font color="#ffffff">: All elements are stored in the hash table itself (so size of table must be greater or equal to the number of keys).&nbsp; There are a few ways to do this</font><br /><br /><font color="#ffffff">&nbsp; &nbsp; </font><font color="#f8eaa9">Linear Probing</font><font color="#ffffff">: If the slot provided by the hash function is full, then we linearly probe for the next slot.</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; Let S be the table size, x be any provided key and hash(x) be the hash function that results the index where values can be stored</font><br /><br /><font color="#c9f8a9">&nbsp; &nbsp; &nbsp; &nbsp;If slot hash(x) % S is full, then we try (hash(x) + 1) % S<br />&nbsp; &nbsp; &nbsp; &nbsp;If (hash(x) + 1) % S is also full, then we try (hash(x) + 2) % S<br />&nbsp; &nbsp; &nbsp; &nbsp;If (hash(x) + 2) % S is also full, then we try (hash(x) + 3) % S&nbsp; &nbsp; and so on ...</font><br /><br />&nbsp; &nbsp; <font color="#f8eaa9">Quadratic Probing</font><font color="#ffffff">: We look for the i^2th slot in the ith -iteration</font><br /><br /><font color="#c9f8a9">&nbsp; &nbsp; &nbsp; &nbsp;If slot hash(x) % S is full, then we try (hash(x) + 1*1) % S<br />&nbsp; &nbsp; &nbsp; &nbsp;If (hash(x) + 1*1) % S is also full, then we try (hash(x) + 2*2) % S<br />&nbsp; &nbsp; &nbsp; &nbsp;If (hash(x) + 2*2) % S is also full, then we try (hash(x) + 3*3) % S</font><span style="color:rgb(201, 248, 169)">&nbsp; &nbsp; and so on ...</span><br /><br />&nbsp; &nbsp; <font color="#f8eaa9">Double Hashing</font><font color="#ffffff">: Use another hash function, hash2(x)</font><br /><br />&nbsp; &nbsp; &nbsp; &nbsp;<font color="#c9f8a9">If slot hash(x) % S is full, then we try (hash(x) + 1*hash2(x)) % S<br />&nbsp; &nbsp; &nbsp; &nbsp;If (hash(x) + 1*hash2(x)) % S is also full, then we try (hash(x) + 2*hash2(x)) % S<br />&nbsp; &nbsp; &nbsp; &nbsp;If (hash(x) + 2*hash2(x)) % S is also full, then we try (hash(x) + 3*hash2(x)) % S&nbsp; &nbsp; and so on ...</font><br /><br /><font color="#c9f8a9">&nbsp; &nbsp; </font><font color="#ffffff">Linear probing has the best cache performance but suffers from clustering (too many keys follow the same chaining path). Double hashing has poor cache performance but no clustering and quadratic probing is between the 2.<br /><br />Some other methods for open addressing include:<br />&nbsp; &nbsp; - </font><font color="#00d3fa">Coalesced Hashing</font><font color="#ffffff">: It is suited for fixed-memory allocation. The collision is resolved by identifying the largest-indexed empty slot on the hash table, and the colliding value is inserted into that slot.</font><br /><font color="#ffffff">&nbsp; &nbsp; - </font><font color="#00d3fa">Cuckoo Hashing</font><font color="#ffffff">: Guarantees O(1) worst-case lookup complexity. It resolves collisions by maintaining 2 hash tables with 2 different hash functions. If procedure enters into infinite loop (noticed from a loop counter) then new hash functions are assigned.</font><br /><font color="#ffffff">&nbsp; &nbsp; - </font><font color="#00d3fa">Hopscotch Hashing</font><font color="#ffffff">: Search in at most H buckets (the hop-range) based on hop-info bitmap. H is a constant.</font><br /><font color="#ffffff">&nbsp; &nbsp; - </font><font color="#00d3fa">Robin Hood Hashing</font><font color="#ffffff">: Collisions are resolved through favouring the displacement of the element that is farthest/ longest probe sequence length from its "home location" (allows for distribution of elements in the hash table)</font></div>
+
+<div><div style="height:20px;overflow:hidden"></div>
+<div id='355593179264357393-slideshow'></div>
+<script type='text/javascript'>
+(function(jQuery) {
+function init() { window.wSlideshow && window.wSlideshow.render({elementID:"355593179264357393",nav:"none",navLocation:"bottom",captionLocation:"bottom",transition:"fade",autoplay:"1",speed:"5",aspectRatio:"auto",showControls:"true",randomStart:"false",images:[{"url":"5/0/1/5/50158331/hashchaining.jpg","width":"545","height":"431","caption":"Chaining","alt":"Chaining"},{"url":"5/0/1/5/50158331/hashopenaddressing.jpg","width":"458","height":"376","caption":"Open Addressing (Linear Probing) ","alt":"Open Addressing (Linear Probing) "}]}) }
+jQuery(document).ready(init);
+})(window.jQuery)
+</script>
+
+<div style="height:20px;overflow:hidden"></div></div>
+
+<div class="paragraph"><font size="3"><font color="#ffffff">Basic Syntax of how to use Hashmaps and HashSets in </font><a href="https://github.com/kannikakabilar/Learning_DataStructures/blob/main/Hashmaps/dictionary.py"><font color="#91e05c">Python</font></a><font color="#ffffff"> and </font><a href="https://github.com/kannikakabilar/Learning_DataStructures/blob/main/Hashmaps/Hashmaps.java"><font color="#ff8d00">Java</font></a></font></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-26" style="background-color: #fcfcfc;background-image: none;" >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title"><font size="6">Hash Map Cheat Sheet</font></h2>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:53.802816901408%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><ul><li><font size="3">&nbsp;<strong style="">To identify a chain in Linked List</strong></font></li></ul><font size="3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - set <em style="">fast&nbsp;</em>var =&gt; x2 speed <font color="#ff0000" style="">----</font><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - set slow var =&gt; x1 speed <font color="#000fff" style="">----</font><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - if they are equal =&gt; cycle exists<br />&nbsp; &nbsp; &nbsp; &nbsp; else <em style="">fast</em> reaches end of linked list =&gt; cycle doesn't exist</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:46.197183098592%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/284212122-435012264788982-1599266614310880519-n_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:53.611111111111%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><ul><li><strong><font size="3">(And) If Linked List may have repeated elements</font></strong></li></ul><font size="3">&#8203;<span>&nbsp; &nbsp; &nbsp; &nbsp;</span>- leave 'bread crumbs'<br />&nbsp; &nbsp; &nbsp; &nbsp;- make a copy of LL and change the visited nodes' value</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:46.388888888889%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/284092420-562412265286074-3273076060523680383-n_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><ul><li><strong><font size="3">Removing "If" statements =&gt; by setting values based on given input</font></strong></li></ul><font size="3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&#8203;- store expected input values in a dictionary<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ex:- {"I":1, "V":5, "X":10, "L":50, "C":100, "D":500, "M":1000}</font></div>
+
+<div class="paragraph"><ul><li><strong><font size="3">When you have to keep track of multiple variables/values</font></strong></li></ul><font size="3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;- for example, which number occurs most in a list =&gt; dictionaries/hashmaps can be used as a counter</font></div>
+
+<div class="paragraph"><ul><li><strong><font size="3">Is Isomorphic?</font></strong></li></ul><font size="3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;- check if each element in list A is mapped to exactly 1 element in B &amp; vice versa<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;- build a dictionary w/ A elements as keys and B elements as values &amp; vice versa<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;- if any element is mapped to more than 1 value =&gt; return False else return True</font><br /><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>&#8203;</div>
+
+<div class="paragraph"><ul><li><strong><font size="3">All elements in a given list is unique</font></strong></li></ul><span><font size="3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =&gt; by creating a hashset &gt;&gt; len(lst) == len(set(lst))</font></span><br /></div>
+
+<div class="paragraph"><ul><li><strong><font size="3">Anagram</font></strong></li></ul><span><font size="3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ex: - <font color="#0d00fa">word1</font> = 'Nathaniel Black' is an anagram of =&gt; <font color="#fa00f1">word2</font> = 'Annabella Thick'<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - make a counter using dictionary for <font color="#0600ff">word1</font><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - then check by subtracting for each letter used in <font color="#fa00f1">word2</font></font></span><br /></div>
+
+<div class="paragraph"><ul><li><strong><font size="3">Union and Intersection of 2 Linked Lists</font></strong></li></ul><font size="3"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>- put the elements of lst1 into a dictionary<br /><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>- traverse through lst2, for each element in dictionary =&gt; add it to intersection list<br /><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>- create a hashset of elements in lst1, then for all elements from lst2 (hashset does not take in duplicates) =&gt; union list</font><ul><li><strong><font size="3">Find a pair w/ given sum</font></strong></li></ul> <font size="3"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>- for each element in lst, check if given_sum - current_element is in dictionary<br /><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if not, then add curr_element in dictionary<br /><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>else print curr_element and difference</font><ul><li><strong><font size="3">Find 4 elements such that:&nbsp; a + b = c + d</font></strong></li></ul> <font size="3"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>- store sum of each pair as key, and the pair as its value<br /><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>- if&nbsp; a sum already exists in the dictionary with different pairs, print the pairs</font><ul><li><strong><font size="3">Missing elements of a range</font></strong></li></ul><font size="3"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>- put all elements of the lst into a dictionary<br /><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>- loop through the range - if an element is not in the dictionary<br /><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>=&gt; append it to missing element list</font><ul><li><strong><font size="3">Longest consecutive subsequence</font></strong></li></ul><font size="3">&nbsp;- given a list, put all the elements into a dictionary<br />&nbsp;- loop through each element - check if curr_element is the starting point by seeing if curr_element-1 is in dictionary<br />&nbsp; &nbsp; &nbsp; &nbsp;- if curr_element is the starting point, see how long the consecutive subsequence is =&gt; store the longest length</font><br /></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-27" style="background-color: #020202;background-image: none;" >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title"><font color="#ffffff">Trees</font></h2>
+
+<div class="paragraph"><font color="#ffffff">A hierarchical structure where data is organized based on levels and are liked to each other.<br /><br />Types of Trees: </font><ul><li><font color="#ffffff">General Tree / N-ary Tree&nbsp; &nbsp; -&nbsp; &nbsp; Each node can have any (or up to N) number of children</font></li><li><font color="#ffffff">Binary Tree&nbsp; &nbsp; -&nbsp; &nbsp; Each node can have at most 2 children</font></li><li><font color="#ffffff">Binary Search Tree&nbsp; &nbsp; -&nbsp; &nbsp; Left child must value lower than node and right child must have value higher than node</font></li><li><font color="#ffffff">AVL Tree&nbsp; &nbsp; -&nbsp; &nbsp;Self-balancing Binary Search Trees.&nbsp;The balancing factor is the difference in heights between the left and right subtrees, and its values are (-1), 0, and 1.</font></li><li><font color="#ffffff">Red Black Tree&nbsp; &nbsp; -&nbsp; &nbsp; A kind of self-balancing binary search tree where each node stores an extra bit color (red or black)</font></li><li><font color="#ffffff">B-Tree&nbsp; &nbsp; -&nbsp; &nbsp; Self-balancing tree that maintains sorted data</font></li><li>&#8203;<font color="#ffffff">Treap.&nbsp; &nbsp;-&nbsp; &nbsp;&nbsp;The root node in a heap data structure has the lowest value, and its child nodes (both left and right) have higher values</font></li><li><font color="#ffffff">Splay Tree.&nbsp; &nbsp;-&nbsp; &nbsp; A BST with an additional property that recently accessed elements are quick to access again</font></li><br /></ul></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-large wsite-button-highlight" href="https://github.com/kannikakabilar/Learning_DataStructures/tree/main/Trees" >
+<span class="wsite-button-inner">Tree Implementations</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Graphs</font></h2>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">Most graphs are defined as a slight alteration of the following rules:</font><br /><br /><ul><li><font color="#ffffff"><span>A graph is made up of two sets called Vertices and Edges</span></font></li><li><font color="#ffffff">The </font><strong style=""><font color="#00fafe">Verticies</font></strong><font color="#ffffff"> are some form of a node&nbsp;type</font></li><li><font color="#ffffff">Each element of the </font><strong style=""><font color="#00fafe">Edge</font></strong><font color="#ffffff"> set is a pair consisting of two elements from the Vertices set</font></li><li><strong><font color="#00fafe">Order of a graph</font></strong><font color="#ffffff"> = # of vertices in the graph</font></li><li><strong style=""><font color="#00fafe">Size of a graph</font></strong><font color="#ffffff"> = # of edges in the graph</font></li><li><font color="#ffffff">2 nodes/vertices are </font><strong style=""><font color="#00fafe">Adjacent</font></strong><font color="#ffffff"> =&gt; connected by an edge</font>&#8203;&#8203;</li><li><strong style=""><font color="#00fafe">Self-loop</font></strong><font color="#ffffff">: edge from a vertex to itself</font></li><li><strong style=""><font color="#00fafe">Isolated vertex</font></strong><font color="#ffffff">: no edge&nbsp;connecting to another node</font></li></ul></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><ul><br /><li>&#8203;<strong style=""><font color="#00fafe">Bridge</font></strong><font color="#ffffff">: An edge whose removal will simply make the graph disconnected</font></li><li><strong><font color="#00fafe">Null graph</font></strong><font color="#ffffff">: A graph is said to be null if there are no edges (but may have isolated vertices)</font></li><li><strong style=""><font color="#00fafe">Cyclic graph</font></strong><font color="#ffffff">: A graph containing a cycle (Opposite is </font><strong style=""><font color="#00fafe">Acyclic/Forest graph</font></strong><font color="#ffffff">)</font></li><li><strong style="color: rgb(0, 250, 254);">Weighted graph</strong><font color="#ffffff">: Edges that contain a value</font></li><li><strong style=""><font color="#00fafe">Connected graph</font></strong><font color="#ffffff">: Does not have any isolated vertex</font></li><li><strong><font color="#00fafe">Complete graph</font></strong><font color="#ffffff">: Any node can be reached from any node through 1 edge</font></li></ul></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><font color="#ffffff">Some of the types of graphs:</font><ul><li><strong><font color="#00fafe">Directed graph</font></strong><font color="#ffffff">: edges have a direction indicating start vertex and end vertex</font></li><li><font color="#ffffff">&#8203;</font><strong><font color="#00fafe">Undirected graph</font></strong><font color="#ffffff">: edges have no direction</font></li></ul> <font color="#ffffff">Graphs can be</font><font color="#ffffff">&nbsp;represented through:</font><ul><li><strong style=""><font color="#00fafe">Adjacency Matrix</font></strong><font color="#ffffff">&nbsp; &nbsp;-&nbsp; &nbsp; First row and first column of the matrix denotes the vertices. The rest of the cells contains either 0 or1</font></li></ul></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/published/graph-adjacency-matrix.jpg?1657377456" alt="Picture" style="width:597;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><ul><li><strong style=""><font color="#00fafe">Adjacency List&nbsp;</font></strong><font color="#ffffff"> &nbsp; -&nbsp; &nbsp; An array of linked list. Elements in array contain nodes of the graph and each node is liked to all the nodes it connects to.</font></li></ul></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/published/adjlist.jpg?1657377678" alt="Picture" style="width:599;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><font color="#ffffff"><strong>Applications of Graphs</strong>:</font><ul><li><font color="#ffffff">Social media networks</font></li><li><font color="#ffffff">Web pages and links by search engines.&nbsp;</font></li><li><font color="#ffffff">Locations and routes in GPS</font></li></ul></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/graphs_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a></div>
+    </div><!-- end footer-wrap -->
+  </div><!-- /.wrapper -->
+
+  <div id="navMobile" class="nav mobile-nav">
+    <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+    <ul class="wsite-menu-default">
+    		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+    			<a
+    						href="index.html"
+    				class="wsite-menu-item"
+    				>
+    				Home
+    			</a>
+    			
+    		</li>
+    		<li id="pg726788859509786725" class="wsite-menu-item-wrap">
+    			<a
+    						href="c-and-net.html"
+    				class="wsite-menu-item"
+    				>
+    				C#  and .NET
+    			</a>
+    			
+    		</li>
+    </ul>
+  </div>
+
+	<script type="text/javascript" src="files/theme/plugins.js"></script>
+  <script type="text/javascript" src="files/theme/custom.js"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="http://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1234"></script>
+
+		
+	</body>
+</html>

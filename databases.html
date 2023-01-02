@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Databases - KANNIKA LIBRETA</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1672676705" title="wsite-theme-css" />
+<link href='http://cdn2.editmysite.com/fonts/Montserrat/font.css?2' rel='stylesheet' type='text/css' />
+
+<link href='http://cdn2.editmysite.com/fonts/Quicksand/font.css?2' rel='stylesheet' type='text/css' />
+<link href='http://cdn2.editmysite.com/fonts/Alegreya_SC/font.css?2' rel='stylesheet' type='text/css' />
+<link href='http://cdn2.editmysite.com/fonts/Alegreya_SC/font.css?2' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Quicksand" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {color:#000 !important;}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-family:"Alegreya SC" !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {font-family:"Alegreya SC" !important;font-weight:400 !important;}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+.wsite-button-small .wsite-button-inner {font-size:19px !important;}
+.wsite-button-large .wsite-button-inner {font-size:15px !important;}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-size:16px !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+
+		<script src='files/templateArtifacts.js?1672541044'></script>
+<script>
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='https://cdn2.editmysite.com/js/jquery-1.8.3.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='UNSET'; </script><script>_W = _W || {};
+			_W.customerLocale = "en_US";
+			_W.storeName = null;
+			_W.isCheckoutReskin = false;
+			_W.storeCountry = "CA";
+			_W.storeCurrency = "CAD";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "258110484374261460";
+			com_userID = "50158331";</script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"174265258517029121","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"726788859509786725","title":"C#  and .NET","url":"c-and-net.html","target":"","nav_menu":false,"nonclickable":false}],
+			"725265851357150658",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{}
+		)
+	}
+//-->
+</script>
+		
+		<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/6/9/6972ea4fe8e76a20caa3b853ee786fd5/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="header-page  wsite-page-databases  full-width-body-off header-overlay-on alt-nav-off  wsite-theme-light"><div class="wrapper">
+    <div class="birdseye-header">
+      <div class="nav-wrap">
+        <div class="container">
+          <div class="logo"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">KANNIKA LIBRETA</span>
+	
+	</a>
+
+</span></div>
+          <div class="nav desktop-nav"><ul class="wsite-menu-default">
+		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg726788859509786725" class="wsite-menu-item-wrap">
+			<a
+						href="c-and-net.html"
+				class="wsite-menu-item"
+				>
+				C#  and .NET
+			</a>
+			
+		</li>
+</ul>
+</div>
+          <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner-wrap">
+      <div class="wsite-elements wsite-not-footer wsite-header-elements">
+	<div class="wsite-section-wrap">
+	<div  class="wsite-section wsite-header-section wsite-section-bg-image" style="height: auto;background-image: url(&quot;/uploads/5/0/1/5/50158331/background-images/1420279060.jpg&quot;) ;background-repeat: no-repeat ;background-position: 50.00% 49.68% ;background-size: 100% ;background-color: transparent ;background-size: cover;" >
+		<div class="wsite-section-content">
+			
+          <div class="container">
+            <div class="banner">
+				<div class="wsite-section-elements">
+					<h2 class="wsite-content-title">Databases</h2>
+				</div>
+			</div>
+          </div>
+      
+		</div>
+		<div class=""></div>
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="main-wrap">
+      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-34" style="background-color: #020202;background-image: none;" >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<div id="949044497671593184"><div><style type="text/css">
+	#element-5bccc401-fffe-4d65-8ca5-d9fc52df0a30 .group-box-content {
+  clear: both;
+  float: left;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+</style><div id="element-5bccc401-fffe-4d65-8ca5-d9fc52df0a30" data-platform-element-id="751043798673526236-1.0.1" class="platform-element-contents">
+	<div class="group-box">
+    <div class="group-box-content">
+        <div style="width: auto"><div></div><div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:47.930890344155%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><ul><li><strong><font color="#c9f8a9"><a href="https://kannikaenlinea.weebly.com/databases.html#Intro">Intro</a></font></strong></li><li><strong><font color="#c9f8a9"><a href="https://kannikaenlinea.weebly.com/databases.html#SQLvsNoSQL">SQL vs. NoSQL</a></font></strong></li><li><strong><font color="#c9f8a9"><a href="https://kannikaenlinea.weebly.com/databases.html#SQLKeywords">SQL Keywords</a></font></strong></li><li><strong><font color="#c9f8a9"><a href="https://kannikaenlinea.weebly.com/databases.html#StoredProcedures">Stored Procedures</a></font></strong>&#8203;</li></ul></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:52.069109655845%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><ul><li><strong><font color="#c9f8a9"><a href="https://kannikaenlinea.weebly.com/databases.html#Databases">Databases</a></font></strong></li><li><strong><font color="#c9f8a9"><a href="https://kannikaenlinea.weebly.com/databases.html#ForeignKeyConstraints">Foreign Key Constraints</a></font></strong></li><li><strong><font color="#c9f8a9"><a href="https://kannikaenlinea.weebly.com/databases.html#SQLInjection">SQL Injections&nbsp;&amp; Hosting</a></font></strong>&#8203;&#8203;</li><li><strong><font color="#c9f8a9"><a href="https://kannikaenlinea.weebly.com/databases.html#MongoDB">MongoDB</a></font></strong></li></ul></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div></div>
+    </div>
+</div>
+</div>
+<div style="clear:both;"></div><script type="text/javascript" class="element-script">function setupElement949044497671593184() {
+	var requireFunc = window.platformElementRequire || window.require;
+
+	// Relies on a global require, specific to platform elements
+	requireFunc([
+		'w-global',
+		'underscore',
+		'jquery',
+		'backbone',
+		'util/platform/elements/PlatformElement',
+		'util/platform/elements/PlatformElementSettings'
+	], function(
+		_W,
+		_,
+		$,
+		Backbone,
+		PlatformElement,
+		PlatformElementSettings
+	) {
+		var dependencies = null || [];
+		var platform_element_id = "751043798673526236-1.0.1";
+
+		if (typeof _W.loadedPlatformDependencies === 'undefined') {
+			_W.loadedPlatformDependencies = [];
+		}
+
+		if (typeof _W.platformElements === 'undefined') {
+			_W.platformElements = [];
+		}
+
+		if (typeof _W.platformElements[platform_element_id] === 'undefined') {
+			_W.platformElements[platform_element_id] = {};
+			_W.platformElements[platform_element_id].deferredObject = new $.Deferred();
+			_W.platformElements[platform_element_id].deferredPromise = _W.platformElements[platform_element_id].deferredObject.promise();
+		}
+
+		if(_.intersection(_W.loadedPlatformDependencies, dependencies).length !== dependencies.length){
+			_.reduce(dependencies, function(promise, nextScript){
+				_W.loadedPlatformDependencies.push(nextScript);
+				return promise.then(function(){
+					return $.getScript(nextScript);
+				});
+			}, $().promise()).then(function(){
+				_W.platformElements[platform_element_id].deferredObject.resolve();
+			});
+		}
+
+		if (dependencies.length === 0){
+			_W.platformElements[platform_element_id].deferredObject.resolve();
+		}
+
+		_W.platformElements[platform_element_id].deferredPromise.done(function(){
+			var _ElementDefinition = /**
+ * This is required for element rendering to be possible
+ * @type {PlatformElement}
+ */
+(function() {
+    var ColoredBox = PlatformElement.extend({
+
+        initialize: function() {
+        }
+
+    });
+
+    return ColoredBox;
+})();
+
+			if (typeof _ElementDefinition == 'undefined' || typeof _ElementDefinition == 'null') {
+				var _ElementDefinition = PlatformElement.extend({});
+			}
+
+			var _Element = _ElementDefinition.extend({
+				initialize: function() {
+					// we still want to call the initialize function defined by the developer
+					// however, we don't want to call it until placeholders have been replaced
+					this.placeholderInterval = setInterval(function() {
+						// so use setInterval to check for placeholders.
+						if (this.$('.platform-element-child-placeholder').length == 0) {
+							clearInterval(this.placeholderInterval);
+							this.constructor.__super__.initialize.apply(this);
+						}
+					}.bind(this), 100);
+				}
+			});
+
+			_Element.prototype.settings = new PlatformElementSettings({"color":"#c9f8a9","opacity":20});
+			_Element.prototype.settings.page_element_id = "949044497671593184";
+
+			_Element.prototype.element_id = "5bccc401-fffe-4d65-8ca5-d9fc52df0a30";
+			_Element.prototype.user_id = "50158331";
+			_Element.prototype.site_id = "258110484374261460";
+			_Element.prototype.assets_path = "//marketplace.editmysite.com/uploads/b/marketplace-elements-751043798673526236-1.0.1/assets/";
+			new _Element({
+				el: '#element-5bccc401-fffe-4d65-8ca5-d9fc52df0a30'
+			});
+		});
+	});
+
+}
+
+if (typeof document.documentElement.appReady == 'undefined') {
+	document.documentElement.appReady = 0;
+}
+
+if (document.documentElement.appReady || (window.inEditor && window.inEditor())) {
+	setupElement949044497671593184();
+} else if (document.createEvent && document.addEventListener) {
+	document.addEventListener('appReady', setupElement949044497671593184, false);
+} else {
+	document.documentElement.attachEvent('onpropertychange', function(event){
+		if (event.propertyName == 'appReady') {
+			setupElement949044497671593184();
+		}
+	});
+}
+
+</script></div></div>
+
+<div><div id="917995919205119808" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a name="Intro">&nbsp</a></div>
+
+
+
+</div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph"><font color="#ffffff"><strong>Database Management Systems</strong> - It is a software package to store, retrieve, query, and manage data in a table.</font><br /><br /><span style="color:rgb(255, 255, 255)"><strong>Database</strong> is a collection of tables. Every table consists of rows (records) and columns (attributes). Each rows provides details of a specific instance of the same object type for that table.<br /><br />&#8203;Example of a database: Consider Facebook</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; - each user would have their own row/record in the database table</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; - the columns of the table would be: fname, lname, profile pic, friends, advertisements, liked posts, and etc.</span><br /><br /><font color="#ffffff"><font size="4"><strong>*</strong> Database <strong>vs</strong> Data structure</font><br />&nbsp; &nbsp; -&nbsp; Database is a collection of data (records) stored &amp; managed in permanent memory (hard disk)<br />&nbsp; &nbsp; &nbsp; &nbsp;while<br />&nbsp; &nbsp; -&nbsp; Data Structure is a way of storing and arranging data arranging data efficiently in temporary memory (RAM)<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Databases&nbsp; &nbsp; --(contain)--&gt;&nbsp; &nbsp; database objects&nbsp; &nbsp; &nbsp;--(these obj. can be implemented using)--&gt;&nbsp; &nbsp; Data Structures<br /><br /><strong>RDBMS</strong>&nbsp;(Relational Database Management System)<br />&nbsp; &nbsp; is a program used to create, update, and manage relational databases (ex: MySQL), while SQL is a programming language that is used&nbsp; &nbsp; &nbsp;&nbsp;</font><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#ffffff">to communicate with databases.</font><br /></div>
+
+<div><div id="106077602316755751" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a name="SQLvsNoSQL">&nbsp</a></div>
+
+
+
+</div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">SQL <strong>vs</strong> NoSQL</font><br />&nbsp; &nbsp; -&nbsp; SQL is a programming language used for querying relational databases<br />&nbsp; &nbsp; &nbsp; &nbsp; ex: MySQL, Oracle, MS-SQL server, Postgres<br />&nbsp; &nbsp; &nbsp; &nbsp;while<br />&nbsp; &nbsp; - NoSQL are non-relational databases<br />&nbsp; &nbsp; &nbsp; &nbsp;ex: Mongo DB, Redis, Neo4j, Cassandra<br /><br />&nbsp; &nbsp; 5 critical differences between SQL vs NoSQL are:</font><ul><li><font color="#ffffff">Relational databases =&gt;&nbsp;SQL, Non-relational databases =&gt; NoSQL</font></li><li><font color="#ffffff">SQL = predefined schema. NoSQL databases = dynamic schemas for unstructured data</font></li><li><font color="#ffffff">SQL databases are vertically scalable, while NoSQL databases are horizontally scalable</font></li><li><font color="#ffffff">SQL databases are table-based, while NoSQL databases are document, key-value pair, graph, or wide-column stores</font></li><li><font color="#ffffff">SQL databases are better for multi-row transactions, while NoSQL is better for unstructured data like documents or JSON</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff" size="4">Mostly used / Popular databases</font></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><strong><font color="#ffffff">SQL</font></strong><ul><li><font color="#ffffff">MySQL</font></li><li><font color="#ffffff">PostgreSQL (and supports JSON non-relational db)</font></li><li><font color="#ffffff">SQLite</font></li><li><font color="#ffffff">Oracle</font></li><li><font color="#ffffff">&#8203;MS SQL server</font></li><li><font color="#ffffff">IBM Db2</font></li></ul></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><strong><font color="#ffffff">NoSQL</font></strong><ul><li><font color="#ffffff">MongoDB</font></li><li><font color="#ffffff">&#8203;Redis</font></li><li><font color="#ffffff">&#8203;Cassandra</font></li></ul></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><font color="#ffffff">Using SQL in a website<br />To build a web site that shows data from a database, you will need:<br /></font><ul><li><font color="#ffffff">An RDBMS database program (i.e. MS Access, SQL Server, MySQL)</font></li><li><font color="#ffffff">To use a server-side scripting language, like PHP or ASP</font></li><li><font color="#ffffff">To use SQL to get the data you want</font></li><li><font color="#ffffff">To use HTML / CSS to style the page</font></li></ul></div>
+
+<div><div id="693273225968589002" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a name="SQLKeywords">&nbsp</a></div>
+
+
+
+</div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph"><font color="#ffffff">SQL keywords are not case sensitive.&nbsp;Some database systems require a semicolon at the end of each SQL statement while other don't.</font></div>
+
+<div class="paragraph"><font color="#ffffff">SELECT&nbsp;</font><ul><li><font color="#a7c7e7">SELECT column1, column2, ... FROM table_name;</font></li><li><font color="#ffffff">The data returned is stored in a result table, called the result-set</font></li><li><font color="#ffffff">ex:&nbsp;</font><font color="#90f6f9">SELECT * FROM table_name;&nbsp; </font>&nbsp; <font color="#d8aaf6">-- selects all columns from the table</font></li><li><span style="color:rgb(255, 255, 255)">ex:&nbsp;</span><font color="#90f6f9">SELECT CustomerName, City FROM Customers;</font></li><li><font color="#00e9ff">&#8203;</font>-</li><li><font color="#a7c7e7">SELECT DISTINCT column1, column2, ... FROM table_name;</font></li><li><font color="#ffffff">Selects only the distinct values from each column listed</font></li><li><font color="#ffffff">ex:&nbsp;</font><font color="#90f6f9">SELECT DISTINCT Country&nbsp;FROM Customers;</font></li><li><span style="color:rgb(255, 255, 255)">ex:&nbsp;</span><font color="#90f6f9">SELECT CustomerID, Country FROM Customers;&nbsp; &nbsp;&nbsp;</font></li><li><font color="#d8aaf6">-- selects all rows with distinct customerID and then all rows with distinct country, </font></li><li><font color="#d8aaf6">-- if customerID are unique all rows will be returned even with duplicate countries</font>&#8203;</li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">WHERE&nbsp;</font><ul><li><font color="#a7c7e7">SELECT column1, column2, ... FROM table_name WHERE condition;&nbsp;</font><font color="#ffffff"> &nbsp; &nbsp;</font></li><li><font color="#d8aaf6">&#8203;-- not only used in select statements but also in update, delete, etc.</font></li><li><span style="color:rgb(255, 255, 255)">ex:&nbsp;</span><font color="#90f6f9">SELECT * FROM Customers WHERE Country='Mexico';</font></li><li><font color="#ffffff">SQL requires single quotes around text values&nbsp;and no quotes around numeric fields</font></li><li><font color="#ffffff">Operators that can be used in `</font><span style="color:rgb(255, 255, 255)">WHERE</span><font color="#ffffff">` clause:&nbsp; &nbsp; =, &lt;, &gt;, &gt;=, &lt;=, !=/&lt;&gt; (not equal), BETWEEN, LIKE, IN</font></li><li>-</li><li><font color="#ffffff">The WHERE clause can be combined with AND, OR, and NOT operators</font></li><li><span style="color:rgb(255, 255, 255)">ex:&nbsp;</span><font color="#90f6f9">SELECT * FROM Customers WHERE Country='Germany' AND City='Berlin';</font></li><li><span style="color:rgb(255, 255, 255)">ex:&nbsp;</span><font color="#90f6f9">SELECT * FROM Customers WHERE City='Berlin' OR City='M&uuml;nchen';</font></li><li><span style="color:rgb(255, 255, 255)">ex:&nbsp;</span><font color="#90f6f9">SELECT * FROM Customers WHERE NOT Country='Germany';</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">ORDER BY</font><ul><li><font color="#ffffff">Sorts the resulting table in ascending/descending order by the stated column</font></li><li><font color="#a7c7e7">SELECT column1, column2, ... FROM table_name ORDER BY column1, column2, ... ASC|DESC;</font></li><li><font color="#ffffff">ex:&nbsp;</font><font color="#90f6f9">SELECT * FROM Customers ORDER BY Country DESC;</font></li><li><span style="color:rgb(255, 255, 255)">ex:&nbsp;</span><font color="#90f6f9">SELECT * FROM Customers ORDER BY Country, CustomerName;&nbsp; &nbsp;</font> </li><li><font color="#d8aaf6">--&nbsp;orders by Country, but if some rows have the same Country, it orders them by CustomerName</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">GROUP BY</font><ul><li><font color="#ffffff">Groups rows that have the same values into summary rows, like "find the number of customers in each country"</font></li><li><font color="#ffffff">Often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-table&nbsp;by one or more columns</font></li><li><font color="#a7c7e7">SELECT column_name(s) FROM table_name WHERE condition GROUP BY column_name(s) ORDER BY column_name(s);</font></li><li><font color="#ffffff">&#8203;</font><span style="color:rgb(255, 255, 255)">ex:&nbsp;</span><font color="#90f6f9">SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country;</font></li><li><span style="color:rgb(255, 255, 255)">ex:&nbsp;</span><font color="#90f6f9">SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country ORDER BY COUNT(CustomerID) DESC;</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">HAVING</font><ul><li><font color="#ffffff">The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions</font></li><li><font color="#84cde5">SELECT col_name(s) FROM table_name WHERE condition GROUP BY col_name(s) HAVING condition ORDER BY col_name(s);</font></li><li><font color="#84cde5">&#8203;</font></li><li><font color="#ffffff">&#8203;</font><span style="color:rgb(255, 255, 255)">ex:&nbsp;</span><font color="#90f6f9">SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country HAVING COUNT(CustomerID) &gt; 5;</font></li><li><font color="#d8aaf6">--&nbsp;&nbsp;lists the number of customers in each country and only include countries with more than 5 customers</font></li><li><font color="#ffffff">&#8203;</font><span style="color:rgb(255, 255, 255)">ex:&nbsp;</span><font color="#90f6f9">SELECT COUNT(CustomerID), Country FROM Customers WHERE Country='Mexico'&nbsp;HAVING COUNT(CustomerID) &gt; 5;</font></li><li><font color="#d8aaf6">--&nbsp;&nbsp;lists the number of customers from Mexico&nbsp;only if it has more than 5 customers</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">INSERT INTO</font><ul><li><font color="#ffffff">Allows to insert a new record into a table</font></li><li><font color="#a7c7e7">INSERT INTO table_name (column1, column3, column2, ...) VALUES (value1, value3, value2, ...);</font></li><li><font color="#a7c7e7">INSERT INTO table_name VALUES (value1, value2, value3, ...);</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">INSERT INTO Customers (CustomerName, City, Country) VALUES ('Cardinal', 'Stavanger', 'Norway');</font></li><li><font color="#d8aaf6">--&nbsp; if a column is not mentioned, it will be automatically filled null values/*auto-increment</font>&#8203;</li><li><font color="#c389e8">&#8203;</font></li></ul> <font color="#ffffff">&#8203;NULL</font><ul><li><font color="#ffffff">NULL values can't be caught using comparison operators ie:&nbsp;</font>&nbsp;<font color="#ffffff">=, &lt;, or &lt;&gt;</font></li><li><font color="#ffffff">IS NULL and IS NOT NULL should be used</font></li><li><font color="#a7c7e7">SELECT column_names FROM table_name WHERE column_name IS NULL;</font></li><li><font color="#a7c7e7">SELECT column_names&nbsp;FROM table_name&nbsp;WHERE column_name IS NOT NULL;</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">UPDATE</font><ul><li><font color="#ffffff">Used to modify existing records in a table</font></li><li><font color="#a7c7e7">UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;</font></li><li><font color="#ff9893">Be careful when updating records. If you omit the WHERE clause, ALL records will be updated!</font></li><li><font color="#ffffff">ex:</font><font color="#ff0000">&nbsp;&nbsp;</font><font color="#90f6f9">UPDATE Customers SET ContactName = 'Alfred Schmidt', City= 'Frankfurt' WHERE CustomerID = 1;</font><font color="#00e9ff">&nbsp; &nbsp; </font><font color="#d8aaf6">--&nbsp; Updating 1 record</font></li><li><font color="#ffffff">ex:&nbsp;</font><font color="#90f6f9">UPDATE Customers SET ContactName='Juan' WHERE Country='Mexico';&nbsp; </font><font color="#00e9ff">&nbsp; </font><font color="#d8aaf6">--&nbsp; Updating multiple records</font></li><li>&#8203;&#8203;</li></ul> <font color="#ffffff">&#8203;DELETE</font><ul><li><font color="#a7c7e7">DELETE FROM table_name WHERE condition;</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">DELETE FROM table_name;&nbsp;</font><font color="#00e9ff"> &nbsp; </font><font color="#ff9893">--&nbsp; * Deletes all records from table w/o deleting the table!</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">SELECT TOP / LIMIT - (MySQL) / FETCH FIRST - (Oracle)</font><ul><li><font color="#ffffff">Used to specify # of records to return</font></li><li>-</li><li><font color="#a7c7e7">SELECT TOP number|percent column_name(s) FROM table_name WHERE condition;</font></li><li><font color="#ffffff">ex:&nbsp; </font><font color="#90f6f9">SELECT TOP 3 * FROM Customers;</font></li><li><span style="color:rgb(255, 255, 255)">ex:</span><font color="#00e9ff">&nbsp;&nbsp;</font><font color="#90f6f9">SELECT TOP 50 PERCENT * FROM Customers;</font></li><li>-</li><li><font color="#a7c7e7">SELECT column_name(s) FROM table_name WHERE condition LIMIT number;</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT&nbsp;*&nbsp;FROM&nbsp;Customers WHERE&nbsp;Country='Germany' LIMIT&nbsp;3;</font></li><li>-&nbsp;</li><li><font color="#a7c7e7">SELECT column_name(s) FROM table_name ORDER BY column_name(s) FETCH FIRST number ROWS ONLY;</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT * FROM Customers WHERE Country='Germany' FETCH FIRST 3 ROWS ONLY;</font></li><li><span style="color:rgb(255, 255, 255)">ex:</span><font color="#00e9ff">&nbsp;&nbsp;</font><font color="#90f6f9">SELECT * FROM Customers FETCH FIRST 50 PERCENT ROWS ONLY;</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">MIN / MAX</font><ul><li><font color="#ffffff">Returns the smallest / largest value of the column</font></li><li><font color="#a7c7e7">SELECT MIN/MAX(column_name) FROM table_name WHERE condition;</font></li><li><font color="#ffffff">&#8203;&nbsp;</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT MIN/MAX(Price) AS SmallestPrice FROM Products;</font></li><li><font color="#d8aaf6">--&nbsp; Below shows result for MIN</font></li><li><font color="#b5aaf6">Number of Records: 1<br />SmallestPrice<br />2.5</font></li><li>-</li></ul> <font color="#bcffbc">* NULL values will be ignored&#8203; from the final result for the below 3</font><br /><font color="#ffffff">COUNT</font><ul><li><font color="#ffffff">Returns the total # of rows of the resulting table</font></li><li><font color="#a7c7e7">SELECT COUNT(column_name) FROM table_name WHERE condition;</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT COUNT(ProductID) FROM Products;</font></li><li>-</li></ul> <font color="#ffffff">AVG</font><ul><li><font color="#ffffff">Returns the average of the numeric column</font></li><li><font color="#a7c7e7">SELECT AVG(column_name) FROM table_name WHERE condition;</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT AVG(Price) FROM Products;</font></li><li>-</li></ul> <font color="#ffffff">SUM</font><ul><li><font color="#ffffff">Returns total sum of a numeric column</font></li><li><font color="#a7c7e7">SELECT SUM(column_name) FROM table_name WHERE condition;</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT SUM(Quantity) FROM OrderDetails;</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">LIKE</font><ul><li><font color="#ffffff">Used in a WHERE clause to search for a specific pattern in a column</font></li><li><font color="#ffffff">2 Wildcards used w/ LIKE operator:</font><ul><li><font color="#ffffff">&#8203;&#8203;</font><font color="#ffffff">% (percent sign): represents 0, 1, or multiple chars&nbsp; &nbsp; -&nbsp;</font><font color="#bcffbc">MS uses * (asterisk sign) instead</font></li><li><font color="#ffffff">_ (underscore sign): represents only 1 char&nbsp; &nbsp; -</font><font color="#a9e976">&nbsp;</font><font color="#bcffbc">MS uses ?&nbsp;(question mark) instead</font></li></ul></li><li><font color="#a7c7e7">SELECT column1, column2, ... FROM table_name WHERE columnN LIKE pattern;</font></li><br /><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT * FROM Customers WHERE CustomerName LIKE 'a__%';</font></li><li><font color="#ffffff">ex:&nbsp;</font><font color="#00e9ff">&nbsp;</font><font color="#90f6f9">SELECT * FROM Customers WHERE CustomerName NOT LIKE 'a%';</font></li><li><font color="#00e9ff">&#8203;</font></li></ul> <font color="#ffffff">Some more Wildcards</font><ul><li><font color="#ffffff">Used in general SQL server</font><ul><li><font color="#ffffff">[] : represents only 1 char that is mentioned in the brackets (ie: h[oa]t matches hat and hot but not hit or hoot)</font></li><li><font color="#ffffff">^ :&nbsp;</font><span style="color:rgb(255, 255, 255)">represents only 1 char that is NOT mentioned in the brackets&nbsp;(ie: h[oa]t matches hit but not hot or hat)</span></li><li><font color="#ffffff">&nbsp; &nbsp; -</font><font color="#a9e976">&nbsp;</font><font color="#bcffbc">MS uses !&nbsp;(exclamation&nbsp;mark) instead</font></li><li><font color="#ffffff">- :&nbsp;represents only 1 char within the specified range (ie: c[a-c]t matches cat, cbt, cct but not cdt)</font></li><li><font color="#bcffbc"># : represent any single numeric char (ie: 2#9 matches 209, 219, 229, 239, etc.)&nbsp; &nbsp; - only works in MS</font></li></ul></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">IN</font><ul><li><font color="#ffffff">Allows to specify multiple values in a WHERE clause ~ almost like a shorthand for multiple ORs</font></li><li><font color="#a7c7e7">SELECT column_name(s) FROM table_name WHERE column_name IN (value1, value2, ...);</font></li><li><font color="#a7c7e7">SELECT column_name(s) FROM table_name WHERE column_name IN (SELECT STATEMENT);</font></li><li><font color="#ffffff">&#8203;</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT * FROM Customers WHERE Country (NOT) IN ('Germany', 'France', 'UK');</font><font color="#00e9ff">&nbsp; &nbsp; </font><font color="#c389e8">--&nbsp; can include NOT to get opposite result</font></li><li><span style="color:rgb(255, 255, 255)">ex:&nbsp;&nbsp;</span><font color="#90f6f9">SELECT * FROM Customers WHERE <u style="">Country</u> IN (SELECT <u style="">Country</u> FROM Suppliers);</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">BETWEEN</font><ul><li><font color="#ffffff">Selects values (ie: numbers, texts, dates) within a given range &amp; inclusive</font></li><li><font color="#a7c7e7">SELECT column_name(s) FROM table_name WHERE column_name BETWEEN value1 AND value2;</font></li><li><font color="#ffffff">&#8203;</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT * FROM Products WHERE Price (NOT) BETWEEN 10 AND 20;</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT * FROM Products WHERE ProductName BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni'</font></li><li><font color="#d8aaf6">--&nbsp; will return all records w/ ProductName alphabetically between the 2 listed</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT * FROM Orders WHERE OrderDate BETWEEN '1996-07-01' AND '1996-07-31';</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">ALIASES</font><ul><li><font color="#ffffff">Used to set a temp name for a column or a table for readability</font></li><li><font color="#a7c7e7">&nbsp;SELECT column_name AS alias_name FROM table_name;</font><font color="#ffffff">&nbsp; &nbsp; </font><font color="#c389e8">-- for columns</font></li><li><font color="#a7c7e7">SELECT column_name(s) FROM table_name AS alias_name;</font><font color="#ffffff">&nbsp; &nbsp; </font><font color="#d8aaf6">-- for tables</font></li><li><font color="#c389e8">&#8203;</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT CustomerID AS ID, CustomerName AS Customer FROM Customers;&nbsp;</font><font color="#ffffff"> &nbsp; </font><font color="#d8aaf6">--&nbsp; resulting table will have 2 columns: ID, Customer</font></li><br /><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT CustomerName AS Customer, ContactName AS [Contact Person] FROM Customers;&nbsp; &nbsp;</font> </li><li><font color="#d8aaf6">--&nbsp; use double quotes or square brackets for new column names</font></li><br /><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT CustomerName, Address + ', ' + PostalCode + ' ' + City + ', ' + Country AS Address FROM Customers;&nbsp; &nbsp;</font> </li><li><font color="#d8aaf6">--&nbsp; combines values from different columns as 1 column in resulting table</font></li><li><font color="#ffffff">in MySQL =&nbsp;</font><font color="#90f6f9">SELECT CustomerName, CONCAT(Address,', ',PostalCode,', ',City,', ',Country) AS Address FROM Customers;</font></li><li><font color="#ffffff">in Oracle =&nbsp;</font><font color="#90f6f9">SELECT CustomerName, (Address || ', ' || PostalCode || ' ' || City || ', ' || Country) AS Address FROM Customers;</font></li><br /><li><span style="color:rgb(255, 255, 255)">ex:&nbsp;&nbsp;</span><font color="#90f6f9">SELECT o.OrderID, o.OrderDate, c.CustomerName FROM Customers AS c, Orders AS o WHERE c.CustomerName='Around the Horn' AND c.CustomerID=o.CustomerID;&nbsp; </font>&nbsp;&nbsp;</li><li><span style="color:rgb(255, 255, 255)">=&nbsp;</span><font color="#90f6f9">SELECT Orders.OrderID, Orders.OrderDate, Customers.CustomerName FROM Customers, Orders WHERE Customers.CustomerName='Around the Horn' AND Customers.CustomerID=Orders.CustomerID;</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">JOIN</font><ul><li><font color="#ffffff">Used to combine rows from 2 or more tables based on a related column between them</font><font color="#c389e8">&#8203;</font></li></ul><br /><font color="#ffffff">INNER JOIN</font><ul><li><font color="#ffffff">Only selects the records that have matching values in both tables</font></li><li><font color="#a7c7e7">SELECT column_name(s) FROM table1 INNER JOIN table2 ON table1.column_name = table2.column_name;</font></li><br /><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate FROM Orders INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;&nbsp;</font><font color="#00e9ff"> &nbsp;</font><font color="#d8aaf6">&nbsp;--&nbsp; Both tables,&nbsp;Orders and Customers have CustomerID column</font></li><li><font color="#d8aaf6">--&nbsp;&nbsp;If there are records in the "Orders" table that do not have matches in "Customers", these orders will not be shown!</font></li><li><font color="#c389e8">&#8203;</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName FROM (</font><ul><li><font color="#90f6f9">(Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)</font><font color="#00e9ff">&nbsp; &nbsp;</font> <font color="#d8aaf6">--&nbsp; hidden SELECT * FROM&nbsp;</font></li><li><font color="#90f6f9">INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID);&nbsp;</font><font color="#00e9ff"> &nbsp; </font><font color="#d8aaf6">--&nbsp; 3 join</font></li></ul></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">LEFT JOIN&nbsp; (~ LEFT OUTER JOIN)</font><ul><li><font color="#ffffff">Returns all records from the left table (table1), and the matching records from the right table (table2)</font></li><li><font color="#a7c7e7">SELECT column_name(s) FROM table1 LEFT JOIN table2 ON table1.column_name = table2.column_name;</font></li><li><font color="#ffffff">If the condition after ON is not satisfied even&nbsp;once =&gt; returns only left table with column from table2 set as null</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT Customers.CustomerName, Orders.OrderID FROM Customers </font><ul><li><font color="#90f6f9">LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;</font></li></ul></li></ul></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/sql-leftjoin_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/sql-leftjoin2_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph"><font color="#ffffff">RIGHT JOIN</font><ul><li><font color="#ffffff">Just like LEFT JOIN, it&nbsp;returns all records from the right table (table2), even if there are no matches in the left table&nbsp;</font></li><li><font color="#a7c7e7">SELECT column_name(s) FROM table1 RIGHT JOIN table2 ON table1.column_name = table2.column_name;</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT Orders.OrderID, Employees.LastName, Employees.FirstName FROM Orders</font><ul><li><font color="#90f6f9">RIGHT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID;&nbsp; &nbsp;</font> </li><li><font color="#d8aaf6">--&nbsp; returns all employees and any orders they may have</font></li></ul></li><li>-</li><li><font color="#ffffff">These are both left and right inclusive join, left and right exclusive join can be found just by adding a `where opp table is null`</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">FULL JOIN = FULL OUTER JOIN</font><ul><li><font color="#ffffff">returns all records when there is a match in left (table1) or right (table2) table records</font></li><li><font color="#a7c7e7">SELECT column_name(s) FROM table1 FULL OUTER JOIN table2 ON table1.column_name = table2.column_name WHERE condition;</font></li><li><font color="#ffffff">The FULL OUTER JOIN keyword returns all matching records from both tables whether the other table matches or not</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT Customers.CustomerName, Orders.OrderID FROM Customers </font><ul><li><font color="#90f6f9">FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID<br />ORDER BY Customers.CustomerName;</font></li><li><font color="#d8aaf6">--&nbsp; resulting table may have some null values for CustomerName and some null for OrderID</font></li></ul></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">SELF JOIN</font><ul><li><font color="#ffffff">Like a regular join but the table is joined w/ itself ; no specific key word is used, just format</font></li><li><font color="#a7c7e7">SELECT column_name(s) FROM table1 T1, table1 T2 WHERE condition;</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City</font><ul><li><font color="#90f6f9">FROM Customers A, Customers B WHERE A.CustomerID &lt;&gt; B.CustomerID AND A.City = B.City;</font></li><li><font color="#d8aaf6">--&nbsp; returns pairs of&nbsp;customers that are from the same city</font></li></ul></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">UNION</font><ul><li><font color="#ffffff">Combines the result-set of 2 or more Select statements.&nbsp;</font><span style="color:rgb(255, 255, 255)">Every SELECT statement within UNION must have:</span><font color="#ffffff">&nbsp;</font><ul><li><font color="#ffffff">&#8203;Same number of columns<br />Each corresponding column&nbsp;must also have similar data types<br />All the columns must be in the same order</font></li></ul></li><li><font color="#a7c7e7">&#8203;SELECT column_name(s) FROM table1 UNION SELECT column_name(s) FROM table2;</font></li><li><font color="#ffffff">* UNION ALL allows duplicate values</font></li><li><font color="#ffffff">Column names of the result is set from the 1st Select statement</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT City FROM Customers UNION SELECT City FROM Suppliers;</font><font color="#00e9ff">&nbsp; &nbsp; </font><font color="#d8aaf6">-- returns the (distinct) cities of customers and suppliers</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">* Below returns a boolean value</font><br /><br /><font color="#ffffff">ANY / ALL</font><ul><li><font color="#ffffff">Allows to perform a comparison between single column value and a range of other values</font></li><li><font color="#ffffff">Returns TRUE&nbsp;if 'any' / 'all' of the subquery value meets the condition</font></li><li><font color="#a7c7e7">SELECT column_name(s) FROM table_name WHERE column_name operator ANY / ALL<br />&nbsp; (SELECT column_name FROM table_name WHERE condition);</font></li><li><font color="#ffffff">*&nbsp;The operator must be a standard comparison operator (=, &lt;&gt;, !=, &gt;, &gt;=, &lt;, or &lt;=)</font></li><br /><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">SELECT ProductName FROM Products WHERE ProductID = ANY / ALL </font><ul><li><font color="#90f6f9">(SELECT ProductID FROM OrderDetails WHERE Quantity = 10);</font></li><li><font color="#d8aaf6">--&nbsp; returns a list of product names if any / all records from OrderDetails have quantity 10</font></li></ul></li><li><font color="#00e9ff">&#8203;</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">SELECT INTO</font><ul><li><font color="#ffffff">Copies data from one table into a new table</font></li><li><font color="#a7c7e7">SELECT column1 AS new_colname, column2, column3, ... INTO newtable [IN externaldb] FROM oldtable WHERE condition;</font></li></ul><br /><font color="#ffffff">CASE</font><ul><li><font color="#90f6f9">SELECT OrderID, Quantity,<br />CASE<br />&nbsp; &nbsp; WHEN Quantity &gt; 30 THEN 'The quantity is greater than 30'<br />&nbsp; &nbsp; WHEN Quantity = 30 THEN 'The quantity is 30'<br />&nbsp; &nbsp; ELSE 'The quantity is under 30'</font><br /><font color="#90f6f9">END AS QuantityText</font><font color="#00e9ff">&nbsp; &nbsp; </font><font color="#d8aaf6">--&nbsp; QuantityText is a separate column</font><br /><font color="#90f6f9">FROM OrderDetails;</font></li></ul><br /><font color="#ffffff">Handling NULL</font><ul><li><font color="#ffffff">ex:&nbsp;</font> <font color="#90f6f9">SELECT ProductName, UnitPrice * (UnitsInStock + COALESCE(UnitsOnOrder, 0)) FROM Products;</font></li></ul><br /><font color="#ffffff">SQL Bitwise Operators: &amp;, |, ^</font></div>
+
+<div><div id="913547107555268021" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a name="StoredProcedures">&nbsp</a></div>
+
+
+
+</div>
+
+<div class="paragraph"><strong><font color="#ffffff">Stored Procedures</font></strong><ul><li><font color="#ffffff">Pre-saved SQL code that can be reused and it can also take in parameters</font></li><li><font color="#ffffff">ex:&nbsp;&nbsp;</font><font color="#90f6f9">CREATE PROCEDURE SelectAllCustomers @City nvarchar(30), @PostalCode nvarchar(10)</font><ul><li><font color="#90f6f9">AS SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode<br />GO;&nbsp; &nbsp;&nbsp;</font></li><li><font color="#90f6f9">EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA1 1DP';</font><font color="#00e9ff">&nbsp; &nbsp;</font><font color="#d8aaf6"> --&nbsp; executes the above procedure</font></li></ul></li></ul></div>
+
+<div><div id="853901484759252505" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a name="Databases">&nbsp</a></div>
+
+
+
+</div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph"><strong><font color="#ffffff" size="4">Working with Databases</font></strong></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#90f6f9">CREATE DATABASE databasename;&nbsp;<br /><br />SHOW DATABASES;&#8203;<br /><br />&#8203;DROP DATABASE databasename;&nbsp;<br /><br />&#8203;BACKUP DATABASE databasename TO DISK = 'filepath';&nbsp;&nbsp;<br /><br />BACKUP DATABASE testDB TO DISK = 'D:\backups\testDB.bak' WITH DIFFERENTIAL;</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#d8aaf6">--&nbsp; Creates a new SQL database<br /><br />--&nbsp; Shows all existing databases&#8203;<br /><br />&#8203;-- Deletes the existing database and all the tables in it<br /><br />&#8203;&#8203;--&nbsp; Creates a full backup of an existing database and stores it in 'filepath'<br />--&nbsp; Only backs up the parts that were changes since the last full database backup</font></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="955510154168244095" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><hr style="height:2px; width:50%; border-width:0; color:white; background-color:white">
+</div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#90f6f9">CREATE TABLE Persons (<br />&nbsp; &nbsp; PersonID int,<br />&nbsp; &nbsp; LastName varchar(255),<br />&nbsp; &nbsp; FirstName varchar(255),<br />&nbsp; &nbsp; Address varchar(255),<br />&nbsp; &nbsp; City varchar(255)<br />);<br />CREATE TABLE TestTable AS<br />&nbsp; &nbsp;&nbsp;SELECT customername, contactname FROM customers;<br /><br />DROP TABLE Shippers;<br />TRUNCATE TABLE table_name;<br /><br />ALTER TABLE table_name ADD column_name datatype;<br />ALTER TABLE Customers ADD Email varchar(255);<br />&#8203;<br />ALTER TABLE Customers DROP COLUMN Email;<br />ALTER TABLE table_name<br />ALTER COLUMN column_name datatype;&nbsp;&nbsp;<br />ALTER TABLE table_name MODIFY column_name datatype;&nbsp; &nbsp;&nbsp;</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#d8aaf6">--&nbsp; Creates a new table<br /><br /><br /><br /><br /><br /><br />-- Creates a new table from a Select query<br /><br /><br />-- Deletes an existing table<br />-- Deletes all the data but keeps the table<br /><br />&#8203;-- Modifies tables<br /><br /><br />-- Deletes column email<br /><br />-- MS Server<br />&#8203;-- Oracle</font></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="884281840467153827" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><hr style="height:2px; width:50%; border-width:0; color:white; background-color:white">
+</div>
+
+
+
+</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:left;"><font color="#90f6f9">CREATE TABLE Persons (</font><br /><font color="#90f6f9">&nbsp; &nbsp; ID int NOT NULL,</font><br /><font color="#90f6f9">&nbsp; &nbsp; LastName varchar(255) NOT NULL,</font><br /><font color="#90f6f9">&nbsp; &nbsp; FirstName varchar(255) NOT NULL,</font><br /><font color="#90f6f9">&nbsp; &nbsp; Age int</font><br /><font color="#90f6f9">);</font><br /><font color="#90f6f9">ALTER TABLE Persons MODIFY Age int NOT NULL;</font><br /><strong><font color="#a7c7e7">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __________</font></strong><br /><br /><font color="#90f6f9">CREATE TABLE Persons (<br />&nbsp; &nbsp; ID int NOT NULL UNIQUE,<br />&nbsp; &nbsp; LastName varchar(255) NOT NULL,<br />&nbsp; &nbsp; FirstName varchar(255),<br />&nbsp; &nbsp; Age int<br />);<br />CREATE TABLE Persons (<br />&nbsp; &nbsp; ID int NOT NULL,<br />&nbsp; &nbsp; LastName varchar(255) NOT NULL,<br />&nbsp; &nbsp; FirstName varchar(255),<br />&nbsp; &nbsp; Age int,<br />&nbsp; &nbsp; CONSTRAINT UC_Person UNIQUE (ID,LastName)<br />);<br /><br />ALTER TABLE Persons ADD<br />&#8203;&nbsp; &nbsp;&nbsp;CONSTRAINT UC_Person UNIQUE (ID,LastName);<br />ALTER TABLE Persons DROP CONSTRAINT UC_Person;<br /><br />&#8203;</font><strong><font color="#a7c7e7">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __________</font></strong><br /><br /><font color="#90f6f9">CREATE&nbsp;TABLE&nbsp;Persons (<br />&nbsp;&nbsp;&nbsp; ID int&nbsp;NOT&nbsp;NULL,<br />&nbsp;&nbsp;&nbsp; LastName varchar(255)&nbsp;NOT&nbsp;NULL,<br />&nbsp;&nbsp;&nbsp; FirstName varchar(255),<br />&nbsp;&nbsp;&nbsp; Age int,<br />&nbsp;&nbsp;&nbsp;&nbsp;CONSTRAINT&nbsp;PK_Person&nbsp;PRIMARY&nbsp;KEY&nbsp;(ID,LastName)<br />);<br />ALTER TABLE Persons ADD CONSTRAINT PK_Person PRIMARY KEY (ID,LastName);<br />ALTER TABLE Persons DROP CONSTRAINT PK_Person;</font><br /><br /><font color="#ffffff">&#8203;</font><strong><font color="#a7c7e7">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __________</font></strong><br /><br /><font color="#90f6f9">CREATE TABLE Orders (<br />&nbsp; &nbsp; OrderID int NOT NULL,<br />&nbsp; &nbsp; OrderNumber int NOT NULL,<br />&nbsp; &nbsp; PersonID int,<br />&nbsp; &nbsp; PRIMARY KEY (OrderID),<br />&nbsp; &nbsp; CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID)<br />&nbsp; &nbsp; REFERENCES Persons(PersonID)<br />);<br /><br />ALTER TABLE Orders ADD<br />&nbsp; &nbsp;&nbsp;CONSTRAINT FK_PersonOrder<br />&#8203;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);<br /><br />ALTER TABLE Orders DROP CONSTRAINT FK_PersonOrder;</font><br /><br /><font color="#ffffff">&#8203;</font><strong><font color="#a7c7e7">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __________</font></strong><br /><br /><font color="#90f6f9">CREATE TABLE Persons (<br />&nbsp; &nbsp; ID int NOT NULL,<br />&nbsp; &nbsp; LastName varchar(255) NOT NULL,<br />&nbsp; &nbsp; FirstName varchar(255),<br />&nbsp; &nbsp; Age int,<br />&nbsp; &nbsp; City varchar(255),<br />&nbsp; &nbsp; CONSTRAINT CHK_Person CHECK (Age&gt;=18 AND City='Sandnes')<br />);<br />ALTER TABLE Persons ADD<br />&nbsp; &nbsp;&nbsp;CONSTRAINT CHK_PersonAge<br />&#8203;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;CHECK (Age&gt;=18 AND City='Sandnes');<br />ALTER TABLE Persons DROP CONSTRAINT CHK_PersonAge;</font><br /><br /><font color="#ffffff">&#8203;</font><strong><font color="#a7c7e7">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __________</font></strong><br /><br /><font color="#90f6f9">CREATE TABLE Persons (<br />&nbsp; &nbsp; ID int NOT NULL,<br />&nbsp; &nbsp; LastName varchar(255) NOT NULL,<br />&nbsp; &nbsp; FirstName varchar(255),<br />&nbsp; &nbsp; Age int,<br />&nbsp; &nbsp; City varchar(255) DEFAULT 'Sandnes'<br />);<br />CREATE TABLE Orders (<br />&nbsp; &nbsp; ID int NOT NULL,<br />&nbsp; &nbsp; OrderNumber int NOT NULL,<br />&nbsp; &nbsp; OrderDate date DEFAULT GETDATE()<br />);<br />ALTER TABLE Persons MODIFY City DEFAULT 'Sandnes';<br />ALTER TABLE Persons ALTER COLUMN City DROP DEFAULT;</font><br /><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#d8aaf6">-- Not Null Constraint</font><br /><br /><br /><br /><br /><br /><font color="#d8aaf6">--&nbsp; If table is already is created</font><br /><strong><font color="#a7c7e7">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __________</font></strong><br /><font color="#ffffff">&#8203;</font><br /><font color="#d8aaf6">-- UNIQUE Constraint</font><br /><br /><br /><br /><br /><br /><font color="#d8aaf6">-- Setting unique constraint on multiple columns</font><br /><br /><br /><br /><br /><br /><font color="#ffffff">&#8203;</font><br /><br /><br /><br /><br /><br /><font color="#ffffff">&#8203;</font><strong><font color="#a7c7e7">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __________</font></strong><br /><br /><font color="#d8aaf6">-- PRIMARY KEY Constraint</font><br /><br /><br /><br /><br /><font color="#ffffff">&#8203;</font><br /><br /><br /><br /><br /><br /><font color="#ffffff">&#8203;</font><strong><font color="#a7c7e7">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __________</font></strong><br /><br /><font color="#d8aaf6">-- FOREIGN KEY refers to a field/column in one table that is the PRIMARY KEY in another table</font><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><font color="#ffffff">&#8203;</font><strong><font color="#a7c7e7">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __________</font></strong><br /><br /><font color="#d8aaf6">-- CHECK constraint limits value range that can be inserted in a column</font><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><font color="#ffffff">&#8203;</font><strong><font color="#a7c7e7">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; __________</font></strong><br /><br /><font color="#d8aaf6">-- DEFAULT constraint used to set default values for a column</font><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="666655448733522315" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><hr style="height:2px; width:50%; border-width:0; color:white; background-color:white">
+</div>
+
+
+
+</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#90f6f9">CREATE VIEW [Brazil Customers] AS<br />&nbsp; &nbsp; SELECT CustomerName, ContactName<br />&nbsp; &nbsp; FROM Customers<br />&nbsp; &nbsp; WHERE Country = 'Brazil';<br /><br />SELECT * FROM [Brazil Customers];<br /><br />CREATE OR REPLACE VIEW [Brazil Customers] AS<br />&nbsp; &nbsp; SELECT CustomerName, ContactName, City<br />&nbsp; &nbsp; FROM Customers<br />&nbsp; &nbsp; WHERE Country = 'Brazil';<br /><br />DROP VIEW [Brazil Customers];</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#d8aaf6">-- VIEW is a virtual table based on the result-set of an SQL statement<br />-- A view shows an up-to-date data whenever the user queries it<br /><br /><br /><br /><br />-- Updates the view<br /><br />&#8203;<br /><br /><br />-- Deletes the view</font></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="901348896250359426" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a name="ForeignKeyConstraints">&nbsp</a></div>
+
+
+
+</div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph"><strong><font color="#ffffff" size="4">Foreign key constraints</font></strong><br /><br /><font color="#ffffff">It ensures&nbsp;that you can only insert a row into the child table if there is a corresponding row in the parent table.</font><br /><br /><span style="color:rgb(255, 255, 255)">FOREIGN KEY (foreign_key_columns)<br />&nbsp; &nbsp;&nbsp;REFERENCES parent_table(parent_key_columns)<br />&nbsp; &nbsp;</span><font color="#a7c7e7">&nbsp;ON UPDATE action<br />&nbsp; &nbsp;&nbsp;ON DELETE action</font><span style="color:rgb(255, 255, 255)">;</span><br /><br /><span style="color:rgb(255, 255, 255)">The&nbsp;</span><font color="#ffffff">ON UPDATE</font><span style="color:rgb(255, 255, 255)">&nbsp;and&nbsp;</span><font color="#ffffff">ON DELETE&nbsp;</font><span style="color:rgb(255, 255, 255)">specify which action will execute when a row in the parent table is updated and deleted. The following are permitted actions :&nbsp;</span><font color="#ffffff">NO ACTION</font><span style="color:rgb(255, 255, 255)">,&nbsp;</span><font color="#ffffff">CASCADE</font><span style="color:rgb(255, 255, 255)">,&nbsp;</span><font color="#ffffff">SET NULL</font><span style="color:rgb(255, 255, 255)">, and&nbsp;</span><font color="#ffffff">SET DEFAULT</font><br /><br /><ul><li><font color="#a7c7e7">NO ACTION</font><font color="#ffffff">: raises an error and rolls back the delete action on the row in the parent table.</font></li><li><font color="#a7c7e7">CASCADE</font><font color="#ffffff">: deletes/updates the rows in the child table that is corresponding to the row deleted/updated from the parent table.</font></li><li><font color="#a7c7e7">SET NULL</font><font color="#ffffff">: sets the rows in the child table to&nbsp;NULL&nbsp;if the corresponding rows in the parent table are modified.&nbsp;(foreign key columns must be nullable)</font></li><li><font color="#a7c7e7">SET DEFAULT</font><font color="#ffffff">: sets the rows in the child table to their default values if the corresponding rows in the parent table are modified. (foreign key columns must have default definitions)&nbsp;</font></li><li>-</li></ul><font color="#ffffff">Cascade</font><ol><li><font color="#ffffff">- CASCADE in MySQL helps to&nbsp;<span style="font-weight:bolder">update/delete</span>&nbsp;the entry from the parent and child table simultaneously.</font></li><li><font color="#ffffff">- ON UPDATE CASCADE&nbsp;and&nbsp;ON DELETE CASCADE&nbsp;is written while creating the child table.</font></li><li><font color="#ffffff">- CASCADE helps in reducing the human effort in updating or deleting an entry from the database.</font></li></ol><br /><font color="#ffffff">Example&nbsp;</font><br /><font color="#90f6f9">CREATE TABLE Science( Enrollment INT, Student_Name varchar(20), Marks INT,<br />&nbsp; &nbsp;&nbsp;PRIMARY KEY(Enrollment, Student_Name),<br />&nbsp; &nbsp;&nbsp;FOREIGN KEY(Enrollment) REFERENCES Class(Enrollment)<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;ON DELETE CASCADE<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;ON UPDATE CASCADE<br />&#8203;);</font></div>
+
+<div><div id="576269735753161753" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a name="SQLInjection">&nbsp</a></div>
+
+
+
+</div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph"><font color="#ffffff"><strong><font size="4">SQL Injection</font></strong><br />Whole/parts of SQL queries can be inserted when asked a user for username/password. And when we try to run a SQL query to insert that username, it may destroy your database or reveal all passwords of other users. For example, if the following gets inputted</font><br /><font color="#ffffff">Username:&nbsp;</font><font color="#25a1ff">" or ""="</font><br /><font color="#ffffff">Password:&nbsp;</font><font color="#25a1ff">" or ""="</font><br /><font color="#ffffff">The server might for this SQL statement and run it in the database, revealing all usernames and passwords.</font><br /><font color="#90f6f9">SELECT * FROM Users WHERE Name ="</font><span style="color:rgb(37, 161, 255)">" or ""="</span><font color="#90f6f9">" AND Pass ="</font><span style="color:rgb(37, 161, 255)">" or ""="</span><font color="#90f6f9">"</font></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph"><font color="#ffffff"><strong><font size="4">SQL Hosting</font></strong><br />In order for a website to store and retrieve data from a database, the website's server should have access to a database system that uses the SQL language/SQL hosting plans.<br /><br />MS Server and Oracle are good for websites with high-traffic.<br />MySQL is inexpensive.</font></div>
+
+<div><div id="201428979297152243" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a name="MongoDB">&nbsp</a></div>
+
+
+
+</div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph"><font color="#ffffff"><strong>MongoDB</strong><br />&nbsp; &nbsp; -&nbsp; document database where each record is stored in a document using a format similar to JSON, called BSON<br />&nbsp; &nbsp; -&nbsp; Example of a document:<br />&nbsp; &nbsp; &nbsp; &nbsp;</font><font color="#90f6f9">{ title:</font> <font color="#90f6f9">"Post Title 1", body:</font> <font color="#90f6f9">"Body of post.", category:</font> <font color="#90f6f9">"News", likes:</font> <font color="#90f6f9">1, tags:</font> <font color="#90f6f9">["news",</font> <font color="#90f6f9">"events"], date: Date() }</font><br /><font color="#90f6f9">&nbsp; &nbsp; </font><font color="#ffffff">-&nbsp; Ex -&nbsp;Find all documents that have a category of "news":&nbsp;&nbsp;</font><font color="#5edaff">db.posts.find( {category: "News"} )</font><br /><font color="#fec3fc">&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#6f7cfe">[<br />&nbsp; &nbsp; &nbsp; &nbsp; {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _id: ObjectId("62c350dc07d768a33fdfe9b0"),<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; title: 'Post Title 1',<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; body: 'Body of post.',<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; category: 'News',<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; likes: 1,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tags: [ 'news', 'events' ],<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; date: 'Mon Jul 04 2022 15:43:08 GMT-0500 (Central Daylight Time)'<br />&nbsp; &nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; &nbsp; &nbsp; ]</font><br /><font color="#90f6f9">&nbsp; &nbsp; </font><font color="#ffffff">-&nbsp;&nbsp;MongoDB stores data in flexible documents. Instead of having multiple tables you can simply keep all of your related data together. This makes reading your data very fast.&nbsp;</font><span><font color="#ffffff">In MongoDB, instead of tables these are called collections.</font></span></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:4.9605411499436%; padding:0 15px;">
+					
+						
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:95.039458850056%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">Creating Databases</font><br /><br /><font color="#5edaff">&gt; show dbs</font><font color="#87def8">&nbsp;</font> <font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font><font color="#b5aaf6">// returns all available databases</font><br /><font color="#5edaff">&gt; use blog</font><font color="#87def8">&nbsp; </font><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font><font color="#b5aaf6">// create a new or change to a database called blog</font><br /><br /><font color="#b5aaf6">// *&nbsp;In MongoDB, a database is not actually created until it gets content!</font><br /><br /><font color="#ffffff">Dropping Database</font><br /><br /><font color="#5edaff">&gt;show dbs</font><br /><font color="#6f7cfe">local&nbsp; &nbsp; &nbsp; 0.78125GB<br />mydb&nbsp; &nbsp; &nbsp; &nbsp;0.23012GB<br />test&nbsp; &nbsp; &nbsp; &nbsp;0.23012GB</font><br /><font color="#5edaff">&gt;<br />&gt;use mydb</font><br /><font color="#6f7cfe">switched to db mydb</font><br /><font color="#5edaff">&gt;db.dropDatabase()</font><br /><font color="#5edaff">&gt;</font><font color="#6f7cfe">{ "dropped" : "mydb", "ok" : 1 }</font><br /><font color="#5edaff">&gt;</font><br />&#8203;<br /><font color="#5edaff">&gt;show dbs</font><br /><font color="#6f7cfe">local&nbsp; &nbsp; &nbsp; 0.78125GB<br />test&nbsp; &nbsp; &nbsp; &nbsp;0.23012GB</font><br /><font color="#5edaff">&gt;</font></div>
+
+<div class="paragraph"><font color="#ffffff">Collection - Grouping of MongoDB Documents = Table in SQL<br /><br />&#8203;</font><font color="#5edaff">&gt;db.createCollection("mycollection")&nbsp; </font><font color="#90f6f9">&nbsp;</font><font color="#ffffff"> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font><font color="#b5aaf6">//&nbsp;using createCollection(name, options) method</font><br /><font color="#6f7cfe">{ "ok" : 1 }</font><br />&#8203;<font color="#ffffff">&#8203;</font><font color="#5edaff">&gt;<br />&gt;db.posts.insertOne({"title": "Post 1"})&nbsp;&nbsp;</font><font color="#90f6f9">&nbsp;</font><font color="#ffffff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font><br /><font color="#b5aaf6">// automatically creates a collection called posts and inserts the JavaScript object</font><br /><font color="#5edaff">&gt;show collections</font><br /><font color="#6f7cfe">mycollection<br />posts</font><br /><font color="#5edaff">&gt;db.mycollection.drop()&nbsp;&nbsp;</font><font color="#90f6f9">&nbsp;</font><font color="#5edaff">&nbsp;&nbsp;</font><font color="#90f6f9">&nbsp;</font><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font><font color="#5edaff">&nbsp;&nbsp;</font><font color="#90f6f9">&nbsp;</font><font color="#ffffff">&nbsp; &nbsp; &nbsp;</font><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font><font color="#b5aaf6">// deletes a collection from database</font><br /><font color="#6f7cfe">true</font><br /><font color="#5edaff">&gt;</font></div>
+
+<div class="paragraph"><font color="#ffffff">Insert</font><br /><br /><font color="#b5aaf6">// insert a single document</font><br /><font color="#5edaff">&gt;db.posts.insertOne({<br />&nbsp; title: "Post Title 1",<br />&nbsp; body: "Body of post.",<br />&nbsp; category: "News",<br />&nbsp; likes: 1,<br />&nbsp; tags: ["news", "events"],<br />&nbsp; date: Date()<br />})</font><br /><font color="#6f7cfe">{<br />&nbsp; acknowledged: true,<br />&nbsp; insertedId: ObjectId("62c350dc07d768a33fdfe9b0")<br />}</font><br /><br /><font color="#b5aaf6">// insert multiple documents</font><br /><font color="#5edaff">db.posts.insertMany([&nbsp;&nbsp;</font><br /><font color="#5edaff">&nbsp; {</font><br /><font color="#5edaff">&nbsp; &nbsp; title: "Post Title 2",</font><br /><font color="#5edaff">&nbsp; &nbsp; body: "Body of post.",</font><br /><font color="#5edaff">&nbsp; &nbsp; category: "Event",</font><br /><font color="#5edaff">&nbsp; &nbsp; likes: 2,</font><br /><font color="#5edaff">&nbsp; &nbsp; tags: ["news", "events"],</font><br /><font color="#5edaff">&nbsp; &nbsp; date: Date()</font><br /><font color="#5edaff">&nbsp; },</font><br /><font color="#5edaff">&nbsp; {</font><br /><font color="#5edaff">&nbsp; &nbsp; title: "Post Title 3",</font><br /><font color="#5edaff">&nbsp; &nbsp; body: "Body of post.",</font><br /><font color="#5edaff">&nbsp; &nbsp; category: "Technology",</font><br /><font color="#5edaff">&nbsp; &nbsp; likes: 3,</font><br /><font color="#5edaff">&nbsp; &nbsp; tags: ["news", "events"],</font><br /><font color="#5edaff">&nbsp; &nbsp; date: Date()</font><br /><font color="#5edaff">&nbsp; },</font><br /><font color="#5edaff">&nbsp; {</font><br /><font color="#5edaff">&nbsp; &nbsp; title: "Post Title 4",</font><br /><font color="#5edaff">&nbsp; &nbsp; body: "Body of post.",</font><br /><font color="#5edaff">&nbsp; &nbsp; category: "Event",</font><br /><font color="#5edaff">&nbsp; &nbsp; likes: 4,</font><br /><font color="#5edaff">&nbsp; &nbsp; tags: ["news", "events"],</font><br /><font color="#5edaff">&nbsp; &nbsp; date: Date()</font><br /><font color="#5edaff">&nbsp; }</font><br /><font color="#5edaff">])</font><br /><font color="#b5aaf6">// random unique objectID is created for each inserted document</font><br /><font color="#6f7cfe">{<br />&nbsp; acknowledged: true,<br />&nbsp; insertedIds: {<br />&nbsp; &nbsp; '0': ObjectId("62c3513907d768a33fdfe9b1"),<br />&nbsp; &nbsp; '1': ObjectId("62c3513907d768a33fdfe9b2"),<br />&nbsp; &nbsp; '2': ObjectId("62c3513907d768a33fdfe9b3")<br />&nbsp; }<br />}&#8203;</font></div>
+
+<div class="paragraph"><font color="#ffffff">Finding Documents</font><br /><br /><font color="#5edaff">&gt;db.posts.find()&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#b5aaf6">// returns all documents in the collection</font><br /><br /><font color="#5edaff">&gt;db.posts.findOne()&nbsp; &nbsp; &nbsp;</font><font color="#b5aaf6">// returns the first match it finds</font><br /><br /><font color="#5edaff">&gt;db.posts.find({}, {title: 1, date: 1})&nbsp; &nbsp; &nbsp; &nbsp;</font><font color="#b5aaf6">// projection: optional parameter - include only title and date fields</font><br /><br /><font color="#5edaff">&gt;db.posts.find({}, {_id: 0, title: 1, date: 1})&nbsp; &nbsp; </font><font color="#b5aaf6">// excludes _id field from result</font><br /><br /><font color="#5edaff">&gt;db.COLLECTION_NAME.find().pretty()&nbsp; &nbsp; &nbsp; </font><font color="#b5aaf6">// displays result in a formatted way</font></div>
+
+<div class="paragraph"><font color="#ffffff">Querying</font><br /><br /><font color="#b5aaf6">// RDBMS equivalent of: where by = "tutorials point" and title = "MongoDB Overview"</font><br /><font color="#5edaff">&gt; db.mycol.find({$and:[{"by":"tutorials point"},{"title": "MongoDB Overview"}]}).pretty()<br /><br />// RDBMS equivalent of: where likes &gt; 10&nbsp;AND (by = 'tutorials point' OR title = 'MongoDB Overview')'<br />&gt;db.mycol.find({"likes": {$gt:10}, $or: [{"by": "tutorials point"}, {"title": "MongoDB Overview"}]}).pretty()</font><br /><br /><ul><li><font color="#a7c7e7">$eq: Values are equal</font></li><li><font color="#a7c7e7">$ne: Values are not equal</font></li><li><font color="#a7c7e7">$gt: Value is greater than another value</font></li><li><font color="#a7c7e7">$gte: Value is greater than or equal to another value</font></li><li><font color="#a7c7e7">$lt: Value is less than another value</font></li><li><font color="#a7c7e7">$lte: Value is less than or equal to another value</font></li><li><font color="#a7c7e7">$in: Value is matched within an array</font></li><li><font color="#a7c7e7">-</font></li><li><font color="#a7c7e7">$and: Returns documents where both queries match</font></li><li><font color="#a7c7e7">$or: Returns documents where either query matches</font></li><li><font color="#a7c7e7">$nor: Returns documents where both queries fail to match</font></li><li><font color="#a7c7e7">$not: Returns documents where the query does not match</font></li><li><font color="#a7c7e7">-</font></li><li><font color="#a7c7e7">$regex: Allows the use of regular expressions when evaluating field values</font></li><li><font color="#a7c7e7">$text: Performs a text search</font></li><li><font color="#a7c7e7">$where: Uses a JavaScript expression to match documents</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">Update</font><br /><br /><font color="#b5aaf6">// The first parameter is a query object to define which document or documents should be updated.<br />// The second parameter is an object defining the updated data.</font><br /><br /><font color="#5edaff">&gt;db.posts.updateOne( { title: "Post Title 1" }, { $set: { likes: 2 } } )&nbsp;</font><br /><font color="#b5aaf6">// Update the likes on 'Post Title 1' to 2&nbsp;</font><br /><br /><font color="#b5aaf6">//&nbsp;Update the document, but if not found insert it</font><br /><font color="#5edaff">&gt;db.posts.updateOne(&nbsp;</font><br /><font color="#5edaff">&nbsp; { title: "Post Title 5" },&nbsp;</font><br /><font color="#5edaff">&nbsp; {</font><br /><font color="#5edaff">&nbsp; &nbsp; $set:&nbsp;</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; {</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; &nbsp; title: "Post Title 5",</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; &nbsp; body: "Body of post.",</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; &nbsp; category: "Event",</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; &nbsp; likes: 5,</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; &nbsp; tags: ["news", "events"],</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; &nbsp; date: Date()</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; }</font><br /><font color="#5edaff">&nbsp; },&nbsp;</font><br /><font color="#5edaff">&nbsp; { upsert: true }</font><br /><font color="#5edaff">)</font><br /><br /><font color="#b5aaf6">// Update likes on all documents by 1 using $inc</font><br /><font color="#5edaff">&gt;db.posts.updateMany({}, { $inc: { likes: 1 } })</font><br /><br /><ul><li><font color="#ffffff">Updating Fields</font></li><li><font color="#a7c7e7">$currentDate: Sets the field value to the current date</font></li><li><font color="#a7c7e7">$inc: Increments the field value</font></li><li><font color="#a7c7e7">$rename: Renames the field</font></li><li><font color="#a7c7e7">$set: Sets the value of a field</font></li><li><font color="#a7c7e7">$unset: Removes the field from the document</font></li><li><font color="#ffffff">-</font></li><li><font color="#ffffff">Updating Arrays</font></li><li><font color="#a7c7e7">$addToSet: Adds distinct elements to an array</font></li><li><font color="#a7c7e7">$pop: Removes the first or last element of an array</font></li><li><font color="#a7c7e7">$pull: Removes all elements from an array that match the query</font></li><li><font color="#a7c7e7">$push: Adds an element to an array</font></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">Delete</font><br /><br /><font color="#b5aaf6">//&nbsp;delete the first document that matches the query provided</font><br /><font color="#5edaff">&gt;db.posts.deleteOne({ title: "Post Title 5" })</font><br /><br /><font color="#b5aaf6">//&nbsp;delete all documents that match the query provided</font><br /><font color="#5edaff">&gt;db.posts.deleteMany({ category: "Technology" })</font></div>
+
+<div class="paragraph"><font color="#ffffff">Limit</font><br /><font color="#b5aaf6">//&nbsp; only return a total of NUMBER results</font><br /><font color="#5edaff">&gt;db.COLLECTION_NAME.find().limit(NUMBER)<br />&gt;db.movies.aggregate([ { $limit: 1 } ])</font><br /><font color="#b5aaf6">//&nbsp;&nbsp;returns only 1 movie from the collection</font></div>
+
+<div class="paragraph"><font color="#ffffff">Aggregation</font><br /><br /><font color="#ffffff">*&nbsp;Don't confuse this _id expression with the _id ObjectId provided to each document</font><br /><br /><font color="#ffffff">$group</font><br /><font color="#5edaff">&gt;db.listingsAndReviews.aggregate([ { $group : { _id : "$property_type" } } ])</font><br /><font color="#b5aaf6">//&nbsp;&nbsp;This will return the distinct values from the property_type field</font><br /><br /><font color="#ffffff">$sort</font><br /><font color="#5edaff">&gt;db.listingsAndReviews.aggregate([&nbsp;</font><br /><font color="#5edaff">&nbsp; {&nbsp;</font><br /><font color="#5edaff">&nbsp; &nbsp; $sort: { "accommodates": -1 }&nbsp;</font><br /><font color="#5edaff">&nbsp; },</font><br /><font color="#5edaff">&nbsp; {</font><br /><font color="#5edaff">&nbsp; &nbsp; $project: {</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; "name": 1,</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; "accommodates": 1</font><br /><font color="#5edaff">&nbsp; &nbsp; }</font><br /><font color="#5edaff">&nbsp; },</font><br /><font color="#5edaff">&nbsp; {</font><br /><font color="#5edaff">&nbsp; &nbsp; $limit: 5</font><br /><font color="#5edaff">&nbsp; }</font><br /><font color="#5edaff">])</font><br /><font color="#b5aaf6">//&nbsp; It first sorts documents by accommodates in descending order then returns first 5 documents<br />// sort can be:&nbsp;1 = ascending and -1 = descending order</font><br /><br /><font color="#ffffff">$match</font><br /><font color="#5edaff">&gt;db.listingsAndReviews.aggregate([&nbsp;</font><br /><font color="#5edaff">&nbsp; { $match : { property_type : "House" } },</font><br /><font color="#5edaff">&nbsp; { $limit: 2 },</font><br /><font color="#5edaff">&nbsp; { $project: {</font><br /><font color="#5edaff">&nbsp; &nbsp; "name": 1,</font><br /><font color="#5edaff">&nbsp; &nbsp; "bedrooms": 1,</font><br /><font color="#5edaff">&nbsp; &nbsp; "price": 1</font><br /><font color="#5edaff">&nbsp; }}</font><br /><font color="#5edaff">])</font><br /><font color="#b5aaf6">//&nbsp;&nbsp;only returns documents that have the property_type of "House"</font><br /><br /><font color="#ffffff">$addFields</font><br /><font color="#5edaff">&gt;db.restaurants.aggregate([</font><br /><font color="#5edaff">&nbsp; {</font><br /><font color="#5edaff">&nbsp; &nbsp; $addFields: {</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; avgGrade: { $avg: "$grades.score" }</font><br /><font color="#5edaff">&nbsp; &nbsp; }</font><br /><font color="#5edaff">&nbsp; },</font><br /><font color="#5edaff">&nbsp; {</font><br /><font color="#5edaff">&nbsp; &nbsp; $project: {</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; "name": 1,</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; "avgGrade": 1</font><br /><font color="#5edaff">&nbsp; &nbsp; }</font><br /><font color="#5edaff">&nbsp; },</font><br /><font color="#5edaff">&nbsp; {</font><br /><font color="#5edaff">&nbsp; &nbsp; $limit: 5</font><br /><font color="#5edaff">&nbsp; }</font><br /><font color="#5edaff">])</font><br /><font color="#b5aaf6">//&nbsp;&nbsp;This will return the documents along with a new field (column), avgGrade, which will contain the average of each restaurants grades.score</font><br /><br /><font color="#ffffff">$count</font><br /><font color="#5edaff">&gt;db.restaurants.aggregate([</font><br /><font color="#5edaff">&nbsp; {</font><br /><font color="#5edaff">&nbsp; &nbsp; $match: { "cuisine": "Chinese" }</font><br /><font color="#5edaff">&nbsp; },</font><br /><font color="#5edaff">&nbsp; {</font><br /><font color="#5edaff">&nbsp; &nbsp; $count: "totalChinese"</font><br /><font color="#5edaff">&nbsp; }</font><br /><font color="#5edaff">])</font><br /><font color="#b5aaf6">//&nbsp;&nbsp;returns the number of documents at the $count stage as a field called "totalChinese"</font><br /><br /><font color="#ffffff">$lookup</font><br /><font color="#b5aaf6">//&nbsp; performs left outer join to collection in the same database</font><br /><font color="#5edaff">&gt;db.comments.aggregate([</font><br /><font color="#5edaff">&nbsp; {</font><br /><font color="#5edaff">&nbsp; &nbsp; $lookup: {</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; from: "movies",</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; localField: "movie_id",</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; foreignField: "_id",</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; as: "movie_details",</font><br /><font color="#5edaff">&nbsp; &nbsp; },</font><br /><font color="#5edaff">&nbsp; },</font><br /><font color="#5edaff">&nbsp; {</font><br /><font color="#5edaff">&nbsp; &nbsp; $limit: 1</font><br /><font color="#5edaff">&nbsp; }</font><br /><font color="#5edaff">])</font><br /><font color="#b5aaf6">//&nbsp;&nbsp;returns the movie data along with each comment</font><br /><br /><font color="#ffffff">$out</font><br /><font color="#5edaff">&gt;db.listingsAndReviews.aggregate([</font><br /><font color="#5edaff">&nbsp; {</font><br /><font color="#5edaff">&nbsp; &nbsp; $group: {</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; _id: "$property_type",</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; properties: {</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; &nbsp; $push: {</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; name: "$name",</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; accommodates: "$accommodates",</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; price: "$price",</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; &nbsp; },</font><br /><font color="#5edaff">&nbsp; &nbsp; &nbsp; },</font><br /><font color="#5edaff">&nbsp; &nbsp; },</font><br /><font color="#5edaff">&nbsp; },</font><br /><font color="#5edaff">&nbsp; { $out: "properties_by_type" },</font><br /><font color="#5edaff">])</font><br /><font color="#b5aaf6">//&nbsp;&nbsp;The first stage will group properties by the property_type and include the name, accommodates, and price fields for each. The $out stage will create a new collection called properties_by_type in the current database and write the resulting documents into that collection</font></div>
+
+<div class="paragraph"><font color="#ffffff">Indexing &amp; Searching</font><br /><br /><font color="#5edaff">&gt;db.movies.aggregate([<br />&nbsp; {<br />&nbsp; &nbsp; $search: {<br />&nbsp; &nbsp; &nbsp; index: "default", // optional unless you named your index something other than "default"<br />&nbsp; &nbsp; &nbsp; text: {<br />&nbsp; &nbsp; &nbsp; &nbsp; query: "star wars",<br />&nbsp; &nbsp; &nbsp; &nbsp; path: "title"<br />&nbsp; &nbsp; &nbsp; },<br />&nbsp; &nbsp; },<br />&nbsp; },<br />&nbsp; {<br />&nbsp; &nbsp; $project: {<br />&nbsp; &nbsp; &nbsp; title: 1,<br />&nbsp; &nbsp; &nbsp; year: 1,<br />&nbsp; &nbsp; }<br />&nbsp; }<br />])</font><br /><font color="#b5aaf6">//&nbsp;&nbsp;The first stage of this aggregation pipeline will return all documents in the movies collection that contain the word "star" or "wars" in the title field. The second stage will project the title and year fields from each document.</font></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><font color="#ffffff">Mongo DB drivers allow you to execute mongodb commands through the programming language that is used for your application (ie: Java, C++, PHP, Python, etc - *Just lookup 'how to use mongodb in Java', it'll require to import lib).</font></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a></div>
+    </div><!-- end footer-wrap -->
+  </div><!-- /.wrapper -->
+
+  <div id="navMobile" class="nav mobile-nav">
+    <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+    <ul class="wsite-menu-default">
+    		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+    			<a
+    						href="index.html"
+    				class="wsite-menu-item"
+    				>
+    				Home
+    			</a>
+    			
+    		</li>
+    		<li id="pg726788859509786725" class="wsite-menu-item-wrap">
+    			<a
+    						href="c-and-net.html"
+    				class="wsite-menu-item"
+    				>
+    				C#  and .NET
+    			</a>
+    			
+    		</li>
+    </ul>
+  </div>
+
+	<script type="text/javascript" src="files/theme/plugins.js"></script>
+  <script type="text/javascript" src="files/theme/custom.js"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="http://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1234"></script>
+
+		
+	</body>
+</html>

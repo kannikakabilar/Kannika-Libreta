@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Coding In Assembly - KANNIKA LIBRETA</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1672676705" title="wsite-theme-css" />
+<link href='http://cdn2.editmysite.com/fonts/Montserrat/font.css?2' rel='stylesheet' type='text/css' />
+
+<link href='http://cdn2.editmysite.com/fonts/Quicksand/font.css?2' rel='stylesheet' type='text/css' />
+<link href='http://cdn2.editmysite.com/fonts/Alegreya_SC/font.css?2' rel='stylesheet' type='text/css' />
+<link href='http://cdn2.editmysite.com/fonts/Alegreya_SC/font.css?2' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Quicksand" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {color:#000 !important;}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-family:"Alegreya SC" !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {font-family:"Alegreya SC" !important;font-weight:400 !important;}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+.wsite-button-small .wsite-button-inner {font-size:19px !important;}
+.wsite-button-large .wsite-button-inner {font-size:15px !important;}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-size:16px !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+<link rel='stylesheet' type='text/css' href='http://cdn2.editmysite.com/css/old/slideshow/slideshow.css?1234' />
+
+		<script src='files/templateArtifacts.js?1672541044'></script>
+<script>
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='https://cdn2.editmysite.com/js/jquery-1.8.3.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='UNSET'; </script><script>_W = _W || {};
+			_W.customerLocale = "en_US";
+			_W.storeName = null;
+			_W.isCheckoutReskin = false;
+			_W.storeCountry = "CA";
+			_W.storeCurrency = "CAD";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "258110484374261460";
+			com_userID = "50158331";</script><script type='text/javascript' src='http://cdn2.editmysite.com/js/old/slideshow-jq.js?buildTime=1234'></script>
+<script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"174265258517029121","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"726788859509786725","title":"C#  and .NET","url":"c-and-net.html","target":"","nav_menu":false,"nonclickable":false}],
+			"791212307924528289",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{}
+		)
+	}
+//-->
+</script>
+		
+		<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/6/9/6972ea4fe8e76a20caa3b853ee786fd5/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="header-page  wsite-page-coding-in-assembly  full-width-body-off header-overlay-on alt-nav-off  wsite-theme-light"><div class="wrapper">
+    <div class="birdseye-header">
+      <div class="nav-wrap">
+        <div class="container">
+          <div class="logo"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">KANNIKA LIBRETA</span>
+	
+	</a>
+
+</span></div>
+          <div class="nav desktop-nav"><ul class="wsite-menu-default">
+		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg726788859509786725" class="wsite-menu-item-wrap">
+			<a
+						href="c-and-net.html"
+				class="wsite-menu-item"
+				>
+				C#  and .NET
+			</a>
+			
+		</li>
+</ul>
+</div>
+          <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner-wrap">
+      <div class="wsite-elements wsite-not-footer wsite-header-elements">
+	<div class="wsite-section-wrap">
+	<div  class="wsite-section wsite-header-section wsite-section-bg-image" style="height: auto;background-image: url(&quot;/uploads/5/0/1/5/50158331/background-images/176012969.jpg&quot;) ;background-repeat: no-repeat ;background-position: 50% 50% ;background-size: 100% ;background-color: transparent ;background-size: cover;" >
+		<div class="wsite-section-content">
+			
+          <div class="container">
+            <div class="banner">
+				<div class="wsite-section-elements">
+					<h2 class="wsite-content-title">&#8203;Coding In Assembly</h2>
+				</div>
+			</div>
+          </div>
+      
+		</div>
+		<div class=""></div>
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="main-wrap">
+      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-20" style="background-color: #020202;background-image: none;" >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title"><font color="#ffffff">Assembly</font></h2>
+
+<div class="paragraph"><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; -&nbsp; &nbsp;It is a low-level programming language, strongly corresponding with the architecture's machine code instruction</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; ( Assembly language usually has one statement per machine instruction )</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; -&nbsp; &nbsp;Assembly code is converted into executable machine code (binary) bya utility program called assembler</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; -&nbsp; &nbsp;Different machines have different assembly language but most assembly languages can be used universally with any OS</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; -&nbsp; &nbsp;Compiling is much more complicated than assembling so low-level assembly language is more conveniently portable across devices than high-level languages (similarly disassembler is much more easier than a decompiler)</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; -&nbsp; &nbsp;Assembly language can help manipulate hardware directly, issues relating to performance, and also provide access to special instructions for processors</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; -&nbsp; &nbsp;Ex of uses: coding device drivers, real-time systems, low-level embedded systems, boot codes, test system hardwares, operating system kernels, reverse engineering</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; - C allows to embed assembly language directly in the source code -help construct abstractions using different assembly on each hardware platform</span><br /><span style="color:rgb(255, 255, 255)">&#8203;&nbsp; &nbsp; -&nbsp; &nbsp; Assembly is the gateway to speed and efficiency and overall less overhead (compared to high-level languages)</span></div>
+
+<div><div style="height:20px;overflow:hidden"></div>
+<div id='746572886480093648-slideshow'></div>
+<script type='text/javascript'>
+(function(jQuery) {
+function init() { window.wSlideshow && window.wSlideshow.render({elementID:"746572886480093648",nav:"none",navLocation:"bottom",captionLocation:"bottom",transition:"fade",autoplay:"1",speed:"5",aspectRatio:"auto",showControls:"true",randomStart:"false",images:[{"url":"5/0/1/5/50158331/assembly-cheatsheet.jpg","width":"800","height":"450"},{"url":"5/0/1/5/50158331/assemblyex3.jpg","width":"800","height":"726"},{"url":"5/0/1/5/50158331/assemblyex1.jpg","width":"869","height":"429"},{"url":"5/0/1/5/50158331/assemblyex2.jpg","width":"720","height":"540"}]}) }
+jQuery(document).ready(init);
+})(window.jQuery)
+</script>
+
+<div style="height:20px;overflow:hidden"></div></div>
+
+<div class="wsite-scribd">			
+
+			
+
+			
+			<div title="Scribd: lec09print_assembly.pdf" id="doc_564797708" style="background-color:#fff"></div>
+			<script type="text/javascript">
+			if (!window.scribd_js_loaded) {
+				window.scribd_js_loaded = true;
+				document.write("<scr"+"ipt type=\"text/javascript\" src=\"//www.scribd.com/javascripts/scribd_api.js\"></scr"+"ipt>");
+			}
+			</script>
+			<script type="text/javascript">
+			var scribd_doc_564797708 = scribd.Document.getDoc(564797708, "key-hcoUo5C0oZpxUnkhgmQe");
+			scribd_doc_564797708.addParam("jsapi_version", 2);
+			scribd_doc_564797708.addParam("height", 750);
+			scribd_doc_564797708.addParam("width", "100%");
+			scribd_doc_564797708.write("doc_564797708");
+			</script>
+			</div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph"><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; .data</font><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; # kind of like global variables, used for declaring initialized data or constants<br />string1:<br />&nbsp; &nbsp; &nbsp; &nbsp; .asciiz "Enter a number: "<br />num1:<br />&nbsp; &nbsp; &nbsp; &nbsp; .word 42&nbsp; &nbsp; &nbsp; &nbsp; # Integers are referred to as words<br />arr1:<br />&nbsp; &nbsp; &nbsp; &nbsp; .word 1, 2, 3, 4, 5&nbsp; &nbsp; &nbsp; &nbsp; # Array of words<br />arr2:<br />&nbsp; &nbsp; &nbsp; &nbsp; .byte 'a', 'b'&nbsp; &nbsp; &nbsp; &nbsp; # Array of bytes and each char is 1 byte<br />buffer:<br />&nbsp; &nbsp; &nbsp; &nbsp; .space 60&nbsp; &nbsp; &nbsp; &nbsp; # Used to allocate space in RAM<br />flt:<br />&nbsp; &nbsp; &nbsp; &nbsp; .float 3.14&nbsp; &nbsp; &nbsp; &nbsp; # Floats are 4 byte each<br />dbl:<br />&nbsp; &nbsp; &nbsp; &nbsp; .double 7.0&nbsp; &nbsp; &nbsp; &nbsp; # Doubles are 8 byte each<br />hlf:<br />&nbsp; &nbsp; &nbsp; &nbsp; .half 53&nbsp; &nbsp; &nbsp; &nbsp; # Stores values worth of 2 bytes each while word store 4 byte<br />----------------------------------------------------------------------------------------------------------------------</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; .text&nbsp; &nbsp; &nbsp; &nbsp; # This indicates that the section contains the actual program<br />&nbsp; &nbsp; &nbsp; &nbsp; .include "somefile.asm"&nbsp; &nbsp; &nbsp; &nbsp; # Takes code from somefile.asm and puts it here<br />&nbsp; &nbsp; &nbsp; &nbsp; .globl _main&nbsp; &nbsp; &nbsp; &nbsp; # Makes it accessible to other files and also indicates the starting function<br />&nbsp; &nbsp; &nbsp; &nbsp; _main:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; .&nbsp; &nbsp; &nbsp; &nbsp; .&nbsp; &nbsp; &nbsp; &nbsp; .<br />-----------------------------------------------------------------------------------------------------------------------<br />&nbsp; &nbsp; &nbsp; &nbsp; la $a0, string1&nbsp; &nbsp; &nbsp; &nbsp; #$a0 contains arguments and string1 contains the string that will printed out<br />&nbsp; &nbsp; &nbsp; &nbsp; li $v0, 4&nbsp; &nbsp; &nbsp; &nbsp; # 4 is the code used for printing out strings<br />&#8203;&nbsp; &nbsp; &nbsp; &nbsp; syscall<br />--------------------------------------------------------------------------------------------------------------------------------------------------------<br />&nbsp; &nbsp; &nbsp; &nbsp; la = load address, li = load immediate, lb = load byte . . .<br />&nbsp; &nbsp; &nbsp; &nbsp; sw = store word<br />&#8203;&nbsp; &nbsp; &nbsp; &nbsp; move $v0, $s2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# $v0 = $s2</span><br />&#8203;</div>
+
+<div><div style="height:20px;overflow:hidden"></div>
+<div id='285784925480291594-slideshow'></div>
+<script type='text/javascript'>
+(function(jQuery) {
+function init() { window.wSlideshow && window.wSlideshow.render({elementID:"285784925480291594",nav:"none",navLocation:"bottom",captionLocation:"bottom",transition:"fade",autoplay:"0",speed:"5",aspectRatio:"auto",showControls:"true",randomStart:"false",images:[{"url":"5/0/1/5/50158331/mips-register-convention.jpg","width":"800","height":"533"},{"url":"5/0/1/5/50158331/274472112-494873785364701-1006388618008850856-n.png","width":"859","height":"591"}]}) }
+jQuery(document).ready(init);
+})(window.jQuery)
+</script>
+
+<div style="height:20px;overflow:hidden"></div></div>
+
+<div class="paragraph"><span style="color:rgb(255, 255, 255)">--------------------------------------------------------------------------------------------------------------------------------------------------------</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; .macro println()&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; # Macros help prevent repeating same parts of code again &amp; again<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; la $a0, newline<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; li $v0, 4<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; syscall<br />&nbsp; &nbsp; &nbsp; &nbsp; .end_macro<br />&nbsp; &nbsp; &nbsp; &nbsp; println()&nbsp; &nbsp; &nbsp; &nbsp; # The assembler will copy above block of code here, so this whole thing prints 2 newlines<br />&nbsp; &nbsp; &nbsp; &nbsp; .macro imme(%a, %b)&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; # Macros can also include parameters<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; add $t0, %a, %b&nbsp; &nbsp; &nbsp; &nbsp; # Parameters can include immediate, global var<br />&nbsp; &nbsp; &nbsp; &nbsp; .end_macro<br />&nbsp; &nbsp; &nbsp; &nbsp; imme(3,5)&nbsp; &nbsp; &nbsp; &nbsp; # Now, $t0 contains 8<br />------------------------------------------------------------------------------------------------------------------------------------------------------------<br />&nbsp; &nbsp; &nbsp; &nbsp; lw $t1, 4($s0)&nbsp; &nbsp; &nbsp; &nbsp; # Copy a word value from an address stored in $s0 w/ an offset of 4 bytes (addr + 4)<br />&nbsp; &nbsp; &nbsp; &nbsp; lb $t2, 0($s0)&nbsp; &nbsp; &nbsp; &nbsp; # Copy a byte value from source (use 'lh' for load halfword)<br />&nbsp; &nbsp; &nbsp; &nbsp; sw $t0, 8($s0)&nbsp; &nbsp; &nbsp; &nbsp;<br />------------------------------------------------------------------------------------------------------------------------------------------------------------<br />IF Statements<br />&nbsp; &nbsp; &nbsp; &nbsp; beq $t0, $t1, if_block&nbsp; &nbsp; &nbsp; &nbsp; # beq can be varying replaced with beqz, bneq, bneqz, ...<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; else_block:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; .&nbsp; &nbsp; &nbsp; &nbsp; .&nbsp; &nbsp; &nbsp; &nbsp; .<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; j end_block<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; if_block:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; .&nbsp; &nbsp; &nbsp; &nbsp; .&nbsp; &nbsp; &nbsp; &nbsp; .<br />&nbsp; &nbsp; &nbsp; &nbsp; end_block:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; .&nbsp; &nbsp; &nbsp; &nbsp; .&nbsp; &nbsp; &nbsp; &nbsp; .<br />LOOPS<br />&nbsp; &nbsp; &nbsp; &nbsp; li $t0, 0<br />&nbsp; &nbsp; &nbsp; &nbsp; while:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; bgt $t0, 10, end_while<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; addi $t0, $t0, 1<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; . . . # do stuff inside loop<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; j while<br />&nbsp; &nbsp; &nbsp; &nbsp; end_while:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; . . . # finish<br /><br />FUNCTIONS<br />&nbsp; &nbsp; &nbsp; &nbsp; sum:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; add $v0, $a0, $a1&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; # This function takes in 2 args and sums it<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; jr $ra&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; # Tells it to go back to return address<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; main:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; li $a0, 1<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; li $a1, 2&nbsp; &nbsp; &nbsp; &nbsp; # Args are stored in the $a* registers<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; jal sum&nbsp; &nbsp; &nbsp; &nbsp; # Calling function sum and telling it to come back here after finishing execution<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; # Return value of sum is in $v0 register<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<br />-------------------------------------------------------------------------------------------------------------------------------------------------------<br />RECURSION<br />ex: factorial<br />&nbsp; &nbsp; &nbsp; &nbsp; fact:&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; addi $sp, $sp, -8&nbsp; &nbsp; &nbsp; &nbsp; # Always allocate space in stack for recursion<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; sw $s0, ($sp)&nbsp; &nbsp; &nbsp; &nbsp; # Store register that holds the current number<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; sw $ra, 4($sp)&nbsp; &nbsp; &nbsp; &nbsp; # Store previous Program Counter<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; li $v0, 1&nbsp; &nbsp; &nbsp; &nbsp; # Initial return value / base case<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; beq $a0, 0, fact_done&nbsp; &nbsp; &nbsp; &nbsp; # Finish if parameter is 0<br /><br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; move $s0, $a0<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; sub $a0, $a0, 1<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; jal fact<br /><br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; mul $v0, $s0, $v0<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; fact_done:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; lw $s0, ($sp)<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; lw $ra, ($sp)<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; addi $sp, $sp, 8&nbsp; &nbsp; &nbsp; &nbsp; # Restore Program Counter<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; jr $ra<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />ex: Power function # $a1 = exponent, $a0 = base<br />&nbsp; &nbsp; &nbsp; &nbsp; recursivePowFunc:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; bne $a1, $zero, recursion<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; li $v0, 1<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; jr $ra<br />&nbsp; &nbsp; &nbsp; &nbsp; recursion:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; addi $sp, -4<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; sw $ra, 0($sp)<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; addi $a1, $a1, -1<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; jal recursivePowFunc<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; mul $v0, $v0, $a0<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; lw $ra, 0($sp)<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; addi $sp, 4<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; jr $ra</span><br />&#8203;</div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a></div>
+    </div><!-- end footer-wrap -->
+  </div><!-- /.wrapper -->
+
+  <div id="navMobile" class="nav mobile-nav">
+    <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+    <ul class="wsite-menu-default">
+    		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+    			<a
+    						href="index.html"
+    				class="wsite-menu-item"
+    				>
+    				Home
+    			</a>
+    			
+    		</li>
+    		<li id="pg726788859509786725" class="wsite-menu-item-wrap">
+    			<a
+    						href="c-and-net.html"
+    				class="wsite-menu-item"
+    				>
+    				C#  and .NET
+    			</a>
+    			
+    		</li>
+    </ul>
+  </div>
+
+	<script type="text/javascript" src="files/theme/plugins.js"></script>
+  <script type="text/javascript" src="files/theme/custom.js"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="http://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1234"></script>
+
+		
+	</body>
+</html>

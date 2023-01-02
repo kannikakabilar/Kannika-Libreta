@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Algorithms I - KANNIKA LIBRETA</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1672676705" title="wsite-theme-css" />
+<link href='http://cdn2.editmysite.com/fonts/Montserrat/font.css?2' rel='stylesheet' type='text/css' />
+
+<link href='http://cdn2.editmysite.com/fonts/Quicksand/font.css?2' rel='stylesheet' type='text/css' />
+<link href='http://cdn2.editmysite.com/fonts/Alegreya_SC/font.css?2' rel='stylesheet' type='text/css' />
+<link href='http://cdn2.editmysite.com/fonts/Alegreya_SC/font.css?2' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Quicksand" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {color:#000 !important;}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-family:"Alegreya SC" !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {font-family:"Alegreya SC" !important;font-weight:400 !important;}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+.wsite-button-small .wsite-button-inner {font-size:19px !important;}
+.wsite-button-large .wsite-button-inner {font-size:15px !important;}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-size:16px !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+
+		<script src='files/templateArtifacts.js?1672541044'></script>
+<script>
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='https://cdn2.editmysite.com/js/jquery-1.8.3.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='UNSET'; </script><script>_W = _W || {};
+			_W.customerLocale = "en_US";
+			_W.storeName = null;
+			_W.isCheckoutReskin = false;
+			_W.storeCountry = "CA";
+			_W.storeCurrency = "CAD";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "258110484374261460";
+			com_userID = "50158331";</script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"174265258517029121","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"726788859509786725","title":"C#  and .NET","url":"c-and-net.html","target":"","nav_menu":false,"nonclickable":false}],
+			"156041258822275539",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{}
+		)
+	}
+//-->
+</script>
+		
+		<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/6/9/6972ea4fe8e76a20caa3b853ee786fd5/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="header-page  wsite-page-algorithms-i  full-width-body-off header-overlay-on alt-nav-off  wsite-theme-light"><div class="wrapper">
+    <div class="birdseye-header">
+      <div class="nav-wrap">
+        <div class="container">
+          <div class="logo"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">KANNIKA LIBRETA</span>
+	
+	</a>
+
+</span></div>
+          <div class="nav desktop-nav"><ul class="wsite-menu-default">
+		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg726788859509786725" class="wsite-menu-item-wrap">
+			<a
+						href="c-and-net.html"
+				class="wsite-menu-item"
+				>
+				C#  and .NET
+			</a>
+			
+		</li>
+</ul>
+</div>
+          <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner-wrap">
+      <div class="wsite-elements wsite-not-footer wsite-header-elements">
+	<div class="wsite-section-wrap">
+	<div  class="wsite-section wsite-header-section wsite-section-bg-image" style="height: auto;background-image: url(&quot;/uploads/5/0/1/5/50158331/background-images/1780990410.jpg&quot;) ;background-repeat: no-repeat ;background-position: 50.00% 45.50% ;background-size: 100% ;background-color: transparent ;background-size: cover;" >
+		<div class="wsite-section-content">
+			
+          <div class="container">
+            <div class="banner">
+				<div class="wsite-section-elements">
+					<h2 class="wsite-content-title">Algorithms &amp; Complexity</h2>
+				</div>
+			</div>
+          </div>
+      
+		</div>
+		<div class=""></div>
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="main-wrap">
+      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-24" style="background-color: #020202;background-image: none;" >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<div class="paragraph" style="text-align:left;"><font color="#ffffff">Algorithms give computers step-by-step instructions to resolve a problem-category in the best possible way.<br /><br /><strong><font size="4">Asymptotic Notations</font></strong><br />- describes the run time of an algorithm based on the input size</font><ul><li><font color="#ffffff"><strong>Big O</strong>: provides the upper-bound (less/faster-than-or-equal-to)</font></li><li><font color="#ffffff"><strong>Big Omega</strong>: provides the lower-bound (more/slower-than-or-equal-to)</font></li><li><font color="#ffffff"><strong>Big Theta</strong>: provides the tight-bound (Theta(n) means it is both O(n) and Omega(n))</font></li><br /><li><font color="#7ad6f8">Analogy</font><font color="#ffffff">:</font> <font color="#ffffff">Electronic Transfer of a file = O(Size of file); Airplane Transfer of a file = O(1)</font></li><br /><li><font color="#ffffff"><strong>*</strong> It is possible that O(n) code runs faster than O(1) - Big O only describes the rate of increase</font></li><li><font color="#ffffff">Also drop non-dominant term, ex: O(n^2 + n) =&gt; O(n^2)</font>&#8203;</li><li>-</li><li><font color="#ffffff"><strong>*</strong> Though Big O can be used to analyze the Worst Case, the runtime of Big O does not have to equal the run time of the Worst Case</font></li><li><font color="#ffffff">(^ same applies for Average case &amp; Big Theta and Best case &amp; Big Omega)</font></li><li><font color="#ffffff"><strong>Best/Average/Worst case</strong> describe the run time of&nbsp;a particular input for that algorithm</font></li><li>-</li><li><font color="#ffffff"><strong>Little O</strong>: provides a strict upper-bound (strictly less/faster-than)</font></li><li><font color="#ffffff"><strong>Little Omega</strong>: provides a strict lower-bound (strictly more/slower-than)</font></li><li>-</li></ul> &#8203;&nbsp; &nbsp; &nbsp;<font color="#ff00fb">For example</font><font color="#ffffff">, the function&nbsp;f(n) = 3n&nbsp;is:</font><ul><li><font color="#ffffff">&#8203;in&nbsp;O(n&sup2;),&nbsp;o(n&sup2;), and&nbsp;O(n)</font></li><li><font color="#ffffff">but NOT&nbsp;in&nbsp;O(lg n),&nbsp;o(lg n), or&nbsp;o(n)</font></li><li>-</li><li><font color="#ffffff">&nbsp;f &isin; O(g) says, essentially<br />For&nbsp;</font><strong style="color:rgb(255, 255, 255)">at least one</strong><font color="#ffffff">&nbsp;choice of a constant&nbsp;</font><em><font color="#fa7200">k</font></em><font color="#ffffff">&nbsp;&gt; 0, you can find a constant&nbsp;</font><em><font color="#fb7200">a</font></em><font color="#ffffff">&nbsp;such that the inequality 0 &lt;= f(x) &lt;= </font><font color="#fa7200">k</font><font color="#ffffff"> g(x) holds for all x &gt; </font><font color="#fa7200">a</font><font color="#ffffff">.<br />*Note that O(g) is the set of all functions for which this condition holds.</font><br /><font color="#ffffff">f &isin; o(g) says, essentially<br />For&nbsp;<strong>every</strong>&nbsp;choice of a constant&nbsp;</font><em><font color="#fa7200">k</font></em><font color="#ffffff">&nbsp;&gt; 0, you can find a constant&nbsp;</font><em><font color="#fb7200">a</font></em><font color="#ffffff">&nbsp;such that the inequality 0 &lt;= f(x) &lt; </font><span style="color:rgb(250, 114, 0)">k</span><font color="#ffffff"> g(x) holds for all x &gt; </font><span style="color:rgb(250, 114, 0)">a</span><font color="#ffffff">.</font></li></ul><br /><strong><font color="#68b1d1">Amortized Time</font></strong><br /><font color="#ffffff">~ Average time taken per function call if the function is called many times</font><br /><br /><font color="#ff00fb">For example</font><font color="#ffffff">, when an ArrayList hits the array capacity in it, then it creates a new array with double the size of the old array and copies all the items from old array to the new array. Inserting in ArrayList has two time complexities: O(1), O(n) - since there are 2 time complexities =&gt; we use amortized time. So the time complexity of inserting </font><font color="#ff4b00">X</font><font color="#ffffff"> elements will be</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 + 2 + 4 + 8 + 16 + ... + </font><span style="color:rgb(255, 75, 0)">X</span><font color="#ffffff"> = </font><span style="color:rgb(255, 75, 0)">X</span><font color="#ffffff"> + </font><span style="color:rgb(255, 75, 0)">X</span><font color="#ffffff">/2 + </font><span style="color:rgb(255, 75, 0)">X</span><font color="#ffffff">/4 + </font><span style="color:rgb(255, 75, 0)">X</span><font color="#ffffff">/8 + ... + 4 + 2 + 1 ~= 2</font><span style="color:rgb(255, 75, 0)">X</span><br /><font color="#ffffff">So </font><span style="color:rgb(255, 75, 0)">X</span><font color="#ffffff"> insertions take about O(2</font><span style="color:rgb(255, 75, 0)">X</span><font color="#ffffff">) time which means the amortized time for each insertion is 2</font><span style="color:rgb(255, 75, 0)">X</span><font color="#ffffff">/</font><span style="color:rgb(255, 75, 0)">X</span><font color="#ffffff"> = 2 =&gt; O(1)</font><br /><br /><font color="#ffffff"><strong><font size="4">Space Complexity</font></strong><br />Recursive calls takes up stack space (func calls that simultaneously exists in the call stack)</font></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Recursive Algorithms</font></h2>
+
+<div class="paragraph" style="text-align:left;"><font color="#ffffff">Recursion helps reduce the length of the code and makes it easier to read and write.</font><br /><br /><font color="#ffffff">It uses </font><font color="#ff5a00">LIFO</font><font color="#ffffff"> structure as each call gets executed from stack. </font><br /><br /><font color="#ffffff">Tail recursion is when the recursive call is the last thing executed by the function.<br /><br /><strong>*</strong>Note: every recursive program can be written iteratively and vice versa is also true.<br /><br />When analyzing a recursive call's time complexity =&gt; draw a tree to see how many recursive calls are made</font><br /><br />&#8203;<br /><span style="color:rgb(255, 255, 255)">Recursion uses more memory, because each recursive call (has its own set of variable values) is stored in the stack, and keeps the value there until the call is finished. Stack Overflow occurs when the base case is not reached, and the recursive call is infinitely called and stored in the stack causing the memory to get exhausted.<br /><br />* Use recursion when you need to:&nbsp;</span><ul><li><span style="color:rgb(255, 255, 255)">compute the nth</span></li><li><span style="color:rgb(255, 255, 255)">list first n ... items</span><br /></li><li><span style="color:rgb(255, 255, 255)">compute all ...</span><br /></li></ul></div>
+
+<div class="paragraph" style="text-align:left;"><font size="4" style="color:rgb(255, 255, 255)">Depth First Search</font><br /><br /><font color="#ffffff">All nodes have an attribute called 'visited' which is initially set to false. (Or we initialize an empty set called visited and add nodes as we traverse through) Given a starting node of the graph, we mark it visited, and for each child, we traverse through and visit its children.</font><br /><br /><font color="#c4fd00">Time Complexity: O(V + E), Space Complexity: O(V)</font></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#b073da"># DFS algorithm</font><br /><font color="#00e8fe">def dfs(graph, start, visited=None):<br />&nbsp; &nbsp; if visited is None:<br />&nbsp; &nbsp; &nbsp; &nbsp; visited = set()<br />&nbsp; &nbsp; visited.add(start)<br /><br />&nbsp; &nbsp; print(start)<br /><br />&nbsp; &nbsp; for child in graph[start]:<br />&#8203;&nbsp; &nbsp; &nbsp; &nbsp; if not(child in visited):<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dfs(graph, child, visited)<br />&nbsp; &nbsp; return visited<br /><br /><br />graph = {'0': set(['1', '2']),<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'1': set(['0', '3', '4']),<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'2': set(['0']),<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'3': set(['1']),<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'4': set(['2', '3'])}<br /><br />dfs(graph, '0')</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/screenshot-2022-07-11-161044_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:left;"><font color="#ffffff" size="4">Breadth First Search</font><br /><br /><span style="color:rgb(255, 255, 255)">Given a starting node of the graph, we mark it visited, and for all of its children, we add them in a queue called 'to-be-visited'. We then visit every node from this queue, while this queue is not empty. </span><br /><br /><span style="color:rgb(196, 253, 0)">Time Complexity: O(V + E), Space Complexity: O(V)</span></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:left;"><font color="#b073da"># BFS algorithm</font><br /><font color="#00e8fe">def bfs(graph, root):</font><br /><br /><font color="#00e8fe">&nbsp; &nbsp; visited = set()</font><br /><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;</span><font color="#00e8fe">queue = []<br /><br />&nbsp; &nbsp; visited.add(root)</font><br /><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;</span><font color="#00e8fe">print(str(root) + " ", end="")<br /></font><br /><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;</span><font color="#00e8fe">for child in graph[root]:<br /></font><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;visited.add(child)</span><br /><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;</span><font color="#00e8fe">queue.append(child)</font><br /><br /><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;</span><font color="#00e8fe">while len(queue) != 0:</font><br /><br /><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><font color="#b073da"># Dequeue a vertex from queue</font><br /><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><font color="#00e8fe">vertex = queue.pop(0)</font><br /><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><font color="#00e8fe">print(str(vertex) + " ", end="")</font><br /><br /><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;</span><font color="#b073da"># If not visited, mark it as visited, and<br /></font><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;</span><font color="#b073da"># enqueue it</font><br /><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;</span><font color="#00e8fe">for child in graph[vertex]:</font><br /><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><font color="#00e8fe">if child not in visited:</font><br /><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;</span><font color="#00e8fe">visited.add(child)</font><br /><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 232, 254)">&nbsp; &nbsp;&nbsp;</span><font color="#00e8fe">queue.append(child)</font><br /><br /><br /><font color="#00e8fe">if __name__ == '__main__':</font><br /><font color="#00e8fe">graph = {0: [1, 2], 1: [2], 2: [3], 3: [1, 2]}</font><br /><font color="#00e8fe">print("Following is Breadth First Traversal: ")</font><br /><font color="#00e8fe">bfs(graph, 0)</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/screenshot-2022-07-11-163608_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/screenshot-2022-07-11-163639_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/screenshot-2022-07-11-163912_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:left;"><font size="4" style="color: rgb(255, 255, 255);">Tower of Hanoi</font><br /><br /><font color="#ffffff">Given: 3 pegs (src, dest, aux), n disks</font><br /><font color="#ffffff">- move n disks from src to dest peg in min # of moves = (2^n) - 1</font><br /><font color="#ffffff">- only top disk can be moved</font><br /><font color="#ffffff">- bigger disk cannot be placed on smaller disk (nth disk cannot be placed on any disk less than n)</font><br /><br /><font color="#7ad6f8">Food for Thought on Solution</font><br /><font color="#ffffff">- In order to solve this problem, we need to first think about base case</font><br /><font color="#ffffff">If there is only 1 disk, then we move from src peg to dest peg</font><br /><font color="#ffffff">- If there are 2 disks, then</font><br /><font color="#ffffff">Step 1: move top disk from src onto aux peg</font><br /><font color="#ffffff">Step 2: move the last disk from src onto dest peg</font><br /><font color="#ffffff">Step 3: move that top disk from aux onto dest peg</font><br /><br /><span style="color:rgb(196, 253, 0)">Time Complexity: O(2^n), Space Complexity: O(1)</span></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#b073da"># Recursive Python function to solve tower of hanoi</font><br /><font color="#00e8fe">&#8203;</font><br /><font color="#00e8fe">def hanoi(n , src, dest, aux):</font><br /><font color="#00e8fe">&nbsp; &nbsp; if n == 1:</font><br /><font color="#00e8fe">&nbsp; &nbsp; &nbsp; &nbsp; print("Move disk 1 from "+src+ " to "+dest)</font><br /><font color="#00e8fe">&nbsp; &nbsp; else:</font><br /><font color="#00e8fe">&nbsp; &nbsp; &nbsp; &nbsp; hanoi(n-1, src, aux, dest)</font><br /><font color="#00e8fe">&nbsp; &nbsp; &nbsp; &nbsp; print("Move disk "+ n +" from " +src+" to "+dest)</font><br /><font color="#00e8fe">&nbsp; &nbsp; &nbsp; &nbsp; hanoi(n-1, aux, dest, src)</font><br /><font color="#b073da"># Driver code</font><br /><font color="#00e8fe">n = 4</font><br /><font color="#00e8fe">TowerOfHanoi(n, 'A', 'C', 'B')</font><br /><font color="#b073da"># A, C, B are the name of rods</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/tower-of-hanoi-two-disks_orig.gif" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:80%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:left;"><font color="#ffffff"><font size="4">GCD (Greatest Common Divisor)</font><br /><br />&#8203;Problem: Greatest possible integer that divides both numbers: a, b<br /><br />When working on a recursion problem, it is important to understand the base case(s)<br />1) if either a or b equal 0 =&gt; return a+b<br />&#8203; (* if a=0 then return b and if b=0 then return a, but if both equal 0 then return 0)<br />2) if a and b are equal =&gt; return a<br />3) if a &gt; b: return gcd(a%b, b) else: return gcd(a, b%a)<br /><br />* It is important to note that: a%b (which is remainder of division a/b) will never equal b and vice versa<br />- if a%b equals 0, then the function returns b (since b divides a and itself) and vice versa for b%a<br />- if a%b does not equal 0, then we need to find the greatest common divisor of the remainder and divisor</font><br /><br /><span style="color:rgb(196, 253, 0)">Time Complexity: O(log(min(a, b))), Space Complexity: O(1)</span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:20%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#00e9ff">def gcf(a, b):<br />&nbsp; &nbsp; if a == 0 or b == 0:<br />&nbsp; &nbsp; &nbsp; &nbsp; return a + b<br />&nbsp; &nbsp; elif a == b:<br />&nbsp; &nbsp; &nbsp; &nbsp; return a<br />&nbsp; &nbsp; elif a &gt; b:<br />&nbsp; &nbsp; &nbsp; &nbsp; return gcf(a%b, b)<br />&nbsp; &nbsp; else:<br />&nbsp; &nbsp; &nbsp; &nbsp; return gcf(a, b%a)</font></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Divide and Conquer Algorithms</font></h2>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:53.611111111111%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">&nbsp; &nbsp; -&nbsp; &nbsp; Similar to recursion, divide and conquer breaks down a problem until it's simple enough to resolve it. <br />&nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;DAC should not be used when the same subproblem occurs many times <br />&#8203;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(ie: for computing Fibonacci =&gt; Dynamic Programming should be used). <br />&nbsp; &nbsp; -&nbsp; &nbsp;&nbsp;Overall, DAC reduces time complexity.</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:46.388888888889%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/editor/divide-and-conquer-introduction.jpg?1657665004" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Binary Search</font><br />The list needs to be already sorted. The recursive method of Binary Search utilizes DAC.&nbsp;<br />Given: a number/char, a sorted list of items&nbsp; &nbsp; =&gt;&nbsp; &nbsp;Find the index where the element is located</font></div>
+
+<div class="paragraph"><span style="color:rgb(196, 253, 0)">Time Complexity: O(log(n)), Space Complexity: O(1)</span><br /><br /><font color="#00e7fd">def binarySearch(array, x, low, high):</font><br /><br /><font color="#00e7fd">&nbsp; &nbsp; if high &gt;= low:</font><br /><font color="#00e7fd">&nbsp; &nbsp; &nbsp; &nbsp; mid = low + (high - low)//2</font><br /><font color="#00e7fd">&#8203;</font><br /><font color="#00e7fd">&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#b073da"># If found at mid, then return it, if not =&gt; we break the list into 2 halves</font><br /><font color="#00e7fd">&nbsp; &nbsp; &nbsp; &nbsp; if array[mid] == x:</font><br /><font color="#00e7fd">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return mid</font><br /><br /><font color="#00e7fd">&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#b073da"># Search the left half</font><br /><font color="#00e7fd">&nbsp; &nbsp; &nbsp; &nbsp; elif array[mid] &gt; x:</font><br /><font color="#00e7fd">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return binarySearch(array, x, low, mid-1)</font><br /><br /><font color="#00e7fd">&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#b073da"># Search the right half</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp;</font><font color="#00e8fe"> else:<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return binarySearch(array, x, mid + 1, high)<br /><br />&nbsp; &nbsp; else:<br />&nbsp; &nbsp; &nbsp; &nbsp; return -1</font><font color="#ffffff">&nbsp; &nbsp; </font><font color="#b073da"># if elements is not found</font></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Merge Sort</font><br /><br />The MergeSort function repeatedly divides the array into two halves until we reach a stage where we try to perform MergeSort on a subarray of size 1.&nbsp;</font><br /><br /><span style="color:rgb(196, 253, 0)">Time Complexity: O(n*log(n)), Space Complexity: O(n)</span><br /><br /><font color="#ffffff">Step 1: Divide the given array into 2 halves</font><br /><font color="#b073da"># But first check for empty list</font><br /><font color="#00e9ff">if len(array) == 0:<br />&nbsp; &nbsp; &nbsp;return array<br />&#8203;&nbsp; &nbsp;<br />r = len(array) // 2<br />L = array[:r]<br />M = array[r:]</font><br /><br /><font color="#ffffff">Step 2: Make sure both these halves of the array are sorted</font><br /><font color="#00e9ff">mergeSort(L)<br />mergeSort(M)</font><br /><br /><font color="#ffffff">Step 3: Merge these 2 sorted arrays</font><br /><font color="#00e8fe">i = j = k =</font> <font color="#00e8fe">0</font><br /><font color="#b073da"># Until we reach either end of either L or M, pick smaller among&nbsp;elements from L and M and place them in the correct position at A[0..r]</font><br /><font color="#00e8fe">while</font> <font color="#00e8fe">i &lt; len(L)</font> <font color="#00e8fe">and</font> <font color="#00e8fe">j &lt; len(M):</font><br /><font color="#00e8fe">&nbsp; &nbsp;&nbsp; if</font> <font color="#00e8fe">L[i] &lt; M[j]:</font><br /><font color="#00e8fe">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; array[k] = L[i]</font><br /><font color="#00e8fe">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; i +=</font> <font color="#00e8fe">1</font><br /><font color="#00e8fe">&nbsp; &nbsp;&nbsp; else:</font><br /><font color="#00e8fe">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; array[k] = M[j]</font><br /><font color="#00e8fe">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; j +=</font> <font color="#00e8fe">1</font><br /><font color="#00e8fe">&nbsp; &nbsp;&nbsp; k +=</font> <font color="#00e8fe">1</font><br /><font color="#b073da"># When we run out of elements in either L or M,<br /># pick up the remaining elements and put in A[r..]</font><br /><font color="#00e8fe">while i &lt; len(L):<br />&nbsp; &nbsp;&nbsp; array[k] = L[i]<br />&nbsp; &nbsp;&nbsp; i += 1<br />&nbsp; &nbsp;&nbsp;&nbsp;k += 1<br />while j &lt; len(M):<br />&nbsp; &nbsp;&nbsp; array[k] = M[j]<br />&nbsp; &nbsp;&nbsp; j += 1<br />&nbsp; &nbsp;&nbsp; k += 1</font></div>
+
+<div class="paragraph"><span style="color:rgb(255, 255, 255)"><font size="4">Quicksort</font></span><font color="#ffffff"><br /></font></div>
+
+<div class="paragraph"><font color="#ffffff">Quicksort uses the right most element as pivot, and the remaining elements are partitioned based whether it's smaller or bigger than the pivot element. These partitioned elements are placed on the left and the right side of the pivot element in the array. After that, quicksort is performed on the 2 partitioned sides.<br /><br /></font>&nbsp; &nbsp; <font color="#ffffff">- Quicksort is used when the given array is guaranteed to be non-sorted and space is restricted</font><br /><br /><font color="#92ff03">Time Complexity: (Worst) O(n^2)&nbsp; (Average)O(n*log n), Space Complexity: O(log n)</font><br />&#8203;<br /><font color="#ffffff">Step 1:&nbsp;Check if list is empty - in our case, low and high will indicate this</font><br /><font color="#00e9ff">def quickSort(array, low, high):<br />&nbsp; &nbsp;&nbsp;if low &lt; high:</font><br /><br /><font color="#ffffff">Step 2:&nbsp; &nbsp; Call partition to get index of where pivot element is placed</font><br /><font color="#b073da">&nbsp; &nbsp;&nbsp;# find pivot element such that<br />&nbsp; &nbsp;&nbsp;# element smaller than pivot are on the left<br />&nbsp; &nbsp;&nbsp;# element greater than pivot are on the right</font><br />&nbsp; &nbsp; <font color="#00e8fe">piv = partition(array, low, high)</font><br /><br /><font color="#ffffff">Step 3:&nbsp; &nbsp; Make sure the elements on the left side of pivot and right side of pivot are sorted<br />&nbsp; &nbsp;&nbsp;</font><font color="#b073da"># recursive call on the left of pivot</font><br /><font color="#00e8fe">&nbsp; &nbsp;&nbsp;quickSort(array, low, piv - 1)</font><br /><font color="#00e8fe">&nbsp; &nbsp;&nbsp;</font><font color="#b073da"># recursive call on the right of pivot</font><br /><font color="#00e8fe">&nbsp; &nbsp; quickSort(array, piv + 1, high)</font><br /><br /><font color="#ffffff">Step 4:&nbsp; &nbsp; Now Let's implement the partition function</font><br /><span><font color="#00e8fe">def partition(array, low, high):</font><br /><br /><font color="#ffffff">Step 5:&nbsp; &nbsp; Choose pivot element</font><br />&nbsp; &nbsp;&nbsp;</span><font color="#00e8fe">pivot = array[high]</font><br /><br /><font color="#ffffff">Step 6:&nbsp; &nbsp; Initialize a pointer to keep track of where pivot element should be placed</font><br /><font color="#00e8fe">&nbsp; &nbsp;&nbsp;i = low - 1</font><br /><br /><font color="#ffffff">Step 7:&nbsp; &nbsp; Every element in the array is compared with the pivot - if an element is smaller than the pivot , then the element is placed at pointer i, or else if element is bigger than the pivot, no action is taken =&gt; so all elements smaller than the pivot are placed before pointer i and the big ones after.</font><br /><font color="#ffddbe">&nbsp; &nbsp; </font><font color="#b073da"># traverse through all elements&nbsp;and&nbsp;compare each element with pivot</font><br />&nbsp; &nbsp; <font color="#00e8fe">for j in range(low, high):</font><br /><font color="#00e8fe">&nbsp; &nbsp; &nbsp; &nbsp; if array[j] &lt;= pivot:</font><br /><font color="#00e8fe">&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#b073da"># if element smaller than pivot is found swap it with the greater element pointed by i</font><br /><font color="#00e8fe">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i = i + 1</font><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<font color="#b073da"># swapping element at i with element at j</font><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <font color="#00e8fe">(array[i], array[j]) = (array[j], array[i])</font><br /><br /><font color="#ffffff">Step 8:&nbsp; &nbsp; Swap the pivot element with the greater element specified by the element after i&nbsp;and return i + 1</font><br /><font color="#00e9ff">&nbsp; &nbsp;&nbsp;(array[i + 1], array[high]) = (array[high], array[i + 1])<br />&nbsp; &nbsp; return i + 1</font></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Median Finding Algorithm</font><br /><br />Given an array&nbsp;<span>A = [1,...,n]&nbsp;</span>of&nbsp;<span>n</span>&nbsp;numbers and an index&nbsp;<span>i,</span>&nbsp;where&nbsp;<span>1 &le; i &le; n</span><span><span><span>,</span></span></span>&nbsp;find the&nbsp;<span><span><span><span>i</span><span><span><span><span><span><span><span><span>th</span></span></span></span></span></span></span></span></span></span></span>&nbsp;smallest element of&nbsp;A.</font><br /><br /><span style="color:rgb(196, 253, 0)">Time Complexity: O(n), Space Complexity: -</span><br /><br /><font color="#c389e8"># Step 1: i represents the ith smallest element, but if we're finding median, then i = n/2</font><br /><font color="#00e8fe">def median_of_medians(A, i):</font><br /><br /><font color="#c389e8"># Step 2: Divide the list A into sublists of length 5 and collect the medians of each sublist</font><br /><font color="#00e9ff">&nbsp; &nbsp; sublists = [A[j:j+5] for j in range(0, len(A), 5)]<br />&nbsp; &nbsp; medians = [sorted(sublist)[len(sublist)/2] for sublist in sublists]</font><br /><br /><font color="#c389e8"># Step 3: Pivot is the median of the medians</font><br /><font color="#00e8fe">&nbsp; &nbsp; if len(medians) &lt;= 5:<br />&nbsp; &nbsp; &nbsp; &nbsp; pivot = sorted(medians)[len(medians)/2]<br />&nbsp; &nbsp; else:<br />&nbsp; &nbsp; &nbsp; &nbsp; #the pivot is the median of the medians<br />&nbsp; &nbsp; &nbsp; &nbsp; pivot = median_of_medians(medians, len(medians)/2)</font><br /><br /><font color="#c389e8"># (Partition) Step 4: Store all elements lower than median of medians (pivot) in low array and the higher ones in high array</font><font color="#00e8fe"><br />&nbsp; &nbsp; low = [j for j in A if j &lt; pivot]<br />&nbsp; &nbsp; high = [j for j in A if j &gt; pivot]</font><br /><br /><font color="#c389e8"># Step 5: To get the ith smallest element, we need to check if i is less than n/2 or greater. - This step gets repeated until the median (n/2) = i of array A =&gt; so we return median element only when it represents the ith smallest element of array</font><br /><font color="#00e8fe">&nbsp; &nbsp; k = len(low)<br />&nbsp; &nbsp; if i &lt; k:<br />&nbsp; &nbsp; &nbsp; &nbsp; return median_of_medians(low,i)<br />&nbsp; &nbsp; elif i &gt; k:<br />&nbsp; &nbsp; &nbsp; &nbsp; return median_of_medians(high,i-k-1)<br />&nbsp; &nbsp; else: #pivot = k<br />&nbsp; &nbsp; &nbsp; &nbsp; return pivot</font></div>
+
+<div class="paragraph"><font size="4" style="color: rgb(255, 255, 255);">Strassen's Matrix Multiplication</font><br /><br /><font color="#ffffff">The naive way to perform matrix multiplication, where A and B are square NxN matrices has Time Complexity: O(N^3)&nbsp;</font><br /><font color="#00e9ff">def multiply(A, B, C):<br />&nbsp;&nbsp;&nbsp;&nbsp;for i in range(N):<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for j in range( N):<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C[i][j] = 0<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for k in range(N):<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C[i][j] += A[i][k]*B[k][j]</font><br /><br /><font color="#ffffff">Now we will try using Divide-And-Conquer: we divide the matrix into 4 sub-matrix of N/2 x N/2 and try to solve them recursively. The below image shows how we can go about it.</font></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/matmul-dac_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">However, even in this method, the time complexity is still O(N^3) because there are a total of 8 (N/2) matrix multiplications and 4 additions. Each matrix addition has a time complexity of O(N^2)., so this results in:<br />T(N) = 8T(N/2) + O(N^<span>2</span>)<br />From <a href="https://www.geeksforgeeks.org/analysis-algorithm-set-4-master-method-solving-recurrences/">Master's Theorem</a>, time complexity of above method is O(N^<span>3</span>) which is the same as the naive method.</font></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:44.907407407407%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">Now, if we follow Strassen's formula, we get&nbsp;<br /><br />&#8203;&nbsp; &nbsp;&nbsp;</font><span style="color:rgb(196, 253, 0)">Time Complexity ~= O(N^2.8), Space Complexity: O(logn)<br /></span><br /><font color="#ffffff">because instead of performing 8 multiplications after breaking the matrix into 4 sub-matrix, Strassen's only performs 7 sub-matrix multiplication. The below image shows the rule we follow to implement Strassen's Matrix Multiplication algorithm.</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:55.092592592593%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/published/stressen-matmul.jpg?1658011596" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><font color="#00e8fe">import numpy as np&nbsp;</font><br /><br /><font color="#c389e8"># Step 1: implement the split function, that splits agiven matrix into 4 sub-matrix</font><br /><font color="#00e8fe">def split(matrix):&nbsp;</font><br /><font color="#00e8fe">&nbsp; &nbsp; row, col = matrix.shape&nbsp;<br />&nbsp; &nbsp;&nbsp;row2, col2 = row//2, col//2<br />&nbsp; &nbsp;&nbsp;return matrix[:row2, :col2], matrix[:row2, col2:], matrix[row2:, :col2], matrix[row2:, col2:]&nbsp;</font><br /><br /><font color="#c389e8"># Step 2: Implement Strassen function and the base case when size of matrices is 1x1&nbsp;</font><br /><font color="#00e8fe">def strassen(x, y):</font><font color="#ffffff">&nbsp;<br /></font>&nbsp; &nbsp;&nbsp;<span style="color:rgb(195, 137, 232)"># Base case</span><br /><font color="#00e8fe">&nbsp; &nbsp;&nbsp;if len(x) == 1:&nbsp;<br />&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;return x * y&nbsp;</font><br /><br /><font color="#c389e8"># Step 3: Call split function and split each matrix into 4 sub-matrix</font><br /><font color="#00e8fe">&nbsp; &nbsp;&nbsp;a, b, c, d = split(x)&nbsp;<br />&nbsp; &nbsp;&nbsp;e, f, g, h = split(y)&nbsp;</font><br /><br /><font color="#c389e8"># Step 4: Compute the 7 matrix multiplication by recursion that are mentioned in Strassen's formula</font><br /><font color="#00e9ff">&nbsp; &nbsp;&nbsp;p1 = strassen(a, f - h)&nbsp;<br />&nbsp; &nbsp;&nbsp;p2 = strassen(a + b, h) &nbsp;<br />&nbsp; &nbsp;&nbsp;p3 = strassen(c + d, e) &nbsp;<br />&nbsp; &nbsp;&nbsp;p4 = strassen(d, g - e) &nbsp;<br />&nbsp; &nbsp;&nbsp;p5 = strassen(a + d, e + h) &nbsp;<br />&nbsp; &nbsp;&nbsp;p6 = strassen(b - d, g + h)&nbsp;<br />&nbsp; &nbsp;&nbsp;p7 = strassen(a - c, e + f)&nbsp;</font><br /><br /><font color="#c389e8"># Step 5: Perform the required matrix addition mentioned in Strassen's formula&nbsp;</font><br /><font color="#00e9ff">&nbsp; &nbsp;&nbsp;c11 = p5 + p4 - p2 + p6&nbsp;<br />&nbsp; &nbsp;&nbsp;c12 = p1 + p2 &nbsp;<br />&nbsp; &nbsp;&nbsp;c21 = p3 + p4 &nbsp;<br />&nbsp; &nbsp;&nbsp;c22 = p1 + p5 - p3 - p7&nbsp;</font><br /><br /><font color="#c389e8"># Step 6: combining the 4 quadrants into a single matrix by stacking horizontally and vertically and return the resulting matrix</font><br /><font color="#01e9ff">&nbsp; &nbsp;&nbsp;c = np.vstack((np.hstack((c11, c12)), np.hstack((c21, c22))))&nbsp;<br /><br />&nbsp; &nbsp;&nbsp;return c&nbsp;</font></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="5">Karats</font></font><font color="#ffffff"><font size="5">uba Algorithm</font><br /><br />Even though multiplying small numbers can be considered to be performing in O(1) time, multiplying really large numbers occurs on O(n^2). However, the Karatsuba algorithm can be used to perform multiplication in O(n^1.585). First we will take a look into how the naive method of multiplication is implemented&nbsp;<br /><br />- Divide each number into 2 halves (for ex:&nbsp; x = 1234 =&gt; xH = 12 and xL =34), b&nbsp; =&nbsp; base, in this case it's 10, n = # of digits, in this case it's 4<br />&nbsp; &nbsp; &nbsp; &nbsp; x&nbsp; =&nbsp; (<span><span>x</span><span><span><span><span><span><span><span>H</span></span></span></span><span>&#8203;)&nbsp; *&nbsp; (</span></span></span></span></span><span><span>b^(</span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>n/2)</span></span></span></span></span><span>&#8203;)&nbsp;&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span><span>+&nbsp; x</span><span><span><span><span><span><span><span><span>L</span></span></span></span><span>&#8203;</span></span></span></span></span><span>,&nbsp; &nbsp; &nbsp;</span><span>y&nbsp;&nbsp;</span><span>=&nbsp; (</span><span><span>y</span><span><span><span><span><span><span><span>H)</span></span></span></span><span>&#8203;&nbsp; *&nbsp; (</span></span></span></span></span><span><span>b^(</span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>n/2))&nbsp;&nbsp;</span></span></span></span></span><span>&#8203;</span></span></span></span></span></span></span></span></span></span></span></span></span><span>+&nbsp; y</span><span><span><span><span><span><span><span>L<br /><br />- And if we are multiplying x and y together, we get 4 terms to multiply<br />&nbsp; &nbsp; &nbsp; &nbsp; xy&nbsp; =&nbsp; (</span></span></span></span></span></span></span></font><span style="color:rgb(255, 255, 255)">(</span><span style="color:rgb(255, 255, 255)">xH&#8203;)&nbsp; *&nbsp; (</span><span style="color:rgb(255, 255, 255)">b^(n/2)&#8203;)&nbsp;&nbsp;</span><span style="color:rgb(255, 255, 255)">+&nbsp; xL)&nbsp; *&nbsp; ((</span><span style="color:rgb(255, 255, 255)">yH)&#8203;&nbsp; *&nbsp; (</span><span style="color:rgb(255, 255, 255)">b^(n/2))&nbsp;&nbsp;&#8203;</span><span style="color:rgb(255, 255, 255)">+&nbsp; y</span><font color="#ffffff">L)</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =&nbsp; [</font><font color="#da73d2">(xH)&nbsp; *&nbsp; (yH)&nbsp; </font><font color="#ffffff">*&nbsp; (b^n)]&nbsp; +&nbsp; [</font><font color="#9789e8">(xH)&nbsp; *&nbsp; (yL)</font><font color="#ffffff">&nbsp; +&nbsp; </font><font color="#23d6f0">(xL)&nbsp; *&nbsp; (yH)</font><font color="#ffffff">]&nbsp; *&nbsp; (b^(n/2))&nbsp; +&nbsp; </font><font color="#76e9c7">(xL&nbsp; *&nbsp; yL)</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; </font><br /><font color="#ffffff">- For example, if we are multiplying 1234 and 5678, then we get</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =&nbsp; (</font><font color="#da73d2">12&nbsp; *&nbsp; 87&nbsp;</font><font color="#ffffff"> *&nbsp; (10^4))&nbsp; +&nbsp; (</font><font color="#9789e8">(12&nbsp; *&nbsp; 65)</font><font color="#ffffff">&nbsp; +&nbsp; </font><font color="#23d6f0">(34&nbsp; *&nbsp; 87)</font><font color="#ffffff">)&nbsp; *&nbsp; (10^(n/2))&nbsp; +&nbsp; </font><font color="#76e9c7">(65&nbsp; *&nbsp; 34)&nbsp;</font><br /><br /><span style="color:rgb(255, 255, 255)">&#8203;- However, if we use Karatsuba's algorithm, we would only need to perform 3 multiplications<br />&nbsp; &nbsp; &nbsp; &nbsp; a&nbsp; =&nbsp; xH&nbsp; *&nbsp; yH<br />&nbsp; &nbsp; &nbsp; &nbsp; d&nbsp; =&nbsp; xL&nbsp; *&nbsp; yL<br />&nbsp; &nbsp; &nbsp; &nbsp; e&nbsp; =&nbsp; (xH&nbsp; +&nbsp; xL)&nbsp; *&nbsp; (yH&nbsp; +&nbsp; yL)&nbsp; -&nbsp; a&nbsp; -&nbsp; d<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; xy&nbsp; =&nbsp; (a * (b^n))&nbsp; +&nbsp; (e&nbsp; *&nbsp; (b^(n/2)&#8203;))&nbsp; +&nbsp; d</span><br /><br /><span style="color:rgb(196, 253, 0)">Time Complexity: O(n ^ 1.585), Space Complexity: O(n)</span><br /><br /><font color="#c389e8"># Step 1: Import the required libraries and implement the base case</font><br /><font color="#00e9ff">from math import ceil, floor<br /><br />def karatsuba(x,y):<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; if x &lt; 10 and y &lt; 10: # in other words, if x and y are single digits<br />&nbsp; &nbsp; &nbsp; &nbsp; return x*y</font><br /><br /><font color="#c389e8"># Step 2: Calculate xH, xL and yH, yL</font><br /><font color="#00e9ff">&nbsp; &nbsp; n = max(len(str(x)), len(str(y)))<br />&nbsp; &nbsp; m = ceil(n/2)&nbsp; &nbsp;#Cast n into a float because n might lie outside the representable range of integers.<br /><br />&nbsp; &nbsp; x_H&nbsp; = floor(x / 10**m)<br />&nbsp; &nbsp; x_L = x % (10**m)<br /><br />&nbsp; &nbsp; y_H = floor(y / 10**m)<br />&nbsp; &nbsp; y_L = y % (10**m)</font><br /><br /><font color="#c389e8"># Step 3: Use recursion to perform the 3 multiplication according to Karatsuba's formula</font><br /><font color="#00e9ff">&nbsp; &nbsp; a = karatsuba(x_H,y_H)<br />&nbsp; &nbsp; d = karatsuba(x_L,y_L)<br />&nbsp; &nbsp; e = karatsuba(x_H + x_L, y_H + y_L) - a - d</font><br /><br /><font color="#ffffff">&#8203;</font><font color="#c389e8"># Step 4: Perfrorm the final addition and return the result</font><br /><font color="#ffffff">&nbsp; &nbsp; </font><font color="#01e9ff">return int(a*(10**(m*2)) + e*(10**m) + d)</font></div>
+
+<div class="paragraph"><font color="#ffffff" size="4">Maximum Subarray Sum</font><br /><span style="color:rgb(255, 255, 255)">Find the sum of contiguous subarray of numbers which has the largest sum</span><br /><br /><span style="color:rgb(196, 253, 0)">Time Complexity: O(n * log n), Space Complexity: O(1)<br />&#8203;</span><br /><font color="#00e9ff">def maxSubArraySum(arr, l, h):</font><br /><br /><font color="#00e9ff">&nbsp; &nbsp; if (l &gt; h):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">return 0&nbsp; &nbsp; </font><font color="#c389e8"># If empty array is not allowed, return -INF</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#c389e8"># Base Case: Only one element</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">if (l == h):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">return max(0, arr[l])</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">m = (l + h) // 2</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">return max(maxSubArraySum(arr, l, m-1),</font><br /><font color="#00e9ff">&nbsp; &nbsp; </font><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">maxSubArraySum(arr, m+1, h),</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">maxCrossingSum(arr, l, m, h))</font><br /><br /><font color="#c389e8"># Find the maximum possible sum in arr[] auch that arr[m] is part of it</font><br /><font color="#00e9ff">def maxCrossingSum(arr, l, m, h):</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#c389e8"># Include elements on left of mid</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">sm = 0</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">left_sum = 0</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">for i in range(m, l-1, -1):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">sm = sm + arr[i]</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">if (sm &gt; left_sum):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">left_sum = sm</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#c389e8"># Include elements on right of mid</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">sm = 0</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp; righ</span><font color="#00e9ff">t_sum = 0</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">for i in range(m, h):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">sm = sm + arr[i]</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">if (sm &gt; right_sum):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span>&#8203;</span><font color="#00e9ff">right_sum = sm</font><br /><br /><font color="#00e9ff">return max(left_sum + right_sum - arr[m], left_sum, right_sum)</font></div>
+
+<div class="paragraph"><font color="#ffffff" size="4">MaxMin DAC</font><br /><font color="#ffffff">Given an array find the max and min. Naive method would perform 2*(n-1) comparisons but DAC takes </font><font color="#b0ff00">(3*n/2)-2</font><font color="#ffffff"> comparisons</font><br /><br /><font color="#00e9ff">def MaxMinDAC (arr, low, high):<br />&nbsp; &nbsp; if low == high:<br />&nbsp; &nbsp; &nbsp; &nbsp; return arr[low], arr[low]<br />&nbsp; &nbsp; elif high - low == 1:<br />&nbsp; &nbsp; &nbsp; &nbsp; return max(arr[low], arr[high]), min(arr[low], arr[high])<br />&nbsp; &nbsp; else:<br />&nbsp; &nbsp; &nbsp; &nbsp; mid = (low + high)//2<br />&nbsp; &nbsp; &nbsp; &nbsp; L_max, L_min =&nbsp;MaxMinDAC (arr, low, mid)<br />&nbsp; &nbsp; &nbsp; &nbsp; R_max, R_min =&nbsp;MaxMinDAC (arr, mid+1, high)<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; return max(L_max, R_max), min(L_min, R_min)</font><br /></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Stock Buy &amp; Sell Profit</font><br /><br />Calculate the maximum difference such that the larger element appears after the smaller element.</font><br /><span style="color:rgb(196, 253, 0)">Time Complexity: O(n), Space Complexity:-</span><br /><br /><font color="#00e9ff">def DivideAndConquerSingleSellProfit(arr):</font><br /><font color="#00e9ff">&nbsp; &nbsp; </font><font color="#c389e8"># Base case: If the array has zero or one elements in it, the maximum profit is 0.</font><br /><font color="#00e9ff">&nbsp; &nbsp; if len(arr) &lt;= 1:</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; return 0;</font><br /><br /><font color="#00e9ff">&nbsp; &nbsp; </font><font color="#c389e8"># Cut the array into two roughly equal pieces.</font><br /><font color="#00e9ff">&nbsp; &nbsp; left&nbsp; = arr[ : len(arr) / 2]</font><br /><font color="#00e9ff">&nbsp; &nbsp; right = arr[len(arr) / 2 : ]</font><br /><br /><font color="#00e9ff">&nbsp; &nbsp; </font><font color="#c389e8"># Find the values for buying and selling purely in the left or purely in&nbsp;the right.</font><br /><font color="#00e9ff">&nbsp; &nbsp; leftBest&nbsp; = DivideAndConquerSingleSellProfit(left)</font><br /><font color="#00e9ff">&nbsp; &nbsp; rightBest = DivideAndConquerSingleSellProfit(right)</font><br /><br /><font color="#00e9ff">&nbsp; &nbsp; </font><font color="#c389e8"># Compute the best profit for buying in the left and selling in the right.</font><br /><font color="#00e9ff">&nbsp; &nbsp; crossBest = max(right) - min(left)</font><br /><br /><font color="#00e9ff">&nbsp; &nbsp; </font><font color="#c389e8"># Return the best of the three</font><br /><font color="#00e9ff">&nbsp; &nbsp; return max(leftBest, rightBest, crossBest)</font></div>
+
+<div class="paragraph"><font color="#ffffff" size="4">Convert Sorted Array to Binary Search Tree</font><br /><br /><span style="color:rgb(196, 253, 0)">Time Complexity: O(n), Space Complexity:-<br />&#8203;</span><br /><font color="#c389e8"># Definition for a binary tree node.</font><br /><font color="#00e9ff">class TreeNode:<br />&nbsp; &nbsp; def __init__(self, val=0, left=None, right=None):<br />&nbsp; &nbsp; &nbsp; &nbsp; self.val = val<br />&nbsp; &nbsp; &nbsp; &nbsp; self.left = left<br />&nbsp; &nbsp; &nbsp; &nbsp; self.right = right<br />class Solution:<br />&nbsp; &nbsp; def sortedArrayToBST(self, nums: List[int]) -&gt; Optional[TreeNode]:<br />&nbsp; &nbsp; &nbsp; &nbsp; if len(nums) == 0:<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return&nbsp;<br />&nbsp; &nbsp; &nbsp; &nbsp; mid = len(nums)//2<br />&nbsp; &nbsp; &nbsp; &nbsp; root = TreeNode(val=nums[mid])<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; &nbsp; root.left = self.sortedArrayToBST(nums[:mid])<br />&nbsp; &nbsp; &nbsp; &nbsp; root.right = self.sortedArrayToBST(nums[mid+1:])<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; &nbsp; return root</font></div>
+
+<div class="paragraph"><font color="#ffffff" size="4">Construct Binary Search Tree from Preorder Traversal</font><br /><br /><font color="#c389e8"># Definition for a binary tree node</font><br /><font color="#00e9ff">class TreeNode:<br />&nbsp; &nbsp; def __init__(self, val=0, left=None, right=None):<br />&nbsp; &nbsp; &nbsp; &nbsp; self.val = val<br />&nbsp; &nbsp; &nbsp; &nbsp; self.left = left<br />&nbsp; &nbsp; &nbsp; &nbsp; self.right = right<br />class Solution:<br />&nbsp; &nbsp; def bstFromPreorder(self, preorder: List[int]) -&gt; Optional[TreeNode]:<br />&nbsp; &nbsp; &nbsp; &nbsp; if len(preorder) == 0:<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return None<br />&nbsp; &nbsp; &nbsp; &nbsp; node = preorder.pop(0)<br />&nbsp; &nbsp; &nbsp; &nbsp; root = TreeNode(node)<br />&nbsp; &nbsp; &nbsp; &nbsp; l = []<br />&nbsp; &nbsp; &nbsp; &nbsp; r = []<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; for val in preorder:<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if val &lt; node:<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; l.append(val)<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else:<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r.append(val)<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; root.left = self.bstFromPreorder(l)<br />&nbsp; &nbsp; &nbsp; &nbsp; root.right =&nbsp; self.bstFromPreorder(r)<br />&nbsp; &nbsp; &nbsp; &nbsp; return root</font></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Reverse String</font><br />Write a function that reverses a string. The input string is given as an array of characters&nbsp;<em>s<br />&#8203;</em>&#8203;</font><br /><span style="color:rgb(196, 253, 0)">Time Complexity: O(n/2), Space Complexity:-</span><font color="#ffffff"></font><br /><br /><font color="#00e9ff">def reverseString(self, s: List[str]) -&gt; None:</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#c389e8"># Modify s in-place, space complexity: O(1)</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; low = 0&nbsp;</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; high = len(s)-1</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; while low &lt; high:</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; s[low], s[high] = s[high], s[low]</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; low += 1</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; high -= 1</font></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Two Sum II - Input Array Is Sorted</font><br />Given an array of integers&nbsp;numbers&nbsp;that is already&nbsp;sorted in non-decreasing order, find two numbers such that they add up to a specific&nbsp;target&nbsp;number<br />&#8203;</font><br /><span style="color:rgb(196, 253, 0)">Time Complexity: O(n), Space Complexity:-</span><br /><br /><font color="#00e9ff">def twoSum(self, numbers: List[int], target: int) -&gt; List[int]:</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#c389e8"># base case: there's exactly one pair that sums to target</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; if len(numbers) == 2:</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return [0, 1]</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; low = 0</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; high = len(numbers) - 1</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; while high &gt; low:</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if numbers[low] + numbers[high] == target:</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return [low, high]</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; elif numbers[low] + numbers[high] &lt; target:</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; low += 1</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; elif numbers[low] + numbers[high] &gt; target:</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; high -= 1</font></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Extraa &amp; Sorting Algos</font></h2>
+
+<div class="paragraph"><font color="#ffffff" size="4">Swapping w/o temp var</font><br /><br /><font color="#ffffff">Swap value of 2 variables without temporary variable</font><ul><li><font color="#ffffff">&#8203;(*using addition)</font></li><li><font color="#ffffff">a = a + b</font></li><li><font color="#ffffff">b = a - b&nbsp; &nbsp; </font><font color="#c389e8"># =&gt; (a + b) - b</font></li><li><font color="#ffffff">a = a - b&nbsp; &nbsp; </font><font color="#c389e8"># =&gt; (a + b) - a</font></li><li><span style="color:rgb(255, 255, 255)">&#8203;(*using xor</span><span style="color:rgb(255, 255, 255)">)</span></li><li><span style="color:rgb(255, 255, 255)">x = x ^ y</span></li><li><span style="color:rgb(255, 255, 255)">y = x ^ y</span></li><li><span style="color:rgb(255, 255, 255)">x = x ^ y</span></li></ul></div>
+
+<div class="paragraph"><font color="#ffffff">Prime Numbers</font><br /><br /><font color="#ffffff">Checking for prime numbers</font><br /><font color="#ffffff">&nbsp; &nbsp; -&nbsp; In order to check if a given number, n is prime,&nbsp;</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp;</font><font color="#ff0000">x</font><font color="#ffffff">&nbsp; You don't need to check if n can be divided by any num from 2 to n-1&nbsp;</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp;</font><font color="#00ff16">o</font><font color="#ffffff">&nbsp; You just need to check if n can be divided by any num from 2 to sqrt(n)</font><br /><font color="#ffffff">&nbsp; &nbsp; -&nbsp; because for every a * b = n =&gt; a &lt;= sqrt(n) and b &gt;= sqrt(n)</font><br /><br /><font color="#ffffff">Generating a List of Primes: The Sieve of Eratosthenes</font><br /><font color="#ffffff">&nbsp; &nbsp; *&nbsp; All non-prime numbers are divisible by a prime number</font><br /><font color="#ffffff">&nbsp; &nbsp; *&nbsp; Given a num </font><font color="#fb7c00">max</font><font color="#ffffff">, create a list with size&nbsp;</font><font color="#fb7c00">max</font><font color="#ffffff">+1 </font><font color="#ffffff">and set their values as true except for 0 and 1 which will be set to false</font><br /><font color="#ffffff">&nbsp; &nbsp; *&nbsp; For each number in the list (ie: 2) set false for all numbers that are divisible by 2 except for 2 itself <br />&nbsp; &nbsp; &nbsp; &nbsp;- repeat this for the next number w/ true value until </font><span style="color:rgb(251, 124, 0)">max</span><font color="#ffffff"> is reached</font><br /><font color="#ffffff">&nbsp; &nbsp; =&gt; final result gives the list of primes from 2 to max</font><br /></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Bubble Sort</font><br />Repeated swaps the adjacent elements if they are in the wrong order.<br />1st iteration and continues until nth iteration<br />( <strong>5 1</strong> 4 2 8 ) &ndash;&gt; ( <strong>1 5</strong> 4 2 8 )<br />( 1 <strong>5 4</strong> 2 8 ) &ndash;&gt;&nbsp; ( 1 <strong>4 5</strong> 2 8 )<br />( 1 4 <strong>5 2</strong> 8 ) &ndash;&gt;&nbsp; ( 1 4 <strong>2 5</strong> 8 )<br />( 1 4 2 <strong>5 8</strong> ) &ndash;&gt; ( 1 4 2 <strong>5 8</strong> )</font><br /><br /><span style="color:rgb(196, 253, 0)">Time Complexity: O(n^2), Space Complexity: O(1)</span><br /><br /><font color="#00e9ff">def bubbleSort(arr):<br />&nbsp; &nbsp; n = len(arr)</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">for i in range(n):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#c389e8"># Last i elements are already in place</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">for j in range(0, n-i-1):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">if arr[j] &gt; arr[j+1]:</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">arr[j], arr[j+1] = arr[j+1], arr[j]</font></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Insertion Sort</font><br />The array is split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.<br /><br />&#8203;For&nbsp;example: arr = [12, 11, 13, 5, 6]</font><br /><span style="color:rgb(255, 255, 255)">[<strong>12, 11</strong>, 13, 5, 6] =&gt; [</span><strong style="color:rgb(255, 255, 255)">11, 12</strong><span style="color:rgb(255, 255, 255)">, 13, 5, 6] - 1st iter: compare 1st and second element<br />[11, <strong>12, 13</strong>, 5, 6] =&gt;&nbsp;[11, <strong>12, 13</strong>, 5, 6] - 2nd iter: compare 13 with the last element of the sorted part<br />[11, 12, <strong>13, 5</strong>, 6] =&gt;&nbsp;[11, <strong>12,</strong> <strong>5</strong></span><strong><strong style="color:rgb(255, 255, 255)">, </strong></strong><span style="color:rgb(255, 255, 255)">13, 6] =&gt;&nbsp;[<strong>11, 5</strong>, 12, 13, 6] =&gt;&nbsp;[<strong>5</strong>, 11, 12, 13,&nbsp;6] - 3rd iter: keep swapping 5 until it is in the correct place<br />[5,&nbsp;11, 12, <strong>13,&nbsp;6</strong>] =&gt;&nbsp;[5,&nbsp;11, <strong>12, 6</strong>, 13] =&gt;&nbsp;[5,&nbsp;<strong>11, 6</strong>, 12, 13] =&gt;&nbsp;[5, <strong>6</strong>, 11, 12, 13] - 4th iter:&nbsp;keep swapping 6 until it is in the correct place</span><br /><br />&#8203;<span style="color:rgb(196, 253, 0)">Time Complexity: O(n^2), Space Complexity: O(1)</span><br /><br /><font color="#00e9ff">def insertionSort(arr):</font><br /><font color="#00e9ff">&nbsp; &nbsp; for i in range(1, len(arr)):</font><font color="#00e9ff">&nbsp;</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; key = arr[i]&nbsp;</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#c389e8"># Keep swapping curr element(key) in the sorted section until curr element is put in the correct place</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; j = i-1</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; while j &gt;= 0 and key &lt; arr[j] :</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; arr[j + 1] = arr[j]</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; j -= 1</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; arr[j + 1] = key</font></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Selection Sort</font><br />In each iteration, the minimum element from the unsorted part is swapped with the end of the sorted part.<br /><br />&#8203;For example: arr = [64, 25, 12, 22, 11]</font><br /><span style="color:rgb(255, 255, 255)">[<strong>64</strong>, 25, 12, 22, <strong>11</strong>] =&gt;&nbsp;[<strong>11</strong>, 25, 12, 22, <strong>64</strong>] - 1st iter: Swap 11 (smallest element) with end of sorted part 64<br />[11, <strong>25, 12</strong>, 22, 64] =&gt;&nbsp;[11, <strong>12, 25</strong>, 22, 64] - 2nd iter:&nbsp;Swap 12 (next smallest element) with end of sorted part 25</span><br /><span style="color:rgb(255, 255, 255)">[11, 12, <strong>25, 22</strong>, 64] =&gt;&nbsp;[11, 12, <strong>22, 25</strong>, 64] - 3rd iter:&nbsp;Swap 22 (next smallest element) with end of sorted part 25<br />[11, 12, 22, <strong>25</strong>, 64] =&gt;&nbsp;[11, 12, 22, <strong>25</strong>, 64] - 4th iter:&nbsp;Swap 25 (next smallest element) with end of sorted part 25<br />[11, 12, 22, 25, <strong>64</strong>] =&gt;&nbsp;[11, 12, 22, 25, <strong>64</strong>] - 5th iter:&nbsp;Swap 64 (next smallest element) with end of sorted part 64</span><br /><br /><span style="color:rgb(196, 253, 0)">Time Complexity: O(n^2), Space Complexity: O(1)</span><br /><br /><font color="#00e9ff">import sys</font><br /><font color="#00e9ff">A = [64, 25, 12, 22, 11]</font><br /><font color="#00e9ff">&nbsp;</font><br /><font color="#00e9ff">for i in range(len(A)):</font><br /><font color="#00e9ff">&nbsp;&nbsp;</font><br /><font color="#00e9ff">&nbsp; &nbsp;</font><font color="#c389e8"> # Find the minimum element from the unsorted part</font><br /><font color="#00e9ff">&nbsp; &nbsp; min_idx = i</font><br /><font color="#00e9ff">&nbsp; &nbsp; for j in range(i+1, len(A)):</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; if A[min_idx] &gt; A[j]:</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; min_idx = j</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font><br /><font color="#00e9ff">&nbsp; &nbsp; </font><font color="#c389e8"># Swap the found minimum element with end of sorted part&nbsp;</font><font color="#00e9ff"> &nbsp; &nbsp;</font><br /><font color="#00e9ff">&nbsp; &nbsp; A[i], A[min_idx] = A[min_idx], A[i]</font></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Topological Sort</font><br />Topological sort (only works for Directed Acyclic Graph) is a linear ordering of vertices such that for every directed edge u-&gt;v, vertex u comes before v in the ordering.</font></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:71.200750469043%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ff00ed">For example</font><font color="#ffffff">, given a set of courses with prerequisites, topo sort will give you an order in which you can take all the courses<br />&#8203;</font><br /><font color="#ffffff">Right side shows a DAG. The following are topological sort of the given graph:</font><ul><li><font color="#ffffff">5 4 2 3 1 0&nbsp;</font></li><li><font color="#ffffff">4 5 2 3 1 0</font></li></ul><br /><span style="color:rgb(196, 253, 0)">Time Complexity: O(V + E), Space Complexity: O(V)</span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:28.799249530957%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/topo-graph_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><font color="#00e9ff">from collections import defaultdict<br /><br />class Graph:<br />&nbsp; &nbsp; def __init__(self, vertices):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span>&#8203;<font color="#00e9ff">self.graph = defaultdict(list) # dictionary containing adjacency List</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">self.V = vertices # No. of vertices</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">def addEdge(self, u, v):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">self.graph[u].append(v)</font><br /><br /><font color="#00e9ff">&nbsp; &nbsp; </font><font color="#c389e8"># helper function</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">def topologicalSortUtil(self, v, visited, stack):</font><span style="color:rgb(0, 233, 255)">&nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">visited[v] = True</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#c389e8"># Recur for all the vertices adjacent to this vertex</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">for i in self.graph[v]:</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span>&nbsp; &nbsp;&nbsp;<font color="#00e9ff">if visited[i] == False:</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<font color="#00e9ff">self.topologicalSortUtil(i, visited, stack)</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#c389e8"># Push child vertices before parent</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">stack.append(v)</font><br /><br /><font color="#00e9ff">&nbsp;</font><font color="#c389e8"> &nbsp; # main function&nbsp;</font><br /><font color="#00e9ff">&nbsp; &nbsp; def topologicalSort(self):</font><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#c389e8"># Initially mark all the vertices as not visited</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">visited = [False] * self.V</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">stack = []</font><br /><br /><font color="#00e9ff">&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#c389e8"># Get all vertices from graph added to stack</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">for i in range(self.V):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span>&nbsp; &nbsp;&nbsp;<font color="#00e9ff">if visited[i] == False:</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">self.topologicalSortUtil(i, visited, stack)</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">print(stack[::-1]) </font><font color="#c389e8"># return list in REVERSE order</font><br /></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Bucket Sort</font><br />Useful when input is uniformly distributed over a range and for floating point values</font></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/published/screen-shot-2022-10-02-at-5-44-22-pm.png?1664808856" alt="Picture" style="width:370;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><span style="color:rgb(196, 253, 0)">Time Complexity: O(n) - if all numbers are evenly distributed, (worst case = O(n^2)) Space Complexity: O(1)</span><br /><br /><font color="#00e9ff">def bucketSort(x):<br />&nbsp; &nbsp; arr = []</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">slot_num = 10 # Num of buckets</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">for i in range(slot_num):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">arr.append([])</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#c389e8"># Put array elements in different buckets</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">for j in x:</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">index_b = int(slot_num * j)</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">arr[index_b].append(j)</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#c389e8"># Sort individual buckets using any other array sorting algorithm</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">for i in range(slot_num):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">arr[i] = </font><font color="#ff008d">AnySortAlgo(</font><span style="color:rgb(0, 233, 255)">arr[i]</span><font color="#ff008d">)</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#c389e8"># concatenate the result</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">k = 0</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">for i in range(slot_num):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">for j in range(len(arr[i])):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">x[k] = arr[i][j]</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">k += 1</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">return x</font></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:71.018518518519%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff"><font size="4">Radix &amp; Counting Sort</font><br />Sorts numbers based on digits of the same place value and uses counting sort as a subroutine. It is used when the numbers are in large ranges</font><br /><br /><span style="color:rgb(196, 253, 0)">Time Complexity: O(n+k) Space Complexity: O(max # of digits) ~ same as counting sort</span><br /><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:28.981481481481%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/screen-shot-2022-10-03-at-7-47-04-pm_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:62.476547842401%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#c389e8"># Counting sort according to&nbsp;digit represented by exp</font><br /><br /><font color="#00e9ff">def countingSort(arr, exp1):</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">n = len(arr)</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#c389e8"># Will have the final sorted arr</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">output = [0] * (n)</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#c389e8"># initialize count array</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">count = [0] * (10)</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#c389e8"># Store count of occurrences&nbsp;</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">for i in range(0, n):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">index = arr[i] // exp1</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">count[index % 10] += 1</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#c389e8"># Change count to contains actual&nbsp;position of this digit in output array</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">for i in range(1, 10):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">count[i] += count[i - 1]</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#c389e8"># Build the output array</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">i = n - 1</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">while i &gt;= 0:</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">index = arr[i] // exp1</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">output[count[index % 10] - 1] = arr[i]</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">count[index % 10] -= 1</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">i -= 1</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#c389e8"># Copying the output array to arr[]</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">i = 0</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">for i in range(0, len(arr)):</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span>&#8203;</span><font color="#00e9ff">arr[i] = output[i]</font><br />&#8203;</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:37.523452157598%; padding:0 15px;">
+					
+						
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/7zuGmKfUt7s?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><font color="#00e9ff">def radixSort(arr):</font><br /><br /><font color="#00e9ff">&nbsp; &nbsp; </font><font color="#c389e8"># Find max num to know number of digits</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">max1 = max(arr)</font><br /><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#c389e8"># Do counting sort for every place value. *Note exp is 10^i where i is current digit number</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">exp = 1</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">while max1 / exp &gt;= 1:</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">countingSort(arr, exp)</font><br /><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 233, 255)">&nbsp; &nbsp;&nbsp;</span><font color="#00e9ff">exp *= 10</font></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-32"  >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<div class="paragraph" style="text-align:left;"><ul><li><strong><span style="color:rgb(255, 0, 43)">Closest Pair of Points</span></strong></li><li><strong><span style="color:rgb(255, 0, 43)">Fast Fourrier Transform</span></strong></li><li><strong><span style="color:rgb(255, 0, 43)">&#8203;Convex Hull</span></strong></li><li><strong><font color="#ff002b">Heap sort</font>&#8203;</strong></li><li><strong><font color="#ff002b">Shell sort</font></strong>&#8203;<font color="#ff002b">&#8203;</font></li></ul></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a></div>
+    </div><!-- end footer-wrap -->
+  </div><!-- /.wrapper -->
+
+  <div id="navMobile" class="nav mobile-nav">
+    <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+    <ul class="wsite-menu-default">
+    		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+    			<a
+    						href="index.html"
+    				class="wsite-menu-item"
+    				>
+    				Home
+    			</a>
+    			
+    		</li>
+    		<li id="pg726788859509786725" class="wsite-menu-item-wrap">
+    			<a
+    						href="c-and-net.html"
+    				class="wsite-menu-item"
+    				>
+    				C#  and .NET
+    			</a>
+    			
+    		</li>
+    </ul>
+  </div>
+
+	<script type="text/javascript" src="files/theme/plugins.js"></script>
+  <script type="text/javascript" src="files/theme/custom.js"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="http://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1234"></script>
+
+		
+	</body>
+</html>
