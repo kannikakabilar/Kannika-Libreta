@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Coding In Assembly - KANNIKA LIBRETA</title>
+		<title>Assembly - KANNIKA LIBRETA</title>
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,7 +11,7 @@
 		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
 <link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
 <link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
-<link rel="stylesheet" type="text/css" href="files/main_style.css?1672676705" title="wsite-theme-css" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1685625859" title="wsite-theme-css" />
 <link href='http://cdn2.editmysite.com/fonts/Montserrat/font.css?2' rel='stylesheet' type='text/css' />
 
 <link href='http://cdn2.editmysite.com/fonts/Quicksand/font.css?2' rel='stylesheet' type='text/css' />
@@ -67,7 +67,7 @@
 }</style>
 <link rel='stylesheet' type='text/css' href='http://cdn2.editmysite.com/css/old/slideshow/slideshow.css?1234' />
 
-		<script src='files/templateArtifacts.js?1672541044'></script>
+		<script src='files/templateArtifacts.js?1685625825'></script>
 <script>
 var STATIC_BASE = '//cdn1.editmysite.com/';
 var ASSETS_BASE = '//cdn2.editmysite.com/';
@@ -105,7 +105,7 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 	
 	function initFlyouts(){
 		initPublishedFlyoutMenus(
-			[{"id":"174265258517029121","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"726788859509786725","title":"C#  and .NET","url":"c-and-net.html","target":"","nav_menu":false,"nonclickable":false}],
+			[{"id":"174265258517029121","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"603325533116812941","title":"Containers","url":"containers.html","target":"","nav_menu":false,"nonclickable":false}],
 			"791212307924528289",
 			'',
 			'active',
@@ -119,7 +119,7 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 		
 		<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/6/9/6972ea4fe8e76a20caa3b853ee786fd5/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
 	</head>
-	<body class="header-page  wsite-page-coding-in-assembly  full-width-body-off header-overlay-on alt-nav-off  wsite-theme-light"><div class="wrapper">
+	<body class="header-page  wsite-page-assembly  full-width-body-off header-overlay-on alt-nav-off  wsite-theme-light"><div class="wrapper">
     <div class="birdseye-header">
       <div class="nav-wrap">
         <div class="container">
@@ -142,12 +142,12 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 			</a>
 			
 		</li>
-		<li id="pg726788859509786725" class="wsite-menu-item-wrap">
+		<li id="pg603325533116812941" class="wsite-menu-item-wrap">
 			<a
-						href="c-and-net.html"
+						href="containers.html"
 				class="wsite-menu-item"
 				>
-				C#  and .NET
+				Containers
 			</a>
 			
 		</li>
@@ -167,7 +167,7 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
           <div class="container">
             <div class="banner">
 				<div class="wsite-section-elements">
-					<h2 class="wsite-content-title">&#8203;Coding In Assembly</h2>
+					<h2 class="wsite-content-title">&#8203;Assembly</h2>
 				</div>
 			</div>
           </div>
@@ -218,7 +218,7 @@ jQuery(document).ready(init);
 			<script type="text/javascript">
 			var scribd_doc_564797708 = scribd.Document.getDoc(564797708, "key-hcoUo5C0oZpxUnkhgmQe");
 			scribd_doc_564797708.addParam("jsapi_version", 2);
-			scribd_doc_564797708.addParam("height", 750);
+			scribd_doc_564797708.addParam("height", 200);
 			scribd_doc_564797708.addParam("width", "100%");
 			scribd_doc_564797708.write("doc_564797708");
 			</script>
@@ -240,6 +240,75 @@ jQuery(document).ready(init);
 <div style="height:20px;overflow:hidden"></div></div>
 
 <div class="paragraph"><span style="color:rgb(255, 255, 255)">--------------------------------------------------------------------------------------------------------------------------------------------------------</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; .macro println()&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; # Macros help prevent repeating same parts of code again &amp; again<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; la $a0, newline<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; li $v0, 4<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; syscall<br />&nbsp; &nbsp; &nbsp; &nbsp; .end_macro<br />&nbsp; &nbsp; &nbsp; &nbsp; println()&nbsp; &nbsp; &nbsp; &nbsp; # The assembler will copy above block of code here, so this whole thing prints 2 newlines<br />&nbsp; &nbsp; &nbsp; &nbsp; .macro imme(%a, %b)&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; # Macros can also include parameters<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; add $t0, %a, %b&nbsp; &nbsp; &nbsp; &nbsp; # Parameters can include immediate, global var<br />&nbsp; &nbsp; &nbsp; &nbsp; .end_macro<br />&nbsp; &nbsp; &nbsp; &nbsp; imme(3,5)&nbsp; &nbsp; &nbsp; &nbsp; # Now, $t0 contains 8<br />------------------------------------------------------------------------------------------------------------------------------------------------------------<br />&nbsp; &nbsp; &nbsp; &nbsp; lw $t1, 4($s0)&nbsp; &nbsp; &nbsp; &nbsp; # Copy a word value from an address stored in $s0 w/ an offset of 4 bytes (addr + 4)<br />&nbsp; &nbsp; &nbsp; &nbsp; lb $t2, 0($s0)&nbsp; &nbsp; &nbsp; &nbsp; # Copy a byte value from source (use 'lh' for load halfword)<br />&nbsp; &nbsp; &nbsp; &nbsp; sw $t0, 8($s0)&nbsp; &nbsp; &nbsp; &nbsp;<br />------------------------------------------------------------------------------------------------------------------------------------------------------------<br />IF Statements<br />&nbsp; &nbsp; &nbsp; &nbsp; beq $t0, $t1, if_block&nbsp; &nbsp; &nbsp; &nbsp; # beq can be varying replaced with beqz, bneq, bneqz, ...<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; else_block:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; .&nbsp; &nbsp; &nbsp; &nbsp; .&nbsp; &nbsp; &nbsp; &nbsp; .<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; j end_block<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; if_block:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; .&nbsp; &nbsp; &nbsp; &nbsp; .&nbsp; &nbsp; &nbsp; &nbsp; .<br />&nbsp; &nbsp; &nbsp; &nbsp; end_block:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; .&nbsp; &nbsp; &nbsp; &nbsp; .&nbsp; &nbsp; &nbsp; &nbsp; .<br />LOOPS<br />&nbsp; &nbsp; &nbsp; &nbsp; li $t0, 0<br />&nbsp; &nbsp; &nbsp; &nbsp; while:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; bgt $t0, 10, end_while<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; addi $t0, $t0, 1<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; . . . # do stuff inside loop<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; j while<br />&nbsp; &nbsp; &nbsp; &nbsp; end_while:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; . . . # finish<br /><br />FUNCTIONS<br />&nbsp; &nbsp; &nbsp; &nbsp; sum:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; add $v0, $a0, $a1&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; # This function takes in 2 args and sums it<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; jr $ra&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; # Tells it to go back to return address<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; main:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; li $a0, 1<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; li $a1, 2&nbsp; &nbsp; &nbsp; &nbsp; # Args are stored in the $a* registers<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; jal sum&nbsp; &nbsp; &nbsp; &nbsp; # Calling function sum and telling it to come back here after finishing execution<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; # Return value of sum is in $v0 register<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<br />-------------------------------------------------------------------------------------------------------------------------------------------------------<br />RECURSION<br />ex: factorial<br />&nbsp; &nbsp; &nbsp; &nbsp; fact:&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; addi $sp, $sp, -8&nbsp; &nbsp; &nbsp; &nbsp; # Always allocate space in stack for recursion<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; sw $s0, ($sp)&nbsp; &nbsp; &nbsp; &nbsp; # Store register that holds the current number<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; sw $ra, 4($sp)&nbsp; &nbsp; &nbsp; &nbsp; # Store previous Program Counter<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; li $v0, 1&nbsp; &nbsp; &nbsp; &nbsp; # Initial return value / base case<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; beq $a0, 0, fact_done&nbsp; &nbsp; &nbsp; &nbsp; # Finish if parameter is 0<br /><br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; move $s0, $a0<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; sub $a0, $a0, 1<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; jal fact<br /><br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; mul $v0, $s0, $v0<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; fact_done:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; lw $s0, ($sp)<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; lw $ra, ($sp)<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; addi $sp, $sp, 8&nbsp; &nbsp; &nbsp; &nbsp; # Restore Program Counter<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; jr $ra<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />ex: Power function # $a1 = exponent, $a0 = base<br />&nbsp; &nbsp; &nbsp; &nbsp; recursivePowFunc:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; bne $a1, $zero, recursion<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; li $v0, 1<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; jr $ra<br />&nbsp; &nbsp; &nbsp; &nbsp; recursion:<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; addi $sp, -4<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; sw $ra, 0($sp)<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; addi $a1, $a1, -1<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; jal recursivePowFunc<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; mul $v0, $v0, $a0<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; lw $ra, 0($sp)<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; addi $sp, 4<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; jr $ra</span><br />&#8203;</div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Mini-Projects in Assembly</font></h2>
+
+<div class="paragraph"><span style="color:rgb(253, 251, 251)">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;I worked on small projects to demonstrate my understanding of the assembly language. I have briefly explained the implementation process and displayed demonstration for each assembly program.<br /><br /></span><font color="#ffffff"><strong><font size="4">List-Sum-Average-Calculator</font></strong><br />This is a simple program when given a list of numbers, it calculates the total sum and its average. The program uses loops to iteratively prompt the user to provide an integer as part of the list. As each number is entered, the total sum and the amount of numbers entered are stored and kept track by temporary registers. When the user enters 0 to indicate the end of list, the total numbers entered, the sum and the average, calculated by dividing the sum by the total numbers entered are printed.&nbsp;</font><span style="color:rgb(253, 251, 251)">My code can be viewed&nbsp;</span><font color="#ffffff"><a href="https://github.com/kannikakabilar/AssemblyProjects/blob/main/ListSumAvrg.asm">here</a>.</font><span style="color:rgb(253, 251, 251)"></span><br /></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/asm1_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><font color="#ffffff"><strong><font size="4">Mini-Calculator</font></strong><br />The mini-calculator program, given 2 numbers will perform the specified operation and print the result.&nbsp;</font><span style="color:rgb(253, 251, 251)">My code can be viewed&nbsp;</span><font color="#ffffff"><a href="https://github.com/kannikakabilar/AssemblyProjects/blob/main/MiniCalculator.asm">here</a>.</font></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/asm2_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><span style="color:rgb(253, 251, 251)"><strong><font size="4">Day-Calculator</font></strong><br />This project is written in x86 assembly.&nbsp;</span><span style="color:rgb(253, 251, 251)">The program prompts user to input a date and uses it to calculate the day number in that year from 1 to 365 (or 366 in leap year).&nbsp;</span><span style="color:rgb(253, 251, 251)">A demonstration is shown below. My code can be viewed&nbsp;</span><font color="#ffffff"><a href="https://github.com/kannikakabilar/DateToDayCalculator">here</a>.</font></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/asm3_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><font color="#ffffff"><strong><font size="4">Right-Triangle-Checker</font></strong><br />The right-triangle calculator determines whether a triangle has a right angle. Given the lengths of the 3 sides, the program utilizes Pythagoras' theorem (a^2 + b^2 = c^2) to determine if the side lengths form a right-triangle.&nbsp;</font><span style="color:rgb(253, 251, 251)">My code can be viewed&nbsp;</span><font color="#ffffff"><a href="https://github.com/kannikakabilar/AssemblyProjects/blob/main/RightTriangleChecker.asm">here</a>.</font></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/asm4_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><font color="#ffffff"><strong><font size="4">Sorted Binary Search</font></strong><br />This search program constructs and stores an array in allocated memory. The array is then sorted using bubble sort algorithm. When provided an element, the program utilizes binary search to determine the index if the element exists else returns &lsquo;element was not found&rsquo;.&nbsp;</font><span style="color:rgb(253, 251, 251)">My code can be viewed&nbsp;</span><font color="#ffffff"><a href="https://github.com/kannikakabilar/AssemblyProjects/blob/main/SortedBinarySearch.asm">here</a>.</font></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/asm5_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><font color="#ffffff"><strong><font size="4">32-Bit-Adder</font></strong><br />This 32-Bit Adder program is capable of handling values over a range from (-1* (2^32 - 1) = -</font><span style="color:rgb(255, 255, 255)">4294967295)&nbsp;</span><font color="#ffffff">up to (2^32=4294967296). The user-entered values are converted into a 32-bit binary value and 8-bit hexadecimal value and stored in an array. The addition is performed through a loop bit-by-bit and the results are printed to the output.&nbsp;</font><span style="color:rgb(253, 251, 251)">My code can be viewed&nbsp;</span><font color="#ffffff"><a href="https://github.com/kannikakabilar/AssemblyProjects/blob/main/Adder32Bit.asm">here</a>.</font></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/asm6_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><strong><font size="4" color="#ffffff">Coconut Escape</font></strong><br /><span style="color:rgb(255, 255, 255)">&#8203;Using the Bitmap display address given in the Mars simulator, I implemented a variation of the Doodle Jump game in the assembly language. The Doodle must evade the deadly coconuts and navigate upwards. The Keyboard and Display MMIO simulator collects input from the user on if the start key - 's' , left key - 'j' or the right key 'k' was entered and move/repaint the Doodle correspondingly. The code for this project can be viewed&nbsp;</span><font color="#ffffff"><a href="https://github.com/kannikakabilar/AssemblyProjects/blob/main/CoconutEscape.asm">here</a>.</font></div>
+
+<div><div style="height:20px;overflow:hidden"></div>
+<div id='757382203964764995-slideshow'></div>
+<script type='text/javascript'>
+(function(jQuery) {
+function init() { window.wSlideshow && window.wSlideshow.render({elementID:"757382203964764995",nav:"none",navLocation:"bottom",captionLocation:"bottom",transition:"fade",autoplay:"1",speed:"5",aspectRatio:"auto",showControls:"true",randomStart:"false",images:[{"url":"5\/0\/1\/5\/50158331\/asm7a.png","width":1366,"height":725,"fullHeight":725,"fullWidth":1366},{"url":"5\/0\/1\/5\/50158331\/asm7b.png","width":1366,"height":728,"fullHeight":728,"fullWidth":1366},{"url":"5\/0\/1\/5\/50158331\/asm7c.png","width":1366,"height":726,"fullHeight":726,"fullWidth":1366}]}) }
+jQuery(document).ready(init);
+})(window.jQuery)
+</script>
+
+<div style="height:20px;overflow:hidden"></div></div>
 			</div>
 		</div>
       </div>
@@ -268,12 +337,12 @@ jQuery(document).ready(init);
     			</a>
     			
     		</li>
-    		<li id="pg726788859509786725" class="wsite-menu-item-wrap">
+    		<li id="pg603325533116812941" class="wsite-menu-item-wrap">
     			<a
-    						href="c-and-net.html"
+    						href="containers.html"
     				class="wsite-menu-item"
     				>
-    				C#  and .NET
+    				Containers
     			</a>
     			
     		</li>

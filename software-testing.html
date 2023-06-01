@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Software Testing - KANNIKA LIBRETA</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1685625859" title="wsite-theme-css" />
+<link href='http://cdn2.editmysite.com/fonts/Montserrat/font.css?2' rel='stylesheet' type='text/css' />
+
+<link href='http://cdn2.editmysite.com/fonts/Quicksand/font.css?2' rel='stylesheet' type='text/css' />
+<link href='http://cdn2.editmysite.com/fonts/Alegreya_SC/font.css?2' rel='stylesheet' type='text/css' />
+<link href='http://cdn2.editmysite.com/fonts/Alegreya_SC/font.css?2' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Quicksand" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {color:#000 !important;}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-family:"Alegreya SC" !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {font-family:"Alegreya SC" !important;font-weight:400 !important;}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+.wsite-button-small .wsite-button-inner {font-size:19px !important;}
+.wsite-button-large .wsite-button-inner {font-size:15px !important;}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-size:16px !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+
+		<script src='files/templateArtifacts.js?1685625825'></script>
+<script>
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='https://cdn2.editmysite.com/js/jquery-1.8.3.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='UNSET'; </script><script>_W = _W || {};
+			_W.customerLocale = "en_US";
+			_W.storeName = null;
+			_W.isCheckoutReskin = false;
+			_W.storeCountry = "CA";
+			_W.storeCurrency = "CAD";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "258110484374261460";
+			com_userID = "50158331";</script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"174265258517029121","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"603325533116812941","title":"Containers","url":"containers.html","target":"","nav_menu":false,"nonclickable":false}],
+			"423189655454690901",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{}
+		)
+	}
+//-->
+</script>
+		
+		<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/6/9/6972ea4fe8e76a20caa3b853ee786fd5/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="header-page  wsite-page-software-testing  full-width-body-off header-overlay-on alt-nav-off  wsite-theme-light"><div class="wrapper">
+    <div class="birdseye-header">
+      <div class="nav-wrap">
+        <div class="container">
+          <div class="logo"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">KANNIKA LIBRETA</span>
+	
+	</a>
+
+</span></div>
+          <div class="nav desktop-nav"><ul class="wsite-menu-default">
+		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg603325533116812941" class="wsite-menu-item-wrap">
+			<a
+						href="containers.html"
+				class="wsite-menu-item"
+				>
+				Containers
+			</a>
+			
+		</li>
+</ul>
+</div>
+          <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner-wrap">
+      <div class="wsite-elements wsite-not-footer wsite-header-elements">
+	<div class="wsite-section-wrap">
+	<div  class="wsite-section wsite-header-section wsite-section-bg-image" style="height: auto;background-image: url(&quot;/uploads/5/0/1/5/50158331/background-images/543906866.jpg&quot;) ;background-repeat: no-repeat ;background-position: 48.26% 35.31% ;background-size: 100% ;background-color: transparent ;background-size: cover;" >
+		<div class="wsite-section-content">
+			
+          <div class="container">
+            <div class="banner">
+				<div class="wsite-section-elements">
+					<h2 class="wsite-content-title">Software Testing</h2>
+				</div>
+			</div>
+          </div>
+      
+		</div>
+		<div class=""></div>
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="main-wrap">
+      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-40" style="background-color: #2b384e;background-image: none;" >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title"><font color="#ffffff">Functional Testing</font></h2>
+
+<div class="paragraph"><ul><li><font color="#ffffff"><strong>Unit Testing</strong> - writing tests for 1 small part of the application or testing 1 method/class. They can be easily automated and easily run through a continuous integration server</font><ul><br /><li><font color="#ffffff"><strong>White Box Testing</strong> - Internal code structure of an app is visible to the tester; easier to find loop holes and faults</font></li><li><font color="#ffffff"><strong>Gorilla Testing</strong> - Thorough testing of the module/application</font></li></ul></li><br /><li><font color="#ffffff"><strong>Integration Testing</strong> - Groups of modules are grouped together and tested as a whole to see if they work correctly together</font><ul><br /><li><font color="#ffffff"><strong>Grey Box Testing</strong> -&nbsp;Testers have partial knowledge of the internal structure or code of an application</font></li></ul></li><br /><li><font color="#ffffff"><strong>System Testing</strong> - Tester evaluates the whole system for some specified requirements</font><ul><br /><li><font color="#ffffff"><strong>End to End Testing</strong> - Replicates user behavior in a prod environment. It performs things like:&nbsp;loading a web page, logging in or more complex scenarios verifying email notifications, online payments ...</font></li><li><font color="#ffffff"><strong>Black Box Testing</strong> - Testing is performed without the knowledge of the internal code structure</font></li><li><font color="#ffffff"><strong>Smoke Testing</strong> - Performs basic checks and critical functionality of the system/app.</font></li><li><font color="#ffffff"><strong>Sanity Testing</strong> - Checks if newly added feature or bug fix works correctly</font></li><li><font color="#ffffff"><strong>Happy Path Testing</strong> - Tests with only correct inputs (ie: no wrong passwords)</font></li><li><font color="#ffffff"><strong>Monkey / Ad-Hoc&nbsp;Testing</strong> - Test with random/incorrect input values (ie: as if a monkey is using the app)</font></li></ul></li></ul><ul><br /><li><font color="#ffffff"><strong>Acceptance Testing / UAT (User Acceptance Testing)</strong> - Tests performed to check if business requirements are met w/ real-time business scenarios</font><ul><li><font color="#ffffff"><strong>Alpha Testing</strong> - The UAT team finds as much defects of the app before releasing to client</font></li><li><font color="#ffffff"><strong>Beta Testing</strong> - Testing done by the client side before releasing it to the market&nbsp;</font></li></ul></li></ul></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Non-Functional Testing</font></h2>
+
+<div class="paragraph"><ul><li><strong><font color="#ffffff">Security Testing&nbsp;</font></strong><ul><li><font color="#ffffff"><strong>Penetration Testing</strong> - Perform authorized cyber attacks / ethical hacking</font></li></ul></li><br /><li><font color="#ffffff"><strong>Performance Testing</strong> -&nbsp;</font><span style="color:rgb(255, 255, 255)">Ability to handle high traffic to site; checks for stability and response time; scalability; volume; endurance (long-lasting)</span></li><br /><li><span style="color:rgb(255, 255, 255)"><strong>Usability Testing</strong> - Exploratory (ability to explore from one page to another); Cross browser testing; Accessibility Testing (for disability)</span></li><br /><li><span style="color:rgb(255, 255, 255)"><strong>Recovery Testing</strong> - How well the application recovers after a crash</span></li><br /><li><font color="#ffffff"><strong>Regression testing</strong> -&nbsp;tests&nbsp;unchanged features of the application just so&nbsp;that any bug fixes or adding new features&nbsp;does&nbsp;not impact&nbsp;the working application</font></li><br /><li><font color="#ffffff"><strong>Stress Testing</strong> - Testing with unfavorable conditions:&nbsp;maximum users; maximum memory usage ...</font></li></ul></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Selenium</font></h2>
+
+<div class="paragraph"><font color="#ffffff">It is&nbsp;<span>a portable automated software testing tool for testing web applications<br /><br /><strong>Selenium Tools</strong></span></font><ul><li><font color="#ffffff"><span>- <strong>Selenium IDE</strong>:&nbsp;</span>a Firefox plugin that lets testers to record their actions as they follow the workflow that they need to test</font></li><li><font color="#ffffff">- <strong>Selenium WebDriver</strong>: Sends commands directly to browser and retrieves the results</font><ul><li><font color="#ffffff">&#8203;Download and Install Java<br />Download and Configure Eclipse<br />Configure FireBug and FirePath<br />Configure Selenium WebDriver</font></li></ul></li></ul><ul><li><font color="#ffffff">- <strong>Selenium Grid</strong>: Helps&nbsp;<span>run parallel tests across different machines and different browsers simultaneously</span></font></li></ul><br /><strong><font color="#ffffff"><span>WebDriver</span></font></strong><ul><li><font color="#ffffff"><span>Selenium Test (Java, C#, Ruby, Python ...) &lt;=&gt; Selenium WebDriver &lt;=&gt; Web Browser &lt;=&gt; Web Application</span></font></li></ul><br /><font color="#ffffff"><span><strong>TestNG</strong><ul><li>TestNG can be installed in eclipse. - It helps run test scripts in parallel.&#8203;</li></ul><br /><strong>Scripting Using WebDriver</strong></span></font><ul><li><font color="#ffffff"><span>1)&nbsp;</span></font><span><font color="#fdfcfc">Launch "Eclipse" from the Extracted Eclipse folder</font></span></li><li><span><font color="#fdfcfc">2)&nbsp;Select the Workspace by clicking the 'Browse' button</font></span></li><li><span><font color="#fdfcfc">3)&nbsp;Now create a 'New Project' from 'File' menu</font></span></li><li><span><font color="#fdfcfc">4)&nbsp;Enter the Project Name and Click 'Next'</font></span></li><li><span><font color="#fdfcfc">5)&nbsp;Go to Libraries Tab and select all the JAR's Selenium WebDriver Library folder and also selenium-java-2.42.2.jar and selenium-java-2.42.2-srcs.jar</font></span></li><li><span><font color="#fdfcfc">6) Package gets created</font></span></li><li><span><font color="#fdfcfc">7)&nbsp;Now right-click on the package and select 'New' &gt;&gt; 'Class' to create a 'class'</font></span></li><li><span><font color="#fdfcfc">8)&nbsp;Now name the class and make it the main function</font></span></li><li><span><font color="#fdfcfc">9)&nbsp;The output of the below script would be printed in Console</font></span></li></ul></div>
+
+<div id="191726803999317268"><div><style type="text/css">
+	#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 .paragraph {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion {
+  padding: 20px 0;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #2b384e;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #9399a4;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #2b384e;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple .accordion__item.active > .accordion__title {
+  background-color: #2b384e;
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #9399a4;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #2b384e;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #9399a4;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #2b384e;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material .accordion__item.active > .accordion__title {
+  background-color: #2b384e;
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #9399a4;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material > .accordion__item {
+  margin-bottom: 1px;
+  box-shadow: none;
+  transition: 500ms ease;
+  z-index: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material > .accordion__item.active {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  z-index: 3;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #2b384e;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #9399a4;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #2b384e;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box .accordion__item.active > .accordion__title {
+  background-color: #2b384e;
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #9399a4;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box > .accordion__item {
+  transition: 500ms ease;
+  border: 1px solid #9399a4;
+  z-index: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box > .accordion__item.active {
+  z-index: 3;
+  border: 1px solid #9399a4;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #2b384e;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #9399a4;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #2b384e;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple.no-touch .accordion__item.active > .accordion__title {
+  background-color: #2b384e;
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #9399a4;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--simple.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #2b384e;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #9399a4;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #2b384e;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material.no-touch .accordion__item.active > .accordion__title {
+  background-color: #2b384e;
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #9399a4;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material.no-touch > .accordion__item {
+  margin-bottom: 1px;
+  box-shadow: none;
+  transition: 500ms ease;
+  z-index: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material.no-touch > .accordion__item.active {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  z-index: 3;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--material.no-touch .accordion__item:hover {
+  box-shadow: ;
+  z-index: 3;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #2b384e;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #9399a4;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #2b384e;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box.no-touch .accordion__item.active > .accordion__title {
+  background-color: #2b384e;
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #9399a4;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box.no-touch > .accordion__item {
+  transition: 500ms ease;
+  border: 1px solid #9399a4;
+  z-index: 1;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box.no-touch > .accordion__item.active {
+  z-index: 3;
+  border: 1px solid #9399a4;
+}
+#element-c1c194c3-447c-4dc8-b782-0b4a943f2582 > .accordion--box.no-touch .accordion__item:hover {
+  z-index: 3;
+}
+
+</style><div id="element-c1c194c3-447c-4dc8-b782-0b4a943f2582" data-platform-element-id="915890017822203553-1.3.9" class="platform-element-contents">
+	<div class="accordion accordion--simple no-touch">
+        <div class="accordion__item" data-item="0">
+            <div class="accordion__title">
+                <span><div class="paragraph"><font color="#ffffff">SELEnium WebDriver script Example</font></div><span>
+            </div>
+            <div class="accordion__content">
+                <div style="padding: 10px 20px 20px;">
+                    <div style="width: auto"><div></div><div class="paragraph"><font color="#ffffff">import java.util.concurrent.TimeUnit;<br /><br />import org.openqa.selenium.*;<br />import org.openqa.selenium.firefox.FirefoxDriver;<br /><br />public class webdriverdemo {<br />&nbsp; &nbsp;public static void main(String[] args) {<br />&nbsp; &nbsp;<br />&nbsp; &nbsp; &nbsp; WebDriver driver = new FirefoxDriver();<br />&nbsp; &nbsp; &nbsp; //Puts an Implicit wait, Will wait for 10 seconds before throwing exception<br />&nbsp; &nbsp; &nbsp; driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);<br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; //Launch website<br />&nbsp; &nbsp; &nbsp; driver.navigate().to("http://www.calculator.net/");<br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; //Maximize the browser<br />&nbsp; &nbsp; &nbsp; driver.manage().window().maximize();<br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; // Click on Math Calculators - google how to find xpath<br />&nbsp; &nbsp; &nbsp; driver.findElement(By.xpath(".//*[@id = 'menu']/div[3]/a")).click();<br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; // Click on Percent Calculators<br />&nbsp; &nbsp; &nbsp; driver.findElement(By.xpath(".//*[@id = 'menu']/div[4]/div[3]/a")).click();<br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; // Enter value 10 in the first number of the percent Calculator<br />&nbsp; &nbsp; &nbsp; driver.findElement(By.id("cpar1")).sendKeys("10");<br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; // Enter value 50 in the second number of the percent Calculator<br />&nbsp; &nbsp; &nbsp; driver.findElement(By.id("cpar2")).sendKeys("50");<br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; // Click Calculate Button<br />&nbsp; &nbsp; &nbsp; driver.findElement(By.xpath(".//*[@id = 'content']/table/tbody/tr[2]/td/input[2]")).click();<br /><br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; // Get the Result Text based on its xpath<br />&nbsp; &nbsp; &nbsp; String result =<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;driver.findElement(By.xpath(".//*[@id = 'content']/p[2]/font/b")).getText();<br /><br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; // Print a Log In message to the screen<br />&nbsp; &nbsp; &nbsp; System.out.println(" The Result is " + result);<br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; //Close the Browser.<br />&nbsp; &nbsp; &nbsp; driver.close();<br />&nbsp; &nbsp;}<br />}</font></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion__item" data-item="1">
+            <div class="accordion__title">
+                <span><div class="paragraph"><span><font color="#ffffff">SELENIUM WEBDRIVER SCRIPT EXAMPLE (With TEstng)</font></span></div><span>
+            </div>
+            <div class="accordion__content">
+                <div style="padding: 10px 20px 20px;">
+                    <div style="width: auto"><div></div><div class="paragraph"><font color="#ffffff">package TestNG;<br /><br />import java.util.concurrent.TimeUnit;<br /><br />import org.openqa.selenium.*;<br />import org.openqa.selenium.firefox.FirefoxDriver;<br /><br />import org.testng.annotations.AfterTest;<br />import org.testng.annotations.BeforeTest;<br />import org.testng.annotations.Test;<br /><br />public class TestNGClass {<br />&nbsp; &nbsp;WebDriver driver = new FirefoxDriver();<br />&nbsp; &nbsp;<br />&nbsp; &nbsp;@BeforeTest<br />&nbsp; &nbsp;public void launchapp() {<br />&nbsp; &nbsp; &nbsp; // Puts an Implicit wait, Will wait for 10 seconds before throwing exception<br />&nbsp; &nbsp; &nbsp; driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);<br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; // Launch website<br />&nbsp; &nbsp; &nbsp; driver.navigate().to("http://www.calculator.net");<br />&nbsp; &nbsp; &nbsp; driver.manage().window().maximize();<br />&nbsp; &nbsp;}<br />&nbsp; &nbsp;<br />&nbsp; &nbsp;@Test<br />&nbsp; &nbsp;public void calculatepercent() {<br />&nbsp; &nbsp; &nbsp; // Click on Math Calculators<br />&nbsp; &nbsp; &nbsp; driver.findElement(By.xpath(".//*[@id='menu']/div[3]/a")).click();<br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; // Click on Percent Calculators<br />&nbsp; &nbsp; &nbsp; driver.findElement(By.xpath(".//*[@id='menu']/div[4]/div[3]/a")).click();<br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; // Enter value 10 in the first number of the percent Calculator<br />&nbsp; &nbsp; &nbsp; driver.findElement(By.id("cpar1")).sendKeys("10");<br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; // Enter value 50 in the second number of the percent Calculator<br />&nbsp; &nbsp; &nbsp; driver.findElement(By.id("cpar2")).sendKeys("50");<br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; // Click Calculate Button<br />&nbsp; &nbsp; &nbsp; driver.findElement(By.xpath(".//*[@id='content']/table/tbody/tr/td[2]/input")).click();<br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; // Get the Result Text based on its xpath<br />&nbsp; &nbsp; &nbsp; String result =<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;driver.findElement(By.xpath(".//*[@id='content']/p[2]/span/font/b")).getText();<br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; // Print a Log In message to the screen<br />&nbsp; &nbsp; &nbsp; System.out.println(" The Result is " + result);<br />&nbsp; &nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp; if(result.equals("5")) {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;System.out.println(" The Result is Pass");<br />&nbsp; &nbsp; &nbsp; } else {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;System.out.println(" The Result is Fail");<br />&nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp;}<br />&nbsp; &nbsp;<br />&nbsp; &nbsp;@AfterTest<br />&nbsp; &nbsp;public void terminatetest() {<br />&nbsp; &nbsp; &nbsp; driver.close();<br />&nbsp; &nbsp;}<br />}</font></div></div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+<div style="clear:both;"></div><script type="text/javascript" class="element-script">function setupElement191726803999317268() {
+	var requireFunc = window.platformElementRequire || window.require;
+
+	// Relies on a global require, specific to platform elements
+	requireFunc([
+		'w-global',
+		'underscore',
+		'jquery',
+		'backbone',
+		'util/platform/elements/PlatformElement',
+		'util/platform/elements/PlatformElementSettings'
+	], function(
+		_W,
+		_,
+		$,
+		Backbone,
+		PlatformElement,
+		PlatformElementSettings
+	) {
+		var dependencies = null || [];
+		var platform_element_id = "915890017822203553-1.3.9";
+
+		if (typeof _W.loadedPlatformDependencies === 'undefined') {
+			_W.loadedPlatformDependencies = [];
+		}
+
+		if (typeof _W.platformElements === 'undefined') {
+			_W.platformElements = [];
+		}
+
+		if (typeof _W.platformElements[platform_element_id] === 'undefined') {
+			_W.platformElements[platform_element_id] = {};
+			_W.platformElements[platform_element_id].deferredObject = new $.Deferred();
+			_W.platformElements[platform_element_id].deferredPromise = _W.platformElements[platform_element_id].deferredObject.promise();
+		}
+
+		if(_.intersection(_W.loadedPlatformDependencies, dependencies).length !== dependencies.length){
+			_.reduce(dependencies, function(promise, nextScript){
+				_W.loadedPlatformDependencies.push(nextScript);
+				return promise.then(function(){
+					return $.getScript(nextScript);
+				});
+			}, $().promise()).then(function(){
+				_W.platformElements[platform_element_id].deferredObject.resolve();
+			});
+		}
+
+		if (dependencies.length === 0){
+			_W.platformElements[platform_element_id].deferredObject.resolve();
+		}
+
+		_W.platformElements[platform_element_id].deferredPromise.done(function(){
+			var _ElementDefinition = /**
+ * This is required for element rendering to be possible
+ * @type {PlatformElement}
+ */
+(function() {
+    var Accordion = PlatformElement.extend({
+        initialize: function() {
+            this.activeIndex = this.settings.get('active_index');
+
+            // if we have any iframes, we get an overlay
+            this.$el.children('.platform-element-overlay').hide();
+
+            this.fixBoxStyleBorders();
+            this.setupAccordion();
+        },
+
+         /**
+         * Listens to size modifications in the content areas
+         * and resizes them as needed
+         */
+        listenToContentChanges: function() {
+            this.currentContent = this.getAccordion()
+                .children('[data-item="' + this.settings.get('active_index') +  '"]')
+                .children('.accordion__content');
+            if (this.currentContent[0]) {
+                this.contentInterval = setInterval(function() {
+                    if (this.currentContent[0].scrollHeight + 20 != parseInt(this.currentContent.css('max-height'))) {
+                        this.currentContent.css('max-height', this.currentContent[0].scrollHeight + 20 + 'px');
+                    }
+                }.bind(this), 50);
+            }
+        },
+
+        /**
+         * Simplistic jQuery usage to animate and control which
+         * accordion item is currently open
+         */
+        setupAccordion: function() {
+            var view = this;
+
+            $titles = this.getTitles();
+            $events = $._data($titles[0], "events");
+
+            // if we already have set up click events, don't set more up
+            if ($events && $events.click && $events.click[0]) {
+                return;
+            }
+
+            $titles.on('touchstart click', function(e) {
+                clearInterval(view.contentInterval);
+
+                // remove "hover" state on touch events
+                if (e.type == "touchstart") {
+                    view.getAccordion().removeClass('no-touch');
+                }
+
+                e.stopPropagation();
+                e.preventDefault();
+
+                var isActive = $(this).parent().hasClass('active');
+
+                // handles closing
+                view.getTitles().each(function() {
+                    var $this = $(this);
+                    var $next = $(this).next();
+                    var eachIsActive = $(this).parent().hasClass('active');
+
+                    $next.css({
+                        'max-height': 0 + 'px'
+                    });
+
+                    if (eachIsActive) {
+                        setTimeout(function() {
+                            $this.parent().removeClass('active');
+                        }, 250);
+                    }
+                });
+
+                // handles opening
+                if (!isActive) {
+                    $(this).parent().addClass('active');
+                    var $next = $(this).next();
+                    $next.css({
+                        'max-height': $next[0].scrollHeight + 20 + 'px' // 20 to compensate for padding
+                    });
+
+                    setTimeout(function() {
+                        $(window).resize();
+                    }, 250);
+
+                    view.listenToContentChanges();
+                }
+                
+            });
+
+            this.getTitles().on('touchend', function() {
+                this.getAccordion().addClass('no-touch');
+            }.bind(this));
+        },
+
+        /**
+         * When using the 'Box' style, to avoid
+         * thick borders on the top and bottom of
+         * elements, we just shift all the elements up
+         * 'i' pixels. Preferable over doing it through css
+         * because all the items need all 4 borders on hover.
+         */
+        fixBoxStyleBorders: function() {
+            var view = this;
+
+            // only do it if the style is 'box'
+            if (this.settings.get('style') == 'box') {
+                this.getAccordion().filter('.accordion--box').children().each(function(i) {
+                    $(this).css({
+                        'top': -i
+                    });
+                });
+            }
+        },
+
+        // these functions exist so that if there's nested accordions, we don't accidentally select child accordions.
+        getAccordion: function() {
+            return this.$el.children();
+        },
+
+        getTitles: function() {
+            return this.$el.children()
+                .children()
+                .children('.accordion__title');
+        },
+
+        getContent: function() {
+            return this.$el.children()
+                .children()
+                .children('.accordion__content');
+        }
+    });
+
+    return Accordion;
+})();
+;
+
+			if (typeof _ElementDefinition == 'undefined' || typeof _ElementDefinition == 'null') {
+				var _ElementDefinition = PlatformElement.extend({});
+			}
+
+			var _Element = _ElementDefinition.extend({
+				initialize: function() {
+					// we still want to call the initialize function defined by the developer
+					// however, we don't want to call it until placeholders have been replaced
+					this.placeholderInterval = setInterval(function() {
+						// so use setInterval to check for placeholders.
+						if (this.$('.platform-element-child-placeholder').length == 0) {
+							clearInterval(this.placeholderInterval);
+							this.constructor.__super__.initialize.apply(this);
+						}
+					}.bind(this), 100);
+				}
+			});
+
+			_Element.prototype.settings = new PlatformElementSettings({"items_each":[{"items_index":0},{"items_index":1}],"items":2,"style":"simple","title_background":"#2b384e","content_background":"#2b384e","active_index":"-1"});
+			_Element.prototype.settings.page_element_id = "191726803999317268";
+
+			_Element.prototype.element_id = "c1c194c3-447c-4dc8-b782-0b4a943f2582";
+			_Element.prototype.user_id = "50158331";
+			_Element.prototype.site_id = "258110484374261460";
+			_Element.prototype.assets_path = "//marketplace.editmysite.com/uploads/b/marketplace-elements-915890017822203553-1.3.9/assets/";
+			new _Element({
+				el: '#element-c1c194c3-447c-4dc8-b782-0b4a943f2582'
+			});
+		});
+	});
+
+}
+
+if (typeof document.documentElement.appReady == 'undefined') {
+	document.documentElement.appReady = 0;
+}
+
+if (document.documentElement.appReady || (window.inEditor && window.inEditor())) {
+	setupElement191726803999317268();
+} else if (document.createEvent && document.addEventListener) {
+	document.addEventListener('appReady', setupElement191726803999317268, false);
+} else {
+	document.documentElement.attachEvent('onpropertychange', function(event){
+		if (event.propertyName == 'appReady') {
+			setupElement191726803999317268();
+		}
+	});
+}
+
+</script></div></div>
+
+<div id="785991882277580267"><div><style type="text/css">
+	#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 .paragraph {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion {
+  padding: 20px 0;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #2b384e;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #9399a4;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #2b384e;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple .accordion__item.active > .accordion__title {
+  background-color: #2b384e;
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #9399a4;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #2b384e;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #9399a4;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #2b384e;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material .accordion__item.active > .accordion__title {
+  background-color: #2b384e;
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #9399a4;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material > .accordion__item {
+  margin-bottom: 1px;
+  box-shadow: none;
+  transition: 500ms ease;
+  z-index: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material > .accordion__item.active {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  z-index: 3;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #2b384e;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #9399a4;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #2b384e;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box .accordion__item.active > .accordion__title {
+  background-color: #2b384e;
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #9399a4;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box > .accordion__item {
+  transition: 500ms ease;
+  border: 1px solid #9399a4;
+  z-index: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box > .accordion__item.active {
+  z-index: 3;
+  border: 1px solid #9399a4;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #2b384e;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #9399a4;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #2b384e;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple.no-touch .accordion__item.active > .accordion__title {
+  background-color: #2b384e;
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #9399a4;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--simple.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #2b384e;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #9399a4;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #2b384e;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material.no-touch .accordion__item.active > .accordion__title {
+  background-color: #2b384e;
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #9399a4;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material.no-touch > .accordion__item {
+  margin-bottom: 1px;
+  box-shadow: none;
+  transition: 500ms ease;
+  z-index: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material.no-touch > .accordion__item.active {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  z-index: 3;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--material.no-touch .accordion__item:hover {
+  box-shadow: ;
+  z-index: 3;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #2b384e;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #9399a4;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #2b384e;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box.no-touch .accordion__item.active > .accordion__title {
+  background-color: #2b384e;
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #9399a4;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box.no-touch > .accordion__item {
+  transition: 500ms ease;
+  border: 1px solid #9399a4;
+  z-index: 1;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box.no-touch > .accordion__item.active {
+  z-index: 3;
+  border: 1px solid #9399a4;
+}
+#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6 > .accordion--box.no-touch .accordion__item:hover {
+  z-index: 3;
+}
+
+</style><div id="element-22ca0350-02f3-486d-8d6b-361ccb80c6c6" data-platform-element-id="915890017822203553-1.3.9" class="platform-element-contents">
+	<div class="accordion accordion--simple no-touch">
+        <div class="accordion__item" data-item="0">
+            <div class="accordion__title">
+                <span><div class="paragraph"><strong><font color="#ffffff">Some Info on Selenium Grid</font></strong></div><span>
+            </div>
+            <div class="accordion__content">
+                <div style="padding: 10px 20px 20px;">
+                    <div style="width: auto"><div></div><div class="paragraph"><font color="#ffffff">Selenium Grid</font><ul><li><font color="#ffffff">Configuring the Hub - utilizes:&nbsp;</font><span><font color="#ffffff">http//localhost:4444</font></span><br /></li><li><font color="#ffffff">Configuring the Nodes<br /></font></li><li><font color="#ffffff">Develop the Script and Prepare the XML File<br /></font></li><li><font color="#ffffff">Test Execution<br /></font></li><li><font color="#ffffff">Result Analysis - results can be displayed in an html file (test cases passed vs failed)</font></li></ul></div>
+
+<div id="824559666538724840"><div><style type="text/css">
+	#element-699a24b9-efbc-4e3a-a434-75f5f3d847ea .content-color-box-wrapper {
+  padding: 20px;
+  border-radius: 0px;
+  background-color: #ffffff;
+  border-style: None;
+  border-color: #555555;
+  border-width: 3px;
+}
+
+</style><div id="element-699a24b9-efbc-4e3a-a434-75f5f3d847ea" data-platform-element-id="698263678581730663-1.1.0" class="platform-element-contents">
+<div class="content-color-box-wrapper">
+<div style="width: 100%"><div></div><div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/published/selgrid.png?1674002513" alt="Picture" style="width:823;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div></div>
+</div>
+</div>
+<div style="clear:both;"></div><script type="text/javascript" class="element-script">function setupElement824559666538724840() {
+	var requireFunc = window.platformElementRequire || window.require;
+
+	// Relies on a global require, specific to platform elements
+	requireFunc([
+		'w-global',
+		'underscore',
+		'jquery',
+		'backbone',
+		'util/platform/elements/PlatformElement',
+		'util/platform/elements/PlatformElementSettings'
+	], function(
+		_W,
+		_,
+		$,
+		Backbone,
+		PlatformElement,
+		PlatformElementSettings
+	) {
+		var dependencies = null || [];
+		var platform_element_id = "698263678581730663-1.1.0";
+
+		if (typeof _W.loadedPlatformDependencies === 'undefined') {
+			_W.loadedPlatformDependencies = [];
+		}
+
+		if (typeof _W.platformElements === 'undefined') {
+			_W.platformElements = [];
+		}
+
+		if (typeof _W.platformElements[platform_element_id] === 'undefined') {
+			_W.platformElements[platform_element_id] = {};
+			_W.platformElements[platform_element_id].deferredObject = new $.Deferred();
+			_W.platformElements[platform_element_id].deferredPromise = _W.platformElements[platform_element_id].deferredObject.promise();
+		}
+
+		if(_.intersection(_W.loadedPlatformDependencies, dependencies).length !== dependencies.length){
+			_.reduce(dependencies, function(promise, nextScript){
+				_W.loadedPlatformDependencies.push(nextScript);
+				return promise.then(function(){
+					return $.getScript(nextScript);
+				});
+			}, $().promise()).then(function(){
+				_W.platformElements[platform_element_id].deferredObject.resolve();
+			});
+		}
+
+		if (dependencies.length === 0){
+			_W.platformElements[platform_element_id].deferredObject.resolve();
+		}
+
+		_W.platformElements[platform_element_id].deferredPromise.done(function(){
+			var _ElementDefinition = PlatformElement.extend({initialize:function(options){},events:{}});;
+
+			if (typeof _ElementDefinition == 'undefined' || typeof _ElementDefinition == 'null') {
+				var _ElementDefinition = PlatformElement.extend({});
+			}
+
+			var _Element = _ElementDefinition.extend({
+				initialize: function() {
+					// we still want to call the initialize function defined by the developer
+					// however, we don't want to call it until placeholders have been replaced
+					this.placeholderInterval = setInterval(function() {
+						// so use setInterval to check for placeholders.
+						if (this.$('.platform-element-child-placeholder').length == 0) {
+							clearInterval(this.placeholderInterval);
+							this.constructor.__super__.initialize.apply(this);
+						}
+					}.bind(this), 100);
+				}
+			});
+
+			_Element.prototype.settings = new PlatformElementSettings({"spacingSize_each":[{"spacingSize_index":0},{"spacingSize_index":1},{"spacingSize_index":2},{"spacingSize_index":3},{"spacingSize_index":4},{"spacingSize_index":5},{"spacingSize_index":6},{"spacingSize_index":7},{"spacingSize_index":8},{"spacingSize_index":9},{"spacingSize_index":10},{"spacingSize_index":11},{"spacingSize_index":12},{"spacingSize_index":13},{"spacingSize_index":14},{"spacingSize_index":15},{"spacingSize_index":16},{"spacingSize_index":17},{"spacingSize_index":18},{"spacingSize_index":19}],"borderWidth_each":[{"borderWidth_index":0},{"borderWidth_index":1},{"borderWidth_index":2}],"backgroundColor":"#ffffff","backgroundTransparency":100,"spacingSize":20,"cornerRadius":0,"borderStyle":"None","borderColor":"#555","borderWidth":3,"borderTransparency":100});
+			_Element.prototype.settings.page_element_id = "824559666538724840";
+
+			_Element.prototype.element_id = "699a24b9-efbc-4e3a-a434-75f5f3d847ea";
+			_Element.prototype.user_id = "50158331";
+			_Element.prototype.site_id = "258110484374261460";
+			_Element.prototype.assets_path = "//marketplace.editmysite.com/uploads/b/marketplace-elements-698263678581730663-1.1.0/assets/";
+			new _Element({
+				el: '#element-699a24b9-efbc-4e3a-a434-75f5f3d847ea'
+			});
+		});
+	});
+
+}
+
+if (typeof document.documentElement.appReady == 'undefined') {
+	document.documentElement.appReady = 0;
+}
+
+if (document.documentElement.appReady || (window.inEditor && window.inEditor())) {
+	setupElement824559666538724840();
+} else if (document.createEvent && document.addEventListener) {
+	document.addEventListener('appReady', setupElement824559666538724840, false);
+} else {
+	document.documentElement.attachEvent('onpropertychange', function(event){
+		if (event.propertyName == 'appReady') {
+			setupElement824559666538724840();
+		}
+	});
+}
+
+</script></div></div></div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+<div style="clear:both;"></div><script type="text/javascript" class="element-script">function setupElement785991882277580267() {
+	var requireFunc = window.platformElementRequire || window.require;
+
+	// Relies on a global require, specific to platform elements
+	requireFunc([
+		'w-global',
+		'underscore',
+		'jquery',
+		'backbone',
+		'util/platform/elements/PlatformElement',
+		'util/platform/elements/PlatformElementSettings'
+	], function(
+		_W,
+		_,
+		$,
+		Backbone,
+		PlatformElement,
+		PlatformElementSettings
+	) {
+		var dependencies = null || [];
+		var platform_element_id = "915890017822203553-1.3.9";
+
+		if (typeof _W.loadedPlatformDependencies === 'undefined') {
+			_W.loadedPlatformDependencies = [];
+		}
+
+		if (typeof _W.platformElements === 'undefined') {
+			_W.platformElements = [];
+		}
+
+		if (typeof _W.platformElements[platform_element_id] === 'undefined') {
+			_W.platformElements[platform_element_id] = {};
+			_W.platformElements[platform_element_id].deferredObject = new $.Deferred();
+			_W.platformElements[platform_element_id].deferredPromise = _W.platformElements[platform_element_id].deferredObject.promise();
+		}
+
+		if(_.intersection(_W.loadedPlatformDependencies, dependencies).length !== dependencies.length){
+			_.reduce(dependencies, function(promise, nextScript){
+				_W.loadedPlatformDependencies.push(nextScript);
+				return promise.then(function(){
+					return $.getScript(nextScript);
+				});
+			}, $().promise()).then(function(){
+				_W.platformElements[platform_element_id].deferredObject.resolve();
+			});
+		}
+
+		if (dependencies.length === 0){
+			_W.platformElements[platform_element_id].deferredObject.resolve();
+		}
+
+		_W.platformElements[platform_element_id].deferredPromise.done(function(){
+			var _ElementDefinition = /**
+ * This is required for element rendering to be possible
+ * @type {PlatformElement}
+ */
+(function() {
+    var Accordion = PlatformElement.extend({
+        initialize: function() {
+            this.activeIndex = this.settings.get('active_index');
+
+            // if we have any iframes, we get an overlay
+            this.$el.children('.platform-element-overlay').hide();
+
+            this.fixBoxStyleBorders();
+            this.setupAccordion();
+        },
+
+         /**
+         * Listens to size modifications in the content areas
+         * and resizes them as needed
+         */
+        listenToContentChanges: function() {
+            this.currentContent = this.getAccordion()
+                .children('[data-item="' + this.settings.get('active_index') +  '"]')
+                .children('.accordion__content');
+            if (this.currentContent[0]) {
+                this.contentInterval = setInterval(function() {
+                    if (this.currentContent[0].scrollHeight + 20 != parseInt(this.currentContent.css('max-height'))) {
+                        this.currentContent.css('max-height', this.currentContent[0].scrollHeight + 20 + 'px');
+                    }
+                }.bind(this), 50);
+            }
+        },
+
+        /**
+         * Simplistic jQuery usage to animate and control which
+         * accordion item is currently open
+         */
+        setupAccordion: function() {
+            var view = this;
+
+            $titles = this.getTitles();
+            $events = $._data($titles[0], "events");
+
+            // if we already have set up click events, don't set more up
+            if ($events && $events.click && $events.click[0]) {
+                return;
+            }
+
+            $titles.on('touchstart click', function(e) {
+                clearInterval(view.contentInterval);
+
+                // remove "hover" state on touch events
+                if (e.type == "touchstart") {
+                    view.getAccordion().removeClass('no-touch');
+                }
+
+                e.stopPropagation();
+                e.preventDefault();
+
+                var isActive = $(this).parent().hasClass('active');
+
+                // handles closing
+                view.getTitles().each(function() {
+                    var $this = $(this);
+                    var $next = $(this).next();
+                    var eachIsActive = $(this).parent().hasClass('active');
+
+                    $next.css({
+                        'max-height': 0 + 'px'
+                    });
+
+                    if (eachIsActive) {
+                        setTimeout(function() {
+                            $this.parent().removeClass('active');
+                        }, 250);
+                    }
+                });
+
+                // handles opening
+                if (!isActive) {
+                    $(this).parent().addClass('active');
+                    var $next = $(this).next();
+                    $next.css({
+                        'max-height': $next[0].scrollHeight + 20 + 'px' // 20 to compensate for padding
+                    });
+
+                    setTimeout(function() {
+                        $(window).resize();
+                    }, 250);
+
+                    view.listenToContentChanges();
+                }
+                
+            });
+
+            this.getTitles().on('touchend', function() {
+                this.getAccordion().addClass('no-touch');
+            }.bind(this));
+        },
+
+        /**
+         * When using the 'Box' style, to avoid
+         * thick borders on the top and bottom of
+         * elements, we just shift all the elements up
+         * 'i' pixels. Preferable over doing it through css
+         * because all the items need all 4 borders on hover.
+         */
+        fixBoxStyleBorders: function() {
+            var view = this;
+
+            // only do it if the style is 'box'
+            if (this.settings.get('style') == 'box') {
+                this.getAccordion().filter('.accordion--box').children().each(function(i) {
+                    $(this).css({
+                        'top': -i
+                    });
+                });
+            }
+        },
+
+        // these functions exist so that if there's nested accordions, we don't accidentally select child accordions.
+        getAccordion: function() {
+            return this.$el.children();
+        },
+
+        getTitles: function() {
+            return this.$el.children()
+                .children()
+                .children('.accordion__title');
+        },
+
+        getContent: function() {
+            return this.$el.children()
+                .children()
+                .children('.accordion__content');
+        }
+    });
+
+    return Accordion;
+})();
+;
+
+			if (typeof _ElementDefinition == 'undefined' || typeof _ElementDefinition == 'null') {
+				var _ElementDefinition = PlatformElement.extend({});
+			}
+
+			var _Element = _ElementDefinition.extend({
+				initialize: function() {
+					// we still want to call the initialize function defined by the developer
+					// however, we don't want to call it until placeholders have been replaced
+					this.placeholderInterval = setInterval(function() {
+						// so use setInterval to check for placeholders.
+						if (this.$('.platform-element-child-placeholder').length == 0) {
+							clearInterval(this.placeholderInterval);
+							this.constructor.__super__.initialize.apply(this);
+						}
+					}.bind(this), 100);
+				}
+			});
+
+			_Element.prototype.settings = new PlatformElementSettings({"items_each":[{"items_index":0}],"items":1,"style":"simple","title_background":"#2b384e","content_background":"#2b384e","active_index":"-1"});
+			_Element.prototype.settings.page_element_id = "785991882277580267";
+
+			_Element.prototype.element_id = "22ca0350-02f3-486d-8d6b-361ccb80c6c6";
+			_Element.prototype.user_id = "50158331";
+			_Element.prototype.site_id = "258110484374261460";
+			_Element.prototype.assets_path = "//marketplace.editmysite.com/uploads/b/marketplace-elements-915890017822203553-1.3.9/assets/";
+			new _Element({
+				el: '#element-22ca0350-02f3-486d-8d6b-361ccb80c6c6'
+			});
+		});
+	});
+
+}
+
+if (typeof document.documentElement.appReady == 'undefined') {
+	document.documentElement.appReady = 0;
+}
+
+if (document.documentElement.appReady || (window.inEditor && window.inEditor())) {
+	setupElement785991882277580267();
+} else if (document.createEvent && document.addEventListener) {
+	document.addEventListener('appReady', setupElement785991882277580267, false);
+} else {
+	document.documentElement.attachEvent('onpropertychange', function(event){
+		if (event.propertyName == 'appReady') {
+			setupElement785991882277580267();
+		}
+	});
+}
+
+</script></div></div>
+
+<div class="paragraph"><font color="#ffffff"><span><strong>SoapUI</strong> is an open-source tool used for functional and non-functional testing, widely used in WebServices testing. It requires&nbsp;</span>basic understanding of the client/server environment, and knowledge of SOAP, WSDL, XML, and XML namespace.&nbsp;It is purely implemented using JAVA platform. It supports Windows, Mac, multiple Linux dialects. It allows testers to execute automated functional, regression, compliance, and load tests on different Web API.<br /><br /><span><strong>TestRail </strong>is a test management tool used to track and maintain records of all STLC phases, from Test Plan, Testcase Execution, and Report creation. It</span><span style="background-color: transparent;">&nbsp;can be integrated with many other tools &ndash; JIRA, Bugzilla, Fogbugz, Version One, TFS, GitHub etc.</span></font><br /></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#ffffff">SOAPUI Tutorial</font></h2>
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/6BhJhTALOs4?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#ffffff">TestRail Tutorial</font></h2>
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/kBWwMUCYvMk?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a></div>
+    </div><!-- end footer-wrap -->
+  </div><!-- /.wrapper -->
+
+  <div id="navMobile" class="nav mobile-nav">
+    <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+    <ul class="wsite-menu-default">
+    		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+    			<a
+    						href="index.html"
+    				class="wsite-menu-item"
+    				>
+    				Home
+    			</a>
+    			
+    		</li>
+    		<li id="pg603325533116812941" class="wsite-menu-item-wrap">
+    			<a
+    						href="containers.html"
+    				class="wsite-menu-item"
+    				>
+    				Containers
+    			</a>
+    			
+    		</li>
+    </ul>
+  </div>
+
+	<script type="text/javascript" src="files/theme/plugins.js"></script>
+  <script type="text/javascript" src="files/theme/custom.js"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="http://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1234"></script>
+
+		
+	</body>
+</html>
