@@ -1,0 +1,14 @@
+From Chebyshev’s theorem, we know that:
+- At least 75% of the data must lie within 2 standard deviations from the mean.
+- At least 88.89% of the data must lie within 3 standard deviations from the mean.
+
+
+Fleury's Algorithm is used to display the Euler path or Euler circuit from a given graph.
+Eulerian Path is a trail in a finite graph that visits every edge exactly once (allowing for revisiting vertices).
+Eulerian Circuit is an Eulerian Path that starts and ends on the same vertex.
+
+Steps to implement a Fleury's Algorithm
+1) Make sure the graph has either 0 or 2 odd vertices.
+2) If there are 0 odd vertices, start anywhere. If there are 2 odd vertices, start at one of them.
+3) Follow edges one at a time. If you have a choice between a bridge (only edge making the vertex connected to the graph) and a non-bridge, always choose the non-bridge.
+4) Stop when you run out of edges.
