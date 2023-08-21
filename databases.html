@@ -11,7 +11,7 @@
 		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
 <link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
 <link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
-<link rel="stylesheet" type="text/css" href="files/main_style.css?1685625859" title="wsite-theme-css" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1692658900" title="wsite-theme-css" />
 <link href='http://cdn2.editmysite.com/fonts/Montserrat/font.css?2' rel='stylesheet' type='text/css' />
 
 <link href='http://cdn2.editmysite.com/fonts/Quicksand/font.css?2' rel='stylesheet' type='text/css' />
@@ -66,7 +66,7 @@
 .wsite-product .wsite-product-price a {}
 }</style>
 
-		<script src='files/templateArtifacts.js?1685625825'></script>
+		<script src='files/templateArtifacts.js?1692500573'></script>
 <script>
 var STATIC_BASE = '//cdn1.editmysite.com/';
 var ASSETS_BASE = '//cdn2.editmysite.com/';
@@ -103,7 +103,7 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 	
 	function initFlyouts(){
 		initPublishedFlyoutMenus(
-			[{"id":"174265258517029121","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"603325533116812941","title":"Containers","url":"containers.html","target":"","nav_menu":false,"nonclickable":false}],
+			[{"id":"174265258517029121","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"406094728939833248","title":"Kotlin & Spring Boot","url":"kotlin--spring-boot.html","target":"","nav_menu":false,"nonclickable":false}],
 			"725265851357150658",
 			'',
 			'active',
@@ -140,12 +140,12 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 			</a>
 			
 		</li>
-		<li id="pg603325533116812941" class="wsite-menu-item-wrap">
+		<li id="pg406094728939833248" class="wsite-menu-item-wrap">
 			<a
-						href="containers.html"
+						href="kotlin--spring-boot.html"
 				class="wsite-menu-item"
 				>
-				Containers
+				Kotlin & Spring Boot
 			</a>
 			
 		</li>
@@ -657,13 +657,1440 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 
 <div class="paragraph"><font color="#ffffff"><strong><font size="4">SQL Hosting</font></strong><br />In order for a website to store and retrieve data from a database, the website's server should have access to a database system that uses the SQL language/SQL hosting plans.<br /><br />MS Server and Oracle are good for websites with high-traffic.<br />MySQL is inexpensive.</font></div>
 
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">PostgreSQL</font></h2>
+
+<div class="paragraph"><span><font color="#ffffff">PostrgreSQL supports both relational (SQL) and non-relational (JSON) queries. It is a back-end database for dynamic websites and web applications. After installing PostgreSQL, it comes with 2 ways to interact with the database: SQL Shell (psql) and pgAdmin 4 (UI)</font></span><br /><br /><font color="#ffffff">Always end SQL statements with a semicolon <strong><font size="4">;</font></strong>&nbsp;&nbsp;</font><span><font color="#ffffff">SQL Shell waits for the semicolon and executes all lines as one SQL statement. For ex:<br />=# SELECT version();<br />-- same as<br />=# SELECT<br />-# version();</font></span><br /></div>
+
+<div id="789031366166434421"><div><style type="text/css">
+	#element-5d745ab5-00a8-4782-9de7-c8660ac7307d .paragraph {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion {
+  padding: 20px 0;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #a1a1a1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000000;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple .accordion__item.active > .accordion__title {
+  background-color: #000000;
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d7d7d;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #a1a1a1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000000;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material .accordion__item.active > .accordion__title {
+  background-color: #000000;
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d7d7d;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material > .accordion__item {
+  margin-bottom: 1px;
+  box-shadow: none;
+  transition: 500ms ease;
+  z-index: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material > .accordion__item.active {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  z-index: 3;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #a1a1a1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000000;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box .accordion__item.active > .accordion__title {
+  background-color: #000000;
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d7d7d;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box > .accordion__item {
+  transition: 500ms ease;
+  border: 1px solid #a1a1a1;
+  z-index: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box > .accordion__item.active {
+  z-index: 3;
+  border: 1px solid #7d7d7d;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #a1a1a1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000000;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple.no-touch .accordion__item.active > .accordion__title {
+  background-color: #000000;
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d7d7d;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--simple.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #a1a1a1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000000;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material.no-touch .accordion__item.active > .accordion__title {
+  background-color: #000000;
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d7d7d;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material.no-touch > .accordion__item {
+  margin-bottom: 1px;
+  box-shadow: none;
+  transition: 500ms ease;
+  z-index: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material.no-touch > .accordion__item.active {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  z-index: 3;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--material.no-touch .accordion__item:hover {
+  box-shadow: ;
+  z-index: 3;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #a1a1a1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000000;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box.no-touch .accordion__item.active > .accordion__title {
+  background-color: #000000;
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d7d7d;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box.no-touch > .accordion__item {
+  transition: 500ms ease;
+  border: 1px solid #a1a1a1;
+  z-index: 1;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box.no-touch > .accordion__item.active {
+  z-index: 3;
+  border: 1px solid #7d7d7d;
+}
+#element-5d745ab5-00a8-4782-9de7-c8660ac7307d > .accordion--box.no-touch .accordion__item:hover {
+  z-index: 3;
+}
+
+</style><div id="element-5d745ab5-00a8-4782-9de7-c8660ac7307d" data-platform-element-id="915890017822203553-1.3.9" class="platform-element-contents">
+	<div class="accordion accordion--simple no-touch">
+        <div class="accordion__item" data-item="0">
+            <div class="accordion__title">
+                <span><div class="paragraph"><strong>working with Databases in postgresql</strong></div><span>
+            </div>
+            <div class="accordion__content">
+                <div style="padding: 10px 20px 20px;">
+                    <div style="width: auto"><div></div><div class="paragraph">&#8203;<span><font color="#ffffff">Creating a table</font></span><br /><span style="color:rgb(255, 255, 255)">=# CREATE TABLE cars (</span><span style="color:rgb(255, 255, 255)">brand VARCHAR(255),&nbsp;model VARCHAR(255),&nbsp;year INT);<br />&gt;&nbsp;CREATE TABLE<br /><br />Display Table<br />=#&nbsp;SELECT * FROM cars;<br />&gt;&nbsp;<br />&nbsp;brand | model | year</span><br /><span style="color:rgb(255, 255, 255)">-------+-------+------</span><br /><span style="color:rgb(255, 255, 255)">(0 rows)<br /><br />Inserting Rows<br />=#&nbsp;INSERT INTO cars (brand, model, year)&nbsp;VALUES ('Ford', 'Mustang', 1964);<br />&gt;&nbsp;INSERT 0 1 -- forget about 0 for now, 1 means 1 row was inserted<br /><br />Inserting Multiple Rows<br />=#&nbsp;INSERT INTO cars (brand, model, year)</span><br /><span style="color:rgb(255, 255, 255)">(# VALUES</span><br /><span style="color:rgb(255, 255, 255)">(#&nbsp;&nbsp;&nbsp;('Volvo', 'p1800', 1968),</span><br /><span style="color:rgb(255, 255, 255)">(#&nbsp;&nbsp;&nbsp;('BMW', 'M1', 1978),</span><br /><span style="color:rgb(255, 255, 255)">(#&nbsp;&nbsp;&nbsp;('Toyota', 'Celica', 1975);<br />&gt;&nbsp;INSERT 0 3<br /><br />Fetching Specific Columns<br />=#&nbsp;SELECT brand, year FROM cars;<br /><br />Adding a Column to an existing table<br />=#&nbsp;ALTER TABLE cars&nbsp;ADD color VARCHAR(255);<br />&gt;&nbsp;ALTER TABLE<br /><br />Modify Values in Existing Records<br />=#&nbsp;UPDATE cars&nbsp;SET color = 'red'&nbsp;WHERE brand = 'Volvo';<br />&gt;&nbsp;UPDATE 1</span><br /><br /><span><font color="#ffffff">Change the data type, or the size of a table column<br />=#&nbsp;</font></span><font color="#ffffff">ALTER TABLE cars ALTER COLUMN year TYPE VARCHAR(4);</font><br /><font color="#ffffff">&gt; ALTER TABLE</font><br /><font color="#88ff7f"><span style="font-weight:bolder">Note:</span>&nbsp;Some data types cannot be converted if the column has value. E.g. numbers can always be converted to text, but text cannot always be converted to numbers.</font><br /><br /><font color="#ffffff">Deleting/Dropping a Column<br />=#&nbsp;</font><span style="color:rgb(255, 255, 255)">ALTER TABLE cars&nbsp;DROP COLUMN color;<br />&gt; ALTER TABLE<br /><br />Deleting Records from a Table<br />=#&nbsp;DELETE FROM cars&nbsp;WHERE brand = 'Volvo';<br />&gt; DELETE 1<br /><br />Delete All Rows from Table without deleting Table<br />=#&nbsp;DELETE FROM cars;<br />&gt; DELETE 3<br />=#&nbsp;TRUNCATE TABLE cars;<br />&gt; TRUNCATE TABLE<br /><br />Deleting a Table<br />=#&nbsp;DROP TABLE cars;<br />&#8203;&gt; DROP TABLE</span></div></div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+<div style="clear:both;"></div><script type="text/javascript" class="element-script">function setupElement789031366166434421() {
+	var requireFunc = window.platformElementRequire || window.require;
+
+	// Relies on a global require, specific to platform elements
+	requireFunc([
+		'w-global',
+		'underscore',
+		'jquery',
+		'backbone',
+		'util/platform/elements/PlatformElement',
+		'util/platform/elements/PlatformElementSettings'
+	], function(
+		_W,
+		_,
+		$,
+		Backbone,
+		PlatformElement,
+		PlatformElementSettings
+	) {
+		var dependencies = null || [];
+		var platform_element_id = "915890017822203553-1.3.9";
+
+		if (typeof _W.loadedPlatformDependencies === 'undefined') {
+			_W.loadedPlatformDependencies = [];
+		}
+
+		if (typeof _W.platformElements === 'undefined') {
+			_W.platformElements = [];
+		}
+
+		if (typeof _W.platformElements[platform_element_id] === 'undefined') {
+			_W.platformElements[platform_element_id] = {};
+			_W.platformElements[platform_element_id].deferredObject = new $.Deferred();
+			_W.platformElements[platform_element_id].deferredPromise = _W.platformElements[platform_element_id].deferredObject.promise();
+		}
+
+		if(_.intersection(_W.loadedPlatformDependencies, dependencies).length !== dependencies.length){
+			_.reduce(dependencies, function(promise, nextScript){
+				_W.loadedPlatformDependencies.push(nextScript);
+				return promise.then(function(){
+					return $.getScript(nextScript);
+				});
+			}, $().promise()).then(function(){
+				_W.platformElements[platform_element_id].deferredObject.resolve();
+			});
+		}
+
+		if (dependencies.length === 0){
+			_W.platformElements[platform_element_id].deferredObject.resolve();
+		}
+
+		_W.platformElements[platform_element_id].deferredPromise.done(function(){
+			var _ElementDefinition = /**
+ * This is required for element rendering to be possible
+ * @type {PlatformElement}
+ */
+(function() {
+    var Accordion = PlatformElement.extend({
+        initialize: function() {
+            this.activeIndex = this.settings.get('active_index');
+
+            // if we have any iframes, we get an overlay
+            this.$el.children('.platform-element-overlay').hide();
+
+            this.fixBoxStyleBorders();
+            this.setupAccordion();
+        },
+
+         /**
+         * Listens to size modifications in the content areas
+         * and resizes them as needed
+         */
+        listenToContentChanges: function() {
+            this.currentContent = this.getAccordion()
+                .children('[data-item="' + this.settings.get('active_index') +  '"]')
+                .children('.accordion__content');
+            if (this.currentContent[0]) {
+                this.contentInterval = setInterval(function() {
+                    if (this.currentContent[0].scrollHeight + 20 != parseInt(this.currentContent.css('max-height'))) {
+                        this.currentContent.css('max-height', this.currentContent[0].scrollHeight + 20 + 'px');
+                    }
+                }.bind(this), 50);
+            }
+        },
+
+        /**
+         * Simplistic jQuery usage to animate and control which
+         * accordion item is currently open
+         */
+        setupAccordion: function() {
+            var view = this;
+
+            $titles = this.getTitles();
+            $events = $._data($titles[0], "events");
+
+            // if we already have set up click events, don't set more up
+            if ($events && $events.click && $events.click[0]) {
+                return;
+            }
+
+            $titles.on('touchstart click', function(e) {
+                clearInterval(view.contentInterval);
+
+                // remove "hover" state on touch events
+                if (e.type == "touchstart") {
+                    view.getAccordion().removeClass('no-touch');
+                }
+
+                e.stopPropagation();
+                e.preventDefault();
+
+                var isActive = $(this).parent().hasClass('active');
+
+                // handles closing
+                view.getTitles().each(function() {
+                    var $this = $(this);
+                    var $next = $(this).next();
+                    var eachIsActive = $(this).parent().hasClass('active');
+
+                    $next.css({
+                        'max-height': 0 + 'px'
+                    });
+
+                    if (eachIsActive) {
+                        setTimeout(function() {
+                            $this.parent().removeClass('active');
+                        }, 250);
+                    }
+                });
+
+                // handles opening
+                if (!isActive) {
+                    $(this).parent().addClass('active');
+                    var $next = $(this).next();
+                    $next.css({
+                        'max-height': $next[0].scrollHeight + 20 + 'px' // 20 to compensate for padding
+                    });
+
+                    setTimeout(function() {
+                        $(window).resize();
+                    }, 250);
+
+                    view.listenToContentChanges();
+                }
+                
+            });
+
+            this.getTitles().on('touchend', function() {
+                this.getAccordion().addClass('no-touch');
+            }.bind(this));
+        },
+
+        /**
+         * When using the 'Box' style, to avoid
+         * thick borders on the top and bottom of
+         * elements, we just shift all the elements up
+         * 'i' pixels. Preferable over doing it through css
+         * because all the items need all 4 borders on hover.
+         */
+        fixBoxStyleBorders: function() {
+            var view = this;
+
+            // only do it if the style is 'box'
+            if (this.settings.get('style') == 'box') {
+                this.getAccordion().filter('.accordion--box').children().each(function(i) {
+                    $(this).css({
+                        'top': -i
+                    });
+                });
+            }
+        },
+
+        // these functions exist so that if there's nested accordions, we don't accidentally select child accordions.
+        getAccordion: function() {
+            return this.$el.children();
+        },
+
+        getTitles: function() {
+            return this.$el.children()
+                .children()
+                .children('.accordion__title');
+        },
+
+        getContent: function() {
+            return this.$el.children()
+                .children()
+                .children('.accordion__content');
+        }
+    });
+
+    return Accordion;
+})();
+;
+
+			if (typeof _ElementDefinition == 'undefined' || typeof _ElementDefinition == 'null') {
+				var _ElementDefinition = PlatformElement.extend({});
+			}
+
+			var _Element = _ElementDefinition.extend({
+				initialize: function() {
+					// we still want to call the initialize function defined by the developer
+					// however, we don't want to call it until placeholders have been replaced
+					this.placeholderInterval = setInterval(function() {
+						// so use setInterval to check for placeholders.
+						if (this.$('.platform-element-child-placeholder').length == 0) {
+							clearInterval(this.placeholderInterval);
+							this.constructor.__super__.initialize.apply(this);
+						}
+					}.bind(this), 100);
+				}
+			});
+
+			_Element.prototype.settings = new PlatformElementSettings({"items_each":[{"items_index":0}],"items":1,"style":"simple","title_background":"#ffffff","content_background":"#000000","active_index":"-1"});
+			_Element.prototype.settings.page_element_id = "789031366166434421";
+
+			_Element.prototype.element_id = "5d745ab5-00a8-4782-9de7-c8660ac7307d";
+			_Element.prototype.user_id = "50158331";
+			_Element.prototype.site_id = "258110484374261460";
+			_Element.prototype.assets_path = "//marketplace.editmysite.com/uploads/b/marketplace-elements-915890017822203553-1.3.9/assets/";
+			new _Element({
+				el: '#element-5d745ab5-00a8-4782-9de7-c8660ac7307d'
+			});
+		});
+	});
+
+}
+
+if (typeof document.documentElement.appReady == 'undefined') {
+	document.documentElement.appReady = 0;
+}
+
+if (document.documentElement.appReady || (window.inEditor && window.inEditor())) {
+	setupElement789031366166434421();
+} else if (document.createEvent && document.addEventListener) {
+	document.addEventListener('appReady', setupElement789031366166434421, false);
+} else {
+	document.documentElement.attachEvent('onpropertychange', function(event){
+		if (event.propertyName == 'appReady') {
+			setupElement789031366166434421();
+		}
+	});
+}
+
+</script></div></div>
+
+<div id="871958368634895703"><div><style type="text/css">
+	#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac .paragraph {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion {
+  padding: 20px 0;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #a1a1a1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000000;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple .accordion__item.active > .accordion__title {
+  background-color: #000000;
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d7d7d;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #a1a1a1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000000;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material .accordion__item.active > .accordion__title {
+  background-color: #000000;
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d7d7d;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material > .accordion__item {
+  margin-bottom: 1px;
+  box-shadow: none;
+  transition: 500ms ease;
+  z-index: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material > .accordion__item.active {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  z-index: 3;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #a1a1a1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000000;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box .accordion__item.active > .accordion__title {
+  background-color: #000000;
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d7d7d;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box > .accordion__item {
+  transition: 500ms ease;
+  border: 1px solid #a1a1a1;
+  z-index: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box > .accordion__item.active {
+  z-index: 3;
+  border: 1px solid #7d7d7d;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #a1a1a1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000000;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple.no-touch .accordion__item.active > .accordion__title {
+  background-color: #000000;
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d7d7d;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--simple.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #a1a1a1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000000;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material.no-touch .accordion__item.active > .accordion__title {
+  background-color: #000000;
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d7d7d;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material.no-touch > .accordion__item {
+  margin-bottom: 1px;
+  box-shadow: none;
+  transition: 500ms ease;
+  z-index: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material.no-touch > .accordion__item.active {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  z-index: 3;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--material.no-touch .accordion__item:hover {
+  box-shadow: ;
+  z-index: 3;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #a1a1a1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000000;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box.no-touch .accordion__item.active > .accordion__title {
+  background-color: #000000;
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d7d7d;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box.no-touch > .accordion__item {
+  transition: 500ms ease;
+  border: 1px solid #a1a1a1;
+  z-index: 1;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box.no-touch > .accordion__item.active {
+  z-index: 3;
+  border: 1px solid #7d7d7d;
+}
+#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac > .accordion--box.no-touch .accordion__item:hover {
+  z-index: 3;
+}
+
+</style><div id="element-024e11b9-a167-4ccb-ba44-cabd6c5abeac" data-platform-element-id="915890017822203553-1.3.9" class="platform-element-contents">
+	<div class="accordion accordion--simple no-touch">
+        <div class="accordion__item" data-item="0">
+            <div class="accordion__title">
+                <span><div class="paragraph"><strong>Postgresql syntax</strong></div><span>
+            </div>
+            <div class="accordion__content">
+                <div style="padding: 10px 20px 20px;">
+                    <div style="width: auto"><div></div><div class="paragraph"><font color="#ffffff">Operators in the WHERE Clause<br />= , &lt; , &gt; , &lt;= , &gt;= , &lt;&gt; (not equal to) , != (not equal to)<br />LIKE (Check if a value matches a pattern - case sensitive) , ILIKE (</font><span style="color:rgb(255, 255, 255)">Check if a value matches a pattern - case insensitive)<br />AND , OR, IS NULL, NOT (ie: NOT LIKE, NOT IN, NOT BETWEEN)<br />IN (</span><font color="#ffffff"><span>Check if a value is between a range of values</span>), BETWEEN (<span>Check if a value is between a range of values</span>)<br /><br />Examples</font><ul><li><font color="#ffffff">=#&nbsp;</font><span style="color:rgb(255, 255, 255)">SELECT * FROM cars&nbsp;WHERE brand &lt;&gt; 'Volvo';</span></li><li><span style="color:rgb(255, 255, 255)">=#&nbsp;SELECT * FROM cars&nbsp;WHERE brand IN ('Volvo', 'Mercedes', 'Ford');</span></li><li><span style="color:rgb(255, 255, 255)">=#&nbsp;SELECT * FROM cars&nbsp;WHERE year BETWEEN 1970 AND 1980;</span></li><li><span style="color:rgb(255, 255, 255)">=#&nbsp;SELECT * FROM cars&nbsp;WHERE model IS NULL;</span></li><li><span style="color:rgb(255, 255, 255)">=#&nbsp;SELECT * FROM cars&nbsp;</span><span style="color:rgb(255, 255, 255)">WHERE year NOT BETWEEN 1970 AND 1979;</span></li></ul><br /><font color="#ffffff">There are two wildcards often used in conjunction with the LIKE operator:<br /><span>&nbsp;-- The percent sign&nbsp;%, represents zero, one, or multiple characters.</span><br /><span>&nbsp;-- The underscore sign&nbsp;_, represents one single character.<br /><br />LIKE Example: r</span></font><span><font color="#ffffff">eturn all records where the model STARTS with a capital 'M'<br />=#&nbsp;</font></span><span style="color:rgb(255, 255, 255)">SELECT * FROM cars&nbsp;WHERE model LIKE 'M%';<br /><br />Distinct values of a column<br />=#&nbsp;SELECT DISTINCT country FROM customers;<br /><br />Count the # of Distinct values of a column<br />=#&nbsp;SELECT COUNT(DISTINCT country) FROM customers;<br /><br />ORDER - sorting the records (by alphabetically or numerically) in ascending or descending order<br />=#&nbsp;SELECT * FROM products&nbsp;ORDER BY price; -- sorts in ascending order by default<br />=#&nbsp;SELECT * FROM products&nbsp;ORDER BY price DESC;<br /><br />LIMIT # of records returned<br />=#&nbsp;SELECT * FROM customers&nbsp;LIMIT 20;<br /><br />Start from the 41st result and return 20 records from there<br />=#&nbsp;SELECT * FROM customers&nbsp;LIMIT 20 OFFSET 40;<br /><br />MIN and MAX<br />=#&nbsp;SELECT MIN(price)&nbsp;FROM products;<br />&gt;</span><br /><font color="#ffffff">&nbsp;min<br />------<br />&nbsp;2.50<br />(1 row)<br />=#&nbsp;</font><span style="color:rgb(255, 255, 255)">SELECT MAX(price)&nbsp;AS highest_price FROM products; -- name the output column<br />&gt;</span><br /><font color="#ffffff">&nbsp;highest_price<br />-----------------<br />&nbsp; &nbsp; &nbsp; &nbsp;263.50<br />(1 row)<br /><br />Return total SUM of a numeric column<br />=#&nbsp;</font><span style="color:rgb(255, 255, 255)">SELECT SUM(quantity)&nbsp;FROM order_details;</span><br /><span style="color:rgb(121, 255, 110); font-weight:bolder">Note:</span><font color="#79ff6e">&nbsp;NULL values are ignored.</font><br /><br /><font color="#ffffff">Return the AVG of a numeric column<br />=#&nbsp;</font><span style="color:rgb(255, 255, 255)">SELECT AVG(price)&nbsp;FROM products;<br /><br />Return the AVG of a numeric column with 2 decimal places<br />=#&nbsp;SELECT AVG(price)::NUMERIC(10,2)&nbsp;FROM products;<br /><br />BETWEEN can be used on text and date values<br />=#&nbsp;SELECT * FROM Products&nbsp;</span><span style="color:rgb(255, 255, 255)">WHERE product_name BETWEEN 'Pavlova' AND 'Tofu'&nbsp;ORDER BY product_name;<br />-- return all product names alphabetically between Pavlova and Tofu (P, Q, R, S, T)<br />=#&nbsp;SELECT * FROM orders&nbsp;WHERE order_date BETWEEN '2023-04-12' AND '2023-05-05';<br /><br />&#8203;Aliases<br /></span><span><font color="#ffffff">SQL aliases are used to give a table, or a column in a table, a temporary name. It only exists for the duration of the query.<br /><br />=#&nbsp;</font></span><span style="color:rgb(255, 255, 255)">SELECT customer_id AS id&nbsp;FROM customers;<br />-- can also be written without AS<br />=#&nbsp;SELECT customer_id id&nbsp;FROM customers;<br /><br />Concatenating 2 columns<br />=#&nbsp;SELECT product_name || unit AS product&nbsp;FROM products;<br />&gt;<br /></span><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;product<br />----------------------------------------------------<br />&nbsp;Chais 10 boxes x 20 bags<br />&nbsp;Chang 24 - 12 oz bottles<br />&nbsp;Aniseed Syrup 12 - 550 ml bottles<br />&nbsp;Chef Antons Cajun Seasoning 48 - 6 oz jars<br />&nbsp;Chef Antons Gumbo Mix 36 boxes<br /><br />JOINS<br /><span>A&nbsp;</span>JOIN<span>&nbsp;clause is used to combine rows from two or more tables, based on a related column between them. Ex:</span></font><span style="color:rgb(255, 255, 255)"></span><br /></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">products table<br />&nbsp;product_id |&nbsp; product_name&nbsp; | category_id<br />------------+----------------+-------------<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;33 | Geitost&nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;34 | Sasquatch Ale&nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;35 | Steeleye Stout |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;36 | Inlagd Sill&nbsp; &nbsp; |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;8</font><br /><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#ffffff">categories table</font><br /><span style="color:rgb(255, 255, 255)">&nbsp;category_id | category_name</span><br /><span style="color:rgb(255, 255, 255)">-------------+----------------</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 | Beverages</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 | Condiments</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 | Confections</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 | Dairy Products</span><br /><br /></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><font color="#ffffff">=#&nbsp;SELECT product_id, product_name, category_name<br />FROM products<br />INNER JOIN categories ON products.category_id = categories.category_id;<br />&gt;<br />&#8203;</font><span style="color:rgb(255, 255, 255)">&nbsp;product_id |&nbsp; product_name&nbsp; |&nbsp;category_name</span><br /><span style="color:rgb(255, 255, 255)">------------+----------------+----------------</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 33 | Geitost&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Dairy Products</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 34 | Sasquatch Ale&nbsp; | Beverages</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 35 | Steeleye Stout | Beverages<br /><br />Note!: category_id 8 is not in categories table so it won't be included in the resulting table<br />Note:&nbsp;</span><font color="#ffffff">JOIN&nbsp;and&nbsp;INNER JOIN&nbsp;will give the same result.</font><br /><br /><span style="color:rgb(255, 255, 255)">Types of Join</span><ul><li><font color="#ffffff">INNER JOIN: Returns records that have matching values in both tables</font></li><li><font color="#ffffff">LEFT JOIN: Returns&nbsp;<strong>all</strong>&nbsp;<strong>records from the left table</strong>, and the matched records from the right table</font></li><li><font color="#ffffff">RIGHT JOIN: Returns all records from the right table, and the matched records from the left table</font></li><li><font color="#ffffff">FULL JOIN: Returns all records when there is a match in either left or right table</font></li></ul><br /><font color="#ffffff"><span style="font-weight:bolder">Note:</span>&nbsp;LEFT JOIN / RIGHT JOIN / FULL JOIN&nbsp;and&nbsp;LEFT OUTER JOIN / RIGHT OUTER JOIN / FULL OUTER JOIN&nbsp;will give the same result.<br /><br />CROSS JOIN&nbsp;keyword matches ALL records from the "left" table with EACH record from the "right" table.&nbsp;</font><span><font color="#ffffff">That means that all records from the "right" table will be returned for each record in the "left" table.<br />=#&nbsp;</font></span><span style="color:rgb(255, 255, 255)">SELECT testproduct_id, product_name, category_name</span><br /><span style="color:rgb(255, 255, 255)">FROM testproducts</span><br /><span style="color:rgb(255, 255, 255)">CROSS JOIN categories;<br />&gt;<br />&nbsp;testproduct_id |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; product_name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | category_name</span><br /><span style="color:rgb(255, 255, 255)">----------------+------------------------+----------------</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 | Johns Fruit Cake&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Beverages</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 | Johns Fruit Cake&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Condiments</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 | Johns Fruit Cake&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Confections</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 | Johns Fruit Cake&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Dairy Products</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 | Johns Fruit Cake&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Grains/Cereals</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 | Johns Fruit Cake&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Meat/Poultry</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 | Johns Fruit Cake&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Produce</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 | Johns Fruit Cake&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Seafood</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 | Marys Healthy Mix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Beverages</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 | Marys Healthy Mix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Condiments</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 | Marys Healthy Mix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Confections</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 | Marys Healthy Mix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Dairy Products</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 | Marys Healthy Mix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Grains/Cereals</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 | Marys Healthy Mix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Meat/Poultry</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 | Marys Healthy Mix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Produce</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 | Marys Healthy Mix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Seafood<br /><br />UNION</span><br /><font color="#ffffff">The UNION operator is used to combine the result-set of two or more queries.</font><ul><li><font color="#ffffff">The queries in the union must follow these rules:</font><ul><li><font color="#ffffff">They must have the same number of columns</font></li><li><font color="#ffffff">The columns must have the same data types</font></li><li><font color="#ffffff">The columns must be in the same order</font></li></ul></li></ul><br /><font color="#ffffff">=#&nbsp;</font><span style="color:rgb(255, 255, 255)">SELECT product_id, product_name</span><br /><span style="color:rgb(255, 255, 255)">FROM products</span><br /><span style="color:rgb(255, 255, 255)">UNION</span><br /><span style="color:rgb(255, 255, 255)">SELECT testproduct_id, product_name</span><br /><span style="color:rgb(255, 255, 255)">FROM testproducts</span><br /><span style="color:rgb(255, 255, 255)">ORDER BY product_id;</span><br /><br /><font color="#ffffff">With the&nbsp;UNION&nbsp;operator, if some rows in the two queries returns the exact same result, only one row will be listed, because&nbsp;UNION&nbsp;selects only distinct values. =&gt; so use&nbsp;UNION ALL&nbsp;to return duplicate values.<br />=#&nbsp;</font><span style="color:rgb(255, 255, 255)">SELECT product_id</span><br /><span style="color:rgb(255, 255, 255)">FROM products</span><br /><span style="color:rgb(255, 255, 255)">UNION ALL</span><br /><span style="color:rgb(255, 255, 255)">SELECT testproduct_id</span><br /><span style="color:rgb(255, 255, 255)">FROM testproducts</span><br /><span style="color:rgb(255, 255, 255)">ORDER BY product_id;<br /><br />GROUP BY</span><br /><font color="#ffffff">The&nbsp;GROUP BY&nbsp;clause is often used with aggregate functions like&nbsp;COUNT(),&nbsp;MAX(),&nbsp;MIN(),&nbsp;SUM(),&nbsp;AVG()&nbsp;to group the result-set by one or more columns.<br />=#&nbsp;</font><span style="color:rgb(255, 255, 255)">SELECT COUNT(customer_id), country</span><br /><span style="color:rgb(255, 255, 255)">FROM customers</span><br /><span style="color:rgb(255, 255, 255)">GROUP BY country;<br /><br />-- list # of orders made by each customer<br />=#&nbsp;SELECT customers.customer_name, COUNT(orders.order_id)</span><br /><span style="color:rgb(255, 255, 255)">FROM orders</span><br /><span style="color:rgb(255, 255, 255)">LEFT JOIN customers ON orders.customer_id = customers.customer_id</span><br /><span style="color:rgb(255, 255, 255)">GROUP BY customer_name;<br /><br />HAVING</span><br /><font color="#ffffff">Aggregate functions are often used with&nbsp;GROUP BY&nbsp;clauses, and by adding&nbsp;HAVING&nbsp;we can write condition like we do with&nbsp;WHERE&nbsp;clauses.<br />=#&nbsp;</font><span style="color:rgb(255, 255, 255)">SELECT COUNT(customer_id), country</span><br /><span style="color:rgb(255, 255, 255)">FROM customers</span><br /><span style="color:rgb(255, 255, 255)">GROUP BY country</span><br /><span style="color:rgb(255, 255, 255)">HAVING COUNT(customer_id) &gt; 5;<br />=#&nbsp;SELECT order_details.order_id, SUM(products.price)</span><br /><span style="color:rgb(255, 255, 255)">FROM order_details</span><br /><span style="color:rgb(255, 255, 255)">LEFT JOIN products ON order_details.product_id = products.product_id</span><br /><span style="color:rgb(255, 255, 255)">GROUP BY order_id</span><br /><span style="color:rgb(255, 255, 255)">HAVING SUM(products.price) &gt; 400.00;<br />=#&nbsp;SELECT customers.customer_name, SUM(products.price)</span><br /><span style="color:rgb(255, 255, 255)">FROM order_details</span><br /><span style="color:rgb(255, 255, 255)">LEFT JOIN products ON order_details.product_id = products.product_id</span><br /><span style="color:rgb(255, 255, 255)">LEFT JOIN orders ON order_details.order_id = orders.order_id</span><br /><span style="color:rgb(255, 255, 255)">LEFT JOIN customers ON orders.customer_id = customers.customer_id</span><br /><span style="color:rgb(255, 255, 255)">GROUP BY customer_name</span><br /><span style="color:rgb(255, 255, 255)">HAVING SUM(products.price) &gt; 1000.00;<br /><br />EXISTS</span><br /><font color="#ffffff">The&nbsp;EXISTS&nbsp;operator returns TRUE if the sub query returns one or more records.<br /><br />-- return all customers that is represented in the&nbsp;orders&nbsp;table<br />=#&nbsp;</font><span style="color:rgb(255, 255, 255)">SELECT customers.customer_name</span><br /><span style="color:rgb(255, 255, 255)">FROM customers</span><br /><span style="color:rgb(255, 255, 255)">WHERE EXISTS (</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; SELECT order_id</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; FROM orders</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; WHERE customer_id = customers.customer_id</span><br /><span style="color:rgb(255, 255, 255)">);<br /><br />--&nbsp;r</span><span style="color:rgb(255, 255, 255)">eturn all customers that are not in the&nbsp;</span><span style="color:rgb(255, 255, 255)">orders&nbsp;table<br />=#&nbsp;SELECT customers.customer_name</span><br /><span style="color:rgb(255, 255, 255)">FROM customers</span><br /><span style="color:rgb(255, 255, 255)">WHERE NOT EXISTS (</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; SELECT order_id</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; FROM orders</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; WHERE customer_id = customers.customer_id</span><br /><span style="color:rgb(255, 255, 255)">);<br /><br />ANY</span><br /><font color="#ffffff">The&nbsp;ANY&nbsp;operator:</font><ul><li><font color="#ffffff">returns a Boolean value as a result</font></li></ul><ul><li><font color="#ffffff">returns TRUE if ANY of the sub query values meet the condition</font></li></ul><font color="#ffffff">--&nbsp;List products that have ANY records in the&nbsp;order_details&nbsp;table with a quantity larger than 120<br />=#&nbsp;</font><span style="color:rgb(255, 255, 255)">SELECT product_name</span><br /><span style="color:rgb(255, 255, 255)">FROM products</span><br /><span style="color:rgb(255, 255, 255)">WHERE product_id = ANY (</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; SELECT product_id</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; FROM order_details</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; WHERE quantity &gt; 120</span><br /><span style="color:rgb(255, 255, 255)">);<br /><br />ALL</span><br /><font color="#ffffff">The ALL operator:</font><ul><li><font color="#ffffff">returns a Boolean value as a result</font></li><li><font color="#ffffff">returns TRUE if ALL of the sub query values meet the condition</font></li></ul><ul><li><font color="#ffffff">is used with SELECT, WHERE and HAVING statements</font></li></ul><br /><font color="#ffffff">--&nbsp;List the products if ALL the records in the order_details with quantity larger than 10.<br />=#&nbsp;SELECT product_name<br />FROM products<br />WHERE product_id = ALL (<br />&nbsp; SELECT product_id<br />&nbsp; FROM order_details<br />&nbsp; WHERE quantity &gt; 10<br />);<br /><br /><span style="font-weight:bolder">Note:</span>&nbsp;This will of course return FALSE because the quantity column has many different values (not only the value of 10)<br /><br />CASE<br />Once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the&nbsp;ELSE&nbsp;clause.&nbsp;If there is no&nbsp;ELSE&nbsp;part and no conditions are true, it returns NULL.<br /><br />=#&nbsp;SELECT product_name,<br />CASE<br />&nbsp; WHEN price &lt; 10 THEN 'Low price product'<br />&nbsp; WHEN price &gt; 50 THEN 'High price product'<br />ELSE<br />&nbsp; 'Normal product'<br />END<br />FROM products;<br /><br />-- With ALIAS (naming the resulting column)<br />&#8203;=#&nbsp;</font><span style="color:rgb(255, 255, 255)">SELECT product_name,</span><br /><span style="color:rgb(255, 255, 255)">CASE</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; WHEN price &lt; 10 THEN 'Low price product'</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; WHEN price &gt; 50 THEN 'High price product'</span><br /><span style="color:rgb(255, 255, 255)">ELSE</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; 'Normal product'</span><br /><span style="color:rgb(255, 255, 255)">END AS "price category"</span><br /><span style="color:rgb(255, 255, 255)">FROM products;</span></div></div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+<div style="clear:both;"></div><script type="text/javascript" class="element-script">function setupElement871958368634895703() {
+	var requireFunc = window.platformElementRequire || window.require;
+
+	// Relies on a global require, specific to platform elements
+	requireFunc([
+		'w-global',
+		'underscore',
+		'jquery',
+		'backbone',
+		'util/platform/elements/PlatformElement',
+		'util/platform/elements/PlatformElementSettings'
+	], function(
+		_W,
+		_,
+		$,
+		Backbone,
+		PlatformElement,
+		PlatformElementSettings
+	) {
+		var dependencies = null || [];
+		var platform_element_id = "915890017822203553-1.3.9";
+
+		if (typeof _W.loadedPlatformDependencies === 'undefined') {
+			_W.loadedPlatformDependencies = [];
+		}
+
+		if (typeof _W.platformElements === 'undefined') {
+			_W.platformElements = [];
+		}
+
+		if (typeof _W.platformElements[platform_element_id] === 'undefined') {
+			_W.platformElements[platform_element_id] = {};
+			_W.platformElements[platform_element_id].deferredObject = new $.Deferred();
+			_W.platformElements[platform_element_id].deferredPromise = _W.platformElements[platform_element_id].deferredObject.promise();
+		}
+
+		if(_.intersection(_W.loadedPlatformDependencies, dependencies).length !== dependencies.length){
+			_.reduce(dependencies, function(promise, nextScript){
+				_W.loadedPlatformDependencies.push(nextScript);
+				return promise.then(function(){
+					return $.getScript(nextScript);
+				});
+			}, $().promise()).then(function(){
+				_W.platformElements[platform_element_id].deferredObject.resolve();
+			});
+		}
+
+		if (dependencies.length === 0){
+			_W.platformElements[platform_element_id].deferredObject.resolve();
+		}
+
+		_W.platformElements[platform_element_id].deferredPromise.done(function(){
+			var _ElementDefinition = /**
+ * This is required for element rendering to be possible
+ * @type {PlatformElement}
+ */
+(function() {
+    var Accordion = PlatformElement.extend({
+        initialize: function() {
+            this.activeIndex = this.settings.get('active_index');
+
+            // if we have any iframes, we get an overlay
+            this.$el.children('.platform-element-overlay').hide();
+
+            this.fixBoxStyleBorders();
+            this.setupAccordion();
+        },
+
+         /**
+         * Listens to size modifications in the content areas
+         * and resizes them as needed
+         */
+        listenToContentChanges: function() {
+            this.currentContent = this.getAccordion()
+                .children('[data-item="' + this.settings.get('active_index') +  '"]')
+                .children('.accordion__content');
+            if (this.currentContent[0]) {
+                this.contentInterval = setInterval(function() {
+                    if (this.currentContent[0].scrollHeight + 20 != parseInt(this.currentContent.css('max-height'))) {
+                        this.currentContent.css('max-height', this.currentContent[0].scrollHeight + 20 + 'px');
+                    }
+                }.bind(this), 50);
+            }
+        },
+
+        /**
+         * Simplistic jQuery usage to animate and control which
+         * accordion item is currently open
+         */
+        setupAccordion: function() {
+            var view = this;
+
+            $titles = this.getTitles();
+            $events = $._data($titles[0], "events");
+
+            // if we already have set up click events, don't set more up
+            if ($events && $events.click && $events.click[0]) {
+                return;
+            }
+
+            $titles.on('touchstart click', function(e) {
+                clearInterval(view.contentInterval);
+
+                // remove "hover" state on touch events
+                if (e.type == "touchstart") {
+                    view.getAccordion().removeClass('no-touch');
+                }
+
+                e.stopPropagation();
+                e.preventDefault();
+
+                var isActive = $(this).parent().hasClass('active');
+
+                // handles closing
+                view.getTitles().each(function() {
+                    var $this = $(this);
+                    var $next = $(this).next();
+                    var eachIsActive = $(this).parent().hasClass('active');
+
+                    $next.css({
+                        'max-height': 0 + 'px'
+                    });
+
+                    if (eachIsActive) {
+                        setTimeout(function() {
+                            $this.parent().removeClass('active');
+                        }, 250);
+                    }
+                });
+
+                // handles opening
+                if (!isActive) {
+                    $(this).parent().addClass('active');
+                    var $next = $(this).next();
+                    $next.css({
+                        'max-height': $next[0].scrollHeight + 20 + 'px' // 20 to compensate for padding
+                    });
+
+                    setTimeout(function() {
+                        $(window).resize();
+                    }, 250);
+
+                    view.listenToContentChanges();
+                }
+                
+            });
+
+            this.getTitles().on('touchend', function() {
+                this.getAccordion().addClass('no-touch');
+            }.bind(this));
+        },
+
+        /**
+         * When using the 'Box' style, to avoid
+         * thick borders on the top and bottom of
+         * elements, we just shift all the elements up
+         * 'i' pixels. Preferable over doing it through css
+         * because all the items need all 4 borders on hover.
+         */
+        fixBoxStyleBorders: function() {
+            var view = this;
+
+            // only do it if the style is 'box'
+            if (this.settings.get('style') == 'box') {
+                this.getAccordion().filter('.accordion--box').children().each(function(i) {
+                    $(this).css({
+                        'top': -i
+                    });
+                });
+            }
+        },
+
+        // these functions exist so that if there's nested accordions, we don't accidentally select child accordions.
+        getAccordion: function() {
+            return this.$el.children();
+        },
+
+        getTitles: function() {
+            return this.$el.children()
+                .children()
+                .children('.accordion__title');
+        },
+
+        getContent: function() {
+            return this.$el.children()
+                .children()
+                .children('.accordion__content');
+        }
+    });
+
+    return Accordion;
+})();
+;
+
+			if (typeof _ElementDefinition == 'undefined' || typeof _ElementDefinition == 'null') {
+				var _ElementDefinition = PlatformElement.extend({});
+			}
+
+			var _Element = _ElementDefinition.extend({
+				initialize: function() {
+					// we still want to call the initialize function defined by the developer
+					// however, we don't want to call it until placeholders have been replaced
+					this.placeholderInterval = setInterval(function() {
+						// so use setInterval to check for placeholders.
+						if (this.$('.platform-element-child-placeholder').length == 0) {
+							clearInterval(this.placeholderInterval);
+							this.constructor.__super__.initialize.apply(this);
+						}
+					}.bind(this), 100);
+				}
+			});
+
+			_Element.prototype.settings = new PlatformElementSettings({"items_each":[{"items_index":0}],"items":1,"style":"simple","title_background":"#ffffff","content_background":"#000000","active_index":"0"});
+			_Element.prototype.settings.page_element_id = "871958368634895703";
+
+			_Element.prototype.element_id = "024e11b9-a167-4ccb-ba44-cabd6c5abeac";
+			_Element.prototype.user_id = "50158331";
+			_Element.prototype.site_id = "258110484374261460";
+			_Element.prototype.assets_path = "//marketplace.editmysite.com/uploads/b/marketplace-elements-915890017822203553-1.3.9/assets/";
+			new _Element({
+				el: '#element-024e11b9-a167-4ccb-ba44-cabd6c5abeac'
+			});
+		});
+	});
+
+}
+
+if (typeof document.documentElement.appReady == 'undefined') {
+	document.documentElement.appReady = 0;
+}
+
+if (document.documentElement.appReady || (window.inEditor && window.inEditor())) {
+	setupElement871958368634895703();
+} else if (document.createEvent && document.addEventListener) {
+	document.addEventListener('appReady', setupElement871958368634895703, false);
+} else {
+	document.documentElement.attachEvent('onpropertychange', function(event){
+		if (event.propertyName == 'appReady') {
+			setupElement871958368634895703();
+		}
+	});
+}
+
+</script></div></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
 <div><div id="201428979297152243" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a name="MongoDB">&nbsp</a></div>
 
 
 
 </div>
-
-<div class="wsite-spacer" style="height:50px;"></div>
 
 <div class="paragraph"><font color="#ffffff"><strong>MongoDB</strong><br />&nbsp; &nbsp; -&nbsp; document database where each record is stored in a document using a format similar to JSON, called BSON<br />&nbsp; &nbsp; -&nbsp; Example of a document:<br />&nbsp; &nbsp; &nbsp; &nbsp;</font><font color="#90f6f9">{ title:</font> <font color="#90f6f9">"Post Title 1", body:</font> <font color="#90f6f9">"Body of post.", category:</font> <font color="#90f6f9">"News", likes:</font> <font color="#90f6f9">1, tags:</font> <font color="#90f6f9">["news",</font> <font color="#90f6f9">"events"], date: Date() }</font><br /><font color="#90f6f9">&nbsp; &nbsp; </font><font color="#ffffff">-&nbsp; Ex -&nbsp;Find all documents that have a category of "news":&nbsp;&nbsp;</font><font color="#5edaff">db.posts.find( {category: "News"} )</font><br /><font color="#fec3fc">&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#6f7cfe">[<br />&nbsp; &nbsp; &nbsp; &nbsp; {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _id: ObjectId("62c350dc07d768a33fdfe9b0"),<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; title: 'Post Title 1',<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; body: 'Body of post.',<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; category: 'News',<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; likes: 1,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tags: [ 'news', 'events' ],<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; date: 'Mon Jul 04 2022 15:43:08 GMT-0500 (Central Daylight Time)'<br />&nbsp; &nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; &nbsp; &nbsp; ]</font><br /><font color="#90f6f9">&nbsp; &nbsp; </font><font color="#ffffff">-&nbsp;&nbsp;MongoDB stores data in flexible documents. Instead of having multiple tables you can simply keep all of your related data together. This makes reading your data very fast.&nbsp;</font><span><font color="#ffffff">In MongoDB, instead of tables these are called collections.</font></span></div>
 
@@ -739,12 +2166,12 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
     			</a>
     			
     		</li>
-    		<li id="pg603325533116812941" class="wsite-menu-item-wrap">
+    		<li id="pg406094728939833248" class="wsite-menu-item-wrap">
     			<a
-    						href="containers.html"
+    						href="kotlin--spring-boot.html"
     				class="wsite-menu-item"
     				>
-    				Containers
+    				Kotlin & Spring Boot
     			</a>
     			
     		</li>

@@ -11,7 +11,7 @@
 		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
 <link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
 <link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
-<link rel="stylesheet" type="text/css" href="files/main_style.css?1685625859" title="wsite-theme-css" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1692658900" title="wsite-theme-css" />
 <link href='http://cdn2.editmysite.com/fonts/Montserrat/font.css?2' rel='stylesheet' type='text/css' />
 
 <link href='http://cdn2.editmysite.com/fonts/Quicksand/font.css?2' rel='stylesheet' type='text/css' />
@@ -67,7 +67,7 @@
 }</style>
 <link rel='stylesheet' type='text/css' href='http://cdn2.editmysite.com/css/old/slideshow/slideshow.css?1234' />
 
-		<script src='files/templateArtifacts.js?1685625825'></script>
+		<script src='files/templateArtifacts.js?1692500573'></script>
 <script>
 var STATIC_BASE = '//cdn1.editmysite.com/';
 var ASSETS_BASE = '//cdn2.editmysite.com/';
@@ -105,7 +105,7 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 	
 	function initFlyouts(){
 		initPublishedFlyoutMenus(
-			[{"id":"174265258517029121","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"603325533116812941","title":"Containers","url":"containers.html","target":"","nav_menu":false,"nonclickable":false}],
+			[{"id":"174265258517029121","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"406094728939833248","title":"Kotlin & Spring Boot","url":"kotlin--spring-boot.html","target":"","nav_menu":false,"nonclickable":false}],
 			"603325533116812941",
 			'',
 			'active',
@@ -142,12 +142,12 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 			</a>
 			
 		</li>
-		<li id="active" class="wsite-menu-item-wrap">
+		<li id="pg406094728939833248" class="wsite-menu-item-wrap">
 			<a
-						href="containers.html"
+						href="kotlin--spring-boot.html"
 				class="wsite-menu-item"
 				>
-				Containers
+				Kotlin & Spring Boot
 			</a>
 			
 		</li>
@@ -188,7 +188,34 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 		<div class="wsite-section-content">
           <div class="container">
 			<div class="wsite-section-elements">
-				<h2 class="wsite-content-title"><font color="#ffffff">Intro</font></h2>
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#0086ff" size="6"><a href="https://kannikalibreta.weebly.com/containers.html#Kubernetes" style="">Kubernetes</a></font></h2>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#79d0ff" size="6"><a href="https://kannikalibreta.weebly.com/containers.html#Docker" style="">Docker</a></font></h2>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Intro</font></h2>
 
 <div class="paragraph"><font color="#ffffff">Containers let you package all your code files in a single object.&nbsp;The container isolates the code and the dependencies to separate components and runs it in isolation.&nbsp;</font><font color="#fefefe">A container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings. The container doesn't contain OS which makes it lightweight unlike a VM which will contain a guest OS along with code, and dependencies.<br /><br />However, the container does contain application code, libraries &amp; dependencies, and the runtime/environment configuration.</font></div>
 
@@ -325,7 +352,43 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 
 <div class="paragraph"><font color="#ffffff"><strong>&nbsp; &nbsp; &nbsp; &nbsp; o&nbsp; &nbsp; Executing (running apps) W/O Containers</strong> developers would need to install each dependency (ie: PostgreSQL, Redis, etc.) onto their local machines but the installation process would be different for each OS making the process prone to errors.</font><br /><br /><strong style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; o&nbsp; &nbsp;&nbsp;</strong><font color="#ffffff"><strong>Deploying W/O Containers</strong> - The development team would send an artifact (like a zip file, ie: *.jar and a database file) along with an instruction files on how to setup &amp; execute it on the server to the operations team. The operations team will handle the installing &amp; configuring apps and its dependencies - but this process gets complicated as mentioned above when executing w/o containers.</font><br /><br /><br /><strong style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; o&nbsp; &nbsp;&nbsp;</strong><font color="#ffffff"><strong>W/ Containers</strong> PostgreSQL, Configurations, start script is packaged together in an isolated environment. Now the service can be started using 1 docker command - this command will be the same for all OS and for any service. It also makes it a lot easier to run different versions of the same application.</font><br /><strong style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong><strong><font color="#ffffff">=&gt;</font></strong><strong style="color:rgb(255, 255, 255)">&nbsp; &nbsp;&nbsp;</strong><font color="#ffffff">It standardizes process of running any service on any local dev environment</font><br /><br /><strong style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; o&nbsp; &nbsp;&nbsp;</strong><font color="#ffffff"><strong>Deploying W/ Containers</strong> - The Docker artifact includes everything the app needs. So the ops team just need to run a docker command to fetch and run docker artifact</font><br /><strong style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong><strong><font color="#ffffff">=&gt;</font></strong><strong style="color:rgb(255, 255, 255)">&nbsp; &nbsp;&nbsp;</strong><font color="#ffffff">No configuration needed on the server (except for docker runtime)</font></div>
 
-<h2 class="wsite-content-title"><font color="#79d0ff">Docker</font></h2>
+<div><div id="468787161199278340" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a name="Docker">&nbsp</a></div>
+
+
+
+</div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:18.839285714286%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/published/file-type-docker2-512x331.png?1690401727" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:81.160714285714%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#79d0ff" size="7">Docker</font></h2>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
 
 <div class="paragraph"><font color="#ffffff"><strong>Develop, Ship, Run</strong> -&nbsp;</font><span><font color="#ffffff">The whole idea of Docker is for developers to easily develop applications, ship them into containers which can then be deployed anywhere -&nbsp;</font></span><font color="#ffffff">separating infrastructure and applications in order to deliver software quickly.</font><br /><br /><span style="color:rgb(255, 255, 255)"><strong>Docker </strong>- A computer software used for Virtualization allowing to</span><font color="#ffffff">&nbsp;run many containers (many OS) on the same infrastructure (unlike VMs because containers use fewer resources).</font><br /><br /><font color="#ffffff">Docker reduces the size of development by providing a smaller footprint of the required OS via containers.<br /><span>Even if your host runs Windows OS, you can have Linux images running in containers with the help of Hyper-V, which automatically <strong>creates a small VM to virtualize the system&rsquo;s base image</strong>, (ie: Linux).</span></font><br />&#8203;<br /><strong><font color="#ffffff">Docker Architecture</font></strong><ul><li><font color="#ffffff"><span style="font-weight:700">Docker Engine:</span>&nbsp;Docker is the client-server type of application which means we have clients who relay to the server. So the Docker daemon called: dockerd is the Docker engine which represents the server, can run on any OS</font>&#8203;&#8203;</li><li><font color="#ffffff"><span style="font-weight:700">Docker Containers:</span>&nbsp;Containers are the organizational units and one of the Docker basics concept. When we build an image and start running it; we are running in a container - also making it portable</font>&#8203;</li></ul></div>
 
@@ -1782,7 +1845,7 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 
 <h2 class="wsite-content-title"><font color="#79d0ff">Docker Storage Driver</font></h2>
 
-<div class="paragraph"><font color="#ffffff">To check which storage driver, docker is currently using, execute&nbsp;<br />:$ docker info<br />The output will also show the 'Backing File System' which is the storage driver that is operating on top of the filesystem</font></div>
+<div class="paragraph"><font color="#ffffff">To check which storage driver, docker is currently using, execute&nbsp;</font><br /><font color="#ffffff">:$ </font><font color="#00b9ff">docker info<br /></font><font color="#ffffff">The output will also show the 'Backing File System' which is the storage driver that is operating on top of the filesystem</font></div>
 
 <div id="810225326277031998"><div><style type="text/css">
 	#element-21f9de5f-cca4-46d2-8b55-ae792a3e5b34 .simple-table-wrapper {
@@ -2008,6 +2071,10 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 
 <div class="paragraph"><font color="#ffffff">Docker Compose is a tool for running multi-container docker applications. It can start and stop many containers with a single command.<br />&#8203;</font><br /><strong style="color:rgb(158, 191, 208)">Step 1</strong><br /><font color="#ffffff">It is usually already installed in Mac and Windows, check with:$ </font><font color="#00b9ff">docker-compose version</font><br /><font color="#ffffff">Or with linux install using pip:$ </font><font color="#00b9ff">pip install -U docker-compose</font><br /><br /><font color="#ffffff">&#8203;</font><strong style="color:rgb(158, 191, 208)">Step 2</strong><br /><font color="#ffffff">Create docker compose file at any location on your computer with following content</font><br /><span style="color:rgb(255, 255, 255)"><strong>docker-compose.yml</strong><br />version: '3'</span><br /><br /><font color="#ffffff">services:</font><br /><font color="#ffffff">&nbsp; web:</font><br /><font color="#ffffff">&nbsp; &nbsp; image: nginx</font><br /><font color="#ffffff">&nbsp; &nbsp; ports:</font><br /><font color="#ffffff">&nbsp; &nbsp; - 9090:80</font><br /><font color="#ffffff">&nbsp; database:</font><br /><font color="#ffffff">&nbsp; &nbsp; image: redis</font><br /><br /><font color="#ffffff"><strong>*</strong> redis is a type of database like mongodb. The version value might need to be changed/updated</font><br /><font color="#ffffff">Check validity of file by command:$ docker-compose config</font><br /><br /><strong style="color:rgb(158, 191, 208)">Step 3</strong><br /><font color="#ffffff">Run it:$ </font><font color="#00b9ff">docker-compose up -d</font><br /><font color="#ffffff">If you check the list of running container, you will see 2 containers running:$ </font><font color="#00b9ff">docker ps</font><br /><br /><strong style="color:rgb(158, 191, 208)">Step 4</strong><br /><font color="#ffffff">Stop the running containers:$ </font><font color="#00b9ff">docker-compose down</font><br /><br /><strong style="color:rgb(158, 191, 208)">Extra Tip</strong><br /><strong style="color:rgb(255, 255, 255)">&nbsp; &nbsp; o&nbsp;&nbsp;</strong><font color="#ffffff">In docker Hub after clicking on nginx or redis, ctrl+f to go to 'compose' section, it would show you how to add them to docker-compose.yml</font><br /><strong style="color:rgb(255, 255, 255)">&nbsp; &nbsp; o&nbsp;&nbsp;</strong>&#8203;<font color="#ffffff">You can also create 4 instances of the database or web service with scale flag</font><ul><li><font color="#ffffff">:$ </font><font color="#00b9ff">docker-compose up -d --scale database=4</font></li><li><font color="#ffffff">&#8203;:$ </font><span style="color:rgb(0, 185, 255)">docker ps</span></li></ul></div>
 
+<h2 class="wsite-content-title"><font color="#79d0ff">Container Linking</font></h2>
+
+<div class="paragraph"><span style="color:rgb(255, 255, 255)">You must first name the containers before linking</span><ul><li><font color="#ffffff">:$ </font><font color="#00b9ff">docker run -it --name container1 -d ubuntu</font></li></ul> <span style="color:rgb(255, 255, 255)">Now we name container 2 and link it with the named container1</span><ul><li><font color="#ffffff">:$ </font><font color="#00b9ff">docker run -it --name container2 --link container1 -d ubuntu</font></li></ul><br /><strong style="color:rgb(255, 255, 255)">Try this task</strong><ul><li><font color="#ffffff">:$ </font><font color="#00b9ff">docker run -it --name container1 -d ubuntu</font></li></ul> <font color="#9ebfd0">Output = container1_ID</font><ul><li><font color="#ffffff">:$ </font><font color="#00b9ff">docker run -it --name container2 --link container1 -d ubuntu</font></li></ul> <font color="#9ebfd0">Output = container2_ID</font><br /><span style="color:rgb(255, 255, 255)">Go inside container2&nbsp;</span><ul><li><font color="#ffffff">:$ </font><font color="#00b9ff">docker exec -ti&nbsp;container2_ID bash</font></li></ul> <span style="color:rgb(255, 255, 255)">Now we are inside container2</span><ul><li><font color="#ffffff">:$ </font><font color="#00b9ff">cat /etc/hosts</font></li></ul> <font color="#9ebfd0">Output will give container1's IP addr</font><br /><span style="color:rgb(255, 255, 255)">Now we will try pinging container1 from container2</span><ul><li><font color="#ffffff">:$ </font><font color="#00b9ff">apt-get update</font></li><li><span style="color:rgb(255, 255, 255)">:$</span><font color="#00b9ff"> apt-get install inputils-ping</font></li><li><span style="color:rgb(255, 255, 255)">:$</span><font color="#00b9ff"> ping container1</font></li></ul> <span style="color:rgb(255, 255, 255)">Essentially, we are establishing a network connection from container2 to container1 so they can communicate. This communication is not possible without linking.</span></div>
+
 <h2 class="wsite-content-title"><font color="#79d0ff">Docker in The Big Picture of Deployment</font></h2>
 
 <div class="paragraph"><font color="#ffffff">Developer codes JS app files with MongoDB container<br /><strong>=&gt;</strong> Commits the JS code files in Git<br /><strong>=&gt;</strong> The Git commit triggers Jenkins which builds the docker image&nbsp; &nbsp; [CI/CD process initiates]<br /><strong>=&gt;</strong> The resulting image is pushed into the company/organization's private registry repository<br /><strong>=&gt;</strong> The deployment server pulls our applications image from private registry's repo and pulls MongoDB image from the public registry - Both our container and MongoDB container will talk with each other based on our Dockerfile configuration</font></div>
@@ -2134,9 +2201,43 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 
 </script></div></div>
 
+<div><div id="829608260682107484" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a name="Kubernetes">&nbsp</a></div>
+
+
+
+</div>
+
 <div class="wsite-spacer" style="height:50px;"></div>
 
-<h2 class="wsite-content-title"><font color="#0086ff">Kubernetes = K8s</font></h2>
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:10.089285714286%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a>
+<img src="uploads/5/0/1/5/50158331/published/kubernetes-logo-512x497.png?1690401848" alt="Picture" style="width:102;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:89.910714285714%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#0086ff" size="7">Kubernetes = K8s</font></h2>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
 
 <div class="paragraph"><font color="#ffffff">It is a platform to manage containers especially applications with hundreds of containerized Microservices (small sub-applications). It automates deployment, scaling, and management of containerized applications.</font><br /><br /><font color="#6eff60">Guaranteed Features</font><font color="#ffffff">: No downtime, and offers disaster recovery</font><br /><br /><font color="#ff4949">Drawbacks</font><font color="#ffffff">: Requires a high-level of resources, cost</font><br />-<ul><li style="color:rgb(255, 255, 255)">A monolithic application architecture is built as a single unit&nbsp;consisting of 3 parts: database, client-side, and server-side. However with the introduction of containers, companies are switching over to microservice architecture to support CI/CD.</li><li>-</li><li style="color:rgb(255, 255, 255)"><strong style="color:rgb(255, 255, 255)">Microservices</strong><font color="#ffffff"> break an application into independent, loosely-coupled, individually deployable services. Each important function of an application operates as an independent service proxy. This architecture allows for each service to scale or update without disrupting other services in the application so that applications can be continuously delivered to end users.</font></li><li><font>-</font></li><li style="color:rgb(255, 255, 255)"><font color="#ffffff"><strong>Artifacts</strong>: B</font>y-products created during the software development lifecycle of an application.&nbsp;DevOps artifacts can include container images, meeting notes, risk assessments, user guides, images, executables, and prototypes.&nbsp;Software artifacts are usually stored in a repository, like JFrog Artifactory ,&nbsp;while application artifacts are stored in a GitHub repository</li></ul></div>
 
@@ -2279,7 +2380,7 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 
 <h2 class="wsite-content-title"><font color="#0086ff">Pods</font></h2>
 
-<div class="paragraph"><font color="#ffffff">Smallest executable unit in K8s and it provides a layer over container. A pod usually contains only 1 application and each pod </font><span style="color:rgb(255, 255, 255)">usually&nbsp;</span><font color="#ffffff">doesn't contain more than 1 container but if it does, it's because they are tightly coupled</font><br /><font color="#ffffff">- each pod gets its own IP but pods may die and new IP will be assigned on re-creation</font><br /><br /><strong style="color:rgb(255, 255, 255)">service</strong><font color="#ffffff">: provides a DNS name and a permanent ip address </font><font color="#97a8ac">(each app/micro-service will be given a service if it needs to communicate with other apps)</font><br /><font color="#ffffff">- lifecycle of pod and service are not connected, so even if pod dies, the service and its ip will stay the same</font><br /><br /><font color="#ffffff">If you want your application to be accessible through the browser, you'll need an external service. But if your pod is running database container, then we don't want it to be accessible through the public browser =&gt; use Internal service - accessible only within the cluster&nbsp;</font><br /><br /><font color="#ffffff">URL of an external service: http://[ip-addr]:[port]</font><br /><font color="#ffffff">Through the use of </font><strong style="color:rgb(255, 255, 255)">Ingress</strong><font color="#ffffff">, it directs the request to our application (from http://my-app.com to our service URL)</font><br /><br /><strong><font color="#ffffff">Pods communicate with each other through service</font></strong><br /></div>
+<div class="paragraph"><font color="#ffffff">Smallest executable unit in K8s and it provides a layer over container. A pod usually contains only 1 application and each pod </font><span style="color:rgb(255, 255, 255)">usually&nbsp;</span><font color="#ffffff">doesn't contain more than 1 container but if it does, it's because they are tightly coupled</font><br /><font color="#ffffff">- each pod gets its own IP but pods may die and new IP will be assigned on re-creation</font><br /><br /><strong style="color:rgb(255, 255, 255)">service</strong><font color="#ffffff">: provides a DNS name and a permanent ip address </font><font color="#9dcafb">(each app/micro-service will be given a service if it needs to communicate with other apps)</font><br /><font color="#ffffff">- lifecycle of pod and service are not connected, so even if pod dies, the service and its ip will stay the same</font><br /><br /><font color="#ffffff">If you want your application to be accessible through the browser, you'll need an external service. But if your pod is running database container, then we don't want it to be accessible through the public browser =&gt; use Internal service - accessible only within the cluster&nbsp;</font><br /><br /><font color="#ffffff">URL of an external service: http://[ip-addr]:[port]</font><br /><font color="#ffffff">Through the use of </font><strong style="color:rgb(255, 255, 255)">Ingress</strong><font color="#ffffff">, it directs the request to our application (from http://my-app.com to our service URL)</font><br /><br /><strong><font color="#ffffff">Pods communicate with each other through service</font></strong></div>
 
 <div id="321768424816232801"><div><style type="text/css">
 	#element-687d51f6-a1f1-4bd5-b020-a93f702a7e3e .paragraph {
@@ -2945,7 +3046,7 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 				}
 			});
 
-			_Element.prototype.settings = new PlatformElementSettings({"items_each":[{"items_index":0}],"items":1,"style":"simple","title_background":"#000233","content_background":"#000233","active_index":"-1"});
+			_Element.prototype.settings = new PlatformElementSettings({"items_each":[{"items_index":0}],"items":1,"style":"simple","title_background":"#000233","content_background":"#000233","active_index":"0"});
 			_Element.prototype.settings.page_element_id = "321768424816232801";
 
 			_Element.prototype.element_id = "687d51f6-a1f1-4bd5-b020-a93f702a7e3e";
@@ -3439,7 +3540,7 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
             </div>
             <div class="accordion__content">
                 <div style="padding: 10px 20px 20px;">
-                    <div style="width: auto"><div></div><div class="paragraph"><ul><li><font color="#ffffff"><strong>Volume example</strong></font></li></ul><font color="#ffffff">kind: PersistentVolume&nbsp; &nbsp; &nbsp;</font><font color="#9ebfd0">--&nbsp;a resource in the cluster which is independent of any individual pod</font><br /><font color="#ffffff">apiVersion: v1</font><br /><font color="#ffffff">metadata:</font><br /><font color="#ffffff">&nbsp; &nbsp;name: pv0001&nbsp;</font><br /><font color="#ffffff">&nbsp; &nbsp;labels:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; type: local</font><br /><font color="#ffffff">spec:</font><br /><font color="#ffffff">&nbsp; &nbsp;capacity:&nbsp;</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; storage: 10Gi&nbsp;</font><br /><font color="#ffffff">&nbsp; &nbsp;accessModes:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; - ReadWriteOnce&nbsp;</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; hostPath:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;path: "/tmp/data01"&nbsp; &nbsp; &nbsp;</font><font color="#9ebfd0">--&nbsp;create volume under this path on the underlying infrastructure</font><br /><font color="#ffffff">&#8203;</font><ul><li><span style="color:rgb(255, 255, 255)"><strong>Create Volume</strong></span></li></ul> <font color="#ffffff">$ </font><font color="#ff002d">kubectl create &ndash;f local-01.yaml</font><br /><font color="#9ebfd0">persistentvolume "pv0001" created</font><br /><br /><ul><li><strong><font color="#ffffff">Checking Volume</font></strong></li></ul> <font color="#ffffff">$ </font><font color="#ff002d">kubectl get pv</font><br /><font color="#9ebfd0">NAME&nbsp; &nbsp; &nbsp; &nbsp; CAPACITY&nbsp; &nbsp; &nbsp; ACCESSMODES&nbsp; &nbsp; &nbsp; &nbsp;STATUS&nbsp; &nbsp; &nbsp; &nbsp;CLAIM&nbsp; &nbsp; &nbsp; REASON&nbsp; &nbsp; &nbsp;AGE<br />pv0001&nbsp; &nbsp; &nbsp; &nbsp; 10Gi&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RWO&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Available&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 14s</font><br /><br /><font color="#ffffff">$ </font><font color="#ff002d">kubectl describe pv pv0001</font><br /><br /><ul><li><strong><font color="#ffffff">Creating secret using a text document</font></strong></li></ul> <font color="#ffffff">$ </font><font color="#ff002d">kubectl create secret generic tomcat-passwd &ndash;-from-file = ./username.txt &ndash;fromfile = ./.<br />password.txt</font></div></div>
+                    <div style="width: auto"><div></div><div class="paragraph"><ul><li><font color="#ffffff"><strong>Volume example</strong></font></li></ul><font color="#ffffff">kind: PersistentVolume&nbsp; &nbsp; &nbsp;</font><font color="#9dcafb">--&nbsp;a resource in the cluster which is independent of any individual pod</font><br /><font color="#ffffff">apiVersion: v1</font><br /><font color="#ffffff">metadata:</font><br /><font color="#ffffff">&nbsp; &nbsp;name: pv0001&nbsp;</font><br /><font color="#ffffff">&nbsp; &nbsp;labels:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; type: local</font><br /><font color="#ffffff">spec:</font><br /><font color="#ffffff">&nbsp; &nbsp;capacity:&nbsp;</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; storage: 10Gi&nbsp;</font><br /><font color="#ffffff">&nbsp; &nbsp;accessModes:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; - ReadWriteOnce&nbsp;</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; hostPath:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;path: "/tmp/data01"&nbsp; &nbsp; &nbsp;</font><font color="#9dcafb">--&nbsp;create volume under this path on the underlying infrastructure</font><br /><font color="#ffffff">&#8203;</font><ul><li><span style="color:rgb(255, 255, 255)"><strong>Create Volume</strong></span></li></ul> <font color="#ffffff">$ </font><font color="#ff002d">kubectl create &ndash;f local-01.yaml</font><br /><font color="#9dcafb">persistentvolume "pv0001" created</font><br /><br /><ul><li><strong><font color="#ffffff">Checking Volume</font></strong></li></ul> <font color="#ffffff">$ </font><font color="#ff002d">kubectl get pv</font><br /><font color="#9dcafb">NAME&nbsp; &nbsp; &nbsp; &nbsp; CAPACITY&nbsp; &nbsp; &nbsp; ACCESSMODES&nbsp; &nbsp; &nbsp; &nbsp;STATUS&nbsp; &nbsp; &nbsp; &nbsp;CLAIM&nbsp; &nbsp; &nbsp; REASON&nbsp; &nbsp; &nbsp;AGE<br />pv0001&nbsp; &nbsp; &nbsp; &nbsp; 10Gi&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RWO&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Available&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 14s</font><br /><br /><font color="#ffffff">$ </font><font color="#ff002d">kubectl describe pv pv0001</font><br /><br /><ul><li><strong><font color="#ffffff">Creating secret using a text document</font></strong></li></ul> <font color="#ffffff">$ </font><font color="#ff002d">kubectl create secret generic tomcat-passwd &ndash;-from-file = ./username.txt &ndash;fromfile = ./.<br />password.txt</font></div></div>
                 </div>
             </div>
         </div>
@@ -4140,7 +4241,7 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
             </div>
             <div class="accordion__content">
                 <div style="padding: 10px 20px 20px;">
-                    <div style="width: auto"><div></div><div class="paragraph"><span style="color:rgb(255, 255, 255)">Deployments are upgraded and higher version of replication controller. It has the capability to change (update, delete, rollback) the deployment midway.</span><br /><br /><span style="color:rgb(255, 255, 255)">apiVersion: extensions/v1beta1&nbsp;</span><br /><span style="color:rgb(255, 255, 255)">kind: Deployment&nbsp;</span><br /><span style="color:rgb(255, 255, 255)">metadata:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp;name: Tomcat-ReplicaSet</span><br /><span style="color:rgb(255, 255, 255)">spec:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp;replicas: 3</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp;template:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; metadata:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;lables:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; app: Tomcat-ReplicaSet</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tier: Backend</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp;spec:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; containers:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- name: Tomcatimage:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tomcat: 8.0</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ports:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- containerPort: 7474<br /></span><br /><ul><li><strong><span style="color:rgb(255, 255, 255)">Create Deployment</span></strong></li></ul><font color="#ffffff">$ </font><font color="#ff0000">kubectl create &ndash;f Deployment.yaml -&ndash;record</font><br /><font color="#9ebfd0">deployment "Deployment" created Successfully.<br /></font><ul><li><strong><span style="color:rgb(255, 255, 255)">Fetch Deployment</span></strong></li></ul><font color="#ffffff">$ </font><font color="#ff0000">kubectl get deployments</font><br /><font color="#9ebfd0">NAME&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;DESIRED&nbsp; &nbsp; &nbsp;CURRENT&nbsp; &nbsp; &nbsp;UP-TO-DATE&nbsp; &nbsp; &nbsp;AVILABLE&nbsp; &nbsp; AGE<br />Deployment&nbsp; &nbsp; &nbsp; &nbsp; 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3&nbsp; &nbsp; &nbsp; &nbsp; 20s<br /><br /></font><ul><li><strong><span style="color:rgb(255, 255, 255)">Check the Status of Deployment</span></strong></li></ul><font color="#ffffff">$ </font><font color="#ff0000">kubectl rollout status deployment/Deployment</font><br /><br /><ul><li><strong><span style="color:rgb(255, 255, 255)">Update the Deployment</span></strong></li></ul><font color="#ffffff">$ </font><font color="#ff0000">kubectl set image deployment/Deployment tomcat=tomcat:6.0</font><br /><br /><ul><li><strong><span style="color:rgb(255, 255, 255)">RollBack to previous Deployment</span></strong></li></ul><font color="#ffffff">$ </font><font color="#ff0000">kubectl rollout undo deployment/Deployment &ndash;to-revision=2</font></div></div>
+                    <div style="width: auto"><div></div><div class="paragraph"><span style="color:rgb(255, 255, 255)">Deployments are upgraded and higher version of replication controller. It has the capability to change (update, delete, rollback) the deployment midway.</span><br /><br /><span style="color:rgb(255, 255, 255)">apiVersion: extensions/v1beta1&nbsp;</span><br /><span style="color:rgb(255, 255, 255)">kind: Deployment&nbsp;</span><br /><span style="color:rgb(255, 255, 255)">metadata:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp;name: Tomcat-ReplicaSet</span><br /><span style="color:rgb(255, 255, 255)">spec:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp;replicas: 3</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp;template:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; metadata:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;lables:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; app: Tomcat-ReplicaSet</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tier: Backend</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp;spec:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; containers:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- name: Tomcatimage:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tomcat: 8.0</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ports:</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- containerPort: 7474</span><br /><br /><ul><li><strong><span style="color:rgb(255, 255, 255)">Create Deployment</span></strong></li></ul><font color="#ffffff">$ </font><font color="#ff0000">kubectl create &ndash;f Deployment.yaml -&ndash;record</font><br /><font color="#9dcafb">deployment "Deployment" created Successfully.</font><ul><li><strong><span style="color:rgb(255, 255, 255)">Fetch Deployment</span></strong></li></ul><font color="#ffffff">$ </font><font color="#ff0000">kubectl get deployments</font><br /><font color="#9dcafb">NAME&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;DESIRED&nbsp; &nbsp; &nbsp;CURRENT&nbsp; &nbsp; &nbsp;UP-TO-DATE&nbsp; &nbsp; &nbsp;AVILABLE&nbsp; &nbsp; AGE<br />Deployment&nbsp; &nbsp; &nbsp; &nbsp; 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3&nbsp; &nbsp; &nbsp; &nbsp; 20s</font><br /><br /><ul><li><strong><span style="color:rgb(255, 255, 255)">Check the Status of Deployment</span></strong></li></ul><font color="#ffffff">$ </font><font color="#ff0000">kubectl rollout status deployment/Deployment</font><br /><br /><ul><li><strong><span style="color:rgb(255, 255, 255)">Update the Deployment</span></strong></li></ul><font color="#ffffff">$ </font><font color="#ff0000">kubectl set image deployment/Deployment tomcat=tomcat:6.0</font><br /><br /><ul><li><strong><span style="color:rgb(255, 255, 255)">RollBack to previous Deployment</span></strong></li></ul><font color="#ffffff">$ </font><font color="#ff0000">kubectl rollout undo deployment/Deployment &ndash;to-revision=2</font></div></div>
                 </div>
             </div>
         </div>
@@ -4876,7 +4977,7 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 					
 						
 
-<div class="paragraph"><font color="#ffffff">An example of how an image is pulled from the docker registry in a Kubernetes' pod.</font><br /><br /><font color="#ffffff">apiVersion: v1</font><br /><font color="#ffffff">kind: pod</font><br /><font color="#ffffff">metadata:</font><br /><font color="#ffffff">&nbsp; &nbsp;name: Testing_for_Image_pull&nbsp; &nbsp; &nbsp;</font><font color="#9ebfd0">-- name given to get the name of the containers it has</font><br /><font color="#ffffff">&nbsp; &nbsp;spec:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; containers:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- name: neo4j-server&nbsp; &nbsp; &nbsp;</font><font color="#9ebfd0">-- name given to container by us</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;image: &lt;Name of the Docker image&gt;&nbsp; &nbsp; </font><font color="#9ebfd0">--&nbsp;<span>name of the image which we are trying to pull</span></font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;imagePullPolicy: Always&nbsp;</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;command: ["echo", "SUCCESS"]&nbsp; &nbsp; &nbsp;</font><font color="#9ebfd0">-- executes when everything goes fine</font><br /><br /><font color="#ffffff">The above code can be executed with the following commands and its log can be fetched to see the output:</font><ul><li><font color="#ffffff">$ </font><font color="#ff0000">kubectl create &ndash;f Testing_for_Image_pull</font></li><li><font color="#ffffff">$ </font><font color="#ff0000">kubectl log Tesing_for_Image_pull</font></li></ul></div>
+<div class="paragraph"><font color="#ffffff">An example of how an image is pulled from the docker registry in a Kubernetes' pod.</font><br /><br /><font color="#ffffff">apiVersion: v1</font><br /><font color="#ffffff">kind: pod</font><br /><font color="#ffffff">metadata:</font><br /><font color="#ffffff">&nbsp; &nbsp;name: Testing_for_Image_pull&nbsp; &nbsp; &nbsp;</font><font color="#9dcafb">-- name given to get the name of the containers it has</font><br /><font color="#ffffff">&nbsp; &nbsp;spec:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; containers:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- name: neo4j-server&nbsp; &nbsp; </font><font color="#9dcafb">&nbsp;-- name given to container by us</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;image: &lt;Name of the Docker image&gt;&nbsp; &nbsp; </font><font color="#9dcafb">--&nbsp;name of the image which we are trying to pull</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;imagePullPolicy: Always&nbsp;</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;command: ["echo", "SUCCESS"]&nbsp; &nbsp; &nbsp;</font><font color="#9dcafb">-- executes when everything goes fine</font><br /><br /><font color="#ffffff">The above code can be executed with the following commands and its log can be fetched to see the output:</font><ul><li><font color="#ffffff">$ </font><font color="#ff0000">kubectl create &ndash;f Testing_for_Image_pull</font></li><li><font color="#ffffff">$ </font><font color="#ff0000">kubectl log Tesing_for_Image_pull</font></li></ul></div>
 
 
 					
@@ -5111,7 +5212,7 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 				}
 			});
 
-			_Element.prototype.settings = new PlatformElementSettings({"items_each":[{"items_index":0}],"items":1,"style":"simple","title_background":"#000233","content_background":"#000233","active_index":"-1"});
+			_Element.prototype.settings = new PlatformElementSettings({"items_each":[{"items_index":0}],"items":1,"style":"simple","title_background":"#000233","content_background":"#000233","active_index":"0"});
 			_Element.prototype.settings.page_element_id = "756079597823510935";
 
 			_Element.prototype.element_id = "d834a53f-7c68-4444-97c6-bf83eaf8c58c";
@@ -5146,7 +5247,7 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 
 <h2 class="wsite-content-title"><font color="#0086ff">Jobs</font></h2>
 
-<div class="paragraph"><font color="#ffffff">Purpose: creates pods and tracks about their success and if the specified # of pods run successfully and is completed =&gt; job is complete.<br />&#8203;</font><ul><li><font color="#ffffff"><strong>py.yaml</strong></font></li></ul> <font color="#ffffff">apiVersion: v1</font><br /><font color="#ffffff">kind: Job&nbsp; &nbsp; &nbsp;</font><font color="#9ebfd0">-- tells kubectl that this yaml file is used to create a job</font><br /><font color="#ffffff">metadata:</font><br /><font color="#ffffff">&nbsp; &nbsp;name: py</font><br /><font color="#ffffff">&nbsp; &nbsp;spec:</font><br /><font color="#ffffff">&nbsp; &nbsp;template:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; metadata</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; name: py </font><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp; &nbsp;</span><font color="#9ebfd0">-- giving a name for this template</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; spec:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;containers:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - name: py </font><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp; &nbsp;</span><font color="#9ebfd0">-- helps to identify the pod that will be created</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; image: python</font><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp; &nbsp;</span>&nbsp;<font color="#9ebfd0">-- the image that will be pulled to create the container</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; command: ["python", "SUCCESS"]</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; restartPocliy: Never&nbsp;</font><br /><br /><font color="#ffffff">Execution commands to create the job and check its status:</font><ul><li><font color="#ffffff">$ </font><font color="#ff0000">kubectl create &ndash;f py.yaml</font></li><li><font color="#ffffff">$ </font><font color="#ff0000">kubectl describe jobs/py</font></li></ul> <font color="#ffffff">Jobs can also be scheduled to run at a specific point in time by using <strong>Cronetes</strong></font></div>
+<div class="paragraph"><font color="#ffffff">Purpose: creates pods and tracks about their success and if the specified # of pods run successfully and is completed =&gt; job is complete.<br />&#8203;</font><ul><li><font color="#ffffff"><strong>py.yaml</strong></font></li></ul> <font color="#ffffff">apiVersion: v1</font><br /><font color="#ffffff">kind: Job&nbsp; &nbsp; &nbsp;</font><font color="#9dcafb">-- tells kubectl that this yaml file is used to create a job</font><br /><font color="#ffffff">metadata:</font><br /><font color="#ffffff">&nbsp; &nbsp;name: py</font><br /><font color="#ffffff">&nbsp; &nbsp;spec:</font><br /><font color="#ffffff">&nbsp; &nbsp;template:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; metadata</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; name: py </font><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp; &nbsp;</span><font color="#9dcafb">-- giving a name for this template</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; spec:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;containers:</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - name: py </font><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp; &nbsp;</span><font color="#9dcafb">-- helps to identify the pod that will be created</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; image: python</font><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp; &nbsp;</span>&nbsp;<font color="#9dcafb">-- the image that will be pulled to create the container</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; command: ["python", "SUCCESS"]</font><br /><font color="#ffffff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; restartPocliy: Never&nbsp;</font><br /><br /><font color="#ffffff">Execution commands to create the job and check its status:</font><ul><li><font color="#ffffff">$ </font><font color="#ff0000">kubectl create &ndash;f py.yaml</font></li><li><font color="#ffffff">$ </font><font color="#ff0000">kubectl describe jobs/py</font></li></ul> <font color="#ffffff">Jobs can also be scheduled to run at a specific point in time by using <strong>Cronetes</strong></font></div>
 
 <h2 class="wsite-content-title"><font color="#0086ff">Nodes</font></h2>
 
@@ -5154,21 +5255,25 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 
 <div class="paragraph"><font color="#ffffff"><strong>Namespace</strong>: used to divide clusters</font></div>
 
-<h2 class="wsite-content-title"><font color="#ffffff">Minikube</font></h2>
+<div class="paragraph"><strong><font color="#ff002d">Red Hat's OpenShift</font></strong><br /><font color="#ffffff">At its core, OpenShift is a cloud-based Kubernetes container platform that's considered both containerization software and a platform-as-a-service (PaaS). It has stricter security policies -&nbsp;it is forbidden to run a container as root.</font><br /></div>
 
-<div class="paragraph"><font color="#ffffff">A open-source tool that provides a K8s setup with 1 node cluster where master processes and worker processes run on one 1 machine.</font></div>
-
-<div class="wsite-spacer" style="height:50px;"></div>
+<div class="paragraph"><font size="5" style="color:rgb(255, 255, 255)">Minikube</font><br /><font color="#ffffff">An open-source tool that provides a K8s setup with 1 node cluster where master processes and worker processes run on one 1 machine. It can be run using a minkube container from Docker and this minikube container will have docker runtime inside it to support applications pods that use docker for deployment. Minikube setup on mac</font><br /><font color="#ffffff">:$ </font><font color="#ff0000">brew install minikube&nbsp;</font><br /><font color="#ffffff">:$ </font><font color="#ff0000">minikube start --driver=docker</font><br /><font color="#ffffff">:$ </font><font color="#ff0000">minikube status</font><br /><font color="#ffffff">Output should be all running and configured</font></div>
 
 <div class="wsite-spacer" style="height:50px;"></div>
 
-<div class="wsite-spacer" style="height:50px;"></div>
+<h2 class="wsite-content-title"><font color="#ff0086">Deploying a Web app w/ MongoDB using Docker &amp; Kubernetes</font></h2>
+
+<div class="paragraph"><font color="#ffffff">We will deploy a web-app pod which will connect to the mongoDB pod through internal service using (external) configuration data from config map and secret (to securely send DB url and credentials). We will also make our web-app accessible externally from the browser using external service.&nbsp;<br />&#8203;</font><br /><font color="#ffffff"><strong>4 K8s Config Files</strong>:</font><ul><li><font color="#ffffff">1) ConfigMap: MongoDB Endpoint</font></li><li><font color="#ffffff">2) Secret: MongoDB User &amp; Pwd</font></li><li><font color="#ffffff">3) MongoDB App w/ internal service (Deployment &amp; Service)</font></li><li><font color="#ffffff">4) Our own Web-App w/ external service (Deployment &amp; Service)</font></li></ul> <font color="#ffffff">&#8203;</font><br /><font color="#ffffff"><strong>Referencing ConfigMap and Secret resources</strong>:</font>&nbsp;<font color="#ffffff">These external configurations can be reference by different deployments.</font><br />&nbsp;<br /><strong><font color="#ffffff">Labels under metadata</font></strong><ul><li><font color="#ffffff">You can give any K8s component a label:&nbsp; Labels are key-value pairs that are attached to K8s resources</font></li><li><font color="#ffffff">Act as identifier, which should be meaningful (ex:&nbsp; "env" : "dev" )</font></li><li><font color="#ffffff">Non-unique: all pod replicas will have the same label - Each pod in a node would be given a unique name but would all have the same label</font></li><li><font color="#ffffff">This common label will help us connect a Deployment to all pod replicas</font></li><li><font color="#ffffff">&#8203;Pods labels are a required field but for Deployment and but for other components we don't have to provide a label</font></li></ul> <font color="#ffffff">&#8203;</font><br /><font color="#ffffff"><strong>Passing Config Data to WebApp Deployment</strong> - To connect WebApp to Database, webapp needs info about:</font><ul><li><font color="#ffffff">MongoDB endpoint referencing from ConfigMap and where can it access the database</font></li><li><font color="#ffffff">DB username &amp; pswd referencing from Secret</font><font color="#ffffff">&#8203;</font></li></ul><br /><font color="#ffffff"><strong>Deploying Resources in Minikube cluster</strong></font><ul><li><font color="#ffffff">&#8203;Open up Docker - have Docker daemon process running</font></li><li><font color="#ffffff">:$ </font><font color="#ff0086">minikube start</font></li><li><font color="#ffffff">ConfigMap and secret must exist before Deployments</font></li><li><font color="#ffffff">:$ </font><font color="#ff0086">kubectl apply -f &lt;filename.yaml&gt;</font></li><li><font color="#ffffff">apply manages applications through files defining K8s resources</font></li><li><font color="#ffffff">:$ </font><font color="#ff0086">kubectl apply -f mongo-config.yaml</font></li><li><span style="color:rgb(255, 255, 255)">:$</span><font color="#ff0086"> kubectl apply -f mongo-secret.yaml</font></li><li><span style="color:rgb(255, 255, 255)">:$</span><font color="#ff0086"> kubectl apply -f mongo.yaml</font></li><li><span style="color:rgb(255, 255, 255)">:$</span><font color="#ff0086"> kubectl apply -f webapp.yaml</font></li><li><span style="color:rgb(255, 255, 255)">:$</span><font color="#ff0086"> kubectl get all</font></li><li><font color="#ffffff">Output = </font><font color="#a37a90">&lt;list of pods&gt;,&nbsp;&lt;list of services&gt;,&nbsp;&lt;list of deployments&gt;</font></li><li><span style="color:rgb(255, 255, 255)">:$</span><font color="#ff0086"> kubectl get configmap</font></li><li><span style="color:rgb(255, 255, 255)">:$</span><font color="#ff0086"> kubectl get secret</font></li><li><span style="color:rgb(255, 255, 255)">:$</span><font color="#ff0086"> kubectl get pod</font></li><li><span style="color:rgb(255, 255, 255)">:$</span><font color="#ff0086"> kubectl describe pod &lt;name-of-pod-from-above-cmd&gt;</font></li><li><span style="color:rgb(255, 255, 255)">:$</span><font color="#ff0086"> kubectl describe service webapp-service</font></li><li><font color="#ffffff">View logs of container:$ </font><font color="#ff0086">kubectl logs &lt;podName&gt;</font></li></ul> <span style="color:rgb(255, 255, 255)">&#8203;</span>&#8203;<br />&#8203;<span style="color:rgb(255, 255, 255)"><strong>View web app in browser</strong></span><ul><li><font color="#ffffff">:$ </font><font color="#ff0086">kubectl get svc</font></li><li><span style="color:rgb(255, 255, 255)">NodePort Service is accessible on each worker node's IP address</span></li><li><font color="#ffffff">get internalIP from :$ </font><font color="#ff0086">kubectl get node -o wide</font></li><li><font color="#ffffff">:$ </font><font color="#ff0086">minikube ip</font></li><li><span style="color:rgb(255, 255, 255)">Now go to browser and type: &lt;ip_addr_found_above&gt;:30100</span></li><li><strong><font color="#ba1443">&#8203;!Note</font></strong><font color="#ffffff">: Database is also connected and works</font></li></ul></div>
 
 <div class="wsite-spacer" style="height:50px;"></div>
 
-<div class="wsite-spacer" style="height:50px;"></div>
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-large wsite-button-highlight" href="https://github.com/kannikakabilar/DevOps-Tools/tree/main/Container-Deployments" >
+<span class="wsite-button-inner">View Deployed Container Projects here</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
 
-<div class="paragraph"><strong><font color="#ff002d">OpenShift<br /><br />&#8203;</font></strong><span style="color:rgb(255, 255, 255)">Container Linking<br />K8s tutpoi - labels &amp; selectors, namespace</span></div>
+<div class="wsite-spacer" style="height:50px;"></div>
 			</div>
 		</div>
       </div>
@@ -5197,12 +5302,12 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
     			</a>
     			
     		</li>
-    		<li id="active" class="wsite-menu-item-wrap">
+    		<li id="pg406094728939833248" class="wsite-menu-item-wrap">
     			<a
-    						href="containers.html"
+    						href="kotlin--spring-boot.html"
     				class="wsite-menu-item"
     				>
-    				Containers
+    				Kotlin & Spring Boot
     			</a>
     			
     		</li>

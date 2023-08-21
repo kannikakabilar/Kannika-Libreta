@@ -1,0 +1,2453 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Go &amp; C++ - KANNIKA LIBRETA</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1692658900" title="wsite-theme-css" />
+<link href='http://cdn2.editmysite.com/fonts/Montserrat/font.css?2' rel='stylesheet' type='text/css' />
+
+<link href='http://cdn2.editmysite.com/fonts/Quicksand/font.css?2' rel='stylesheet' type='text/css' />
+<link href='http://cdn2.editmysite.com/fonts/Alegreya_SC/font.css?2' rel='stylesheet' type='text/css' />
+<link href='http://cdn2.editmysite.com/fonts/Alegreya_SC/font.css?2' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Quicksand" !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {color:#000 !important;}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-family:"Alegreya SC" !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {font-family:"Alegreya SC" !important;font-weight:400 !important;}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+.wsite-button-small .wsite-button-inner {font-size:19px !important;}
+.wsite-button-large .wsite-button-inner {font-size:15px !important;}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-size:16px !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+
+		<script src='files/templateArtifacts.js?1692500573'></script>
+<script>
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='https://cdn2.editmysite.com/js/jquery-1.8.3.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='UNSET'; </script><script>_W = _W || {};
+			_W.customerLocale = "en_US";
+			_W.storeName = null;
+			_W.isCheckoutReskin = false;
+			_W.storeCountry = "CA";
+			_W.storeCurrency = "CAD";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "258110484374261460";
+			com_userID = "50158331";</script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"174265258517029121","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"406094728939833248","title":"Kotlin & Spring Boot","url":"kotlin--spring-boot.html","target":"","nav_menu":false,"nonclickable":false}],
+			"136600448749520706",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{}
+		)
+	}
+//-->
+</script>
+		
+		<script type="text/javascript">(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="http://static.zotabox.com/6/9/6972ea4fe8e76a20caa3b853ee786fd5/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));</script>
+	</head>
+	<body class="header-page  wsite-page-go-c  full-width-body-off header-overlay-on alt-nav-off  wsite-theme-light"><div class="wrapper">
+    <div class="birdseye-header">
+      <div class="nav-wrap">
+        <div class="container">
+          <div class="logo"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">KANNIKA LIBRETA</span>
+	
+	</a>
+
+</span></div>
+          <div class="nav desktop-nav"><ul class="wsite-menu-default">
+		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg406094728939833248" class="wsite-menu-item-wrap">
+			<a
+						href="kotlin--spring-boot.html"
+				class="wsite-menu-item"
+				>
+				Kotlin & Spring Boot
+			</a>
+			
+		</li>
+</ul>
+</div>
+          <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner-wrap">
+      <div class="wsite-elements wsite-not-footer wsite-header-elements">
+	<div class="wsite-section-wrap">
+	<div  class="wsite-section wsite-header-section wsite-section-bg-image" style="height: auto;background-image: url(&quot;/uploads/5/0/1/5/50158331/background-images/1810910436.jpg&quot;) ;background-repeat: no-repeat ;background-position: 50.00% 29.93% ;background-size: 100% ;background-color: transparent ;background-size: cover;" >
+		<div class="wsite-section-content">
+			
+          <div class="container">
+            <div class="banner">
+				<div class="wsite-section-elements">
+					<h2 class="wsite-content-title" style="text-align:left;">=</h2>
+				</div>
+			</div>
+          </div>
+      
+		</div>
+		<div class=""></div>
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="main-wrap">
+      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-51" style="background-color: #01002f;background-image: none;" >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:53.839285714286%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#00f7ff" size="7">GO</font></h2>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:46.160714285714%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:right;"><font size="7" color="#83a3ff"><a href="https://kannikalibreta.weebly.com/go--c.html#Cplusplus" style="">Go to C++</a></font></h2>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Intro</font></h2>
+
+<div class="paragraph"><font color="#ffffff">Used for creating high-performance application =&gt; fast compilation time and run time<br />It supports concurrency and supports memory management<br />Some of it's main uses are:</font><ul><li><font color="#ffffff">Web development (server-side)</font></li><li><font color="#ffffff">Developing network-based programs</font></li></ul><ul><li><font color="#ffffff">Cloud-native development</font></li></ul><br /><font color="#71ff84">Note:&nbsp;&nbsp;Statically typed means that the variable types are known at compile time</font><br /><font color="#ffffff">A compiler, like GCC, is needed to translate the Go code into a language that the computer will understand</font></div>
+
+<h2 class="wsite-content-title"><font color="#00f7ff">Basics</font></h2>
+
+<div class="paragraph"><ul><li><font color="#ffffff"><strong>helloworld.go</strong></font></li></ul><font color="#ffffff">package main&nbsp; &nbsp; // Package declaration - In Go every program is part of a package<br />import ("fmt")&nbsp; &nbsp; // Import packages<br /><br />func main() {&nbsp; &nbsp; // function<br />&nbsp; fmt.Println("Hello World!")&nbsp; &nbsp; // Statement / expression<br />&nbsp; /*&nbsp;<span>In Go, statements are separated by ending a line (hitting the Enter key) or by a semicolon "</span>;<span>"&nbsp; */</span><br />}<br /><br />In the terminal, execute this:&nbsp;go run .\helloworld<span>.go<br />&gt; Hello World!<br /><br />To save the program as an executable, execute this:&nbsp;go build .</span><span>\helloworld</span><span>.</span><span>go</span><br /><br /><span style="font-weight:bolder">Note:</span><span>&nbsp;In Go, any executable code belongs to the&nbsp;</span>main</font><span><font color="#ffffff">&nbsp;package.</font></span></div>
+
+<div id="333870150519312945"><div><style type="text/css">
+	#element-ebf33830-6551-415d-a2c4-78946331c2e8 .paragraph {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion {
+  padding: 20px 0;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #01002f;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7e7d95;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #01002f;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple .accordion__item.active > .accordion__title {
+  background-color: #01002f;
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7e7d95;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #01002f;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7e7d95;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #01002f;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material .accordion__item.active > .accordion__title {
+  background-color: #01002f;
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7e7d95;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material > .accordion__item {
+  margin-bottom: 1px;
+  box-shadow: none;
+  transition: 500ms ease;
+  z-index: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material > .accordion__item.active {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  z-index: 3;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #01002f;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7e7d95;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #01002f;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box .accordion__item.active > .accordion__title {
+  background-color: #01002f;
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7e7d95;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box > .accordion__item {
+  transition: 500ms ease;
+  border: 1px solid #7e7d95;
+  z-index: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box > .accordion__item.active {
+  z-index: 3;
+  border: 1px solid #7e7d95;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #01002f;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7e7d95;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #01002f;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple.no-touch .accordion__item.active > .accordion__title {
+  background-color: #01002f;
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7e7d95;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--simple.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #01002f;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7e7d95;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #01002f;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material.no-touch .accordion__item.active > .accordion__title {
+  background-color: #01002f;
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7e7d95;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material.no-touch > .accordion__item {
+  margin-bottom: 1px;
+  box-shadow: none;
+  transition: 500ms ease;
+  z-index: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material.no-touch > .accordion__item.active {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  z-index: 3;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--material.no-touch .accordion__item:hover {
+  box-shadow: ;
+  z-index: 3;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #01002f;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7e7d95;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #01002f;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box.no-touch .accordion__item.active > .accordion__title {
+  background-color: #01002f;
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7e7d95;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box.no-touch > .accordion__item {
+  transition: 500ms ease;
+  border: 1px solid #7e7d95;
+  z-index: 1;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box.no-touch > .accordion__item.active {
+  z-index: 3;
+  border: 1px solid #7e7d95;
+}
+#element-ebf33830-6551-415d-a2c4-78946331c2e8 > .accordion--box.no-touch .accordion__item:hover {
+  z-index: 3;
+}
+
+</style><div id="element-ebf33830-6551-415d-a2c4-78946331c2e8" data-platform-element-id="915890017822203553-1.3.9" class="platform-element-contents">
+	<div class="accordion accordion--simple no-touch">
+        <div class="accordion__item" data-item="0">
+            <div class="accordion__title">
+                <span><div class="paragraph"><strong><font color="#ffffff">Basics of Go: Variables, Constants, Printing, Arrays, operators, condition, Switch, for loops</font></strong></div><span>
+            </div>
+            <div class="accordion__content">
+                <div style="padding: 10px 20px 20px;">
+                    <div style="width: auto"><div></div><div class="paragraph"><font color="#ffffff"><font size="5">Variables</font><br />Syntax:&nbsp; &nbsp; &nbsp;&nbsp;var<span>&nbsp;</span><em>variablename type</em><span>&nbsp;=&nbsp;</span><em>value&nbsp; &nbsp; </em>|&nbsp; &nbsp;&nbsp;<span style="font-weight:bolder">Note:</span><span>&nbsp;You always have to specify either&nbsp;</span>type<span>&nbsp;or&nbsp;</span>value<span>&nbsp;(or both).<br />OR:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><em>variablename&nbsp;</em>:=&nbsp;<em>value&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</em><em>&nbsp;&nbsp;</em>|&nbsp; &nbsp; <strong>Note:</strong> In this case, the type of the variable is inferred from the value while compiling.&nbsp;&nbsp;<br />/* := can only be used in functions and cannot be used for variable declaration, a value must be given */<br /><br />Examples</font><br /><font color="#fefefe">package main<br />import ("fmt")<br /><br />func main() {<br />&nbsp; var student1 string = "John" //type is string<br />&nbsp; var student2 = "Jane" //type is inferred<br />&nbsp; x := 2 //type is inferred<br /><br />&nbsp; /* Without declaring an initial value */</font><br /><font color="#ffffff"><span>&nbsp;&nbsp;</span>var<span>&nbsp;a string&nbsp; // set to default value =&gt; ""</span><br /><span>&nbsp;&nbsp;</span>var<span>&nbsp;b&nbsp;</span>int</font><span style="color:rgb(255, 255, 255)">&nbsp; // set to default value =&gt; 0</span><br /><font color="#ffffff"><span>&nbsp;&nbsp;</span>var<span>&nbsp;c bool</span>&nbsp; // set to default value =&gt; false</font><br /><br /><font color="#ffffff">&nbsp; c = true&nbsp; // values can be assigned after initialization</font><br /><br /><font color="#ffffff">&nbsp;&nbsp;var<span>&nbsp;ay, by, cy, dy&nbsp;</span>int<span>&nbsp;=&nbsp;</span>1<span>,&nbsp;</span>3<span>,&nbsp;</span>5<span>,&nbsp;</span>7&nbsp; // Multiple variable declaration (all must be an int type)<br />&nbsp;&nbsp;<span>ca, da :=&nbsp;</span>7<span>,&nbsp;</span>"World!"</font><br /><br /><font color="#fefefe">}<br /><br /><font size="5">Constants</font><br />A variable with&nbsp;</font><span><font color="#ffffff">a fixed value that cannot be changed<br />Syntax:&nbsp; &nbsp; &nbsp;&nbsp;</font></span><font color="#ffffff">const<span>&nbsp;</span><em>CONSTNAME type</em><span>&nbsp;=&nbsp;</span><em>value&nbsp; &nbsp; </em>|&nbsp; &nbsp; Note: value must be assigned<br /><br />Example<br />package<span>&nbsp;main</span><br />import<span>&nbsp;(</span>"fmt"<span>)</span><br /><br />const<span>&nbsp;PI =&nbsp;</span>3.14&nbsp; &nbsp; // Creating a constant w/o type<br />const<span>&nbsp;A&nbsp;</span>int<span>&nbsp;=&nbsp;</span>1&nbsp; &nbsp; // Creating a constant w/ type<br />const<span>&nbsp;(&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Creating multiple constants</span><br /><span>&nbsp; X&nbsp;</span>int<span>&nbsp;=&nbsp;</span>1<br /><span>&nbsp; G = 9</span>.81<br /><span>&nbsp; Z =&nbsp;</span>"Hi!"<br /><span>)</span><br /><br /><span>func main() {</span><br /><span>&nbsp;&nbsp;fmt.</span><span>Println</span><span>(PI)</span><br /><span>}</span></font></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="5">Printing</font><br />package&nbsp;main<br />import&nbsp;("fmt")<br /><br />func main() {<br />&nbsp;&nbsp;var&nbsp;i,j string =&nbsp;"Hello","World"<br />&nbsp;&nbsp;fmt.Print(i,&nbsp;" ", j)&nbsp; &nbsp; // Hello World // space must be manually added<br /><br />&nbsp;&nbsp;var&nbsp;k,m =&nbsp;10,20<br />&nbsp;&nbsp;fmt.Print(k,m)&nbsp; &nbsp; // 10 20 // space automatically added since neither are strings<br /><br />&nbsp;&nbsp;var&nbsp;g,h string =&nbsp;"Hello","World"<br />&nbsp;&nbsp;fmt.Println(g,h)&nbsp; &nbsp; // Hello World&nbsp; // white space gets automatically added with Println and new line is added at the end<br /><br />&nbsp; // Formatting<br />&nbsp;&nbsp;var&nbsp;a string =&nbsp;"Hello"<br />&nbsp;&nbsp;var&nbsp;b int&nbsp;=&nbsp;15<br /><br />&nbsp; fmt.Printf("i has value: %v and type: %T\n", a, a)&nbsp; //&nbsp;</font><span style="color:rgb(255, 255, 255)">i has value: Hello and type: string</span><font color="#ffffff"><br />&nbsp;&nbsp;fmt.Printf("j has value: %v and type: %T", b, b)&nbsp; //&nbsp;</font><span style="color:rgb(255, 255, 255)">j has value: 15 and type: int</span><font color="#ffffff"><br />}</font><br /></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="5">Data Types</font><br /><br />package&nbsp;main<br />import&nbsp;("fmt")<br /><br />func main() {<br /><br />&nbsp;&nbsp;var&nbsp;c float32 =&nbsp;3.14&nbsp;&nbsp;<em style="">// 32-bit Floating point number<br /></em>&nbsp;&nbsp;var&nbsp;y uint =&nbsp;4500&nbsp; // unsigned integers can only store non-negative values [0 to 18446744073709551615]<br />&nbsp; var z int8 = 9&nbsp; //int8 is an 8-bit integer [-128 to 127]<br /><br />}</font><br /></div>
+
+<div class="paragraph"><font color="#ffffff" size="5">Arrays</font><br /><font color="#ffffff">Arrays are used to store multiple values of the same type in a single variable</font><br /><font color="#ffffff">Syntax:&nbsp; &nbsp;&nbsp;var&nbsp;</font><em style="color:rgb(255, 255, 255)">array_name =&nbsp;</em><font color="#ffffff">[</font><em style="color:rgb(255, 255, 255)">length</em><font color="#ffffff">]</font><em style="color:rgb(255, 255, 255)">datatype</em><font color="#ffffff">{</font><em style="color:rgb(255, 255, 255)">values</em><font color="#ffffff">}&nbsp;// here length is defined</font><br /><font color="#ffffff">OR:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;var&nbsp;</font><em style="color:rgb(255, 255, 255)">array_name =&nbsp;</em><font color="#ffffff">[...]</font><em style="color:rgb(255, 255, 255)">datatype</em><font color="#ffffff">{</font><em style="color:rgb(255, 255, 255)">values</em><font color="#ffffff">}</font><em style="color:rgb(255, 255, 255)">&nbsp;</em><font color="#ffffff">// here length is inferred</font><br />&#8203;<br /><font color="#ffffff">Example</font><br /><font color="#ffffff">package&nbsp;main</font><br /><font color="#ffffff">import&nbsp;("fmt")</font><br /><br /><font color="#ffffff">func main() {</font><br /><font color="#ffffff">&nbsp;&nbsp;var&nbsp;arr1 = [3]int{1,2,3}</font><br /><font color="#ffffff">&nbsp;&nbsp;arr2 := [5]int{4,5,6,7,8}</font><br /><font color="#ffffff">&nbsp;&nbsp;var&nbsp;arr3 = [...]int{1,2,3}&nbsp; &nbsp; // inferred length</font><br /><br /><font color="#ffffff">&nbsp; fmt.Println(arr3[2])&nbsp; &nbsp; // 3 // accessing elements of an array</font><br /><font color="#ffffff">&nbsp; arr3[2] =&nbsp;50&nbsp; &nbsp; &nbsp;// change elements of an array</font><br /><font color="#ffffff">&nbsp;&nbsp;fmt.Println(arr3)&nbsp; // 50</font><br /><br /><font color="#ffffff">&nbsp; /* Array Initialization */</font><br /><font color="#ffffff">&nbsp; arr4 := [5]int{}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//&nbsp;[0 0 0 0 0]&nbsp;//not initialized</font><br /><font color="#ffffff">&nbsp;&nbsp;arr5 := [5]int{1,2}&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//&nbsp;[1 2 0 0 0]&nbsp;//partially initialized</font><br /><font color="#ffffff">&nbsp;&nbsp;arr6 := [5]int{1,2,3,4,5}&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//&nbsp;[1 2 3 4 5]&nbsp;//fully initialized</font><br /><br /><font color="#ffffff">&nbsp; arr7 := [5]int{1:10,2:40}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//&nbsp;[0 10 40 0 0]&nbsp;//initialize only the specified index</font><br /><br /><font color="#ffffff">&nbsp; fmt.Println(len(arr6))&nbsp; &nbsp; // 5</font><br /><br /><font color="#ffffff">}</font><br /><br /><font color="#ffffff">/* Slicing an array - Syntax only */</font><br /><font color="#ffffff">var&nbsp;myarray = [length]datatype{values}&nbsp;// An array</font><br /><font color="#ffffff">myslice := myarray[start:end]</font><em style="color: rgb(255, 255, 255);">&nbsp;</em><font color="#ffffff">// A slice made from the array</font><br /><br /><font color="#ffffff"><em style="">slice_name</em>&nbsp;= append(<em style="">slice_name</em>,&nbsp;<em style="">element1</em>,&nbsp;<em style="">element2</em>, ...)&nbsp; // Appending elements to a slice<br /><em style="">slice3</em>&nbsp;= append(<em style="">slice1</em>,&nbsp;<em style="">slice2</em>...)&nbsp; // Appending 2 slices |&nbsp; Note:&nbsp;The&nbsp;<span style="font-weight: bolder;">'...'</span>&nbsp;after&nbsp;<em style="">slice2</em>&nbsp;is&nbsp;<span style="font-weight: bolder;">necessary</span>&nbsp;when appending the elements of one slice to another.</font><br /></div>
+
+<div class="paragraph"><font size="5" style="color:rgb(255, 255, 255)">Operators</font><br /><br /><font color="#ffffff">&#8203;AND = &amp;&amp; ; Bitwise AND = &amp;</font><br /><font color="#ffffff">OR = || ; Bitwise OR = |</font><br /><font color="#ffffff">NOT = !</font><br /><font color="#ffffff">XOR = ^</font><br /><br /><font color="#ffffff" size="5">Conditions<br />&#8203;</font><br /><font color="#ffffff">package&nbsp;main</font><br /><font color="#ffffff">import&nbsp;("fmt")</font><br /><br /><font color="#ffffff">func main() {</font><br /><font color="#ffffff">&nbsp;&nbsp;time :=&nbsp;22</font><br /><font color="#ffffff">&nbsp;&nbsp;if&nbsp;time &lt;&nbsp;10&nbsp;{</font><br /><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Good morning.")</font><br /><font color="#ffffff">&nbsp;&nbsp;}&nbsp;else&nbsp;if&nbsp;time &lt;&nbsp;20&nbsp;{</font><br /><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Good day.")</font><br /><font color="#ffffff">&nbsp;&nbsp;}&nbsp;else&nbsp;{</font><br /><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Good evening.")</font><br /><font color="#ffffff">&nbsp;&nbsp;}</font><br /><font color="#ffffff">}</font><br /><br /><font color="#ffffff" size="5">Switch</font><br /><font color="#ffffff">// No break statements necessary - once a match, it will stop<br />// All case value should have same data type<br />package&nbsp;main<br />import&nbsp;("fmt")<br /><br />func main() {<br />&nbsp;&nbsp;day :=&nbsp;8<br /><br />&nbsp;&nbsp;switch&nbsp;day {<br />&nbsp;&nbsp;case&nbsp;1:<br />&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Monday")<br />&nbsp;&nbsp;case&nbsp;2:<br />&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Tuesday")<br />&nbsp;&nbsp;case&nbsp;3:<br />&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Wednesday")<br />&nbsp;&nbsp;case&nbsp;4:<br />&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Thursday")<br />&nbsp;&nbsp;case&nbsp;5:<br />&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Friday")<br />&nbsp;&nbsp;case&nbsp;6:<br />&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Saturday")<br />&nbsp;&nbsp;case&nbsp;7:<br />&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Sunday")<br />&nbsp;&nbsp;default:<br />&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Not a weekday")<br />&nbsp;&nbsp;}<br />}<br /><br />// Multi-case Switch statement<br />package&nbsp;main<br />import&nbsp;("fmt")<br /><br />func main() {<br />&nbsp;&nbsp; day :=&nbsp;5<br /><br />&nbsp;&nbsp;&nbsp;switch&nbsp;day {<br />&nbsp;&nbsp;&nbsp;case&nbsp;1,3,5:<br />&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Odd weekday")<br />&nbsp;&nbsp;&nbsp;case&nbsp;2,4:<br />&nbsp;&nbsp;&nbsp;&nbsp; fmt.Println("Even weekday")<br />&nbsp;&nbsp;&nbsp;case&nbsp;6,7:<br />&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Weekend")<br />&nbsp;&nbsp;default:<br />&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println("Invalid day of day number")<br />&nbsp; }</font><br /><font color="#ffffff">}<br /><br /><font size="5">For loop</font> - the only kind of loop in Go<br />package&nbsp;main<br />import&nbsp;("fmt")<br /><br />func main() {<br />&nbsp;&nbsp;for&nbsp;i:=0; i &lt; 110; i+=10 {<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;i == 70&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;fmt.Println(i)<br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;if&nbsp;i == 90&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;}<br />}<br /><br />// Looping over an array<br />package&nbsp;main<br />import&nbsp;("fmt")<br /><br />func main() {<br />&nbsp;&nbsp;fruits := [3]string{"apple",&nbsp;"orange",&nbsp;"banana"}<br />&nbsp;&nbsp;for&nbsp;idx, val := range fruits {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fmt.Printf("%v\t%v\n", idx, val)<br />&nbsp;&nbsp;}<br />}<br />/* Output</font><br /><span style="color:rgb(255, 255, 255)">0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apple</span><br /><span style="color:rgb(255, 255, 255)">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orange</span><br /><span style="color:rgb(255, 255, 255)">2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;banana<br />&#8203;*/</span></div></div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+<div style="clear:both;"></div><script type="text/javascript" class="element-script">function setupElement333870150519312945() {
+	var requireFunc = window.platformElementRequire || window.require;
+
+	// Relies on a global require, specific to platform elements
+	requireFunc([
+		'w-global',
+		'underscore',
+		'jquery',
+		'backbone',
+		'util/platform/elements/PlatformElement',
+		'util/platform/elements/PlatformElementSettings'
+	], function(
+		_W,
+		_,
+		$,
+		Backbone,
+		PlatformElement,
+		PlatformElementSettings
+	) {
+		var dependencies = null || [];
+		var platform_element_id = "915890017822203553-1.3.9";
+
+		if (typeof _W.loadedPlatformDependencies === 'undefined') {
+			_W.loadedPlatformDependencies = [];
+		}
+
+		if (typeof _W.platformElements === 'undefined') {
+			_W.platformElements = [];
+		}
+
+		if (typeof _W.platformElements[platform_element_id] === 'undefined') {
+			_W.platformElements[platform_element_id] = {};
+			_W.platformElements[platform_element_id].deferredObject = new $.Deferred();
+			_W.platformElements[platform_element_id].deferredPromise = _W.platformElements[platform_element_id].deferredObject.promise();
+		}
+
+		if(_.intersection(_W.loadedPlatformDependencies, dependencies).length !== dependencies.length){
+			_.reduce(dependencies, function(promise, nextScript){
+				_W.loadedPlatformDependencies.push(nextScript);
+				return promise.then(function(){
+					return $.getScript(nextScript);
+				});
+			}, $().promise()).then(function(){
+				_W.platformElements[platform_element_id].deferredObject.resolve();
+			});
+		}
+
+		if (dependencies.length === 0){
+			_W.platformElements[platform_element_id].deferredObject.resolve();
+		}
+
+		_W.platformElements[platform_element_id].deferredPromise.done(function(){
+			var _ElementDefinition = /**
+ * This is required for element rendering to be possible
+ * @type {PlatformElement}
+ */
+(function() {
+    var Accordion = PlatformElement.extend({
+        initialize: function() {
+            this.activeIndex = this.settings.get('active_index');
+
+            // if we have any iframes, we get an overlay
+            this.$el.children('.platform-element-overlay').hide();
+
+            this.fixBoxStyleBorders();
+            this.setupAccordion();
+        },
+
+         /**
+         * Listens to size modifications in the content areas
+         * and resizes them as needed
+         */
+        listenToContentChanges: function() {
+            this.currentContent = this.getAccordion()
+                .children('[data-item="' + this.settings.get('active_index') +  '"]')
+                .children('.accordion__content');
+            if (this.currentContent[0]) {
+                this.contentInterval = setInterval(function() {
+                    if (this.currentContent[0].scrollHeight + 20 != parseInt(this.currentContent.css('max-height'))) {
+                        this.currentContent.css('max-height', this.currentContent[0].scrollHeight + 20 + 'px');
+                    }
+                }.bind(this), 50);
+            }
+        },
+
+        /**
+         * Simplistic jQuery usage to animate and control which
+         * accordion item is currently open
+         */
+        setupAccordion: function() {
+            var view = this;
+
+            $titles = this.getTitles();
+            $events = $._data($titles[0], "events");
+
+            // if we already have set up click events, don't set more up
+            if ($events && $events.click && $events.click[0]) {
+                return;
+            }
+
+            $titles.on('touchstart click', function(e) {
+                clearInterval(view.contentInterval);
+
+                // remove "hover" state on touch events
+                if (e.type == "touchstart") {
+                    view.getAccordion().removeClass('no-touch');
+                }
+
+                e.stopPropagation();
+                e.preventDefault();
+
+                var isActive = $(this).parent().hasClass('active');
+
+                // handles closing
+                view.getTitles().each(function() {
+                    var $this = $(this);
+                    var $next = $(this).next();
+                    var eachIsActive = $(this).parent().hasClass('active');
+
+                    $next.css({
+                        'max-height': 0 + 'px'
+                    });
+
+                    if (eachIsActive) {
+                        setTimeout(function() {
+                            $this.parent().removeClass('active');
+                        }, 250);
+                    }
+                });
+
+                // handles opening
+                if (!isActive) {
+                    $(this).parent().addClass('active');
+                    var $next = $(this).next();
+                    $next.css({
+                        'max-height': $next[0].scrollHeight + 20 + 'px' // 20 to compensate for padding
+                    });
+
+                    setTimeout(function() {
+                        $(window).resize();
+                    }, 250);
+
+                    view.listenToContentChanges();
+                }
+                
+            });
+
+            this.getTitles().on('touchend', function() {
+                this.getAccordion().addClass('no-touch');
+            }.bind(this));
+        },
+
+        /**
+         * When using the 'Box' style, to avoid
+         * thick borders on the top and bottom of
+         * elements, we just shift all the elements up
+         * 'i' pixels. Preferable over doing it through css
+         * because all the items need all 4 borders on hover.
+         */
+        fixBoxStyleBorders: function() {
+            var view = this;
+
+            // only do it if the style is 'box'
+            if (this.settings.get('style') == 'box') {
+                this.getAccordion().filter('.accordion--box').children().each(function(i) {
+                    $(this).css({
+                        'top': -i
+                    });
+                });
+            }
+        },
+
+        // these functions exist so that if there's nested accordions, we don't accidentally select child accordions.
+        getAccordion: function() {
+            return this.$el.children();
+        },
+
+        getTitles: function() {
+            return this.$el.children()
+                .children()
+                .children('.accordion__title');
+        },
+
+        getContent: function() {
+            return this.$el.children()
+                .children()
+                .children('.accordion__content');
+        }
+    });
+
+    return Accordion;
+})();
+;
+
+			if (typeof _ElementDefinition == 'undefined' || typeof _ElementDefinition == 'null') {
+				var _ElementDefinition = PlatformElement.extend({});
+			}
+
+			var _Element = _ElementDefinition.extend({
+				initialize: function() {
+					// we still want to call the initialize function defined by the developer
+					// however, we don't want to call it until placeholders have been replaced
+					this.placeholderInterval = setInterval(function() {
+						// so use setInterval to check for placeholders.
+						if (this.$('.platform-element-child-placeholder').length == 0) {
+							clearInterval(this.placeholderInterval);
+							this.constructor.__super__.initialize.apply(this);
+						}
+					}.bind(this), 100);
+				}
+			});
+
+			_Element.prototype.settings = new PlatformElementSettings({"items_each":[{"items_index":0}],"items":1,"style":"simple","title_background":"#01002f","content_background":"#01002f","active_index":"-1"});
+			_Element.prototype.settings.page_element_id = "333870150519312945";
+
+			_Element.prototype.element_id = "ebf33830-6551-415d-a2c4-78946331c2e8";
+			_Element.prototype.user_id = "50158331";
+			_Element.prototype.site_id = "258110484374261460";
+			_Element.prototype.assets_path = "//marketplace.editmysite.com/uploads/b/marketplace-elements-915890017822203553-1.3.9/assets/";
+			new _Element({
+				el: '#element-ebf33830-6551-415d-a2c4-78946331c2e8'
+			});
+		});
+	});
+
+}
+
+if (typeof document.documentElement.appReady == 'undefined') {
+	document.documentElement.appReady = 0;
+}
+
+if (document.documentElement.appReady || (window.inEditor && window.inEditor())) {
+	setupElement333870150519312945();
+} else if (document.createEvent && document.addEventListener) {
+	document.addEventListener('appReady', setupElement333870150519312945, false);
+} else {
+	document.documentElement.attachEvent('onpropertychange', function(event){
+		if (event.propertyName == 'appReady') {
+			setupElement333870150519312945();
+		}
+	});
+}
+
+</script></div></div>
+
+<div class="paragraph"><font color="#ffffff"><font size="5">Functions</font><br /><br />/* Syntax<br />func&nbsp;<em style="">FunctionName</em>(<em style="">param1</em>&nbsp;<em style="">type</em>,&nbsp;<em style="">param2</em>&nbsp;<em style="">type</em>) return_<em style="">type</em>&nbsp;{<br />&nbsp;&nbsp;<em style="">// code to be executed</em><br />&nbsp;&nbsp;return&nbsp;<em style="">output</em><br />}<br />*/<br /><br />// Example 1: simple<br />package&nbsp;main<br />import&nbsp;("fmt")<br /><br />func myFunction(x&nbsp;int, y&nbsp;int)&nbsp;int&nbsp;{<br />&nbsp;&nbsp;return&nbsp;x + y<br />}<br /><br />func main() {<br />&nbsp;&nbsp;fmt.Println(myFunction(1,&nbsp;2))<br />}<br /><br /></font><span style="color:rgb(255, 255, 255)">// Example 2: Naming the return values</span><font color="#ffffff"><br />package&nbsp;main<br />import&nbsp;("fmt")<br /><br />func myFunction(x&nbsp;int, y string) (result&nbsp;int, txt1 string) {<br />&nbsp;&nbsp;result = x + x<br />&nbsp;&nbsp;txt1 = y +&nbsp;" World!"<br />&nbsp;&nbsp;return<br />}<br /><br />func main() {<br />&nbsp;&nbsp; a, _ := myFunction(5,&nbsp;"Hello")&nbsp; // the 2nd return value is omitted by using an '_'<br />&nbsp;&nbsp;fmt.Println(a)<br />}<br /><br /></font><span style="color:rgb(255, 255, 255)">// Example 3: recursion</span><font color="#ffffff"><br />package&nbsp;main<br />import&nbsp;("fmt")<br /><br />func factorial_recursion(x float64) (y float64) {<br />&nbsp;&nbsp;if&nbsp;x &gt;&nbsp;0&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp; y = x * factorial_recursion(x-1)<br />&nbsp;&nbsp;}&nbsp;else&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp; y =&nbsp;1<br />&nbsp;&nbsp;}<br />&nbsp;&nbsp;return<br />}<br /><br />func main() {<br />&nbsp;&nbsp;fmt.Println(factorial_recursion(4))<br />}</font></div>
+
+<div class="paragraph"><font color="#ffffff" size="5">Struct</font><br /><br /><font color="#ffffff">package&nbsp;main<br />import&nbsp;("fmt")<br /><br />type Person struct {<br />&nbsp; name string<br />&nbsp;&nbsp;age&nbsp;int<br />&nbsp; job string<br />&nbsp; salary&nbsp;int<br />}<br /><br />func main() {<br />&nbsp;&nbsp;var&nbsp;pers1 Person<br />&nbsp;&nbsp;var&nbsp;pers2 Person<br /><br />&nbsp;&nbsp;// Pers1 specification<br />&nbsp; pers1.name&nbsp;=&nbsp;"Nina"<br />&nbsp;&nbsp;pers1.age&nbsp;= 24<br />&nbsp; pers1.job&nbsp;=&nbsp;"Secretary"<br />&nbsp; pers1.salary&nbsp;=&nbsp;120000<br /><br />&nbsp;&nbsp;// Pers2 specification<br />&nbsp; pers2.name&nbsp;=&nbsp;"Julia"<br />&nbsp;&nbsp;pers2.age&nbsp;=&nbsp;20<br />&nbsp; pers2.job&nbsp;=&nbsp;"Archeologist"<br />&nbsp; pers2.salary&nbsp;= 30000<br /><br />&nbsp;&nbsp;// Print Pers1 info by calling a function<br />&nbsp; printPerson(pers1)<br /><br />&nbsp;&nbsp;// Print Pers2 info by calling a function<br />&nbsp; printPerson(pers2)<br />}<br /><br />func printPerson(pers Person) {<br />&nbsp;&nbsp;fmt.Println("Name: ", pers.name)<br />&nbsp; fmt.Println("Age: ", pers.age)<br />&nbsp; fmt.Println("Job: ", pers.job)<br />&nbsp; fmt.Println("Salary: ", pers.salary)<br />}</font><br /></div>
+
+<div class="paragraph"><font color="#ffffff" size="5">Maps</font><br /><br /><font color="#ffffff">Syntax<br />var&nbsp;<em style="">a</em>&nbsp;= map[KeyType]ValueType{<em style="">key1</em>:<em style="">value1</em>,&nbsp;<em style="">key2</em>:<em style="">value2</em>,...}<br /><em style="">b</em>&nbsp;:= map[KeyType]ValueType{<em style="">key1</em>:<em style="">value1</em>,&nbsp;<em style="">key2</em>:<em style="">value2</em>,...}<br />var&nbsp;<em style="">a</em>&nbsp;= make(map[KeyType]ValueType)&nbsp; // using make function<br /><br />// Example 1: simple<br />package&nbsp;main<br />import&nbsp;("fmt")<br /><br />func main() {<br />&nbsp;&nbsp;var&nbsp;a = map[string]string{"brand":&nbsp;"Ford",&nbsp;"model":&nbsp;"Mustang",&nbsp;"year":&nbsp;"1964"}<br />&nbsp; a["year"] =&nbsp;"1970"&nbsp;<em style="">// Updating an element</em><br />&nbsp;&nbsp;a["color"] =&nbsp;"red"&nbsp;<em style="">// Adding an element<br /></em>&nbsp;&nbsp;delete(a,"year")&nbsp;<em style="">// Deleting an element<br />&nbsp;&nbsp;</em>val2, ok2 := a["day"]&nbsp;<em style="">// Checking for non-existing key and its value =&gt; val2 = "", ok2 = false</em><span></span><br />&nbsp; b := make(map[string]int)&nbsp; &nbsp; //make is the right way to create an empty map because this b == nil is false<br />&nbsp;&nbsp;b["Oslo"] =&nbsp;1<br />&nbsp;&nbsp;b["Bergen"] =&nbsp;2<br />&nbsp;&nbsp;b["Trondheim"] =&nbsp;3<br />&nbsp;&nbsp;b["Stavanger"] =&nbsp;4<span></span><br /><br />&nbsp;&nbsp;fmt.Printf("a\t%v\n", a)<br />&nbsp;&nbsp;fmt.Printf(a["brand"])&nbsp; // accessing a single element<br />&nbsp;&nbsp;fmt.Printf("b\t%v\n", b)<br />}<br /><br />/*&nbsp;&nbsp;<span style="background-color: transparent;">Maps are references to hash tables.&nbsp;If two map variables refer to the same hash table, changing the content of one variable affect the content of the other. <br />Sample output<br /></span>a = map[brand:Ford model:Mustang year:1964]<br />b = map[brand:Ford model:Mustang year:1964]<br />After change to b:<br />a = map[brand:Ford model:Mustang year:1970]<br />b = map[brand:Ford model:Mustang year:1970]<span style="background-color: transparent;"><br />*/<br /></span><br />// Example 2: Looping through maps<br />package&nbsp;main<br />import&nbsp;("fmt")<br /><br />func main() {<br />&nbsp;&nbsp;a := map[string]int{"one":&nbsp;1,&nbsp;"two":&nbsp;2,&nbsp;"three":&nbsp;3,&nbsp;"four":&nbsp;4}<br /><br />&nbsp;&nbsp;var&nbsp;b = []string&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em style="">// defining the order</em><br />&nbsp;&nbsp;b = append(b,&nbsp;"one",&nbsp;"two",&nbsp;"three",&nbsp;"four")<br /><br />&nbsp;&nbsp;for&nbsp;k, v := range a {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em style="">// loop with no order</em><br />&nbsp;&nbsp;&nbsp;&nbsp;fmt.Printf("%v : %v, ", k, v)<br />&nbsp;&nbsp;}<br /><br />&nbsp;&nbsp;fmt.Println()<br /><br />&nbsp;&nbsp;for&nbsp;_, element := range b {&nbsp;&nbsp;<em style="">// loop with the defined order</em><br />&nbsp;&nbsp;&nbsp;&nbsp;fmt.Printf("%v : %v, ", element, a[element])<br />&nbsp;&nbsp;}<br />}<br /><br />/* Output<br />two : 2, three : 3, four : 4, one : 1,<br />one : 1, two : 2, three : 3, four : 4,<br />*/</font><span></span><br /></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-image wsite-background-52" style="height: 201px;background-image: url(&quot;/uploads/5/0/1/5/50158331/background-images/65844996.jpg&quot;) ;background-repeat: no-repeat ;background-position: 33.33% 48.28% ;background-size: 100% ;background-color: transparent ;background-size: cover;" >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<div><div id="103315351643566930" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a name="Cplusplus">&nbsp</a></div>
+
+
+
+</div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-53" style="background-color: #000b37;background-image: none;" >
+		<div class="wsite-section-content">
+          <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title"><font color="#83a3ff" size="7">C++</font></h2>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Intro</font></h2>
+
+<div class="paragraph"><font color="#ffffff">C++ is an OOP language and it can be used to <strong style="">create high-performance applications</strong>. It gives programmers a high level of <strong style="">control over system resources and memory</strong>. It is used when working with OS, GUI, and embedded systems.<br /><br />C++ and C have almost the same syntax - the main difference between C and C++ is that C++ <strong style="">supports classes and objects</strong>, while C does not.&nbsp;To work with C++, we would need GCC as a compiler.</font></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Basics</font></h2>
+
+<div class="paragraph"><ul><li><font color="#ffffff"><span><strong>myfirst.cpp</strong></span></font></li></ul><font color="#ffffff"><span>#include &lt;iostream&gt;</span><br /><span>using namespace std;</span><br /><br />int<span>&nbsp;main() {</span><br /><span>&nbsp;&nbsp;</span><span>cout &lt;&lt;&nbsp;</span>"Hello World!"<span>;<br />&nbsp; //&nbsp;</span><span style="font-weight:bolder">std::</span><span>cout &lt;&lt;&nbsp;</span>"Hello World!"<span>;&nbsp; &nbsp;// if using namespace line was not written<br /><br /></span>&nbsp; int x, y;<br />&nbsp; int sum;<br />&nbsp; cout &lt;&lt; "Type a number: ";<br />&nbsp; cin &gt;&gt; x;&nbsp; &nbsp; // getting user input<br />&nbsp; cout &lt;&lt; "Type another number: ";<br />&nbsp; cin &gt;&gt; y;<br />&nbsp; sum = x + y;<br />&nbsp; cout &lt;&lt; "Sum is: " &lt;&lt; sum;</font><font color="#ffffff"><span><br /></span><br /><span>&nbsp;&nbsp;</span>return<span>&nbsp;</span>0<span>;</span><br /><span>}</span></font></div>
+
+<div id="462596460239294987"><div><style type="text/css">
+	#element-95054867-4d28-4262-a241-cbea402f06d6 .paragraph {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion {
+  padding: 20px 0;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #000b37;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7d8399;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000b37;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple .accordion__item.active > .accordion__title {
+  background-color: #000b37;
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d8399;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #000b37;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7d8399;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000b37;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material .accordion__item.active > .accordion__title {
+  background-color: #000b37;
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d8399;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material > .accordion__item {
+  margin-bottom: 1px;
+  box-shadow: none;
+  transition: 500ms ease;
+  z-index: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material > .accordion__item.active {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  z-index: 3;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #000b37;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7d8399;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000b37;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box .accordion__item.active > .accordion__title {
+  background-color: #000b37;
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d8399;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box > .accordion__item {
+  transition: 500ms ease;
+  border: 1px solid #7d8399;
+  z-index: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box > .accordion__item.active {
+  z-index: 3;
+  border: 1px solid #7d8399;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #000b37;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7d8399;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000b37;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple.no-touch .accordion__item.active > .accordion__title {
+  background-color: #000b37;
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d8399;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--simple.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #000b37;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7d8399;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000b37;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material.no-touch .accordion__item.active > .accordion__title {
+  background-color: #000b37;
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d8399;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material.no-touch > .accordion__item {
+  margin-bottom: 1px;
+  box-shadow: none;
+  transition: 500ms ease;
+  z-index: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material.no-touch > .accordion__item.active {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  z-index: 3;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--material.no-touch .accordion__item:hover {
+  box-shadow: ;
+  z-index: 3;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #000b37;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7d8399;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000b37;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box.no-touch .accordion__item.active > .accordion__title {
+  background-color: #000b37;
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d8399;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box.no-touch > .accordion__item {
+  transition: 500ms ease;
+  border: 1px solid #7d8399;
+  z-index: 1;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box.no-touch > .accordion__item.active {
+  z-index: 3;
+  border: 1px solid #7d8399;
+}
+#element-95054867-4d28-4262-a241-cbea402f06d6 > .accordion--box.no-touch .accordion__item:hover {
+  z-index: 3;
+}
+
+</style><div id="element-95054867-4d28-4262-a241-cbea402f06d6" data-platform-element-id="915890017822203553-1.3.9" class="platform-element-contents">
+	<div class="accordion accordion--simple no-touch">
+        <div class="accordion__item" data-item="0">
+            <div class="accordion__title">
+                <span><div class="paragraph"><font color="#ffffff">Variables, strings, math, arrays</font></div><span>
+            </div>
+            <div class="accordion__content">
+                <div style="padding: 10px 20px 20px;">
+                    <div style="width: auto"><div></div><div class="paragraph"><font color="#ffffff">Variables and constant work exactly the same way they do in C and C#<br /><br />Data Types and operator are the same as C and C#.<br />The return value of a comparison is either&nbsp;1&nbsp;or&nbsp;0, which means&nbsp;<span style="font-weight:bolder">true</span>&nbsp;(1) or&nbsp;<span style="font-weight:bolder">false</span>&nbsp;(0).<br />&nbsp; int x = 5, y = 3;<br />&nbsp; cout &lt;&lt; (x &gt; y); // returns 1 (true) because 5 is greater than 3<br /><br />Some String Notes<br />string txt =&nbsp;"ABCDEFGHIJKLMNOPQRSTUVWXYZ";<br />cout &lt;&lt;&nbsp;"The length of the txt string is: "&nbsp;&lt;&lt; txt.size();<br />cout &lt;&lt;&nbsp;"The length of the txt string is: "&nbsp;&lt;&lt; txt.length(); // same as above line<br />string z = txt + 10;&nbsp; &nbsp;// causes an error, numbers cannot be concatenated with strings<br /><br />Accessing characters of a string is same as C#<br /><br />cin can only take in 1 number or string with no spaces or tabs =&gt; use getline<br />string fullName;&nbsp; &nbsp; // without namespace line, this would be:&nbsp;<span style="font-weight:bolder">std::</span>string fullName;<br />cout &lt;&lt; "Type your full name: ";<br />getline (cin, fullName);<br />cout &lt;&lt; "Your name is: " &lt;&lt; fullName;&nbsp; &nbsp;// your name is: Kannika Kabilar<br /><br />Math<br />#include &lt;cmath&gt;<br /><br />cout &lt;&lt;&nbsp;sqrt(64);<br />cout &lt;&lt; round(2.6);<br />cout &lt;&lt; log(2);<br />cout &lt;&lt; max(2, 9);<br /><br /><strong>if ... else if ... else ...</strong> and shorthand <strong>if ... ? then : else</strong> and <strong>switch</strong> is the same as C and C#<br /><br />for loop and for each loop, and break &amp; continue is the same as Java, C, and C#<br /><br />Arrays<br />string cars[4] = {"Volvo",&nbsp;"BMW",&nbsp;"Ford",&nbsp;"Mazda"};<br />//&nbsp;string cars[] = {"Volvo",&nbsp;"BMW",&nbsp;"Ford"};&nbsp;// Three array elements - omitting array size<br />cars[0] =&nbsp;"Opel";<br />cout &lt;&lt; cars[0];<br />// Now outputs Opel instead of Volvo<br />int&nbsp;myNumbers[5] = {10,&nbsp;20,&nbsp;30,&nbsp;40,&nbsp;50};<br />int&nbsp;getArrayLength =&nbsp;<span style="font-weight: bolder;">sizeof(myNumbers) / sizeof(int)</span>;<br />cout &lt;&lt; getArrayLength;<br /><br />// Multi-dimensional array<br />string letters[2][4] = {<br />&nbsp; {&nbsp;"A",&nbsp;"B",&nbsp;"C",&nbsp;"D"&nbsp;},<br />&nbsp; {&nbsp;"E",&nbsp;"F",&nbsp;"G",&nbsp;"H"&nbsp;}<br />};<br />cout &lt;&lt; letters[0][2];&nbsp;&nbsp;// Outputs "C"</font><span style="color:green"></span><br /></div></div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+<div style="clear:both;"></div><script type="text/javascript" class="element-script">function setupElement462596460239294987() {
+	var requireFunc = window.platformElementRequire || window.require;
+
+	// Relies on a global require, specific to platform elements
+	requireFunc([
+		'w-global',
+		'underscore',
+		'jquery',
+		'backbone',
+		'util/platform/elements/PlatformElement',
+		'util/platform/elements/PlatformElementSettings'
+	], function(
+		_W,
+		_,
+		$,
+		Backbone,
+		PlatformElement,
+		PlatformElementSettings
+	) {
+		var dependencies = null || [];
+		var platform_element_id = "915890017822203553-1.3.9";
+
+		if (typeof _W.loadedPlatformDependencies === 'undefined') {
+			_W.loadedPlatformDependencies = [];
+		}
+
+		if (typeof _W.platformElements === 'undefined') {
+			_W.platformElements = [];
+		}
+
+		if (typeof _W.platformElements[platform_element_id] === 'undefined') {
+			_W.platformElements[platform_element_id] = {};
+			_W.platformElements[platform_element_id].deferredObject = new $.Deferred();
+			_W.platformElements[platform_element_id].deferredPromise = _W.platformElements[platform_element_id].deferredObject.promise();
+		}
+
+		if(_.intersection(_W.loadedPlatformDependencies, dependencies).length !== dependencies.length){
+			_.reduce(dependencies, function(promise, nextScript){
+				_W.loadedPlatformDependencies.push(nextScript);
+				return promise.then(function(){
+					return $.getScript(nextScript);
+				});
+			}, $().promise()).then(function(){
+				_W.platformElements[platform_element_id].deferredObject.resolve();
+			});
+		}
+
+		if (dependencies.length === 0){
+			_W.platformElements[platform_element_id].deferredObject.resolve();
+		}
+
+		_W.platformElements[platform_element_id].deferredPromise.done(function(){
+			var _ElementDefinition = /**
+ * This is required for element rendering to be possible
+ * @type {PlatformElement}
+ */
+(function() {
+    var Accordion = PlatformElement.extend({
+        initialize: function() {
+            this.activeIndex = this.settings.get('active_index');
+
+            // if we have any iframes, we get an overlay
+            this.$el.children('.platform-element-overlay').hide();
+
+            this.fixBoxStyleBorders();
+            this.setupAccordion();
+        },
+
+         /**
+         * Listens to size modifications in the content areas
+         * and resizes them as needed
+         */
+        listenToContentChanges: function() {
+            this.currentContent = this.getAccordion()
+                .children('[data-item="' + this.settings.get('active_index') +  '"]')
+                .children('.accordion__content');
+            if (this.currentContent[0]) {
+                this.contentInterval = setInterval(function() {
+                    if (this.currentContent[0].scrollHeight + 20 != parseInt(this.currentContent.css('max-height'))) {
+                        this.currentContent.css('max-height', this.currentContent[0].scrollHeight + 20 + 'px');
+                    }
+                }.bind(this), 50);
+            }
+        },
+
+        /**
+         * Simplistic jQuery usage to animate and control which
+         * accordion item is currently open
+         */
+        setupAccordion: function() {
+            var view = this;
+
+            $titles = this.getTitles();
+            $events = $._data($titles[0], "events");
+
+            // if we already have set up click events, don't set more up
+            if ($events && $events.click && $events.click[0]) {
+                return;
+            }
+
+            $titles.on('touchstart click', function(e) {
+                clearInterval(view.contentInterval);
+
+                // remove "hover" state on touch events
+                if (e.type == "touchstart") {
+                    view.getAccordion().removeClass('no-touch');
+                }
+
+                e.stopPropagation();
+                e.preventDefault();
+
+                var isActive = $(this).parent().hasClass('active');
+
+                // handles closing
+                view.getTitles().each(function() {
+                    var $this = $(this);
+                    var $next = $(this).next();
+                    var eachIsActive = $(this).parent().hasClass('active');
+
+                    $next.css({
+                        'max-height': 0 + 'px'
+                    });
+
+                    if (eachIsActive) {
+                        setTimeout(function() {
+                            $this.parent().removeClass('active');
+                        }, 250);
+                    }
+                });
+
+                // handles opening
+                if (!isActive) {
+                    $(this).parent().addClass('active');
+                    var $next = $(this).next();
+                    $next.css({
+                        'max-height': $next[0].scrollHeight + 20 + 'px' // 20 to compensate for padding
+                    });
+
+                    setTimeout(function() {
+                        $(window).resize();
+                    }, 250);
+
+                    view.listenToContentChanges();
+                }
+                
+            });
+
+            this.getTitles().on('touchend', function() {
+                this.getAccordion().addClass('no-touch');
+            }.bind(this));
+        },
+
+        /**
+         * When using the 'Box' style, to avoid
+         * thick borders on the top and bottom of
+         * elements, we just shift all the elements up
+         * 'i' pixels. Preferable over doing it through css
+         * because all the items need all 4 borders on hover.
+         */
+        fixBoxStyleBorders: function() {
+            var view = this;
+
+            // only do it if the style is 'box'
+            if (this.settings.get('style') == 'box') {
+                this.getAccordion().filter('.accordion--box').children().each(function(i) {
+                    $(this).css({
+                        'top': -i
+                    });
+                });
+            }
+        },
+
+        // these functions exist so that if there's nested accordions, we don't accidentally select child accordions.
+        getAccordion: function() {
+            return this.$el.children();
+        },
+
+        getTitles: function() {
+            return this.$el.children()
+                .children()
+                .children('.accordion__title');
+        },
+
+        getContent: function() {
+            return this.$el.children()
+                .children()
+                .children('.accordion__content');
+        }
+    });
+
+    return Accordion;
+})();
+;
+
+			if (typeof _ElementDefinition == 'undefined' || typeof _ElementDefinition == 'null') {
+				var _ElementDefinition = PlatformElement.extend({});
+			}
+
+			var _Element = _ElementDefinition.extend({
+				initialize: function() {
+					// we still want to call the initialize function defined by the developer
+					// however, we don't want to call it until placeholders have been replaced
+					this.placeholderInterval = setInterval(function() {
+						// so use setInterval to check for placeholders.
+						if (this.$('.platform-element-child-placeholder').length == 0) {
+							clearInterval(this.placeholderInterval);
+							this.constructor.__super__.initialize.apply(this);
+						}
+					}.bind(this), 100);
+				}
+			});
+
+			_Element.prototype.settings = new PlatformElementSettings({"items_each":[{"items_index":0}],"items":1,"style":"simple","title_background":"#000b37","content_background":"#000b37","active_index":"0"});
+			_Element.prototype.settings.page_element_id = "462596460239294987";
+
+			_Element.prototype.element_id = "95054867-4d28-4262-a241-cbea402f06d6";
+			_Element.prototype.user_id = "50158331";
+			_Element.prototype.site_id = "258110484374261460";
+			_Element.prototype.assets_path = "//marketplace.editmysite.com/uploads/b/marketplace-elements-915890017822203553-1.3.9/assets/";
+			new _Element({
+				el: '#element-95054867-4d28-4262-a241-cbea402f06d6'
+			});
+		});
+	});
+
+}
+
+if (typeof document.documentElement.appReady == 'undefined') {
+	document.documentElement.appReady = 0;
+}
+
+if (document.documentElement.appReady || (window.inEditor && window.inEditor())) {
+	setupElement462596460239294987();
+} else if (document.createEvent && document.addEventListener) {
+	document.addEventListener('appReady', setupElement462596460239294987, false);
+} else {
+	document.documentElement.attachEvent('onpropertychange', function(event){
+		if (event.propertyName == 'appReady') {
+			setupElement462596460239294987();
+		}
+	});
+}
+
+</script></div></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Struct</font></h2>
+
+<div class="paragraph"><font color="#ffffff">// Declare a structure named "car"<br />struct car {<br />&nbsp; string brand;<br />&nbsp; string model;<br />&nbsp;&nbsp;int&nbsp;year;<br />};<br /><br />int&nbsp;main() {<br />&nbsp;&nbsp;// Create a car structure and store it in myCar1;<br />&nbsp; car myCar1;<br />&nbsp; myCar1.brand&nbsp;=&nbsp;"BMW";<br />&nbsp; myCar1.model&nbsp;=&nbsp;"X5";<br />&nbsp; myCar1.year&nbsp;=&nbsp;1999;<br /><br />&nbsp;&nbsp;// Create another car structure and store it in myCar2;<br />&nbsp; car myCar2;<br />&nbsp; myCar2.brand&nbsp;=&nbsp;"Ford";<br />&nbsp; myCar2.model&nbsp;=&nbsp;"Focus";<br />&nbsp; myCar2.year&nbsp;= 2001;<br />&nbsp;<br />&nbsp;&nbsp;// Print the structure members<br />&nbsp; cout &lt;&lt; myCar1.brand&nbsp;&lt;&lt;&nbsp;" "&nbsp;&lt;&lt; myCar1.model&nbsp;&lt;&lt;&nbsp;" "&nbsp;&lt;&lt; myCar1.year&nbsp;&lt;&lt;&nbsp;"\n";<br />&nbsp; cout &lt;&lt; myCar2.brand&nbsp;&lt;&lt;&nbsp;" "&nbsp;&lt;&lt; myCar2.model&nbsp;&lt;&lt;&nbsp;" "&nbsp;&lt;&lt; myCar2.year&nbsp;&lt;&lt;&nbsp;"\n";<br />&nbsp;<br />&nbsp;&nbsp;return&nbsp;0;<br />}</font></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">References &amp; Pointers</font></h2>
+
+<div class="paragraph"><font color="#ffffff">string food =&nbsp;"Pizza";<br />string &amp;meal = food;<br /><br />cout &lt;&lt; food &lt;&lt;&nbsp;"\n";&nbsp;&nbsp;// Outputs Pizza<br />cout &lt;&lt; meal &lt;&lt;&nbsp;"\n";&nbsp;&nbsp;// Outputs Pizza<br />cout &lt;&lt; &amp;food;&nbsp;// Outputs 0x6dfed4<br /><br />&#8203;<span style="font-weight: bolder;">string* ptr =&nbsp;&amp;food;</span>&nbsp;&nbsp;&nbsp;&nbsp;// A pointer variable, with the name ptr, that stores the address of food<br /><br />// Output the value of food (Pizza)<br />cout &lt;&lt; food &lt;&lt;&nbsp;"\n";<br /><br />// Output the memory address of food (0x6dfed4)<br />cout &lt;&lt; &amp;food &lt;&lt;&nbsp;"\n";<br /><br />// Output the memory address of food with the pointer (0x6dfed4)<br />cout &lt;&lt;&nbsp;ptr &lt;&lt;&nbsp;"\n";<br /><br />// Dereference: Output the value of food with the pointer (Pizza)<br /><span style="font-weight: bolder;">cout &lt;&lt;&nbsp;*ptr &lt;&lt;&nbsp;"\n";<br /><br /></span>// Change the value of the pointer<br />*ptr =&nbsp;"Hamburger";<br /><br />// Output the new value of the pointer (Hamburger)<br />cout &lt;&lt; *ptr &lt;&lt;&nbsp;"\n";<br /><br />// Output the new value of the food variable (Hamburger)<br />cout &lt;&lt; food &lt;&lt;&nbsp;"\n";</font><span style="font-weight:bolder"></span><span></span><br /></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Functions</font></h2>
+
+<div class="paragraph"><font color="#ffffff">// Default parameter value<br />void&nbsp;myFunction(<span style="font-weight: bolder;">string country =&nbsp;"Canada"</span>) {<br />&nbsp; cout&nbsp;&lt;&lt; country &lt;&lt;&nbsp;"\n";<br />}<br /><br />int&nbsp;main() {<br />&nbsp;&nbsp;myFunction("India");&nbsp;&nbsp;// India<br />&nbsp;&nbsp;<span style="font-weight: bolder;">myFunction();&nbsp; &nbsp;// Canada</span><br />&nbsp;&nbsp;myFunction("USA");&nbsp; // USA<br />&nbsp;&nbsp;return&nbsp;0;<br /></font><span><font color="#ffffff">}<br /><br />// Passing vals by reference<br /></font></span><font color="#ffffff">void&nbsp;swapNums(int&nbsp;&amp;x,&nbsp;int&nbsp;&amp;y) {<br />&nbsp;&nbsp;int&nbsp;z = x;<br />&nbsp; x = y;<br />&nbsp;&nbsp;y = z;<br />}<br /><br />int&nbsp;main() {<br />&nbsp;&nbsp;int&nbsp;firstNum =&nbsp;10;<br />&nbsp;&nbsp;int&nbsp;secondNum =&nbsp;20;<br /><br />&nbsp; cout &lt;&lt;&nbsp;"Before swap: "&nbsp;&lt;&lt;&nbsp;"\n";<br />&nbsp; cout &lt;&lt; firstNum &lt;&lt; secondNum &lt;&lt;&nbsp;"\n";<br /><br />&nbsp;&nbsp;// Call the function, which will change the values of firstNum and secondNum<br />&nbsp; swapNums(firstNum, secondNum);<br /><br />&nbsp; cout &lt;&lt;&nbsp;"After swap: "&nbsp;&lt;&lt;&nbsp;"\n";<br />&nbsp; cout &lt;&lt; firstNum &lt;&lt; secondNum &lt;&lt;&nbsp;"\n";<br /><br />&nbsp;&nbsp;return&nbsp;0;<br /></font><span><font color="#ffffff">}<br /><br />// Passing Arrays - sent through reference, so values of arr can be changed<br /></font></span><font color="#ffffff">void&nbsp;myFunction(int&nbsp;myNumbers[5]) {<br />&nbsp;&nbsp;for&nbsp;(int&nbsp;i =&nbsp;0; i &lt;&nbsp;5; i++) {<br />&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; myNumbers[i] &lt;&lt;&nbsp;"\n";<br />&nbsp; }<br />}<br /><br />int&nbsp;main() {<br />&nbsp;&nbsp;int&nbsp;myNumbers[5] = {10,&nbsp;20,&nbsp;30,&nbsp;40,&nbsp;50};<br />&nbsp; myFunction(myNumbers);<br />&nbsp;&nbsp;return&nbsp;0;<br /></font><span><font color="#ffffff">}<br /><br />&#8203;Function overloading and recursion work as expected</font></span><br /></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Classes</font></h2>
+
+<div class="paragraph"><font color="#ffffff">class&nbsp;MyClass {&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// The class<br />&nbsp;&nbsp;public:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Access specifier (private, protected - by default it is private)<br />&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;myNum;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Attribute (int variable)<br />&nbsp;&nbsp;&nbsp; string myString;&nbsp;&nbsp;// Attribute (string variable)<br /><br />&nbsp; &nbsp;&nbsp;void&nbsp;myMethod() {&nbsp;&nbsp;// Method/function defined inside the class<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt;&nbsp;"Hello World!";<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp; &nbsp;&nbsp;void&nbsp;myMethod2();&nbsp;&nbsp;&nbsp;// Method/function declaration<br /><br />&nbsp; &nbsp; MyClass() {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Constructor (constructors can also be created outside of the class like myMethod2<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt;&nbsp;"I just created an instance of MyClass!";<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />};<br /><br /></font><font color="#008000">/</font><font color="#ffffff">/ Method/function definition outside the class<br />void&nbsp;<span style="font-weight: bolder;">MyClass::myMethod2()</span>&nbsp;{<br />&nbsp; cout &lt;&lt;&nbsp;"Hello World 2.0!";<br />}<br /><br />int&nbsp;main() {<br />&nbsp; MyClass&nbsp;<span style="font-weight: bolder;">myObj</span>;&nbsp;&nbsp;// Create an object of MyClass<br /><br />&nbsp;&nbsp;// Access attributes and set values<br />&nbsp;&nbsp;<span style="font-weight: bolder;">myObj.<span>myNum</span></span>&nbsp;=&nbsp;15;&nbsp;<br />&nbsp;&nbsp;<span style="font-weight: bolder;">myObj.<span>myString</span></span>&nbsp;=&nbsp;"Some text";<br /><br />&nbsp;&nbsp;// Print attribute values<br />&nbsp;&nbsp;cout &lt;&lt; myObj.myNum&nbsp;&lt;&lt;&nbsp;"\n";<br />&nbsp; cout &lt;&lt; myObj.myString;<br /><br /></font><span>&nbsp;<font color="#ffffff">&nbsp;</font></span><font color="#ffffff">myObj.myMethod();&nbsp;&nbsp;// Call the method<br /></font><span>&nbsp;<font color="#ffffff">&nbsp;</font></span><font color="#ffffff">myObj.myMethod2();&nbsp;&nbsp;// Call the method<br />&nbsp;&nbsp;return&nbsp;0;<br />}</font></div>
+
+<div id="953820685902728669"><div><style type="text/css">
+	#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb .paragraph {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion {
+  padding: 20px 0;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #000b37;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7d8399;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000b37;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple .accordion__item.active > .accordion__title {
+  background-color: #000b37;
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d8399;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #000b37;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7d8399;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000b37;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material .accordion__item.active > .accordion__title {
+  background-color: #000b37;
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d8399;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material > .accordion__item {
+  margin-bottom: 1px;
+  box-shadow: none;
+  transition: 500ms ease;
+  z-index: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material > .accordion__item.active {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  z-index: 3;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #000b37;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7d8399;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000b37;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box .accordion__item.active > .accordion__title {
+  background-color: #000b37;
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d8399;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box > .accordion__item {
+  transition: 500ms ease;
+  border: 1px solid #7d8399;
+  z-index: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box > .accordion__item.active {
+  z-index: 3;
+  border: 1px solid #7d8399;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #000b37;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7d8399;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000b37;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple.no-touch .accordion__item.active > .accordion__title {
+  background-color: #000b37;
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d8399;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--simple.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #000b37;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7d8399;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000b37;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material.no-touch .accordion__item.active > .accordion__title {
+  background-color: #000b37;
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d8399;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material.no-touch > .accordion__item {
+  margin-bottom: 1px;
+  box-shadow: none;
+  transition: 500ms ease;
+  z-index: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material.no-touch > .accordion__item.active {
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  z-index: 3;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--material.no-touch .accordion__item:hover {
+  box-shadow: ;
+  z-index: 3;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box.no-touch .accordion__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  box-sizing: border-box;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box.no-touch .accordion__item > .accordion__title {
+  width: 100%;
+  background-color: #000b37;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  transition: 250ms ease;
+  opacity: 0.75;
+  cursor: pointer;
+  min-height: 45px;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box.no-touch .accordion__item > .accordion__title span {
+  opacity: 0.5;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box.no-touch .accordion__item > .accordion__title::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  top: 10px;
+  right: 20px;
+  font-size: 1.25em;
+  opacity: 0.5;
+  color: #7d8399;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box.no-touch .accordion__item > .accordion__content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease;
+  background-color: #000b37;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box.no-touch .accordion__item.active > .accordion__title {
+  background-color: #000b37;
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box.no-touch .accordion__item.active > .accordion__title span {
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box.no-touch .accordion__item.active > .accordion__title::after {
+  content: '\2013';
+  color: #7d8399;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box.no-touch .accordion__item.active > .accordion__content {
+  display: block;
+  max-height: 1000px;
+  transition: 500ms ease;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box.no-touch .accordion__item > .accordion__title:hover {
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box.no-touch .accordion__item > .accordion__title:hover span {
+  opacity: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box.no-touch > .accordion__item {
+  transition: 500ms ease;
+  border: 1px solid #7d8399;
+  z-index: 1;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box.no-touch > .accordion__item.active {
+  z-index: 3;
+  border: 1px solid #7d8399;
+}
+#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb > .accordion--box.no-touch .accordion__item:hover {
+  z-index: 3;
+}
+
+</style><div id="element-f79c87d6-21f8-4cd4-9a2b-8568262972fb" data-platform-element-id="915890017822203553-1.3.9" class="platform-element-contents">
+	<div class="accordion accordion--simple no-touch">
+        <div class="accordion__item" data-item="0">
+            <div class="accordion__title">
+                <span><div class="paragraph"><font color="#ffffff">Encapsulation</font></div><span>
+            </div>
+            <div class="accordion__content">
+                <div style="padding: 10px 20px 20px;">
+                    <div style="width: auto"><div></div><div class="paragraph"><font color="#ffffff"><font size="5">Encapsulation</font><br /><br />#include &lt;iostream&gt;<br />using namespace std;<br /><br />class&nbsp;Employee {<br />&nbsp;&nbsp;private:<br />&nbsp;&nbsp;&nbsp;&nbsp;// Private attribute<br />&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;salary;<br /><br />&nbsp;&nbsp;public:<br />&nbsp;&nbsp;&nbsp;&nbsp;// Setter<br />&nbsp;&nbsp;&nbsp;&nbsp;void&nbsp;setSalary(int&nbsp;s) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; salary = s;<br />&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;// Getter<br />&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;getSalary() {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;salary;<br />&nbsp;&nbsp;&nbsp; }<br />};<br /><br />int&nbsp;main() {<br />&nbsp; Employee myObj;<br />&nbsp; myObj.setSalary(50000);<br />&nbsp;&nbsp;cout &lt;&lt; myObj.getSalary();<br />&nbsp;&nbsp;return&nbsp;0;<br />}</font></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion__item" data-item="1">
+            <div class="accordion__title">
+                <span><div class="paragraph"><font color="#ffffff">INHERITANCE</font></div><span>
+            </div>
+            <div class="accordion__content">
+                <div style="padding: 10px 20px 20px;">
+                    <div style="width: auto"><div></div><div class="paragraph"><font color="#ffffff"><font size="5">Inheritance</font><br /><br />// MULTI-LEVEL INHERITANCE<br />// Base class (parent)<br />class&nbsp;MyClass {<br />&nbsp;&nbsp;public:<br />&nbsp;&nbsp;&nbsp;&nbsp;void&nbsp;myFunction() {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt;&nbsp;"Some content in parent class."&nbsp;;<br />&nbsp;&nbsp;&nbsp; }<br />};<br /><br />// Derived class (child)<br />class&nbsp;MyChild:&nbsp;public&nbsp;MyClass {<br />};<br /><br />// Derived class (grandchild)<br />class&nbsp;MyGrandChild:&nbsp;public&nbsp;MyChild {<br />};<br /><br />int&nbsp;main() {<br />&nbsp;&nbsp;MyGrandChild myObj;<br />&nbsp;&nbsp;myObj.myFunction();<br />&nbsp;&nbsp;return&nbsp;0;<br />}<br /><br />// MULTIPLE INHERITANCE<br />// Base class<br />class&nbsp;MyClass {<br />&nbsp;&nbsp;public:<br />&nbsp;&nbsp;&nbsp;&nbsp;void&nbsp;myFunction() {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt;&nbsp;"Some content in parent class."&nbsp;;<br />&nbsp;&nbsp;&nbsp; }<br />};<br /><br />// Another base class<br />class&nbsp;MyOtherClass {<br />&nbsp;&nbsp;public:<br />&nbsp;&nbsp;&nbsp;&nbsp;void&nbsp;myOtherFunction() {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt;&nbsp;"Some content in another class."&nbsp;;<br />&nbsp;&nbsp;&nbsp; }<br />};<br /><br />// Derived class<br /><span style="font-weight: bolder;">class&nbsp;MyChildClass:&nbsp;public&nbsp;MyClass,&nbsp;public&nbsp;MyOtherClass</span>&nbsp;{<br />};<br /><br />int&nbsp;main() {<br />&nbsp;&nbsp;MyChildClass myObj;<br />&nbsp;&nbsp;myObj.myFunction();<br />&nbsp; myObj.myOtherFunction();<br />&nbsp;&nbsp;return&nbsp;0;<br /></font><span><font color="#ffffff">}</font></span><br /></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion__item" data-item="2">
+            <div class="accordion__title">
+                <span><div class="paragraph"><font color="#ffffff">Polymorphism</font></div><span>
+            </div>
+            <div class="accordion__content">
+                <div style="padding: 10px 20px 20px;">
+                    <div style="width: auto"><div></div><div class="paragraph"><font color="#ffffff"><font size="5">Polymorphism</font><br /><br />#include &lt;iostream&gt;<br />#include &lt;string&gt;<br />using namespace std;<br /><br />// Base class<br />class Animal {<br />&nbsp; public:<br />&nbsp; &nbsp; void animalSound() {<br />&nbsp; &nbsp; &nbsp; cout &lt;&lt; "The animal makes a sound \n";<br />&nbsp; &nbsp; }<br />};<br /><br />// Derived class<br />class Pig : public Animal {<br />&nbsp; public:<br />&nbsp; &nbsp; void animalSound() {<br />&nbsp; &nbsp; &nbsp; cout &lt;&lt; "The pig says: wee wee \n";<br />&nbsp; &nbsp; }<br />};<br /><br />// Derived class<br />class Dog : public Animal {<br />&nbsp; public:<br />&nbsp; &nbsp; void animalSound() {<br />&nbsp; &nbsp; &nbsp; cout &lt;&lt; "The dog says: bow wow \n";<br />&nbsp; &nbsp; }<br />};<br /><br />int main() {<br />&nbsp; Animal myAnimal;<br />&nbsp; Pig myPig;<br />&nbsp; Dog myDog;<br /><br />&nbsp; myAnimal.animalSound();<br />&nbsp; myPig.animalSound();<br />&nbsp; myDog.animalSound();<br />&nbsp; return 0;<br />}<br></font><br /></div></div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+<div style="clear:both;"></div><script type="text/javascript" class="element-script">function setupElement953820685902728669() {
+	var requireFunc = window.platformElementRequire || window.require;
+
+	// Relies on a global require, specific to platform elements
+	requireFunc([
+		'w-global',
+		'underscore',
+		'jquery',
+		'backbone',
+		'util/platform/elements/PlatformElement',
+		'util/platform/elements/PlatformElementSettings'
+	], function(
+		_W,
+		_,
+		$,
+		Backbone,
+		PlatformElement,
+		PlatformElementSettings
+	) {
+		var dependencies = null || [];
+		var platform_element_id = "915890017822203553-1.3.9";
+
+		if (typeof _W.loadedPlatformDependencies === 'undefined') {
+			_W.loadedPlatformDependencies = [];
+		}
+
+		if (typeof _W.platformElements === 'undefined') {
+			_W.platformElements = [];
+		}
+
+		if (typeof _W.platformElements[platform_element_id] === 'undefined') {
+			_W.platformElements[platform_element_id] = {};
+			_W.platformElements[platform_element_id].deferredObject = new $.Deferred();
+			_W.platformElements[platform_element_id].deferredPromise = _W.platformElements[platform_element_id].deferredObject.promise();
+		}
+
+		if(_.intersection(_W.loadedPlatformDependencies, dependencies).length !== dependencies.length){
+			_.reduce(dependencies, function(promise, nextScript){
+				_W.loadedPlatformDependencies.push(nextScript);
+				return promise.then(function(){
+					return $.getScript(nextScript);
+				});
+			}, $().promise()).then(function(){
+				_W.platformElements[platform_element_id].deferredObject.resolve();
+			});
+		}
+
+		if (dependencies.length === 0){
+			_W.platformElements[platform_element_id].deferredObject.resolve();
+		}
+
+		_W.platformElements[platform_element_id].deferredPromise.done(function(){
+			var _ElementDefinition = /**
+ * This is required for element rendering to be possible
+ * @type {PlatformElement}
+ */
+(function() {
+    var Accordion = PlatformElement.extend({
+        initialize: function() {
+            this.activeIndex = this.settings.get('active_index');
+
+            // if we have any iframes, we get an overlay
+            this.$el.children('.platform-element-overlay').hide();
+
+            this.fixBoxStyleBorders();
+            this.setupAccordion();
+        },
+
+         /**
+         * Listens to size modifications in the content areas
+         * and resizes them as needed
+         */
+        listenToContentChanges: function() {
+            this.currentContent = this.getAccordion()
+                .children('[data-item="' + this.settings.get('active_index') +  '"]')
+                .children('.accordion__content');
+            if (this.currentContent[0]) {
+                this.contentInterval = setInterval(function() {
+                    if (this.currentContent[0].scrollHeight + 20 != parseInt(this.currentContent.css('max-height'))) {
+                        this.currentContent.css('max-height', this.currentContent[0].scrollHeight + 20 + 'px');
+                    }
+                }.bind(this), 50);
+            }
+        },
+
+        /**
+         * Simplistic jQuery usage to animate and control which
+         * accordion item is currently open
+         */
+        setupAccordion: function() {
+            var view = this;
+
+            $titles = this.getTitles();
+            $events = $._data($titles[0], "events");
+
+            // if we already have set up click events, don't set more up
+            if ($events && $events.click && $events.click[0]) {
+                return;
+            }
+
+            $titles.on('touchstart click', function(e) {
+                clearInterval(view.contentInterval);
+
+                // remove "hover" state on touch events
+                if (e.type == "touchstart") {
+                    view.getAccordion().removeClass('no-touch');
+                }
+
+                e.stopPropagation();
+                e.preventDefault();
+
+                var isActive = $(this).parent().hasClass('active');
+
+                // handles closing
+                view.getTitles().each(function() {
+                    var $this = $(this);
+                    var $next = $(this).next();
+                    var eachIsActive = $(this).parent().hasClass('active');
+
+                    $next.css({
+                        'max-height': 0 + 'px'
+                    });
+
+                    if (eachIsActive) {
+                        setTimeout(function() {
+                            $this.parent().removeClass('active');
+                        }, 250);
+                    }
+                });
+
+                // handles opening
+                if (!isActive) {
+                    $(this).parent().addClass('active');
+                    var $next = $(this).next();
+                    $next.css({
+                        'max-height': $next[0].scrollHeight + 20 + 'px' // 20 to compensate for padding
+                    });
+
+                    setTimeout(function() {
+                        $(window).resize();
+                    }, 250);
+
+                    view.listenToContentChanges();
+                }
+                
+            });
+
+            this.getTitles().on('touchend', function() {
+                this.getAccordion().addClass('no-touch');
+            }.bind(this));
+        },
+
+        /**
+         * When using the 'Box' style, to avoid
+         * thick borders on the top and bottom of
+         * elements, we just shift all the elements up
+         * 'i' pixels. Preferable over doing it through css
+         * because all the items need all 4 borders on hover.
+         */
+        fixBoxStyleBorders: function() {
+            var view = this;
+
+            // only do it if the style is 'box'
+            if (this.settings.get('style') == 'box') {
+                this.getAccordion().filter('.accordion--box').children().each(function(i) {
+                    $(this).css({
+                        'top': -i
+                    });
+                });
+            }
+        },
+
+        // these functions exist so that if there's nested accordions, we don't accidentally select child accordions.
+        getAccordion: function() {
+            return this.$el.children();
+        },
+
+        getTitles: function() {
+            return this.$el.children()
+                .children()
+                .children('.accordion__title');
+        },
+
+        getContent: function() {
+            return this.$el.children()
+                .children()
+                .children('.accordion__content');
+        }
+    });
+
+    return Accordion;
+})();
+;
+
+			if (typeof _ElementDefinition == 'undefined' || typeof _ElementDefinition == 'null') {
+				var _ElementDefinition = PlatformElement.extend({});
+			}
+
+			var _Element = _ElementDefinition.extend({
+				initialize: function() {
+					// we still want to call the initialize function defined by the developer
+					// however, we don't want to call it until placeholders have been replaced
+					this.placeholderInterval = setInterval(function() {
+						// so use setInterval to check for placeholders.
+						if (this.$('.platform-element-child-placeholder').length == 0) {
+							clearInterval(this.placeholderInterval);
+							this.constructor.__super__.initialize.apply(this);
+						}
+					}.bind(this), 100);
+				}
+			});
+
+			_Element.prototype.settings = new PlatformElementSettings({"items_each":[{"items_index":0},{"items_index":1},{"items_index":2}],"items":3,"style":"simple","title_background":"#000b37","content_background":"#000b37","active_index":"1"});
+			_Element.prototype.settings.page_element_id = "953820685902728669";
+
+			_Element.prototype.element_id = "f79c87d6-21f8-4cd4-9a2b-8568262972fb";
+			_Element.prototype.user_id = "50158331";
+			_Element.prototype.site_id = "258110484374261460";
+			_Element.prototype.assets_path = "//marketplace.editmysite.com/uploads/b/marketplace-elements-915890017822203553-1.3.9/assets/";
+			new _Element({
+				el: '#element-f79c87d6-21f8-4cd4-9a2b-8568262972fb'
+			});
+		});
+	});
+
+}
+
+if (typeof document.documentElement.appReady == 'undefined') {
+	document.documentElement.appReady = 0;
+}
+
+if (document.documentElement.appReady || (window.inEditor && window.inEditor())) {
+	setupElement953820685902728669();
+} else if (document.createEvent && document.addEventListener) {
+	document.addEventListener('appReady', setupElement953820685902728669, false);
+} else {
+	document.documentElement.attachEvent('onpropertychange', function(event){
+		if (event.propertyName == 'appReady') {
+			setupElement953820685902728669();
+		}
+	});
+}
+
+</script></div></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Files</font></h2>
+
+<div class="paragraph"><font color="#ffffff">#include &lt;iostream&gt;<br />#include &lt;fstream&gt;<br />using namespace std;<br /><br />/* Note: fstream can be used for both reading and writing */<br /><br />int&nbsp;main() {<br />&nbsp; // CREATING AND WRITING TO FILES<br />&nbsp;&nbsp;// Create and open a text file<br />&nbsp; ofstream MyFile("filename.txt");<br /><br />&nbsp;&nbsp;// Write to the file<br />&nbsp; MyFile &lt;&lt;&nbsp;"Files can be tricky, but it is fun enough!";<br /><br />&nbsp;&nbsp;// Close the file<br />&nbsp; MyFile.close();<br /><br />&nbsp; &nbsp;// READING FILES<br />&nbsp;&nbsp;// Create a text string, which is used to output the text file<br /><span></span>&nbsp;&nbsp;string myText;<br /><br />&nbsp;&nbsp;// Read from the text file<br /><span></span>&nbsp;&nbsp;ifstream MyReadFile("filename.txt");<br /><br />&nbsp;&nbsp;// Use a while loop together with the getline() function to read the file line by line<br />&nbsp;&nbsp;while&nbsp;(getline (MyReadFile,&nbsp;myText)) {<br />&nbsp;&nbsp;&nbsp;&nbsp;<span></span>// Output the text from the file<br />&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; myText;<br /><span></span>&nbsp;&nbsp;}<br /><br />&nbsp;&nbsp;// Close the file<br /><span></span>&nbsp;&nbsp;MyReadFile.close();<br />}</font></div>
+
+<h2 class="wsite-content-title"><font color="#ffffff">Exceptions</font></h2>
+
+<div class="paragraph"><font color="#ffffff">try&nbsp;{<br />&nbsp;&nbsp;int&nbsp;age =&nbsp;15;<br />&nbsp;&nbsp;if&nbsp;(age &gt;=&nbsp;18) {<br />&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt;&nbsp;"Access granted - you are old enough.";<br />&nbsp; }&nbsp;</font><span style="color:rgb(255, 255, 255)">else if (age == 0)</span><span style="color:rgb(255, 255, 255)">&nbsp;{</span><br /><span style="color:rgb(255, 255, 255)">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:rgb(255, 255, 255)">throw</span><span style="color:rgb(255, 255, 255)">&nbsp;</span><span style="color:rgb(255, 255, 255)">"zero exception"</span><span style="color:rgb(255, 255, 255)">;</span><br /><span style="color:rgb(255, 255, 255)">&nbsp; }</span><font color="#ffffff">else&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;505;<br />&nbsp; }<br />}<br />catch&nbsp;(int&nbsp;myNum) {<br />&nbsp;&nbsp;cout &lt;&lt;&nbsp;"Access denied - You must be at least 18 years old.\n";<br />&nbsp;&nbsp;cout &lt;&lt;&nbsp;"Error number: "&nbsp;&lt;&lt; myNum;<br />}<br />catch&nbsp;(...) { // Catches any exception<br />&nbsp; cout &lt;&lt;&nbsp;"Something went wrong\n";<br />}</font></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="footer-wrap">
+        <div class="footer">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a></div>
+    </div><!-- end footer-wrap -->
+  </div><!-- /.wrapper -->
+
+  <div id="navMobile" class="nav mobile-nav">
+    <a class="hamburger" aria-label="Menu" href="#"><span></span></a>
+    <ul class="wsite-menu-default">
+    		<li id="pg174265258517029121" class="wsite-menu-item-wrap">
+    			<a
+    						href="index.html"
+    				class="wsite-menu-item"
+    				>
+    				Home
+    			</a>
+    			
+    		</li>
+    		<li id="pg406094728939833248" class="wsite-menu-item-wrap">
+    			<a
+    						href="kotlin--spring-boot.html"
+    				class="wsite-menu-item"
+    				>
+    				Kotlin & Spring Boot
+    			</a>
+    			
+    		</li>
+    </ul>
+  </div>
+
+	<script type="text/javascript" src="files/theme/plugins.js"></script>
+  <script type="text/javascript" src="files/theme/custom.js"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="http://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1234"></script>
+
+		
+	</body>
+</html>
